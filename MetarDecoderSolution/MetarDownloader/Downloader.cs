@@ -101,7 +101,7 @@ namespace ENG.Metar.Downloader
     /// <exception cref="MetarDownloadException">
     /// Raised when any error occurs.
     /// </exception>
-    public void DownloadMetarAsync(string icao, IMetarRetrieve metarRetriever,
+    public static void DownloadMetarAsync(string icao, IMetarRetrieve metarRetriever,
       DownloadMetarCompletedDelegate downloadMetarCompletedDelegate)
     {
       Downloader d = new Downloader(metarRetriever);
