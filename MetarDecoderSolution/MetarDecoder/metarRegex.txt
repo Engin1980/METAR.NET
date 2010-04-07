@@ -1,0 +1,46 @@
+﻿http://derekslager.com/blog/posts/2007/09/a-better-dotnet-regular-expression-tester.ashx
+http://myregexp.com/
+
+tested:
+^(METAR)(?#icao) ([A-Z]{4})(?#date) ((\d{2})(\d{2})(\d{2})Z)(?#auto)( AUTO)?(?#wind) (((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)(?#visib) ((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|((M)?(\d+)(/(\d))?SM))(?#rwyVis)( (R(\d{2}(R|L|C)?)/(M|P)?(\d{4})(V(\d{4}))?(FT|U|N|D)?))*(?#phenoms)(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)*)?(?#sky)(( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*)(?#temp-dew) ((M)*(\d{2})/(M)*(\d{2}))(?#press) ((Q|A)(\d{4}))(?#re-phen)(( (RE((\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)))+)?(?#ws)( (WS ALL RWY)| (WS( RWY(\d{2}(R|L|C)?))*))?(?#rwyCond)(( SNOCLO)|( R(\d{2}(L|R|C)*)/(\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2}))*))?(?#trend)( (?#type-date)((NOSIG)|((TEMPO|BECMG)( (FM|TL|AT)(\d{2})(\d{2}))*))(?#tr-wind)( ((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)?(?#tr-visib)( ((CAVOK)|(\d{4})))?(?#tr-cloud)((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?(?#tr-sky)((( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*))?)?(?#rmk)( RMK (.*))?$
+applied:
+^(METAR)(?#icao) ([A-Z]{4})(?#date) ((\d{2})(\d{2})(\d{2})Z)(?#auto)( AUTO)?(?#wind) (((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)(?#visib) ((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|((M)?(\d+)(/(\d))?SM))(?#rwyVis)(( (R(\d{2}(R|L|C)?)/(M|P)?(\d{4})(V(\d{4}))?(FT|U|N|D)?))*)(?#phenoms)(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)*)?(?#sky)(( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*)(?#temp-dew) ((M)*(\d{2})/(M)*(\d{2}))(?#press) ((Q|A)(\d{4}))(?#re-phen)(( (RE(\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))+)?(?#ws)( (WS ALL RWY)| (WS( RWY(\d{2}(R|L|C)?))*))?(?#rwyCond)(( SNOCLO)|(( R(\d{2}(L|R|C)*)/(\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2}))*)?) (?#tr-type-date)((NOSIG)|((TEMPO|BECMG)( (FM|TL|AT)(\d{2})(\d{2}))*))(?#tr-wind)( ((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)?(?#tr-visib)( ((CAVOK)|(\d{4})))?(?#tr-cloud)((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?(?#tr-sky)((( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*))?(?#rmk)( RMK (.*))?$
+^(METAR)(?#icao) ([A-Z]{4})(?#date) ((\d{2})(\d{2})(\d{2})Z)(?#auto)( AUTO)?(?#wind) (((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)(?#visib) ((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|((M)?(\d+)(/(\d))?SM))(?#rwyVis)(( (R(\d{2}(R|L|C)?)/(M|P)?(\d{4})(V(\d{4}))?(FT|U|N|D)?))*)(?#phenoms)(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)*)?(?#sky)(( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*)(?#temp-dew) ((M)*(\d{2})/(M)*(\d{2}))(?#press) ((Q|A)(\d{4}))(?#re-phen)(( (RE(\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))+)?(?#ws)( (WS ALL RWY)| (WS( RWY(\d{2}(R|L|C)?))*))?(?#rwyCond)(( SNOCLO)|(( R(\d{2}(L|R|C)*)/(\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2}))*)?)(?#tr-type-date)( (NOSIG)| ((TEMPO|BECMG)(( (FM|TL|AT)(\d{2})(\d{2}))*)))(?#tr-wind)(?#wind)( ((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)?(?#tr-visib)( ((CAVOK)|(\d{4})))?(?#tr-cloud)((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?(?#tr-sky)((( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*))?(?#rmk)( RMK (.*))?$
+
+
+testingg:
+^(METAR)(?#icao) ([A-Z]{4})(?#date) ((\d{2})(\d{2})(\d{2})Z)(?#auto)( AUTO)?(?#wind) (((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)(?#visib) ((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|((M)?(\d+)(/(\d))?SM))((?#rwyVis)( (R(\d{2}(R|L|C)?)/(M|P)?(\d{4})(V(\d{4}))?(FT|U|N|D)?))*)(?#phenoms)(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)*)?(?#sky)(( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*)(?#temp-dew) ((M)*(\d{2})/(M)*(\d{2}))(?#press) ((Q|A)(\d{4}))(?#re-phen)(( (RE(\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))+)?(?#ws)( (WS ALL RWY)| (WS( RWY(\d{2}(R|L|C)?))*))?(?#rwyCond)(( SNOCLO)|(( R(\d{2}(L|R|C)*)/(\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2}))*))?(?#tr-type-date)( (NOSIG)| ((TEMPO|BECMG)(( (FM|TL|AT)(\d{2})(\d{2}))*)))(?#tr-wind)(?#wind)( ((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)?(?#tr-visib)( ((CAVOK)|(\d{4})|((M)?(\d+)(/(\d))?SM)))?((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?(?#tr-sky)(( (NSC)| (SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*))?(?#rmk)( RMK (.*))?$
+
+
+metar:::
+^
+(METAR)
+(?#icao) ([A-Z]{4})
+(?#date) ((\d{2})(\d{2})(\d{2})Z)
+(?#auto)( AUTO)?
+(?#wind) (((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)
+(?#visib) ((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|((M)?(\d+)(/(\d))?SM))
+(?#rwyVis)( (R(\d{2}(R|L|C)?)/(M|P)?(\d{4})(V(\d{4}))?(FT|U|N|D)?))*
+(?#phenoms)(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)*)?
+(?#sky)(( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*)
+(?#temp-dew) ((M)*(\d{2})/(M)*(\d{2}))
+(?#press) ((Q|A)(\d{4}))
+(?#re-phen)(( (RE((\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)))+)?
+(?#ws)( (WS ALL RWY)| (WS( RWY(\d{2}(R|L|C)?))*))?
+(?#rwyCond)(( R(\d{2}(L|R|C)*)/(\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2}))*)?
+(?#trend)( (?#type-date)((NOSIG)|((TEMPO|BECMG)( (FM|TL|AT)(\d{2})(\d{2}))*))(?#tr-wind)( ((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)?(?#tr-visib)( ((CAVOK)|(\d{4})))?(?#tr-cloud)((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?(?#tr-sky)((( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*))?)?
+(?#rmk)( RMK (.*))?
+$
+
+trend:::
+(?#trend)( 
+(?#tr-type-date)((NOSIG)|((TEMPO|BECMG)( (FM|TL|AT)(\d{2})(\d{2}))*))
+(?#tr-wind)( ((\d{3}|VRB)(\d{2})(G(\d{2,3}))?(KT|MPS|KMH))( (\d{3})V(\d{3}))?)?
+(?#tr-visib)( ((CAVOK)|(\d{4})|((M)?(\d+)(/(\d))?SM)))?
+(?#tr-phenoms)((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?
+(?#tr-sky)((( NSC)|( SKC)| VV(\d{4})|( (FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)*))?
+)?
+
+
+((( NSW)|(( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+))*))?
+         (( (\-|\+|VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)+)*)?

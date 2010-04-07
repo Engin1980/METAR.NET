@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ESystem;
+
+namespace MetarDecoder
+{
+  /// <summary>
+  /// Represents day-time information when metar was presented.
+  /// </summary>
+  public class DayTime : MetarItem
+  {
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private int _Day;
+    ///<summary>
+    /// Sets/gets Day value.
+    ///</summary>
+    public int Day
+    {
+      get
+      {
+        return (_Day);
+      }
+      set
+      {
+        if (!value.IsBetween(1, 31))
+          throw new ArgumentOutOfRangeException("Value must be between 1 and 31.");
+        _Day = value;
+      }
+    }
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private int _Hour;
+    ///<summary>
+    /// Sets/gets Hour value.
+    ///</summary>
+    public int Hour
+    {
+      get
+      {
+        return (_Hour);
+      }
+      set
+      {
+        if (!value.IsBetween(0,24))
+          throw new ArgumentOutOfRangeException("Value must be between 0 and 24.");
+        _Hour = value;
+      }
+    }
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private int _Minute;
+    ///<summary>
+    /// Sets/gets Minute value.
+    ///</summary>
+    public int Minute
+    {
+      get
+      {
+        return (_Minute);
+      }
+      set
+      {
+        if (!value.IsBetween(0, 59))
+          throw new ArgumentOutOfRangeException("Value must be between 0 and 59.");
+        _Minute = value;
+      }
+    }
+
+    /// <summary>
+    /// Returns item in metar string.
+    /// </summary>
+    /// <returns></returns>
+    public string ToMetar()
+    {
+      return this.Day.ToString("00") + this.Hour.ToString("00") + this.Minute.ToString("00") + "Z";
+    }
+
+    #region IMetarItem Members
+
+
+    /// <summary>
+    /// Proceed sanity check of inserted values.
+    /// </summary>
+    /// <param name="errors">Found errors.</param>
+    /// <param name="warnings">Found warnings.</param>
+    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    {
+      // nothing
+    }
+
+    #endregion
+  }
+}

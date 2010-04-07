@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MetarDownloader</name>
+    </assembly>
+    <members>
+        <member name="T:MetarDownloader.Downloader">
+            <summary>
+            Class responsible for downloading metar information from source.
+            </summary>
+        </member>
+        <member name="F:MetarDownloader.Downloader.retr">
+            <summary>
+            Local decoder used to retrieve metar.
+            </summary>
+        </member>
+        <member name="F:MetarDownloader.Downloader.aIcao">
+            <summary>
+            private async synchro variable
+            </summary>
+        </member>
+        <member name="F:MetarDownloader.Downloader.aDel">
+            <summary>
+            private async synchro variable
+            </summary>
+        </member>
+        <member name="M:MetarDownloader.Downloader.#ctor(MetarDownloader.IMetarRetrieve)">
+            <summary>
+            Initializes a new Instance of MetarDownloader.Downloader
+            </summary>
+            <param name="metarRetriever">Metar retrievere used to decode metar from source stream</param>
+        </member>
+        <member name="M:MetarDownloader.Downloader.DownloadMetar(System.String,MetarDownloader.IMetarRetrieve)">
+            <summary>
+            Download metar synchronously.
+            </summary>
+            <param name="icao">Icao code of airport/station.</param>
+            <param name="metarRetriever">Metar retrievere used to decode metar from source stream</param>
+            <returns>Metar as string.</returns>
+            <exception cref="T:MetarDownloader.MetarDownloadException">
+            Raised when any error occurs.
+            </exception>
+        </member>
+        <member name="M:MetarDownloader.Downloader.DownloadMetar(System.String)">
+            <summary>
+            Download metar synchronously.
+            </summary>
+            <param name="ICAO">Icao code of airport/station.</param>
+            <returns>Metar as string.</returns>
+            <exception cref="T:MetarDownloader.MetarDownloadException">
+            Raised when any error occurs.
+            </exception>
+        </member>
+        <member name="M:MetarDownloader.Downloader.DownloadMetarAsync(System.String,MetarDownloader.IMetarRetrieve,MetarDownloader.Downloader.DownloadMetarCompletedDelegate)">
+            <summary>
+            Download metar asynchronously.
+            </summary>
+            <param name="icao">Icao code of airport/station.</param>
+            <param name="metarRetriever">Metar retrievere used to decode metar from source stream</param>
+            <param name="downloadMetarCompletedDelegate">Delegate function raised when download is completed or error occured.</param>
+            <exception cref="T:MetarDownloader.MetarDownloadException">
+            Raised when any error occurs.
+            </exception>
+        </member>
+        <member name="M:MetarDownloader.Downloader.DownloadMetarAsync(System.String,MetarDownloader.Downloader.DownloadMetarCompletedDelegate)">
+            <summary>
+            Download metar asynchronously.
+            </summary>
+            <param name="icao">Icao code of airport/station.</param>
+            <param name="downloadMetarCompletedDelegate">Delegate function raised when download is completed or error occured.</param>
+            <exception cref="T:MetarDownloader.MetarDownloadException">
+            Raised when any error occurs.
+            </exception>
+        </member>
+        <member name="M:MetarDownloader.Downloader.DownloadAsynchronously">
+            <summary>
+            Used to download metar asynchronously.
+            </summary>
+        </member>
+        <member name="T:MetarDownloader.Downloader.DownloadMetarCompletedDelegate">
+            <summary>
+            Delegate used to announce when asynchronous download is completed.
+            Is used for both, successful and unsuccessful downloads.
+            </summary>
+            <param name="result">Result containing data</param>
+        </member>
+        <member name="T:MetarDownloader.IMetarRetrieve">
+            <summary>
+            Represents type able to define source for metar downloading.
+            </summary>
+        </member>
+        <member name="M:MetarDownloader.IMetarRetrieve.GetUrlForICAO(System.String)">
+            <summary>
+            Returns URL where METAR information is stored.
+            </summary>
+            <param name="icao">ICAO code of airport/station.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDownloader.IMetarRetrieve.DecodeMetar(System.IO.Stream)">
+            <summary>
+            Decodes metar from stream. Stream should be downloaded from URL address obtained 
+            from GetUrlForICAO() method. <seealso cref="M:MetarDownloader.IMetarRetrieve.GetUrlForICAO(System.String)"/>.
+            </summary>
+            <param name="sourceStream">Source stream, from which the metar will be obtained.</param>
+            <returns>Metar string.</returns>
+            <exception cref="T:MetarDownloader.MetarDownloadException">
+            Returns if anything fails. Inner exception should contain more accurate info.
+            </exception>
+        </member>
+        <member name="T:MetarDownloader.MetarResult">
+            <summary>
+            Represents result of async metar downloading.
+            </summary>
+        </member>
+        <member name="M:MetarDownloader.MetarResult.#ctor(System.Exception)">
+            <summary>
+            Initializes a new Instance of MetarDownloader.MetarResult
+            </summary>
+            <param name="ex">Exception if async download was not successfull.</param>
+        </member>
+        <member name="M:MetarDownloader.MetarResult.#ctor(System.String)">
+            <summary>
+            Initializes a new Instance of MetarDownloader.MetarResult
+            </summary>
+            <param name="metar">Metar if async download was successfull.</param>
+        </member>
+        <member name="P:MetarDownloader.MetarResult.Exception">
+            <summary>
+            Contains exception if any raised during async metar downloading.
+            Null, if downloading was successfull.
+            </summary>
+        </member>
+        <member name="P:MetarDownloader.MetarResult.Result">
+            <summary>
+            Contains downloaded metar, if download was successfull. Undefined value otherwise.
+            </summary>
+        </member>
+        <member name="P:MetarDownloader.MetarResult.IsSuccessful">
+            <summary>
+            Returns true if download was successfull. False if exception was raised.
+            </summary>
+            <remarks>
+            If this property returns True, then correct downloaded metar is available through Result property. 
+            <seealso cref="P:MetarDownloader.MetarResult.Result"/>
+            If this property returns False, then error occurs during async downloading. Exception associated with
+            error is available through Exception property. <seealso cref="P:MetarDownloader.MetarResult.Exception"/>
+            </remarks>
+        </member>
+        <member name="T:MetarDownloader.MetarDownloadException">
+            <summary>
+            Raised when some error occurs during metar downloading or decoding.
+            Inner exception should contain more accurate information.
+            </summary>
+        </member>
+        <member name="M:MetarDownloader.MetarDownloadException.#ctor(System.String)">
+            <summary>
+            Initializes a new Instance of MetarDownloader.MetarDownloadException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:MetarDownloader.MetarDownloadException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new Instance of MetarDownloader.MetarDownloadException
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="M:MetarDownloader.MetarDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new Instance of MetarDownloader.MetarDownloadException
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:MetarDownloader.Retrievers.USAS1VatsimRetriever">
+            <summary>
+            This class is able to download metar from usa vatsim network source.
+            Downloaded metar is associated to VATSIM online network, and can differ
+            significantly from real weather.
+            </summary>
+            <seealso cref="T:MetarDownloader.IMetarRetrieve"/>
+        </member>
+        <member name="F:MetarDownloader.Retrievers.USAS1VatsimRetriever.SOURCE">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="M:MetarDownloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)">
+            <summary>
+            Returns URL where METAR information is stored.
+            </summary>
+            <param name="icao">ICAO code of airport/station.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDownloader.Retrievers.USAS1VatsimRetriever.DecodeMetar(System.IO.Stream)">
+            <summary>
+            Decodes metar from stream. Stream should be downloaded from URL address obtained 
+            from GetUrlForICAO() method. <seealso cref="M:MetarDownloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)"/>.
+            </summary>
+            <param name="sourceStream">Source stream, from which the metar will be obtained.</param>
+            <returns>Metar string.</returns>
+            <exception cref="T:MetarDownloader.MetarDownloadException">
+            Returns if anything fails. Inner exception should contain more accurate info.
+            </exception>
+        </member>
+        <member name="M:MetarDownloader.Retrievers.USAS1VatsimRetriever.IsNotValidMetar(System.String)">
+            <summary>
+            Checks if metar is valid.
+            </summary>
+            <param name="metar"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MetarDownloader.Retrievers.OldLineWeatherRetriever">
+            <summary>
+            This class is able to download metar from web OldLineWeather.
+            </summary>
+            <seealso cref="T:MetarDownloader.IMetarRetrieve"/>
+        </member>
+        <member name="M:MetarDownloader.Retrievers.OldLineWeatherRetriever.GetUrlForICAO(System.String)">
+            <summary>
+            Returns URL where METAR information is stored.
+            </summary>
+            <param name="icao">ICAO code of airport/station.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDownloader.Retrievers.OldLineWeatherRetriever.DecodeMetar(System.IO.Stream)">
+            <summary>
+            Decodes metar from stream. Stream should be downloaded from URL address obtained 
+            from GetUrlForICAO() method. <seealso cref="M:MetarDownloader.Retrievers.OldLineWeatherRetriever.GetUrlForICAO(System.String)"/>.
+            </summary>
+            <param name="sourceStream">Source stream, from which the metar will be obtained.</param>
+            <returns>Metar string.</returns>
+            <exception cref="T:MetarDownloader.MetarDownloadException">Returns if anything fails. Inner exception should contain more accurate info.</exception>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,28 @@
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\Tester.exe
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\Tester.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\obj\Debug\Tester.exe
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\obj\Debug\Tester.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\MetarDecoder.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\MetarDecoder.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\obj\Debug\Tester.Properties.Resources.resources
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\obj\Debug\Tester.csproj.GenerateResource.Cache
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\cs-CZ\MetarDecoder.resources.dll
+H:\MetarDecoderSolution\Tester\obj\Debug\Tester.exe
+H:\MetarDecoderSolution\Tester\obj\Debug\Tester.pdb
+H:\MetarDecoderSolution\Tester\bin\Debug\Tester.exe
+H:\MetarDecoderSolution\Tester\bin\Debug\Tester.pdb
+H:\MetarDecoderSolution\Tester\bin\Debug\MetarDecoder.dll
+H:\MetarDecoderSolution\Tester\bin\Debug\MetarDecoder.pdb
+H:\MetarDecoderSolution\Tester\bin\Debug\cs-CZ\MetarDecoder.resources.dll
+H:\MetarDecoderSolution\Tester\obj\Debug\ResolveAssemblyReference.cache
+H:\MetarDecoderSolution\Tester\obj\Debug\Tester.Properties.Resources.resources
+H:\MetarDecoderSolution\Tester\obj\Debug\ResGen.read.1.tlog
+H:\MetarDecoderSolution\Tester\obj\Debug\ResGen.write.1.tlog
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\ESystem.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\ESystem.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\ESystem.xml
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\MetarDownloader.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\MetarDownloader.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\MetarDecoder.xml
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\Tester\bin\Debug\MetarDownloader.xml

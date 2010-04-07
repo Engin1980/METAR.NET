@@ -1,0 +1,24 @@
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\MetarDecoder.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\MetarDecoder.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.Properties.Resources.resources
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.csproj.GenerateResource.Cache
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\cs-CZ\MetarDecoder.resources.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.Properties.Resources.cs-CZ.resources
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\obj\Debug\cs-CZ\MetarDecoder.resources.dll
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\ResolveAssemblyReference.cache
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.Properties.Resources.resources
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.Properties.Resources.cs-CZ.resources
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\ResGen.read.1.tlog
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\ResGen.write.1.tlog
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.dll
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\MetarDecoder.pdb
+H:\MetarDecoderSolution\MetarDecoder\bin\Debug\MetarDecoder.dll
+H:\MetarDecoderSolution\MetarDecoder\bin\Debug\MetarDecoder.pdb
+H:\MetarDecoderSolution\MetarDecoder\bin\Debug\cs-CZ\MetarDecoder.resources.dll
+H:\MetarDecoderSolution\MetarDecoder\obj\Debug\cs-CZ\MetarDecoder.resources.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ESystem.dll
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ESystem.pdb
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ESystem.xml

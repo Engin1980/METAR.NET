@@ -1,0 +1,1888 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MetarDecoder</name>
+    </assembly>
+    <members>
+        <member name="T:MetarDecoder.MetarDecodeException">
+            <summary>
+            Raised when error captured during metar decode process.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new Instance of MetarDecoder.MetarDecodeException
+            </summary>
+            <param name="metar"></param>
+            <param name="error"></param>
+        </member>
+        <member name="M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new Instance of MetarDecoder.MetarDecodeException
+            </summary>
+            <param name="metar"></param>
+            <param name="error"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="T:MetarDecoder.TrendInfo">
+            <summary>
+            Represents information about trend. To mark trend as not used. set null value into property type.
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="T:MetarDecoder.MetarItem">
+            <summary>
+            Common interface to describe metar element.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.MetarItem.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.MetarItem.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo._Times">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo._Wind">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo._Visibility">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo._Phenomens">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo._Clouds">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.TrendInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.TrendInfo.ToInfo">
+            <summary>
+            Returns item in text string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.TrendInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.TrendInfo.Type">
+            <summary>
+             Sets/gets Type value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendInfo.Times">
+            <summary>
+             Sets/gets Dates value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendInfo.Wind">
+            <summary>
+             Sets/gets Wind value. Null if not specified in trend.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendInfo.Visibility">
+            <summary>
+             Sets/gets Visibility value. Null if not specified in trend.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendInfo.Phenomens">
+            <summary>
+             Sets/gets Phenomens value. Null if not specified in trend.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendInfo.Clouds">
+            <summary>
+             Sets/gets Clouds value. Null if not specified in trend.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.TrendInfo.eType">
+            <summary>
+            Type of trend.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo.eType.NOSIG">
+            <summary>
+            No significant change trend.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo.eType.BECMG">
+            <summary>
+            Becoming trend.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendInfo.eType.TEMPO">
+            <summary>
+            Temporaly trend.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.TrendTimeInfo">
+            <summary>
+            Represents set of time infos in metar trend.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.TrendTimeInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.TrendTimeInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="T:MetarDecoder.Racional">
+            <summary>
+            Represents racional number (struct).
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Racional.Numerator">
+            <summary>
+            Represents numerator.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Racional.Denominator">
+            <summary>
+            Represents denominator.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.Racional.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Instance of MetarDecoder.Racional
+            </summary>
+            <param name="numerator"></param>
+            <param name="denominator"></param>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Equality(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator ==
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Inequality(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator !=
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_GreaterThan(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator greater-than
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_LessThan(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator less-than
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_GreaterThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator equal-or-more-than
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_LessThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator equal-or-less-than
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal by their real values.
+            </summary>
+            <param name="obj">Another object to compare to.</param>
+            <returns>true if <paramref name="obj"/> and this instance have the same real value; otherwise, false.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:MetarDecoder.Racional.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer that is the hash code for this instance.</returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:MetarDecoder.Racional.ToString(System.Boolean)">
+            <summary>
+            Returns value of this instance; param decides if delimited as racional number (e.g. 3/1).
+            </summary>
+            <param name="useFrictionWhenInteger">True when allways use /, false otherwise.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.ToString">
+            <summary>
+            Returns value of this instance, allways delimited as racional number (e.g. 3/1).
+            </summary>
+            <returns></returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator plus
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,System.Int32)">
+            <summary>
+            Operator plus
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator plus
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,System.Int32)">
+            <summary>
+            Operator minus
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Subtraction(System.Int32,MetarDecoder.Racional)">
+            <summary>
+            Operator minus
+            </summary>
+            <param name="b"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator multiply
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,System.Int32)">
+            <summary>
+            Operator multiply
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,MetarDecoder.Racional)">
+            <summary>
+            Operator divide
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,System.Int32)">
+            <summary>
+            Operator divide
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Division(System.Int32,MetarDecoder.Racional)">
+            <summary>
+            Operator divide
+            </summary>
+            <param name="b"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Implicit(MetarDecoder.Racional)~System.Double">
+            <summary>
+            Operator implicit conversion to double
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Explicit(MetarDecoder.Racional)~System.Int32">
+            <summary>
+            Operator explicit conversion to integer.
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.op_Implicit(System.Int32)~MetarDecoder.Racional">
+            <summary>
+            Operator implicit conversion from integer.
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.FromDouble(System.Double)">
+            <summary>
+            Creates value from double.
+            </summary>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.Abbreviate">
+            <summary>
+            Abbreviates the racional. E.g. from 2/4 to 1/2.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Racional.CompareTo(MetarDecoder.Racional)">
+            <summary>
+            Compares two racional number by their real values.
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MetarDecoder.Racional.Value">
+            <summary>
+            Returns real value of racional number.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Extensions">
+            <summary>
+            Represents extensions.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)">
+            <summary>
+            Adds string into string builder and then empty space at the end.
+            </summary>
+            <param name="builder"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)">
+            <summary>
+            Returns value from Group parsed as integer. Exception if fails.
+            </summary>
+            <param name="grp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)">
+            <summary>
+            Returns value from Capture parsed as integer. Exception if fails.
+            </summary>
+            <param name="grp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MetarDecoder.Wind">
+            <summary>
+            Represents information about wind.
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="F:MetarDecoder.Wind._Unit">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind._Direction">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind._Speed">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind._GustSpeed">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind._Variability">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.Wind.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Wind.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.Wind.Unit">
+            <summary>
+             Sets/gets unit of wind speed.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Wind.Direction">
+            <summary>
+             Sets/gets wind direction value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Wind.IsVariable">
+            <summary>
+             Sets/gets true if wind si variable (VRB). Do not confuse with wind variability!
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Wind.Speed">
+            <summary>
+             Sets/gets wind speed.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Wind.GustSpeed">
+            <summary>
+             Sets/gets GustSpeed value. Null if no gusts defined.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Wind.Variability">
+            <summary>
+             Sets/gets variable value. Null if not used.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Wind.IsVarying">
+            <summary>
+            Returns true if wind is varying between two headings..
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:MetarDecoder.Wind.eUnit">
+            <summary>
+            Wind-speed unit
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind.eUnit.MPS">
+            <summary>
+            Metres per second (used e.g. in Russia)
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind.eUnit.KT">
+            <summary>
+            Knots (most common)
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Wind.eUnit.KMH">
+            <summary>
+            Kilometers per hour
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.TrendVisibility">
+            <summary>
+            Represents information about trend visibility.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SetCAVOK">
+            <summary>
+            Sets "cloud and visibility ok" (CAVOK) weather (that is clear sky in EU style).
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SetSKC">
+            <summary>
+            Sets "sky clear" (SKC) weather (that is clear sky in US style).
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SetClear(System.Boolean)">
+            <summary>
+            Sets clear sky. Parameter define if to use EU style (US otherwise).
+            </summary>
+            <param name="useEUStyle">True if EU style to use, false otherwise (that is US style).</param>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SetMeters(System.Int32)">
+            <summary>
+            Set distance in meters. Sets EU style.
+            </summary>
+            <param name="distance">Visibility distance.</param>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SetMiles(MetarDecoder.Racional,System.Boolean)">
+            <summary>
+            Sets visibility distance in miles. Sets US style (non EU style).
+            </summary>
+            <param name="distance">Distance</param>
+            <param name="isDevicesMinimumValue">True if value is minimum of measuring equipment.</param>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SetMiles(System.Int32,System.Boolean)">
+            <summary>
+            Sets visibility distance in miles. Sets US style (non EU style).
+            </summary>
+            <param name="distance">Distance</param>
+            <param name="isDevicesMinimumValue">True if value is minimum of measuring equipment.</param>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.TrendVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.TrendVisibility.UseEUStyle">
+            <summary>
+             Sets/gets if to use E-U style in ToMetar method.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendVisibility.IsDevicesMinimumValue">
+            <summary>
+             Sets/gets if measured distance is equipments minimal measurable value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendVisibility.IsClear">
+            <summary>
+             Sets/gets clear visibility value. If true, most of other properties are omitted.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendVisibility.Distance">
+            <summary>
+             Sets/gets distance value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayConditionInfo">
+            <summary>
+            Represets sets of runway conditions.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.RunwayConditionInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.RunwayConditionInfo.ToInfo">
+            <summary>
+            Returns item in text string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.RunwayConditionInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.RunwayConditionInfo.IsSNOCLO">
+            <summary>
+             Sets/gets if airport is closed due to snow (that is SNOCLO in metar).
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.PhenomInfo">
+            <summary>
+            Represents information about phenoms. E.g. (+RAHZ -SN)
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.PhenomInfo.#ctor(System.Boolean)">
+            <summary>
+            Creates new instance. Parameter is true if instance is used for re-phenoms. See Metar.RePhenomens.
+            </summary>
+            <param name="isRe">True if re-phenoms, false otherwise.</param>
+            <remarks>
+            If argument is true, when converted, data are represented in metar with prefix RE.
+            </remarks>
+        </member>
+        <member name="M:MetarDecoder.PhenomInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.PhenomInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.PhenomInfo.IsNSW">
+            <summary>
+             Sets/gets if no-significant-weather flag is used (NSW).
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.and">
+            <summary>
+              Looks up a localized string similar to and.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.CAVOK">
+            <summary>
+              Looks up a localized string similar to cloud and visiblity OK.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.DewPoint">
+            <summary>
+              Looks up a localized string similar to Dew point.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.ForICAO">
+            <summary>
+              Looks up a localized string similar to for.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.FromDate">
+            <summary>
+              Looks up a localized string similar to released.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.Gusting">
+            <summary>
+              Looks up a localized string similar to gusting to.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.knots">
+            <summary>
+              Looks up a localized string similar to knots.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.MetarInfo">
+            <summary>
+              Looks up a localized string similar to Metar information.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.meters">
+            <summary>
+              Looks up a localized string similar to meter(s).
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.PreviousWeather">
+            <summary>
+              Looks up a localized string similar to Previous significant weather.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.RunwayConditions">
+            <summary>
+              Looks up a localized string similar to Runways.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.Temperature">
+            <summary>
+              Looks up a localized string similar to Temperature.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.VerticalVisibility">
+            <summary>
+              Looks up a localized string similar to vertical visibility.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.Visibility">
+            <summary>
+              Looks up a localized string similar to Visibility.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.WindFrom">
+            <summary>
+              Looks up a localized string similar to Wind from.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.WindSpeed">
+            <summary>
+              Looks up a localized string similar to wind speed.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Properties.Resources.WindVaryingBetween">
+            <summary>
+              Looks up a localized string similar to vary between.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.WindVariable">
+            <summary>
+            Represents wind variability between values.
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="F:MetarDecoder.WindVariable._FromDirection">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.WindVariable._ToDirection">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.WindVariable.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.WindVariable.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.WindVariable.FromDirection">
+            <summary>
+             Sets/gets FromDirection value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.WindVariable.ToDirection">
+            <summary>
+             Sets/gets ToDirection value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Visibility">
+            <summary>
+            Describes visibility.
+            </summary>
+            <seealso cref="T:MetarDecoder.TrendVisibility"/>
+        </member>
+        <member name="F:MetarDecoder.Visibility._OtherDistance">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility._OtherWayRestriction">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility._Runways">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.Visibility.SetMeters(System.Int32)">
+            <summary>
+            Set distance in meters. Sets EU style.
+            </summary>
+            <param name="distance">Visibility distance.</param>
+        </member>
+        <member name="M:MetarDecoder.Visibility.SetMeters(System.Int32,MetarDecoder.Visibility.eDirection)">
+            <summary>
+            Sets distance in meters with direction specification.
+            </summary>
+            <param name="distance">Distance</param>
+            <param name="way">Direction specification.</param>
+        </member>
+        <member name="M:MetarDecoder.Visibility.SetMeters(System.Int32,MetarDecoder.Visibility.eDirection,System.Int32,MetarDecoder.Visibility.eDirection)">
+            <summary>
+            Sets distance in meters with direction specification.
+            </summary>
+            <param name="distance">Distance</param>
+            <param name="way">Direction specification.</param>
+            <param name="secondDistance">Other visibility</param>
+            <param name="secondWay">Other visibility direction</param>
+        </member>
+        <member name="M:MetarDecoder.Visibility.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Visibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.Visibility.DirectorySpecification">
+            <summary>
+             Sets/gets directory specification value. (e.g. 3000NE). Null if not used.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Visibility.OtherDistance">
+            <summary>
+             Sets/gets other direction measured distance (e.g. numeric second part in 3000NE 1200S). Null if not used.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Visibility.OtherWayRestriction">
+            <summary>
+             Sets/gets other measured distance's direction (e.g. postfix of second part in 3000NE 1200S). Null if not used.
+             Must be used when OtherDistance is used.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Visibility.Runways">
+            <summary>
+             Sets/gets runway designator.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Visibility.eDirection">
+            <summary>
+            Represents world direction
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.N">
+            <summary>
+            North
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.NE">
+            <summary>
+            Northeast
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.E">
+            <summary>
+            East
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.SE">
+            <summary>
+            Southeast
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.S">
+            <summary>
+            South
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.SW">
+            <summary>
+            Southwest
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.W">
+            <summary>
+            West
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Visibility.eDirection.NW">
+            <summary>
+            Northwest
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.WindShearInfo">
+            <summary>
+            Represents information about windshears in metar.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.WindShearInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.WindShearInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.WindShearInfo.IsAllRunways">
+            <summary>
+             Sets/gets if winshear warning is true for all runways (WS ALL RWY). If so, collection data are ignored.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.ePhenomCollection">
+            <summary>
+            Represents set of items defining the phenomen. E.g. +RAHZ.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.ePhenomCollection.Add(System.String)">
+            <summary>
+            Decodes and adds new phenomenom from string (e.g. from +RAHZ).
+            </summary>
+            <param name="value">String value to decode adds.</param>
+        </member>
+        <member name="M:MetarDecoder.ePhenomCollection.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.ePhenomCollection.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="T:MetarDecoder.ePhenomCollection.ePhenom">
+            <summary>
+            All types of phenomens.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.Light">
+            <summary>
+            Light. Value "-"
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.Heavy">
+            <summary>
+            Heavy. Value "+"
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.VC">
+            <summary>
+            In vicinity
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.MI">
+            <summary>
+            Shallow
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.BC">
+            <summary>
+            Patches
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.PR">
+            <summary>
+            Partial
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.DR">
+            <summary>
+            Low drifting
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.BL">
+            <summary>
+            Blowing
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.SH">
+            <summary>
+            Shower
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.TS">
+            <summary>
+            Thunderstorm
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.FZ">
+            <summary>
+            Freezing
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.DZ">
+            <summary>
+            Drizzle
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.RA">
+            <summary>
+            Rain
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.SN">
+            <summary>
+            Snow
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.SG">
+            <summary>
+            Snow grains
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.IC">
+            <summary>
+            Ice crystals
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.PL">
+            <summary>
+            Ice pellets
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.GR">
+            <summary>
+            Hail
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.GS">
+            <summary>
+            Snow pellets
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.BR">
+            <summary>
+            Mist
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.FG">
+            <summary>
+            Fog
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.FU">
+            <summary>
+            Smoke
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.VA">
+            <summary>
+            Volcanic ash.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.DU">
+            <summary>
+            Dust
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.SA">
+            <summary>
+            Sand
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.HZ">
+            <summary>
+            Haze
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.PO">
+            <summary>
+            Dust/sand whirls 
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.SQ">
+            <summary>
+            Squalls
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.FC">
+            <summary>
+            Funnel cloud
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.SS">
+            <summary>
+            Sand storm
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.ePhenomCollection.ePhenom.DS">
+            <summary>
+            Dust storm
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayCondition">
+            <summary>
+            Represents info about runway conditions (contamination, depth and braking action).
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition._Runway">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition._Deposit">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition._Contamination">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition._Depth">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition._Friction">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.RunwayCondition.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.RunwayCondition.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.RunwayCondition.Runway">
+            <summary>
+             Sets/gets Runway name/sign.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayCondition.IsForAllRunways">
+            <summary>
+            True if definition is for all runways.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:MetarDecoder.RunwayCondition.Deposit">
+            <summary>
+             Sets/gets deposit of runway. Null if unknown/not reported (that is / in metar).
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayCondition.Contamination">
+            <summary>
+             Sets/gets contamination level of runway. Null if unknown/not reported (that is / in metar).
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayCondition.Depth">
+            <summary>
+             Sets/gets contamination depth on runway. Null if unknown/not reported (that is // in metar).
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayCondition.Friction">
+            <summary>
+             Sets/gets friction/braking effect of runway. Null if unknown/not reported (that is // in metar).
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayCondition.eDeposit">
+            <summary>
+            Presents runway deposit.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.CleanDry">
+            <summary>
+            Clean dry runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.WetDamp">
+            <summary>
+            Wet runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.WetOrWetPatches">
+            <summary>
+            Wet patches on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.RimeOrFrost">
+            <summary>
+            Rime or frosts on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.DrySnow">
+            <summary>
+            Dry snow on runay.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.WetSnow">
+            <summary>
+            Wet snow on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.Slush">
+            <summary>
+            Slush on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.Ice">
+            <summary>
+            Ice on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.CompactSnow">
+            <summary>
+            Compact snow on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eDeposit.FrozentRutsRidges">
+            <summary>
+            Frozen ruts or ridges on runway.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayCondition.eContamination">
+            <summary>
+            Represents amount of contamination on runway.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.Reserved0">
+            <summary>
+            Reserved, not used.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.LessThan10Percent">
+            <summary>
+            Less than 10%.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.LessThan25Percent">
+            <summary>
+            More than 10% but less than 25%.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.Reserved3">
+            <summary>
+            Reserved, not used.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.Reserved4">
+            <summary>
+            Reserved, not used.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.LessThan50Percent">
+            <summary>
+            More than 25%, but less than 50%.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.Reserved6">
+            <summary>
+            Reserved, not used.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.Reserved7">
+            <summary>
+            Reserved, not used.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.Reserved8">
+            <summary>
+            Reserved, not used.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayCondition.eContamination.MoreThan50Percent">
+            <summary>
+            More than 50% including 100%.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Metar">
+            <summary>
+            Represents metar.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.Metar.Create(System.String)">
+            <summary>
+            Creates metar instance from string.
+            </summary>
+            <param name="metarString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Metar.CheckMetarString(System.String,System.String@)">
+            <summary>
+            Checks if metar string is recognizable by this class.
+            Returns true if success, otherwise false, if failed, and in error variable is error description.
+            </summary>
+            <param name="metarString"></param>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Metar.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Metar.ToInfo">
+            <summary>
+            Returns item in text string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Metar.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.Metar.Type">
+            <summary>
+             Sets/gets Type value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.ICAO">
+            <summary>
+             Sets/gets ICAO value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Date">
+            <summary>
+             Sets/gets Date value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.IsAUTO">
+            <summary>
+             Sets/gets IsAUTO value. The optional code word AUTO shall be inserted before the wind group 
+             when a report contains fully automated observations without human intervention. 
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Wind">
+            <summary>
+             Sets/gets Wind value, including VRB wind, wind varying, and gusts.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Visibility">
+            <summary>
+             Sets/gets Visibility value, including directions.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Phenomens">
+            <summary>
+             Sets/gets Phenomens value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Clouds">
+            <summary>
+             Sets/gets Clouds value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Temperature">
+            <summary>
+             Sets/gets Temperature value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.DewPoint">
+            <summary>
+             Sets/gets DewPoint value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Pressure">
+            <summary>
+             Sets/gets Pressure value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.RePhenomens">
+            <summary>
+             Sets/gets RePhenoms value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.WindShears">
+            <summary>
+             Sets/gets WindShears value, or null if not presented in metar.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.RunwayConditions">
+            <summary>
+             Sets/gets RunwayConditions value, or null if not presented in metar.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Trend">
+            <summary>
+             Sets/gets Trend value. Allways value is in here, when no info found, trend type is null.
+             Trend in metar is required, (NOSIG text is minimum).
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Metar.Remark">
+            <summary>
+             Sets/gets Remark value (without RMK prefix), or null if not presented in metar.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Metar.eType">
+            <summary>
+            Types of metar. Now METAR only supported, SPECI not supported.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Metar.eType.METAR">
+            <summary>
+            Metar type.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.DayTime">
+            <summary>
+            Represents day-time information when metar was presented.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.DayTime.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.DayTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.DayTime.Day">
+            <summary>
+             Sets/gets Day value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.DayTime.Hour">
+            <summary>
+             Sets/gets Hour value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.DayTime.Minute">
+            <summary>
+             Sets/gets Minute value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Cloud">
+            <summary>
+            Represents one cloud (e.g. OVC040TCU).
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.Cloud.SetClouds(MetarDecoder.Cloud.eType,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Sets cloud type.
+            </summary>
+            <param name="type">Type of cloud.</param>
+            <param name="altitude">Altitude in hunderds of ft.</param>
+            <param name="isCB">True if cloud is cumulonimbus (CB).</param>
+            <param name="isTCU">True if cloud is towering cumulus (TCU).</param>
+        </member>
+        <member name="M:MetarDecoder.Cloud.SetClouds(MetarDecoder.Cloud.eType,System.Int32)">
+            <summary>
+            Sets cloud type.
+            </summary>
+            <param name="type">Type of cloud.</param>
+            <param name="altitude">Altitude in hunderds of ft.</param>
+        </member>
+        <member name="M:MetarDecoder.Cloud.SetClouds(System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Sets cloud type.
+            </summary>
+            <param name="type">Type of cloud (as string).</param>
+            <param name="altitude">Altitude in hunderds of ft.</param>
+            <param name="isCB">True if cloud is cumulonimbus (CB).</param>
+            <param name="isTCU">True if cloud is towering cumulus (TCU).</param>
+        </member>
+        <member name="M:MetarDecoder.Cloud.SetClouds(System.String,System.Int32)">
+            <summary>
+            Sets cloud type.
+            </summary>
+            <param name="type">Type of cloud (as string).</param>
+            <param name="altitude">Altitude in hunderds of ft.</param>
+        </member>
+        <member name="M:MetarDecoder.Cloud.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.Cloud.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.Cloud.IsCB">
+            <summary>
+             Sets/gets if cloud is cumulonimbus. That is, if there is prefix with CB, e.g. OVC040CB.
+            </summary>
+            <remarks>
+            This property cannot be true if IsTCU is true.
+            </remarks>
+        </member>
+        <member name="P:MetarDecoder.Cloud.IsTCU">
+            <summary>
+             Sets/gets if cloud is towering cumulus. That is, if there is prefix with TCU, e.g. OVC040TCU.
+            </summary>
+            <remarks>
+            This property cannot be true if IsCB is true.
+            </remarks>
+        </member>
+        <member name="P:MetarDecoder.Cloud.Altitude">
+            <summary>
+             Sets/gets Altitude value, in hundreds of feet, e.g. OVC040 for 4000 ft.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.Cloud.Type">
+            <summary>
+             Sets/gets type of clouds. <see cref="T:MetarDecoder.Cloud.eType"/>
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.Cloud.eType">
+            <summary>
+            List of types of clouds.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Cloud.eType.FEW">
+            <summary>
+            Few clouds.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Cloud.eType.SCT">
+            <summary>
+            Scattered clouds.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Cloud.eType.BKN">
+            <summary>
+            Broken clouds.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.Cloud.eType.OVC">
+            <summary>
+            Overcast clouds.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.PressureInfo">
+            <summary>
+            Represents pressure info.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.PressureInfo.Set(System.Double,MetarDecoder.PressureInfo.eUnit)">
+            <summary>
+            Sets pressure value.
+            </summary>
+            <param name="value">Pressure value.</param>
+            <param name="unit">Pressure unit.</param>
+        </member>
+        <member name="M:MetarDecoder.PressureInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.PressureInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.PressureInfo.Unit">
+            <summary>
+             Sets/gets Unit value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.PressureInfo.Value">
+            <summary>
+             Sets/gets pressure value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.PressureInfo.QNH">
+            <summary>
+             Sets/gets QNH value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.PressureInfo.mmHq">
+            <summary>
+             Sets/gets mmHq value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.PressureInfo.eUnit">
+            <summary>
+            Pressure unit.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.PressureInfo.eUnit.hPa">
+            <summary>
+            Hectopascals. E.g. for Q1013
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.PressureInfo.eUnit.mmHq">
+            <summary>
+            Milimeters of Hq. E.g. for A29.92
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.CloudInfo">
+            <summary>
+            Represents information about clouds.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.CloudInfo.SetSKC">
+            <summary>
+            Sets "sky clear". <see cref="P:MetarDecoder.CloudInfo.IsSKC"/>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.CloudInfo.SetNSC">
+            <summary>
+            Sets "no significand cloud". <see cref="P:MetarDecoder.CloudInfo.IsNSC"/>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.CloudInfo.SetVerticalVisibility(System.Nullable{System.Int32})">
+            <summary>
+            Sets vertical visibility. Argument is null if not known (that is VV///).
+            </summary>
+            <param name="distance">Distance in hounded feet. Null if not known.</param>
+        </member>
+        <member name="M:MetarDecoder.CloudInfo.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.CloudInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.CloudInfo.IsSKC">
+            <summary>
+             Gets "is sky clear" value. That is SKC in metar.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.CloudInfo.IsNSC">
+            <summary>
+             Gets "no significant cloud" value. That is NSC in metar.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.CloudInfo.IsVerticalVisibility">
+            <summary>
+             Gets if cloud info is represented by vertical visibility. E.g. VV040 in metar.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.CloudInfo.VVDistance">
+            <summary>
+             Gets vertical visibility distance (in houndreds of feet). E.g. VV040. 
+             If not known, value is null. That is VV/// in metar.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.NonNegInt">
+            <summary>
+            Zero-value or positive integer.
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.NonNegInt.op_Implicit(MetarDecoder.NonNegInt)~System.Int32">
+            <summary>
+            Implicit conversion into integer.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.NonNegInt.op_Implicit(System.Int32)~MetarDecoder.NonNegInt">
+            <summary>
+            Explicit conversion from integer.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.NonNegInt.ToString(System.String)">
+            <summary>
+            Returns string represention of this value.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MetarDecoder.NonNegInt.Value">
+            <summary>
+             Sets/gets Value value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.TrendTime">
+            <summary>
+            Represents trend time information.
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="F:MetarDecoder.TrendTime._Hour">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendTime._Minute">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.TrendTime.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.TrendTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.TrendTime.Type">
+            <summary>
+             Sets/gets time type.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendTime.Hour">
+            <summary>
+             Sets/gets Hour value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.TrendTime.Minute">
+            <summary>
+             Sets/gets Minute value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.TrendTime.eType">
+            <summary>
+            Type of trend time.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendTime.eType.FM">
+            <summary>
+            From date/time
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendTime.eType.TL">
+            <summary>
+            Until date/time
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.TrendTime.eType.AT">
+            <summary>
+            At date/time
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayVisibility">
+            <summary>
+            Represents runway visibility information.
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility._Distance">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility._VariableVisibility">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility._Runway">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility._IsInFeet">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.RunwayVisibility.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.RunwayVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.RunwayVisibility.DeviceMeasurementRestriction">
+            <summary>
+             Sets/gets device measurement restriction. Null if not used.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayVisibility.Tendency">
+            <summary>
+             Sets/gets visibility tendency value. Null if not used.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayVisibility.Distance">
+            <summary>
+             Sets/gets Visibility value.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayVisibility.VariableVisibility">
+            <summary>
+             Sets/gets VariableVisibility value. Null if visibility does not vary.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayVisibility.Runway">
+            <summary>
+             Sets/gets Runway designator.
+            </summary>
+        </member>
+        <member name="P:MetarDecoder.RunwayVisibility.IsInFeet">
+            <summary>
+             Sets/gets true if visibility is in feet. Used in US.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayVisibility.eTendency">
+            <summary>
+            Represents tendency of visibility.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility.eTendency.U">
+            <summary>
+            Increasing tendency
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility.eTendency.D">
+            <summary>
+            Decreasing tendency
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility.eTendency.N">
+            <summary>
+            No change expected-tendency.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.RunwayVisibility.eDeviceMeasurementRestriction">
+            <summary>
+            Represents measuring device restriction.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility.eDeviceMeasurementRestriction.M">
+            <summary>
+            If used, visibility is at best at this value.
+            Device cannot measure less value.
+            </summary>
+        </member>
+        <member name="F:MetarDecoder.RunwayVisibility.eDeviceMeasurementRestriction.P">
+            <summary>
+            If used, visibility is at worse at this value.
+            Device cannot measure bigger value.
+            </summary>
+        </member>
+        <member name="T:MetarDecoder.WindShear">
+            <summary>
+            Represents windshear information for one runway.
+            </summary>
+            <seealso cref="T:MetarDecoder.MetarItem"/>
+        </member>
+        <member name="F:MetarDecoder.WindShear._Runway">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MetarDecoder.WindShear.ToMetar">
+            <summary>
+            Returns item in metar string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MetarDecoder.WindShear.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Proceed sanity check of inserted values.
+            </summary>
+            <param name="errors">Found errors.</param>
+            <param name="warnings">Found warnings.</param>
+        </member>
+        <member name="P:MetarDecoder.WindShear.Runway">
+            <summary>
+             Sets/gets runway designator.
+            </summary>
+        </member>
+    </members>
+</doc>
