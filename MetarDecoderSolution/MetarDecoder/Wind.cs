@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using ESystem;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents information about wind.
   /// </summary>
-  /// <seealso cref="T:MetarDecoder.MetarItem"/>
+  /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
   public class Wind : MetarItem
   {
     #region Nested

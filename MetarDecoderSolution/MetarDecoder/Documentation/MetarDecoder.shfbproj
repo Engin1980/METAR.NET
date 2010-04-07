@@ -18,7 +18,7 @@
     <HtmlHelpName>Documentation</HtmlHelpName>
     <FrameworkVersion>3.5</FrameworkVersion>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\MetarDecoder.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\MetarDecoder.csproj" />
     </DocumentationSources>
   </PropertyGroup>
   <!-- There are no properties for these two groups but they need to appear in

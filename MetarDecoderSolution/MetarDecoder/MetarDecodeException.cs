@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Raised when error captured during metar decode process.
@@ -11,14 +11,14 @@ namespace MetarDecoder
   public class MetarDecodeException : Exception
   {
     /// <summary>
-    /// Initializes a new Instance of MetarDecoder.MetarDecodeException
+    /// Initializes a new Instance of ENG.Metar.Decoder.MetarDecodeException
     /// </summary>
     /// <param name="metar"></param>
     /// <param name="error"></param>
     public MetarDecodeException(string metar, string error) 
       :this (metar, error, null) {}
     /// <summary>
-    /// Initializes a new Instance of MetarDecoder.MetarDecodeException
+    /// Initializes a new Instance of ENG.Metar.Decoder.MetarDecodeException
     /// </summary>
     /// <param name="metar"></param>
     /// <param name="error"></param>

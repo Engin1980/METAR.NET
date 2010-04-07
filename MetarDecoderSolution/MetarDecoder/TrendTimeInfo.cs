@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents set of time infos in metar trend.

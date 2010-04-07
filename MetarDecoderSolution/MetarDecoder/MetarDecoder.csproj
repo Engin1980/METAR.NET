@@ -8,8 +8,8 @@
     <ProjectGuid>{96A6EC13-8871-4695-83BE-F2A3907D94B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MetarDecoder</RootNamespace>
-    <AssemblyName>MetarDecoder</AssemblyName>
+    <RootNamespace>ENG.Metar.Decoder</RootNamespace>
+    <AssemblyName>ENG.Metar.Decoder</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -42,7 +42,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>bin\Debug\MetarDecoder.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\ENG.Metar.Decoder.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

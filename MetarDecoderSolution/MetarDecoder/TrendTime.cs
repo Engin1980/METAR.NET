@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using ESystem;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
 
   /// <summary>
   /// Represents trend time information.
   /// </summary>
-  /// <seealso cref="T:MetarDecoder.MetarItem"/>
+  /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
   public class TrendTime : MetarItem
   {
     /// <summary>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using ESystem;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents pressure info.

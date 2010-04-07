@@ -1,5 +1,0 @@
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\bin\Debug\MetarDownloader.dll
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\bin\Debug\MetarDownloader.pdb
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\obj\Debug\MetarDownloader.dll
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\obj\Debug\MetarDownloader.pdb

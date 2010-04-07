@@ -5,7 +5,7 @@ using System.Text;
 using System.Net;
 using System.IO;
 
-namespace MetarDownloader
+namespace ENG.Metar.Downloader
 {
   /// <summary>
   /// Class responsible for downloading metar information from source.
@@ -32,7 +32,7 @@ namespace MetarDownloader
     private DownloadMetarCompletedDelegate aDel;
 
     /// <summary>
-    /// Initializes a new Instance of MetarDownloader.Downloader
+    /// Initializes a new Instance of ENG.Metar.Downloader.Downloader
     /// </summary>
     /// <param name="metarRetriever">Metar retrievere used to decode metar from source stream</param>
     public Downloader(IMetarRetrieve metarRetriever)

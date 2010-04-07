@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDownloader
+namespace ENG.Metar.Downloader
 {
   /// <summary>
   /// Raised when some error occurs during metar downloading or decoding.
@@ -13,18 +13,18 @@ namespace MetarDownloader
   public class MetarDownloadException : ApplicationException
   {
     /// <summary>
-    /// Initializes a new Instance of MetarDownloader.MetarDownloadException
+    /// Initializes a new Instance of ENG.Metar.Downloader.MetarDownloadException
     /// </summary>
     /// <param name="message"></param>
     public MetarDownloadException(string message) : base(message) { }
     /// <summary>
-    /// Initializes a new Instance of MetarDownloader.MetarDownloadException
+    /// Initializes a new Instance of ENG.Metar.Downloader.MetarDownloadException
     /// </summary>
     /// <param name="message"></param>
     /// <param name="inner"></param>
     public MetarDownloadException(string message, Exception inner) : base(message, inner) { }
     /// <summary>
-    /// Initializes a new Instance of MetarDownloader.MetarDownloadException
+    /// Initializes a new Instance of ENG.Metar.Downloader.MetarDownloadException
     /// </summary>
     /// <param name="info"></param>
     /// <param name="context"></param>

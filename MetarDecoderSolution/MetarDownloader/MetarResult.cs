@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDownloader
+namespace ENG.Metar.Downloader
 {
   /// <summary>
   /// Represents result of async metar downloading.
@@ -38,7 +38,7 @@ namespace MetarDownloader
     }
 
     /// <summary>
-    /// Initializes a new Instance of MetarDownloader.MetarResult
+    /// Initializes a new Instance of ENG.Metar.Downloader.MetarResult
     /// </summary>
     /// <param name="ex">Exception if async download was not successfull.</param>
     public MetarResult(Exception ex)
@@ -47,7 +47,7 @@ namespace MetarDownloader
       this.Result = null;
     }
     /// <summary>
-    /// Initializes a new Instance of MetarDownloader.MetarResult
+    /// Initializes a new Instance of ENG.Metar.Downloader.MetarResult
     /// </summary>
     /// <param name="metar">Metar if async download was successfull.</param>
     public MetarResult(string metar)

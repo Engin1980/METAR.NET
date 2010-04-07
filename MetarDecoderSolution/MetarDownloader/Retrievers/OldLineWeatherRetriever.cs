@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace MetarDownloader.Retrievers
+namespace ENG.Metar.Downloader.Retrievers
 {
   /// <summary>
   /// This class is able to download metar from web OldLineWeather.
   /// </summary>
-  /// <seealso cref="T:MetarDownloader.IMetarRetrieve"/>
+  /// <seealso cref="T:ENG.Metar.Downloader.IMetarRetrieve"/>
   public class OldLineWeatherRetriever : IMetarRetrieve
   {
     #region IMetarRetrieve Members

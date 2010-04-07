@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Describes visibility.
   /// </summary>
-  /// <seealso cref="T:MetarDecoder.TrendVisibility"/>
+  /// <seealso cref="T:ENG.Metar.Decoder.TrendVisibility"/>
   public class Visibility : TrendVisibility
   {
     #region Properties

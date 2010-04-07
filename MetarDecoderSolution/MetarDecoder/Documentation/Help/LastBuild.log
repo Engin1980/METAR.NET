@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="6.4.2010 23:47:40">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="7.4.2010 23:54:46">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -13,7 +13,7 @@ Source: C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Proje
     Found project 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\MetarDecoder.csproj'
 
 Parsing project files
-    Found assembly 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\MetarDecoder.dll'
+    Found assembly 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ENG.Metar.Decoder.dll'
 
 References to use:
     ESystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL
@@ -25,15 +25,15 @@ References to use:
     System.Xml.Linq
 
 Copying XML comments files
-    C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\MetarDecoder.XML -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.XML
+    C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ENG.Metar.Decoder.xml -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.1875
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -46,18 +46,18 @@ GenerateRefInfo:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:13.1094
+    Last step completed in 00:00:02.0938
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.1094
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     4 attribute nodes removed
     0 explicit interface implementations removed
     84 local and base class EII elements removed
-    Last step completed in 00:00:00.1094
+    Last step completed in 00:00:00.1250
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -70,7 +70,7 @@ TransformManifest:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:06.2188
+    Last step completed in 00:00:02.8281
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
@@ -185,27 +185,27 @@ C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt;
 C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\SplitScreen.js
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Presentation.css
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:01.7969
+    Last step completed in 00:00:00.4531
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.1563
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.1250
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -829,7 +829,7 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'T:Microsoft.Build.Framework.RequiredRuntimeAttribute' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
-  Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.XML'.
+  Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml'.
   Info: CopyFromIndexComponent: Indexed 131670 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
@@ -907,518 +907,518 @@ BuildReferenceTopics:
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
   Info: ResolveReferenceLinksComponent2: Loaded 170536 reference targets.
   Info: SaveComponent: Instantiating component.
-  Info: BuildAssembler: Building topic N:MetarDecoder
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:MetarDecoder
-  Info: BuildAssembler: Building topic T:MetarDecoder.Cloud
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.Cloud
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Cloud.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.Cloud
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.Cloud
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Cloud.SetClouds
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Cloud.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.Cloud.Altitude
-  Info: BuildAssembler: Building topic P:MetarDecoder.Cloud.IsCB
-  Info: BuildAssembler: Building topic P:MetarDecoder.Cloud.IsTCU
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.SetClouds(MetarDecoder.Cloud.eType,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.SetClouds(MetarDecoder.Cloud.eType,System.Int32,System.Boolean,System.Boolean)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.SetClouds(System.String,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.SetClouds(System.String,System.Int32,System.Boolean,System.Boolean)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Cloud.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Cloud.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.Cloud.Type
-  Info: BuildAssembler: Building topic T:MetarDecoder.Cloud.eType
-  Info: BuildAssembler: Building topic T:MetarDecoder.CloudInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.CloudInfo
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.CloudInfo.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.CloudInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.CloudInfo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.BinarySearch
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.CopyTo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.FindIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.FindLastIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.IndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.LastIndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.Reverse
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.CloudInfo.Sort
-  Info: BuildAssembler: Building topic M:MetarDecoder.CloudInfo.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.CloudInfo.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.CloudInfo.IsNSC
-  Info: BuildAssembler: Building topic P:MetarDecoder.CloudInfo.IsSKC
-  Info: BuildAssembler: Building topic P:MetarDecoder.CloudInfo.IsVerticalVisibility
-  Info: BuildAssembler: Building topic M:MetarDecoder.CloudInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.CloudInfo.SetNSC
-  Info: BuildAssembler: Building topic M:MetarDecoder.CloudInfo.SetSKC
-  Info: BuildAssembler: Building topic M:MetarDecoder.CloudInfo.SetVerticalVisibility(System.Nullable{System.Int32})
-  Info: BuildAssembler: Building topic M:MetarDecoder.CloudInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.CloudInfo.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.CloudInfo.VVDistance
-  Info: BuildAssembler: Building topic T:MetarDecoder.DayTime
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.DayTime
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.DayTime.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.DayTime
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.DayTime
-  Info: BuildAssembler: Building topic M:MetarDecoder.DayTime.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.DayTime.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.DayTime.Day
-  Info: BuildAssembler: Building topic P:MetarDecoder.DayTime.Hour
-  Info: BuildAssembler: Building topic P:MetarDecoder.DayTime.Minute
-  Info: BuildAssembler: Building topic M:MetarDecoder.DayTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.DayTime.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.DayTime.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.ePhenomCollection
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.ePhenomCollection
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.ePhenomCollection.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.ePhenomCollection
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.ePhenomCollection
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.Add
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.BinarySearch
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.CopyTo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.FindIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.FindLastIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.IndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.LastIndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.Reverse
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.ePhenomCollection.Sort
-  Info: BuildAssembler: Building topic M:MetarDecoder.ePhenomCollection.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.ePhenomCollection.#ctor
-  Info: BuildAssembler: Building topic M:MetarDecoder.ePhenomCollection.Add(System.String)
-  Info: BuildAssembler: Building topic M:MetarDecoder.ePhenomCollection.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.ePhenomCollection.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.ePhenomCollection.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.ePhenomCollection.ePhenom
-  Info: BuildAssembler: Building topic T:MetarDecoder.Extensions
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.Extensions
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.Extensions
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Extensions.GetIntValue
-  Info: BuildAssembler: Building topic M:MetarDecoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;builder&quot;/&gt; documentation for M:MetarDecoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;text&quot;/&gt; documentation for M:MetarDecoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;grp&quot;/&gt; documentation for M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;grp&quot;/&gt; documentation for M:MetarDecoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)
-  Info: BuildAssembler: Building topic T:MetarDecoder.Metar
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.Metar
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Metar.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.Metar
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.Metar
-  Info: BuildAssembler: Building topic M:MetarDecoder.Metar.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Metar.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Clouds
-  Info: BuildAssembler: Building topic M:MetarDecoder.Metar.Create(System.String)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Metar.Create(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarString&quot;/&gt; documentation for M:MetarDecoder.Metar.Create(System.String)
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Date
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.DewPoint
-  Info: BuildAssembler: Building topic M:MetarDecoder.Metar.CheckMetarString(System.String,System.String@)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Metar.CheckMetarString(System.String,System.String@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarString&quot;/&gt; documentation for M:MetarDecoder.Metar.CheckMetarString(System.String,System.String@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;error&quot;/&gt; documentation for M:MetarDecoder.Metar.CheckMetarString(System.String,System.String@)
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.ICAO
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.IsAUTO
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Phenomens
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Pressure
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Remark
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.RePhenomens
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.RunwayConditions
-  Info: BuildAssembler: Building topic M:MetarDecoder.Metar.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Temperature
-  Info: BuildAssembler: Building topic M:MetarDecoder.Metar.ToInfo
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Metar.ToInfo
-  Info: BuildAssembler: Building topic M:MetarDecoder.Metar.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Metar.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Trend
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Type
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Visibility
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.Wind
-  Info: BuildAssembler: Building topic P:MetarDecoder.Metar.WindShears
-  Info: BuildAssembler: Building topic T:MetarDecoder.Metar.eType
-  Info: BuildAssembler: Building topic T:MetarDecoder.MetarDecodeException
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.MetarDecodeException
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.MetarDecodeException
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.MetarDecodeException
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.MetarDecodeException.#ctor
-  Info: BuildAssembler: Building topic M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metar&quot;/&gt; documentation for M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;error&quot;/&gt; documentation for M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String)
-  Info: BuildAssembler: Building topic M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metar&quot;/&gt; documentation for M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;error&quot;/&gt; documentation for M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;innerException&quot;/&gt; documentation for M:MetarDecoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
-  Info: BuildAssembler: Building topic T:MetarDecoder.MetarItem
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.MetarItem
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.MetarItem
-  Info: BuildAssembler: Building topic M:MetarDecoder.MetarItem.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.MetarItem.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.MetarItem.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.NonNegInt
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.NonNegInt
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.NonNegInt
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.NonNegInt
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.NonNegInt.ToString
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.NonNegInt.op_Implicit
-  Info: BuildAssembler: Building topic M:MetarDecoder.NonNegInt.op_Implicit(MetarDecoder.NonNegInt)~System.Int32
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.NonNegInt.op_Implicit(MetarDecoder.NonNegInt)~System.Int32
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:MetarDecoder.NonNegInt.op_Implicit(MetarDecoder.NonNegInt)~System.Int32
-  Info: BuildAssembler: Building topic M:MetarDecoder.NonNegInt.op_Implicit(System.Int32)~MetarDecoder.NonNegInt
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.NonNegInt.op_Implicit(System.Int32)~MetarDecoder.NonNegInt
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:MetarDecoder.NonNegInt.op_Implicit(System.Int32)~MetarDecoder.NonNegInt
-  Info: BuildAssembler: Building topic M:MetarDecoder.NonNegInt.ToString(System.String)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.NonNegInt.ToString(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;format&quot;/&gt; documentation for M:MetarDecoder.NonNegInt.ToString(System.String)
-  Info: BuildAssembler: Building topic P:MetarDecoder.NonNegInt.Value
-  Info: BuildAssembler: Building topic T:MetarDecoder.PhenomInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.PhenomInfo
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.PhenomInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.PhenomInfo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.BinarySearch
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.CopyTo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.FindIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.FindLastIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.IndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.LastIndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.Reverse
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.PhenomInfo.Sort
-  Info: BuildAssembler: Building topic M:MetarDecoder.PhenomInfo.#ctor(System.Boolean)
-  Info: BuildAssembler: Building topic P:MetarDecoder.PhenomInfo.IsNSW
-  Info: BuildAssembler: Building topic M:MetarDecoder.PhenomInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.PhenomInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.PhenomInfo.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.PressureInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.PressureInfo
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.PressureInfo.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.PressureInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.PressureInfo
-  Info: BuildAssembler: Building topic M:MetarDecoder.PressureInfo.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.PressureInfo.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.PressureInfo.mmHq
-  Info: BuildAssembler: Building topic P:MetarDecoder.PressureInfo.QNH
-  Info: BuildAssembler: Building topic M:MetarDecoder.PressureInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.PressureInfo.Set(System.Double,MetarDecoder.PressureInfo.eUnit)
-  Info: BuildAssembler: Building topic M:MetarDecoder.PressureInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.PressureInfo.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.PressureInfo.Unit
-  Info: BuildAssembler: Building topic P:MetarDecoder.PressureInfo.Value
-  Info: BuildAssembler: Building topic T:MetarDecoder.PressureInfo.eUnit
-  Info: BuildAssembler: Building topic T:MetarDecoder.Racional
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.Racional
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.Racional
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.Racional
-  Info: BuildAssembler: Building topic Fields.T:MetarDecoder.Racional
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Racional.op_Addition
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Racional.op_Division
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Racional.op_Implicit
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Racional.op_Multiply
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Racional.op_Subtraction
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Racional.ToString
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.#ctor(System.Int32,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;numerator&quot;/&gt; documentation for M:MetarDecoder.Racional.#ctor(System.Int32,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;denominator&quot;/&gt; documentation for M:MetarDecoder.Racional.#ctor(System.Int32,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.Abbreviate
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.Abbreviate
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.CompareTo(MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.CompareTo(MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;other&quot;/&gt; documentation for M:MetarDecoder.Racional.CompareTo(MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic F:MetarDecoder.Racional.Denominator
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.Equals(System.Object)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.FromDouble(System.Double)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.FromDouble(System.Double)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;val&quot;/&gt; documentation for M:MetarDecoder.Racional.FromDouble(System.Double)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.GetHashCode
-  Info: BuildAssembler: Building topic F:MetarDecoder.Racional.Numerator
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Addition(MetarDecoder.Racional,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Division(MetarDecoder.Racional,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Division(System.Int32,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Division(System.Int32,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Division(System.Int32,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Division(System.Int32,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Equality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Equality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Equality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Equality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Explicit(MetarDecoder.Racional)~System.Int32
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Explicit(MetarDecoder.Racional)~System.Int32
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Explicit(MetarDecoder.Racional)~System.Int32
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_GreaterThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_GreaterThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_GreaterThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_GreaterThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_GreaterThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_GreaterThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_GreaterThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_GreaterThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Implicit(MetarDecoder.Racional)~System.Double
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Implicit(MetarDecoder.Racional)~System.Double
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Implicit(MetarDecoder.Racional)~System.Double
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Implicit(System.Int32)~MetarDecoder.Racional
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Implicit(System.Int32)~MetarDecoder.Racional
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Implicit(System.Int32)~MetarDecoder.Racional
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Inequality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Inequality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Inequality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Inequality(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_LessThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_LessThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_LessThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_LessThan(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_LessThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_LessThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_LessThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_LessThanOrEqual(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Multiply(MetarDecoder.Racional,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,System.Int32)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(MetarDecoder.Racional,System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.op_Subtraction(System.Int32,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(System.Int32,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(System.Int32,MetarDecoder.Racional)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:MetarDecoder.Racional.op_Subtraction(System.Int32,MetarDecoder.Racional)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.ToString
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.ToString
-  Info: BuildAssembler: Building topic M:MetarDecoder.Racional.ToString(System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Racional.ToString(System.Boolean)
-  Info: BuildAssembler: Building topic P:MetarDecoder.Racional.Value
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayCondition
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.RunwayCondition
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.RunwayCondition.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.RunwayCondition
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.RunwayCondition
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayCondition.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.RunwayCondition.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayCondition.Contamination
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayCondition.Deposit
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayCondition.Depth
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayCondition.Friction
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayCondition.IsForAllRunways
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayCondition.Runway
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayCondition.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayCondition.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.RunwayCondition.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayCondition.eContamination
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayCondition.eDeposit
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayConditionInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.RunwayConditionInfo
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.RunwayConditionInfo.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.RunwayConditionInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.RunwayConditionInfo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.BinarySearch
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.CopyTo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.FindIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.FindLastIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.IndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.LastIndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.Reverse
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.RunwayConditionInfo.Sort
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayConditionInfo.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.RunwayConditionInfo.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayConditionInfo.IsSNOCLO
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayConditionInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayConditionInfo.ToInfo
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.RunwayConditionInfo.ToInfo
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayConditionInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.RunwayConditionInfo.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayVisibility
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.RunwayVisibility
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.RunwayVisibility.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.RunwayVisibility
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.RunwayVisibility
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayVisibility.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.RunwayVisibility.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayVisibility.DeviceMeasurementRestriction
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayVisibility.Distance
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayVisibility.IsInFeet
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayVisibility.Runway
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayVisibility.Tendency
-  Info: BuildAssembler: Building topic M:MetarDecoder.RunwayVisibility.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.RunwayVisibility.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.RunwayVisibility.VariableVisibility
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayVisibility.eDeviceMeasurementRestriction
-  Info: BuildAssembler: Building topic T:MetarDecoder.RunwayVisibility.eTendency
-  Info: BuildAssembler: Building topic T:MetarDecoder.TrendInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.TrendInfo
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendInfo.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.TrendInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.TrendInfo
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendInfo.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendInfo.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendInfo.Clouds
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendInfo.Phenomens
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendInfo.Times
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendInfo.ToInfo
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.TrendInfo.ToInfo
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.TrendInfo.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendInfo.Type
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendInfo.Visibility
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendInfo.Wind
-  Info: BuildAssembler: Building topic T:MetarDecoder.TrendInfo.eType
-  Info: BuildAssembler: Building topic T:MetarDecoder.TrendTime
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.TrendTime
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendTime.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.TrendTime
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.TrendTime
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendTime.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendTime.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendTime.Hour
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendTime.Minute
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendTime.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.TrendTime.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendTime.Type
-  Info: BuildAssembler: Building topic T:MetarDecoder.TrendTime.eType
-  Info: BuildAssembler: Building topic T:MetarDecoder.TrendTimeInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.TrendTimeInfo
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendTimeInfo.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.TrendTimeInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.TrendTimeInfo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.BinarySearch
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.CopyTo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.FindIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.FindLastIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.IndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.LastIndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.Reverse
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendTimeInfo.Sort
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendTimeInfo.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendTimeInfo.#ctor
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendTimeInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendTimeInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.TrendTimeInfo.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.TrendVisibility
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.TrendVisibility
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendVisibility.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.TrendVisibility
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.TrendVisibility
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.TrendVisibility.SetMiles
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.TrendVisibility.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendVisibility.Distance
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendVisibility.IsClear
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendVisibility.IsDevicesMinimumValue
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SetCAVOK
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SetClear(System.Boolean)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SetMeters(System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SetMiles(MetarDecoder.Racional,System.Boolean)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SetMiles(System.Int32,System.Boolean)
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.SetSKC
-  Info: BuildAssembler: Building topic M:MetarDecoder.TrendVisibility.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.TrendVisibility.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.TrendVisibility.UseEUStyle
-  Info: BuildAssembler: Building topic T:MetarDecoder.Visibility
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.Visibility
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Visibility.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.Visibility
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.Visibility
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Visibility.SetMiles
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.Visibility.SetMeters
-  Info: BuildAssembler: Building topic M:MetarDecoder.Visibility.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Visibility.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.Visibility.DirectorySpecification
-  Info: BuildAssembler: Building topic P:MetarDecoder.Visibility.OtherDistance
-  Info: BuildAssembler: Building topic P:MetarDecoder.Visibility.OtherWayRestriction
-  Info: BuildAssembler: Building topic P:MetarDecoder.Visibility.Runways
-  Info: BuildAssembler: Building topic M:MetarDecoder.Visibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Visibility.SetMeters(System.Int32)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Visibility.SetMeters(System.Int32,MetarDecoder.Visibility.eDirection)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Visibility.SetMeters(System.Int32,MetarDecoder.Visibility.eDirection,System.Int32,MetarDecoder.Visibility.eDirection)
-  Info: BuildAssembler: Building topic M:MetarDecoder.Visibility.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Visibility.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.Visibility.eDirection
-  Info: BuildAssembler: Building topic T:MetarDecoder.Wind
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.Wind
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Wind.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.Wind
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.Wind
-  Info: BuildAssembler: Building topic M:MetarDecoder.Wind.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.Wind.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.Direction
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.GustSpeed
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.IsVariable
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.IsVarying
-  Info: BuildAssembler: Building topic M:MetarDecoder.Wind.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.Speed
-  Info: BuildAssembler: Building topic M:MetarDecoder.Wind.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.Wind.ToMetar
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.Unit
-  Info: BuildAssembler: Building topic P:MetarDecoder.Wind.Variability
-  Info: BuildAssembler: Building topic T:MetarDecoder.Wind.eUnit
-  Info: BuildAssembler: Building topic T:MetarDecoder.WindShear
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.WindShear
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.WindShear.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.WindShear
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.WindShear
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindShear.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.WindShear.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.WindShear.Runway
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindShear.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindShear.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.WindShear.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.WindShearInfo
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.WindShearInfo
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.WindShearInfo.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.WindShearInfo
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.WindShearInfo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.BinarySearch
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.CopyTo
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.FindIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.FindLastIndex
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.IndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.LastIndexOf
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.Reverse
-  Info: BuildAssembler: Building topic Overload:MetarDecoder.WindShearInfo.Sort
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindShearInfo.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.WindShearInfo.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.WindShearInfo.IsAllRunways
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindShearInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindShearInfo.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.WindShearInfo.ToMetar
-  Info: BuildAssembler: Building topic T:MetarDecoder.WindVariable
-  Info: BuildAssembler: Building topic AllMembers.T:MetarDecoder.WindVariable
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.WindVariable.#ctor
-  Info: BuildAssembler: Building topic Methods.T:MetarDecoder.WindVariable
-  Info: BuildAssembler: Building topic Properties.T:MetarDecoder.WindVariable
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindVariable.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:MetarDecoder.WindVariable.#ctor
-  Info: BuildAssembler: Building topic P:MetarDecoder.WindVariable.FromDirection
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindVariable.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
-  Info: BuildAssembler: Building topic P:MetarDecoder.WindVariable.ToDirection
-  Info: BuildAssembler: Building topic M:MetarDecoder.WindVariable.ToMetar
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:MetarDecoder.WindVariable.ToMetar
+  Info: BuildAssembler: Building topic N:ENG.Metar.Decoder
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Cloud
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Cloud
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Cloud.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Cloud
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Cloud
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Cloud.SetClouds
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Cloud.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.Altitude
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.IsCB
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.IsTCU
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(ENG.Metar.Decoder.Cloud.eType,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(ENG.Metar.Decoder.Cloud.eType,System.Int32,System.Boolean,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(System.String,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(System.String,System.Int32,System.Boolean,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Cloud.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.Type
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Cloud.eType
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.CloudInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.CloudInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.CloudInfo.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.CloudInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.CloudInfo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.BinarySearch
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.CopyTo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.FindIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.FindLastIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.IndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.LastIndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.Reverse
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.CloudInfo.Sort
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.CloudInfo.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.IsNSC
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.IsSKC
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.IsVerticalVisibility
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SetNSC
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SetSKC
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SetVerticalVisibility(System.Nullable{System.Int32})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.VVDistance
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.DayTime
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.DayTime
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.DayTime.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.DayTime
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.DayTime
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.DayTime.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.DayTime.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.DayTime.Day
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.DayTime.Hour
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.DayTime.Minute
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.DayTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.DayTime.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.DayTime.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.ePhenomCollection
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.ePhenomCollection
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.ePhenomCollection.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.ePhenomCollection
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.ePhenomCollection
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.Add
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.BinarySearch
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.CopyTo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.FindIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.FindLastIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.IndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.LastIndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.Reverse
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.ePhenomCollection.Sort
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.ePhenomCollection.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.Add(System.String)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.ePhenomCollection.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.ePhenomCollection.ePhenom
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Extensions
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Extensions
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Extensions
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Extensions.GetIntValue
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;builder&quot;/&gt; documentation for M:ENG.Metar.Decoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;text&quot;/&gt; documentation for M:ENG.Metar.Decoder.Extensions.AppendSpaced(System.Text.StringBuilder,System.String)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;grp&quot;/&gt; documentation for M:ENG.Metar.Decoder.Extensions.GetIntValue(System.Text.RegularExpressions.Capture)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;grp&quot;/&gt; documentation for M:ENG.Metar.Decoder.Extensions.GetIntValue(System.Text.RegularExpressions.Group)
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Metar
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Metar
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Metar.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Metar
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Metar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Metar.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Clouds
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.Create(System.String)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.Create(System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarString&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.Create(System.String)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Date
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.DewPoint
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.CheckMetarString(System.String,System.String@)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.CheckMetarString(System.String,System.String@)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarString&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.CheckMetarString(System.String,System.String@)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;error&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.CheckMetarString(System.String,System.String@)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.ICAO
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.IsAUTO
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Phenomens
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Pressure
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Remark
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.RePhenomens
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.RunwayConditions
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Temperature
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToInfo
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Trend
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Type
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Visibility
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Wind
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.WindShears
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Metar.eType
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.MetarDecodeException
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.MetarDecodeException
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.MetarDecodeException
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.MetarDecodeException
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.MetarDecodeException.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metar&quot;/&gt; documentation for M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;error&quot;/&gt; documentation for M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metar&quot;/&gt; documentation for M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;error&quot;/&gt; documentation for M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;innerException&quot;/&gt; documentation for M:ENG.Metar.Decoder.MetarDecodeException.#ctor(System.String,System.String,System.Exception)
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.MetarItem
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.MetarItem
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.MetarItem
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.MetarItem.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.MetarItem.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.MetarItem.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.NonNegInt
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.NonNegInt
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.NonNegInt
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.NonNegInt
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.NonNegInt.ToString
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.NonNegInt.op_Implicit
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.NonNegInt.op_Implicit(ENG.Metar.Decoder.NonNegInt)~System.Int32
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.NonNegInt.op_Implicit(ENG.Metar.Decoder.NonNegInt)~System.Int32
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.NonNegInt.op_Implicit(ENG.Metar.Decoder.NonNegInt)~System.Int32
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.NonNegInt.op_Implicit(System.Int32)~ENG.Metar.Decoder.NonNegInt
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.NonNegInt.op_Implicit(System.Int32)~ENG.Metar.Decoder.NonNegInt
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.NonNegInt.op_Implicit(System.Int32)~ENG.Metar.Decoder.NonNegInt
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.NonNegInt.ToString(System.String)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.NonNegInt.ToString(System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;format&quot;/&gt; documentation for M:ENG.Metar.Decoder.NonNegInt.ToString(System.String)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.NonNegInt.Value
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PhenomInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.PhenomInfo
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.PhenomInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.PhenomInfo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.BinarySearch
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.CopyTo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.FindIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.FindLastIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.IndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.LastIndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.Reverse
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.Sort
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.#ctor(System.Boolean)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PhenomInfo.IsNSW
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PressureInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.PressureInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PressureInfo.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.PressureInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.PressureInfo
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PressureInfo.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.mmHq
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.QNH
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.Set(System.Double,ENG.Metar.Decoder.PressureInfo.eUnit)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PressureInfo.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.Unit
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.Value
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PressureInfo.eUnit
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Racional
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Racional
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Racional
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Racional
+  Info: BuildAssembler: Building topic Fields.T:ENG.Metar.Decoder.Racional
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Addition
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Division
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Implicit
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Multiply
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Subtraction
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.ToString
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.#ctor(System.Int32,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;numerator&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.#ctor(System.Int32,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;denominator&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.#ctor(System.Int32,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Abbreviate
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.Abbreviate
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.CompareTo(ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.CompareTo(ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;other&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.CompareTo(ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic F:ENG.Metar.Decoder.Racional.Denominator
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Equals(System.Object)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.FromDouble(System.Double)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.FromDouble(System.Double)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;val&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.FromDouble(System.Double)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.GetHashCode
+  Info: BuildAssembler: Building topic F:ENG.Metar.Decoder.Racional.Numerator
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(ENG.Metar.Decoder.Racional,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Division(System.Int32,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(System.Int32,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(System.Int32,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Division(System.Int32,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Int32
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Int32
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Int32
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_GreaterThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Implicit(ENG.Metar.Decoder.Racional)~System.Double
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(ENG.Metar.Decoder.Racional)~System.Double
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(ENG.Metar.Decoder.Racional)~System.Double
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Implicit(System.Int32)~ENG.Metar.Decoder.Racional
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(System.Int32)~ENG.Metar.Decoder.Racional
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(System.Int32)~ENG.Metar.Decoder.Racional
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Inequality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Inequality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Inequality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Inequality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_LessThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_LessThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_LessThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_LessThan(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_LessThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_LessThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_LessThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_LessThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Multiply(ENG.Metar.Decoder.Racional,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(ENG.Metar.Decoder.Racional,System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.ToString
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.ToString
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.ToString(System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.ToString(System.Boolean)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Racional.Value
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.RunwayCondition
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayCondition.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.RunwayCondition
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.RunwayCondition
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayCondition.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.Contamination
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.Deposit
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.Depth
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.Friction
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.IsForAllRunways
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.Runway
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayCondition.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition.eContamination
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition.eDeposit
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayConditionInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.RunwayConditionInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayConditionInfo.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.RunwayConditionInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.RunwayConditionInfo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.BinarySearch
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.CopyTo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.FindIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.FindLastIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.IndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.LastIndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.Reverse
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.RunwayConditionInfo.Sort
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayConditionInfo.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayConditionInfo.IsSNOCLO
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.ToInfo
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToInfo
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.RunwayVisibility
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayVisibility.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.RunwayVisibility
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.RunwayVisibility
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayVisibility.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.DeviceMeasurementRestriction
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.Distance
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.IsInFeet
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.Runway
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.Tendency
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayVisibility.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.VariableVisibility
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility.eTendency
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.TrendInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendInfo.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.TrendInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.TrendInfo
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendInfo.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Clouds
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Phenomens
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Times
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.ToInfo
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToInfo
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Type
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Visibility
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Wind
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendInfo.eType
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendTime
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.TrendTime
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendTime.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.TrendTime
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.TrendTime
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendTime.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Hour
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Minute
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTime.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Type
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendTime.eType
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendTimeInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.TrendTimeInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendTimeInfo.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.TrendTimeInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.TrendTimeInfo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.BinarySearch
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.CopyTo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.FindIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.FindLastIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.IndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.LastIndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.Reverse
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.Sort
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendTimeInfo.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendVisibility
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.TrendVisibility
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendVisibility.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.TrendVisibility
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.TrendVisibility
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendVisibility.SetMiles
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendVisibility.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.Distance
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.IsClear
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.IsDevicesMinimumValue
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetCAVOK
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetClear(System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetMeters(System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetMiles(ENG.Metar.Decoder.Racional,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetMiles(System.Int32,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetSKC
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.UseEUStyle
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Visibility
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Visibility
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Visibility.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Visibility
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Visibility
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Visibility.SetMiles
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Visibility.SetMeters
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Visibility.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Visibility.DirectorySpecification
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Visibility.OtherDistance
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Visibility.OtherWayRestriction
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Visibility.Runways
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Visibility.eDirection)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Visibility.eDirection,System.Int32,ENG.Metar.Decoder.Visibility.eDirection)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Visibility.eDirection
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Wind
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Wind
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Wind.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Wind
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Wind
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Wind.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Direction
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.GustSpeed
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.IsVariable
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.IsVarying
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Speed
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Wind.ToMetar
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Unit
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Variability
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Wind.eUnit
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindShear
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.WindShear
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShear.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.WindShear
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.WindShear
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShear.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindShear.Runway
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShear.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindShearInfo
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.WindShearInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShearInfo.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.WindShearInfo
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.WindShearInfo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.BinarySearch
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.CopyTo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.FindIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.FindLastIndex
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.IndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.LastIndexOf
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.Reverse
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.WindShearInfo.Sort
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShearInfo.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindShearInfo.IsAllRunways
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShearInfo.ToMetar
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindVariable
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.WindVariable
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindVariable.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.WindVariable
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.WindVariable
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindVariable.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindVariable.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindVariable.FromDirection
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindVariable.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindVariable.ToDirection
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindVariable.ToMetar
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindVariable.ToMetar
   Info: Processed 365 topics
-    Last step completed in 00:02:38.7031
+    Last step completed in 00:01:51.5156
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -1427,7 +1427,7 @@ GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:03.8906
+    Last step completed in 00:00:01.6250
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
@@ -1441,15 +1441,15 @@ Processed 365 HTML files
 Sorting keywords and generating See Also indices
 Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Documentation.hhk
 Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Documentation.hhc
-    Last step completed in 00:00:01.5781
+    Last step completed in 00:00:01.2813
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1.x index file...
@@ -1457,7 +1457,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1473,7 +1473,7 @@ Build1xHelpFile:
   
   
   
-  Compile time: 0 minutes, 10 seconds
+  Compile time: 0 minutes, 9 seconds
   
   367	Topics
   
@@ -1487,19 +1487,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\Documentation.chm, 660,847 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\Documentation.chm, 663,495 bytes
   
-  Compression decreased file by 4,740,098 bytes.
+  Compression decreased file by 4,759,772 bytes.
   
-    Last step completed in 00:00:13.3594
+    Last step completed in 00:00:13.5313
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.2969
+    Last step completed in 00:00:00.3281
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.06.2010 11:51 odp..  Total time: 00:03:20,5313
+Build completed successfully at 04.07.2010 11:57 odp..  Total time: 00:02:14,4375
 
 </buildStep>
 </shfbBuild>

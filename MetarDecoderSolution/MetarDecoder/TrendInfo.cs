@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents information about trend. To mark trend as not used. set null value into property type.
   /// </summary>
-  /// <seealso cref="T:MetarDecoder.MetarItem"/>
+  /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
   public class TrendInfo: MetarItem
   {
     /// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents racional number (struct).
@@ -20,7 +20,7 @@ namespace MetarDecoder
     public readonly int Denominator;
 
     /// <summary>
-    /// Initializes a new Instance of MetarDecoder.Racional
+    /// Initializes a new Instance of ENG.Metar.Decoder.Racional
     /// </summary>
     /// <param name="numerator"></param>
     /// <param name="denominator"></param>

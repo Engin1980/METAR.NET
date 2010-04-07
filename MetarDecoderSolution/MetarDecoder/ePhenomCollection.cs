@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents set of items defining the phenomen. E.g. +RAHZ.
   /// </summary>
-  public class ePhenomCollection : List<MetarDecoder.ePhenomCollection.ePhenom>, MetarItem
+  public class ePhenomCollection : List<ENG.Metar.Decoder.ePhenomCollection.ePhenom>, MetarItem
   {
     /// <summary>
     /// All types of phenomens.

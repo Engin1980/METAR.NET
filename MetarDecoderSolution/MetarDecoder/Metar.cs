@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents metar.
@@ -493,16 +493,16 @@ namespace MetarDecoder
         ret.Distance = grp[3].GetIntValue();
         if (grp[5].Success)
         {
-          ret.DirectorySpecification = (MetarDecoder.Visibility.eDirection)Enum.Parse(
-            typeof(MetarDecoder.Visibility.eDirection), grp[5].Value);
+          ret.DirectorySpecification = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
+            typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[5].Value);
         }
         else
           ret.DirectorySpecification = null;
         if (grp[6].Success)
         {
           ret.OtherDistance = grp[7].GetIntValue();
-          ret.OtherWayRestriction = (MetarDecoder.Visibility.eDirection)Enum.Parse(
-            typeof(MetarDecoder.Visibility.eDirection), grp[8].Value);
+          ret.OtherWayRestriction = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
+            typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[8].Value);
         }
         else
         {
@@ -670,7 +670,7 @@ namespace MetarDecoder
       if (grp[1].Value == "Q")
         ret.Set(grp[2].GetIntValue(), PressureInfo.eUnit.hPa);
       else
-        ret.Set(grp[2].GetIntValue() / 100.0, MetarDecoder.PressureInfo.eUnit.mmHq);
+        ret.Set(grp[2].GetIntValue() / 100.0, ENG.Metar.Decoder.PressureInfo.eUnit.mmHq);
 
       obj.Pressure = ret;
     }
@@ -938,8 +938,8 @@ namespace MetarDecoder
     {
       StringBuilder ret = new StringBuilder();
 
-      //    MetarDecoder.Metar x =
-      //MetarDecoder.Metar.Create(
+      //    ENG.Metar.Decoder.Metar x =
+      //ENG.Metar.Decoder.Metar.Create(
       //"METAR LKPR 312300Z VRB03KT 0800 R08/0300 R09/0400D -SN +RABR FEW020CB OVC040TCU M01/M10 Q0997 " +
       //"RERA RESN WS RWY24C RWY04 R04C/012345 R22/////// " +
       //"TEMPO FM1010 TL2020 AT1330 VRB03G20KT 010V040 M1/8SM RA SNBR FEW040 OVC050TCU RMK HOTOVO");

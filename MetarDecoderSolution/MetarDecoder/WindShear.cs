@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDecoder
+namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents windshear information for one runway.
   /// </summary>
-  /// <seealso cref="T:MetarDecoder.MetarItem"/>
+  /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
   public class WindShear : MetarItem
   {
     /// <summary>

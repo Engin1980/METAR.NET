@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace MetarDownloader.Retrievers
+namespace ENG.Metar.Downloader.Retrievers
 {
   /// <summary>
   /// This class is able to download metar from usa vatsim network source.
   /// Downloaded metar is associated to VATSIM online network, and can differ
   /// significantly from real weather.
   /// </summary>
-  /// <seealso cref="T:MetarDownloader.IMetarRetrieve"/>
+  /// <seealso cref="T:ENG.Metar.Downloader.IMetarRetrieve"/>
   public class USAS1VatsimRetriever : IMetarRetrieve
   {
     /// <summary>

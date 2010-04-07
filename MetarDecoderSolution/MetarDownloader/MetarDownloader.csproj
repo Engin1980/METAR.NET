@@ -8,8 +8,8 @@
     <ProjectGuid>{70D6E24E-D71B-4096-B383-1767646FCC42}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MetarDownloader</RootNamespace>
-    <AssemblyName>MetarDownloader</AssemblyName>
+    <RootNamespace>ENG.Metar.Downloader</RootNamespace>
+    <AssemblyName>ENG.Metar.Downloader</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\MetarDownloader.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\ENG.Metar.Downloader.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

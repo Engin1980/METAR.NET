@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MetarDownloader")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ENG.Metar.Downloader")]
+[assembly: AssemblyDescription("Library - classes used to download METAR weather info from web")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MetarDownloader")]
+[assembly: AssemblyCompany("Marek Vajgl")]
+[assembly: AssemblyProduct("ENG.Metar.Downloader")]
 [assembly: AssemblyCopyright("Copyright ©  2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

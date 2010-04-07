@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MetarDownloader
+namespace ENG.Metar.Downloader
 {
   /// <summary>
   /// Represents type able to define source for metar downloading.
