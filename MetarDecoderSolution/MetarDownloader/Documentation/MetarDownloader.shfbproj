@@ -15,11 +15,15 @@
     <Name>Documentation</Name>
     <!-- SHFB properties -->
     <OutputPath>.\Help\</OutputPath>
-    <HtmlHelpName>Documentation</HtmlHelpName>
+    <HtmlHelpName>MetarDownloader</HtmlHelpName>
     <FrameworkVersion>3.5</FrameworkVersion>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\MetarDownloader.csproj" />
     </DocumentationSources>
+    <FeedbackEMailAddress>engin%40seznam.cz</FeedbackEMailAddress>
+    <FooterText>http://metar.codeplex.com</FooterText>
+    <HeaderText>A Sandcastle Documented Class Library</HeaderText>
+    <HelpTitle>METAR.NET Downloader</HelpTitle>
   </PropertyGroup>
   <!-- There are no properties for these two groups but they need to appear in
        order for Visual Studio to perform the build. -->

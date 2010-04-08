@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\MetarDownloader.shfbproj" started="7.4.2010 23:51:38">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\MetarDownloader.shfbproj" started="8.4.2010 13:27:19">
 <buildStep step="Initializing">
-</buildStep>
-<buildStep step="ClearWorkFolder">
-Clearing working folder...
 </buildStep>
 <buildStep step="FindingTools">
 Finding tools...
@@ -31,11 +28,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.1719
+    Last step completed in 00:00:00.0938
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -48,11 +45,11 @@ GenerateRefInfo:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:06.0938
+    Last step completed in 00:00:02.6563
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0781
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
@@ -72,7 +69,7 @@ TransformManifest:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:02.7969
+    Last step completed in 00:00:02.8750
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
@@ -187,7 +184,7 @@ C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt;
 C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\SplitScreen.js
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Presentation.css
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:00.8750
+    Last step completed in 00:00:00.7813
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -196,18 +193,18 @@ No additional content to copy
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.0781
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -972,7 +969,7 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
   Info: Processed 48 topics
-    Last step completed in 00:01:19.0313
+    Last step completed in 00:01:08.6094
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -981,7 +978,7 @@ GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:00.9688
+    Last step completed in 00:00:02.7344
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
@@ -993,17 +990,17 @@ E-Mail: Eric@EWoodruff.us
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
 Processed 48 HTML files
 Sorting keywords and generating See Also indices
-Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Documentation.hhk
-Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Documentation.hhc
-    Last step completed in 00:00:00.8750
+Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhk
+Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhc
+    Last step completed in 00:00:00.7031
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1.x index file...
@@ -1011,7 +1008,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1021,13 +1018,13 @@ Build1xHelpFile:
   
   
   
-  Compiling c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\Documentation.chm
+  Compiling c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm
   
   
   
   
   
-  Compile time: 0 minutes, 3 seconds
+  Compile time: 0 minutes, 4 seconds
   
   50	Topics
   
@@ -1041,19 +1038,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\Documentation.chm, 151,551 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm, 155,970 bytes
   
-  Compression decreased file by 649,515 bytes.
+  Compression decreased file by 668,516 bytes.
   
-    Last step completed in 00:00:05.5469
+    Last step completed in 00:00:07.0938
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.2031
+    Last step completed in 00:00:00.1719
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.07.2010 11:53 odp..  Total time: 00:01:37,2813
+Build completed successfully at 04.08.2010 01:28 odp..  Total time: 00:01:26,3438
 
 </buildStep>
 </shfbBuild>
