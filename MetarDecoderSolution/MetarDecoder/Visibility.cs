@@ -11,8 +11,8 @@ namespace ENG.Metar.Decoder
   /// <seealso cref="T:ENG.Metar.Decoder.TrendVisibility"/>
   public class Visibility : TrendVisibility
   {
-    #region Properties
-
+    #region Nested
+    
     /// <summary>
     /// Represents world direction
     /// </summary>
@@ -51,13 +51,16 @@ namespace ENG.Metar.Decoder
       /// </summary>
       NW
     }
+    #endregion Nested
+
+    #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private eDirection? _DirectionSpecification;
     ///<summary>
     /// Sets/gets directory specification value. (e.g. 3000NE). Null if not used.
     ///</summary>
-    public eDirection? DirectorySpecification
+    public eDirection? DirectionSpecification
     {
       get
       {
@@ -91,20 +94,20 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eDirection? _OtherWayRestriction;
+    private eDirection? _OtherDirectionSpecification;
     ///<summary>
     /// Sets/gets other measured distance's direction (e.g. postfix of second part in 3000NE 1200S). Null if not used.
     /// Must be used when OtherDistance is used.
     ///</summary>
-    public eDirection? OtherWayRestriction
+    public eDirection? OtherDirectionSpecification
     {
       get
       {
-        return (_OtherWayRestriction);
+        return (_OtherDirectionSpecification);
       }
       set
       {
-        _OtherWayRestriction = value;
+        _OtherDirectionSpecification = value;
       }
     }
 
@@ -137,9 +140,9 @@ namespace ENG.Metar.Decoder
     {
       UseEUStyle = true;
       Distance = distance;
-      DirectorySpecification = null;
+      DirectionSpecification = null;
       OtherDistance = null;
-      OtherWayRestriction = null;
+      OtherDirectionSpecification = null;
       IsDevicesMinimumValue = false;
     }
 
@@ -151,7 +154,7 @@ namespace ENG.Metar.Decoder
     public void SetMeters(int distance, eDirection way)
     {
       SetMeters(distance);
-      DirectorySpecification = way;
+      DirectionSpecification = way;
     }
 
     /// <summary>
@@ -165,10 +168,80 @@ namespace ENG.Metar.Decoder
     {
       SetMeters(distance, way);
       OtherDistance = secondDistance;
-      OtherWayRestriction = secondWay;
+      OtherDirectionSpecification = secondWay;
     }
 
     #endregion Methods
+
+    #region Inherited
+
+#if INFO
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="formatter">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+    public string ToInfo(InfoFormatter formatter)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      string s;
+      if (IsClear)
+        s = formatter.VisibilityClearFormat;
+      else if (OtherDistance.HasValue)
+        s = formatter.VisibilityWithOtherDistanceFormat;
+      else
+        s = formatter.VisibilityFormat;
+
+      ret.AppendFormat(
+        s,
+        this.Distance.ToString(false),
+        this.UseEUStyle ? "meters" : "sm",
+        this.DirectionSpecification.HasValue ? this.DirectionSpecification.Value.ToString() : "",
+        "K/S",
+        this.OtherDistance.HasValue ? this.OtherDistance.Value.ToString(false) : "-",
+        this.OtherDistance.HasValue ? this.OtherDirectionSpecification.Value.ToString() : "-");
+
+      return ret.ToString();
+    }
+#endif //INFO
+
+    private string eDirectionToInfo(eDirection eDirection, bool verbose)
+    {
+      string ret;
+
+      switch (eDirection)
+      {
+        case eDirection.E:
+          ret = (verbose ? "east": "E");
+          break;
+        case eDirection.N:
+          ret = (verbose ? "north" : "N");
+          break;
+        case eDirection.NE:
+          ret = (verbose ? "northeast" : "NE");
+          break;
+        case eDirection.NW:
+          ret = (verbose ? "northwest" : "NW");
+          break;
+        case eDirection.S:
+          ret = (verbose ? "south" : "S");
+          break;
+        case eDirection.SE:
+          ret = (verbose ? "southeast" : "SE");
+          break;
+        case eDirection.SW:
+          ret = (verbose ? "southwest" : "SW");
+          break;
+        case eDirection.W:
+          ret = (verbose ? "west" : "W");
+          break;
+        default:
+          throw new NotImplementedException();
+      }
+
+      return ret;
+    }
 
     /// <summary>
     /// Returns item in metar string.
@@ -188,13 +261,13 @@ namespace ENG.Metar.Decoder
       else if (UseEUStyle)
       {
         ret.Append(Distance.Value.ToString("0000"));
-        if (DirectorySpecification.HasValue)
-          ret.Append(DirectorySpecification.ToString());
+        if (DirectionSpecification.HasValue)
+          ret.Append(DirectionSpecification.ToString());
 
         if (OtherDistance.HasValue)
         {
           ret.Append(OtherDistance.Value.Value.ToString("0000"));
-          ret.Append(OtherWayRestriction.ToString());
+          ret.Append(OtherDirectionSpecification.ToString());
         }
 
       }
@@ -230,13 +303,16 @@ namespace ENG.Metar.Decoder
       if (UseEUStyle && IsDevicesMinimumValue)
         warnings.Add("IsDeviceMinimumValue flag is not used in EU style and will be ignored.");
 
-      if ((OtherDistance.HasValue && !OtherWayRestriction.HasValue)
+      if ((OtherDistance.HasValue && !OtherDirectionSpecification.HasValue)
         ||
-        (!OtherDistance.HasValue && OtherWayRestriction.HasValue))
+        (!OtherDistance.HasValue && OtherDirectionSpecification.HasValue))
         errors.Add("Both Other-distance and Other-way-restriction must have value or set be to null.");
 
       if (IsClear && OtherDistance.HasValue)
         warnings.Add("Is-clear is true, and also other-distance value is set. This combination is probably not correct.");
     }
+
+    #endregion Inherited
+
   }
 }

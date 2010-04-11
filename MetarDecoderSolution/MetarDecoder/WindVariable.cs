@@ -10,8 +10,10 @@ namespace ENG.Metar.Decoder
   /// Represents wind variability between values.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class WindVariable : MetarItem
+  public class WindVariable : IMetarItem
   {
+    #region Properties
+
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -54,6 +56,31 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Inherited
+
+#if INFO
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+    public string ToInfo(InfoFormatter formatter)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.AppendFormat(
+        formatter.WindVaryingFormat,
+        FromDirection,
+        Common.HeadingToString(FromDirection),
+        ToDirection,
+        Common.HeadingToString(ToDirection));
+
+      return ret.ToString();
+    }
+#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -74,5 +101,8 @@ namespace ENG.Metar.Decoder
       if (FromDirection == ToDirection)
         warnings.Add("Significant variable wind range is 0.");
     }
+
+    #endregion Inherited
+
   }
 }

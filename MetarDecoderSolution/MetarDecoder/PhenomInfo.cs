@@ -8,21 +8,11 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about phenoms. E.g. (+RAHZ -SN)
   /// </summary>
-  public class PhenomInfo : List<ePhenomCollection>, MetarItem
+  public class PhenomInfo : List<ePhenomCollection>, IMetarItem
   {
     private bool isRE;
 
-    /// <summary>
-    /// Creates new instance. Parameter is true if instance is used for re-phenoms. See Metar.RePhenomens.
-    /// </summary>
-    /// <param name="isRe">True if re-phenoms, false otherwise.</param>
-    /// <remarks>
-    /// If argument is true, when converted, data are represented in metar with prefix RE.
-    /// </remarks>
-    public PhenomInfo(bool isRe)
-    {
-      this.isRE = isRe;
-    }
+    #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private bool _IsNSW;
@@ -41,6 +31,59 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region .ctor
+
+    /// <summary>
+    /// Creates new instance. Parameter is true if instance is used for re-phenoms. See Metar.RePhenomens.
+    /// </summary>
+    /// <param name="isRe">True if re-phenoms, false otherwise.</param>
+    /// <remarks>
+    /// If argument is true, when converted, data are represented in metar with prefix RE.
+    /// </remarks>
+    public PhenomInfo(bool isRe)
+    {
+      this.isRE = isRe;
+    }
+    #endregion .ctor
+
+    #region Inherited
+#if INFO
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      if (this.IsNSW)
+        ret.AppendSpaced("No significant weather.");
+      else
+      {
+        if (this.Count > 0)
+        {
+          if (verbose)
+            ret.AppendSpaced(this[0].ToInfo(verbose));
+          else
+          {
+            if (isRE)
+              ret.AppendSpaced("Recent weather:");
+            else
+              ret.AppendSpaced("Weather:");
+
+            this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose) + ";"));
+
+            ret[ret.Length - 2] = '.';
+          }
+        }
+      }
+
+      return ret.ToString();
+    }
+#endif //INFO
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -74,5 +117,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
   }
 }

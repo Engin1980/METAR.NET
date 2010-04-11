@@ -9,8 +9,10 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents metar.
   /// </summary>
-  public class Metar : MetarItem
+  public class Metar : IMetarItem
   {
+    #region Nested
+
     /// <summary>
     /// Types of metar. Now METAR only supported, SPECI not supported.
     /// </summary>
@@ -21,6 +23,8 @@ namespace ENG.Metar.Decoder
       /// </summary>
       METAR
     }
+
+    #endregion Nested
 
     #region Properties
 
@@ -302,7 +306,20 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    /// <summary>
+    /// Calculates humidity. Very rough aproximation.
+    /// </summary>
+    public double Humidity
+    {
+      get
+      {
+        return 100 - 5d * (Temperature - DewPoint);
+      }
+    }
+
     #endregion Properties
+
+    #region Static methods
 
     /// <summary>
     /// Creates metar instance from string.
@@ -369,6 +386,8 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Static methods
+
     #region Consts
 
     private const string R_METAR_BLOCK = "(" + R_METAR + ")";
@@ -393,7 +412,7 @@ namespace ENG.Metar.Decoder
     private const string R_WS = @"RWY(\d{2}(R|L|C)?)";
     private const string R_WSS = @"(?#ws)( (WS ALL RWY)| (WS( " + R_WS + ")*))?";
     private const string R_RWY_CONDS = @"(?#rwyCond)(( SNOCLO)|(( " + R_RWY_COND + ")*))?";
-    private const string R_RWY_COND = @"R(\d{2}(L|R|C)*)/(\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2})";
+    private const string R_RWY_COND = @"R(\d{2}(L|R|C)*)/((\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2})|(CLDR//))";
     // trends
     private const string RT_TYPEDATES = @"(?#tr-type-date)( (NOSIG)| ((TEMPO|BECMG)(( " + RT_TYPEDATE + ")*)))?";
     private const string RT_TYPEDATE = @"(FM|TL|AT)(\d{2})(\d{2})";
@@ -405,6 +424,8 @@ namespace ENG.Metar.Decoder
     private const string R_RMK = @"(?#rmk)( RMK (.*))?";
 
     #endregion Consts
+
+    #region Internal methods
 
     internal static DecoderCollection GetDecoders()
     {
@@ -433,6 +454,8 @@ namespace ENG.Metar.Decoder
 
       return ret;
     }
+
+    #endregion Internal methods
 
     #region Decoders
     private static void DecodeMetarPrefix(Group[] grp, ref Metar obj)
@@ -490,24 +513,24 @@ namespace ENG.Metar.Decoder
       else if (grp[3].Success)
       {
         ret.UseEUStyle = true;
-        ret.Distance = grp[3].GetIntValue();
+        ret.Distance = grp[4].GetIntValue();
         if (grp[5].Success)
         {
-          ret.DirectorySpecification = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
+          ret.DirectionSpecification = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
             typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[5].Value);
         }
         else
-          ret.DirectorySpecification = null;
+          ret.DirectionSpecification = null;
         if (grp[6].Success)
         {
           ret.OtherDistance = grp[7].GetIntValue();
-          ret.OtherWayRestriction = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
+          ret.OtherDirectionSpecification = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
             typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[8].Value);
         }
         else
         {
           ret.OtherDistance = null;
-          ret.OtherWayRestriction = null;
+          ret.OtherDirectionSpecification = null;
         }
       }
       else
@@ -761,10 +784,15 @@ namespace ENG.Metar.Decoder
       RunwayCondition ret = new RunwayCondition();
 
       ret.Runway = m.Groups[1].Value;
-      ret.Deposit = (m.Groups[3].Value == "/" ? null : (RunwayCondition.eDeposit?)m.Groups[3].GetIntValue());
-      ret.Contamination = (m.Groups[4].Value == "/" ? null : (RunwayCondition.eContamination?)m.Groups[4].GetIntValue());
-      ret.Depth = (m.Groups[5].Value == "//" ? null : (int?)m.Groups[5].GetIntValue());
-      ret.Friction = (m.Groups[6].Value == "//" ? null : (int?)m.Groups[6].GetIntValue());
+      if (m.Groups[8].Success)
+        ret.IsCleared = true;
+      else
+      {
+        ret.Deposit = (m.Groups[4].Value == "/" ? null : (RunwayCondition.eDeposit?)m.Groups[4].GetIntValue());
+        ret.Contamination = (m.Groups[5].Value == "/" ? null : (RunwayCondition.eContamination?)m.Groups[5].GetIntValue());
+        ret.Depth = (m.Groups[6].Value == "//" ? null : (RunwayCondition.eDepth?)m.Groups[6].GetIntValue());
+        ret.Friction = (m.Groups[7].Value == "//" ? null : (RunwayCondition.eFriction?)m.Groups[7].GetIntValue());
+      }
 
       return ret;
     }
@@ -930,6 +958,44 @@ namespace ENG.Metar.Decoder
 
     #endregion Decoders
 
+    #region Inherited
+#if INFO
+public string ToInfo(InfoFormatter formatter)
+{
+  StringBuilder ret = new StringBuilder();
+
+  /*
+     * METAR:
+     * 0 - icao
+     * 1 - date-day
+     * 2 - date-hour
+     * 3 - date-minute
+     * 4 - temperature
+     * 5 - dew-point
+     * 6 - wind
+     * 
+   * */
+
+  ret.AppendFormat(
+    formatter.MetarFormat,
+    this.ICAO,
+    this.Date.Day,
+    this.Date.Hour,
+    this.Date.Minute,
+    this.Temperature,
+    this.DewPoint,
+    this.Wind.ToInfo (formatter),
+    this.Visibility.ToInfo(formatter));
+
+        string pom = ret.ToString();
+
+        pom = formatter.Normalize(pom);
+
+  return pom.ToString();
+}
+
+    #endif //INFO
+    
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -969,16 +1035,8 @@ namespace ENG.Metar.Decoder
       return ret.ToString().TrimEnd();
     }
 
-    private string IntToMetarString(int p)
-    {
-      if (p < 0)
-        return "M" + (-p).ToString("00");
-      else
-        return p.ToString("00");
-    }
-
     #region MetarItem Members
-
+#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
@@ -987,7 +1045,7 @@ namespace ENG.Metar.Decoder
     {
       throw new NotImplementedException();
     }
-
+#endif //INFO
     /// <summary>
     /// Proceed sanity check of inserted values.
     /// </summary>
@@ -1008,5 +1066,18 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion MetarItem Members
+
+    #endregion Inherited
+
+    #region Private methods
+    private static string IntToMetarString(int p)
+    {
+      if (p < 0)
+        return "M" + (-p).ToString("00");
+      else
+        return p.ToString("00");
+    }
+
+    #endregion Private methods
   }
 }

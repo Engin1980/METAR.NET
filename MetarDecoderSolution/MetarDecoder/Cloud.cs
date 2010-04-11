@@ -8,8 +8,10 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents one cloud (e.g. OVC040TCU).
   /// </summary>
-  public class Cloud : MetarItem
+  public class Cloud : IMetarItem
   {
+    #region Nested
+
     /// <summary>
     /// List of types of clouds.
     /// </summary>
@@ -32,6 +34,10 @@ namespace ENG.Metar.Decoder
       /// </summary>
       OVC
     }
+
+    #endregion Nested
+
+    #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private bool _IsCB;
@@ -99,6 +105,10 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Methods
+
     /// <summary>
     /// Sets cloud type.
     /// </summary>
@@ -155,6 +165,51 @@ namespace ENG.Metar.Decoder
       SetClouds(t, altitude);
     }
 
+    #endregion Methods
+
+    #region Inherited
+
+#if INFO
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+    public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      switch (this.Type)
+      {
+        case eType.BKN:
+          ret.AppendSpaced("broken");
+          break;
+        case eType.FEW:
+          ret.AppendSpaced("few");
+          break;
+        case eType.OVC:
+          ret.AppendSpaced("overcast");
+          break;
+        case eType.SCT:
+          ret.AppendSpaced("scattered");
+          break;
+        default:
+          throw new NotImplementedException();
+      }
+
+      ret.Append((this.Altitude * 100).ToString() + " ft ");
+
+      if (this.IsCB)
+        ret.Append("cumulonimbus, ");
+      else if (this.IsTCU)
+        ret.Append("towering cumulus, ");
+      else
+        ret.Append(", ");
+
+      return ret.ToString();
+    }
+#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -185,5 +240,8 @@ namespace ENG.Metar.Decoder
       if (IsTCU && IsCB)
         errors.Add("IsTCU and IsCB flags cannot be set both at same time. Only one of them can be used.");
     }
+
+    #endregion Inherited
+
   }
 }

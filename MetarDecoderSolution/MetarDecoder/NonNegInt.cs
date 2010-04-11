@@ -50,6 +50,14 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
+    /// Returns value of the instance as string.
+    /// </summary>
+    public override string ToString()
+    {
+      return this.Value.ToString();
+    }
+
+    /// <summary>
     /// Returns string represention of this value.
     /// </summary>
     /// <param name="format"></param>

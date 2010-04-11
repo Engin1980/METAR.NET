@@ -9,8 +9,11 @@ namespace ENG.Metar.Decoder
   /// Represents runway visibility information.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class RunwayVisibility : MetarItem
+  public class RunwayVisibility : IMetarItem
   {
+
+    #region Nested
+
     /// <summary>
     /// Represents tendency of visibility.
     /// </summary>
@@ -46,6 +49,9 @@ namespace ENG.Metar.Decoder
       /// </summary>
       P
     }
+    #endregion Nested
+
+    #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private eDeviceMeasurementRestriction? _DeviceMeasurementRestriction = null;
@@ -156,6 +162,47 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Inherited
+
+#if INFO
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.AppendSpaced("Runway " + Runway + " visibility");
+
+      if (this.DeviceMeasurementRestriction.HasValue)
+        if (this.DeviceMeasurementRestriction.Value == eDeviceMeasurementRestriction.P)
+          ret.AppendSpaced("more than");
+        else
+          ret.AppendSpaced("less than");
+
+      ret.AppendSpaced(this.Distance.ToString());
+      if (this.VariableVisibility.HasValue)
+        ret.AppendSpaced(" to " + this.VariableVisibility.Value.ToString());
+
+      if (this.Tendency.HasValue)
+        if (this.Tendency.Value == eTendency.D)
+          ret.AppendSpaced(verbose ? "decreasing" : "decr.");
+        else if (this.Tendency.Value == eTendency.U)
+          ret.AppendSpaced(verbose ? "increasing" : "incr.");
+
+      if (!this.IsInFeet)
+        ret.AppendSpaced("meters.");
+      else
+        ret.AppendSpaced("feet.");
+
+      return ret.ToString();
+    }
+#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -193,5 +240,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
   }
 }

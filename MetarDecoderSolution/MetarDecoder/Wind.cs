@@ -10,7 +10,7 @@ namespace ENG.Metar.Decoder
   /// Represents information about wind.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class Wind : MetarItem
+  public class Wind : IMetarItem
   {
     #region Nested
     /// <summary>
@@ -163,6 +163,42 @@ namespace ENG.Metar.Decoder
     }
     #endregion Properties
 
+#if INFO
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+    public string ToInfo(InfoFormatter formatter)
+    {
+      /* 
+     * WIND:
+     * 0 - direction
+     * 1 - direction as N/NE/...
+     * 2 - wind speed
+     * 3 - wind speed unit
+     * 4 - wind-gust-speed, if none, wind speed is used
+     * 5 - WIND-VARIES
+     * */
+
+      StringBuilder ret = new StringBuilder();
+
+      string s = (GustSpeed.HasValue ? formatter.WindGustingFormat : formatter.WindFormat);
+
+      ret.AppendFormat(
+        s,
+        Direction,
+        Direction.HasValue ? Common.HeadingToString(Direction.Value) : "",
+        Speed,
+        Unit.ToString(),
+        GustSpeed.HasValue ? GustSpeed.Value : Speed,
+        IsVarying ? Variability.ToInfo (formatter) : "");
+
+      return ret.ToString();
+    }
+#endif //INFO
+    #region Inherits
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -206,5 +242,8 @@ namespace ENG.Metar.Decoder
       if (Variability != null)
         Variability.SanityCheck(ref errors, ref warnings);
     }
+
+    #endregion Inherits
+
   }
 }

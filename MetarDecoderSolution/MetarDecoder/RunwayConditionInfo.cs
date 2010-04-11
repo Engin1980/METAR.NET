@@ -8,8 +8,10 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represets sets of runway conditions.
   /// </summary>
-  public class RunwayConditionInfo : List<RunwayCondition>, MetarItem
+  public class RunwayConditionInfo : List<RunwayCondition>, IMetarItem
   {
+    #region Properties
+
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private bool _IsSNOCLO;
     ///<summary>
@@ -26,6 +28,39 @@ namespace ENG.Metar.Decoder
         _IsSNOCLO = value;
       }
     }
+
+    #endregion Properties
+
+    #region Inherited
+
+#if INFO
+
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      if (IsSNOCLO)
+        ret.AppendSpaced("Closed due to snow.");
+      else
+      {
+        if (this.Count > 0)
+        {
+          ret.AppendSpaced("Runway conditions:");
+
+          this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose)));
+
+          ret[ret.Length - 2] = '.';
+        }
+      }
+
+      return ret.ToString();
+    }
+#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -50,7 +85,7 @@ namespace ENG.Metar.Decoder
 
     #region MetarItem Members
 
-
+#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
@@ -59,6 +94,7 @@ namespace ENG.Metar.Decoder
     {
       throw new NotImplementedException();
     }
+#endif //INFO
 
     /// <summary>
     /// Proceed sanity check of inserted values.
@@ -74,5 +110,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
   }
 }

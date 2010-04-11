@@ -8,8 +8,10 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about clouds.
   /// </summary>
-  public class CloudInfo : List<Cloud>, MetarItem
+  public class CloudInfo : List<Cloud>, IMetarItem
   {
+    #region Properties
+
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private bool _IsSKC;
     ///<summary>
@@ -62,6 +64,11 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Methods
+
+
     /// <summary>
     /// Sets "sky clear". <see cref="IsSKC"/>
     /// </summary>
@@ -93,6 +100,52 @@ namespace ENG.Metar.Decoder
       _IsVerticalVisibility = true;
       _VVDistance = distance;
     }
+
+    #endregion Methods
+
+    #region Implemented
+
+#if INFO
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+    public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      if (this.IsNSC)
+        ret.AppendSpaced("No significant clouds.");
+      else if (this.IsSKC)
+        ret.AppendSpaced("Sky clear.");
+      else if (this.IsVerticalVisibility)
+      {
+        ret.AppendSpaced("Vertical visibility");
+        if (VVDistance.HasValue)
+          ret.AppendSpaced ((VVDistance.Value*100).ToString() + " ft.");
+        else
+          ret.AppendSpaced (" unknown.");
+        }
+      else
+      {
+        if (this.Count > 0)
+        {
+        ret.AppendSpaced("Clouds: ");
+        if (verbose)
+          ret.AppendSpaced(this[0].ToInfo(verbose));
+        else
+        {
+          this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose)));
+          ret[ret.Length-2] = '.';
+        }
+        }
+    
+      }
+
+      return ret.ToString();
+    }
+#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -135,5 +188,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Implemented
+
   }
 }

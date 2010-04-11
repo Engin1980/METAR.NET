@@ -11,8 +11,10 @@ namespace ENG.Metar.Decoder
   /// Represents trend time information.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class TrendTime : MetarItem
+  public class TrendTime : IMetarItem
   {
+    #region Nested
+
     /// <summary>
     /// Type of trend time.
     /// </summary>
@@ -31,6 +33,11 @@ namespace ENG.Metar.Decoder
       /// </summary>
       AT
     }
+
+    #endregion Nested
+
+    #region Properties
+
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private eType _Type;
@@ -89,6 +96,26 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Inherited
+#if INFO
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.AppendSpaced(eTypeToString(this.Type));
+      ret.AppendSpaced(this.Hour.ToString() + ":" + this.Minute.ToString("00"));
+
+      return ret.ToString();
+    }
+
+ #endif //INFO
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -115,5 +142,26 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
+    #region Private
+    
+private string eTypeToString(eType eType)
+{
+  switch (eType)
+  {
+    case eType.AT:
+      return "at";
+    case eType.FM:
+      return "from";
+    case eType.TL:
+      return "until";
+    default:
+      throw new NotImplementedException();
+  }
+}
+    #endregion Private
+
   }
 }

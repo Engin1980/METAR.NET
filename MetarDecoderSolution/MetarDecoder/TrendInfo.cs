@@ -9,8 +9,10 @@ namespace ENG.Metar.Decoder
   /// Represents information about trend. To mark trend as not used. set null value into property type.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class TrendInfo: MetarItem
+  public class TrendInfo : IMetarItem
   {
+    #region Nested
+
     /// <summary>
     /// Type of trend.
     /// </summary>
@@ -29,6 +31,10 @@ namespace ENG.Metar.Decoder
       /// </summary>
       TEMPO
     }
+
+    #endregion Nested
+
+    #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private eType? _Type = eType.NOSIG;
@@ -139,6 +145,42 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Inherited
+
+#if INFO
+
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+    public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      //if (this.Type != null)
+      //{
+
+      //    ret.AppendSpaced(this.Type.ToString());
+      //    this.Times.ForEach(
+      //      i => ret.AppendSpaced(i.ToInfo(verbose)));
+      //    if (Wind != null)
+      //      ret.AppendSpaced(Wind.ToInfo(verbose));
+      //    if (Visibility != null)
+      //      ret.AppendSpaced(this.Visibility.ToInfo(verbose));
+      //    if (Phenomens != null)
+      //      ret.AppendSpaced(this.Phenomens.ToInfo(verbose));
+      //    if (Clouds != null)
+      //      ret.AppendSpaced(this.Clouds.ToInfo(verbose));
+
+      //}
+
+      return ret.ToString();
+    }
+#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -169,7 +211,7 @@ namespace ENG.Metar.Decoder
 
     #region MetarItem Members
 
-
+#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
@@ -178,6 +220,7 @@ namespace ENG.Metar.Decoder
     {
       throw new NotImplementedException();
     }
+#endif //INFO
 
     /// <summary>
     /// Proceed sanity check of inserted values.
@@ -197,5 +240,7 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
   }
 }

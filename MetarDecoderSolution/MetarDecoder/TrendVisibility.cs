@@ -8,7 +8,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about trend visibility.
   /// </summary>
-  public class TrendVisibility : MetarItem
+  public class TrendVisibility : IMetarItem
   {
     #region Properties
 
@@ -139,6 +139,36 @@ namespace ENG.Metar.Decoder
 
     #endregion Methods
 
+    #region Inherited
+
+#if INFO
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public virtual string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.AppendSpaced("Visibility");
+      if (IsClear)
+        ret.AppendSpaced("unlimited.");  
+      else
+      {
+        if (this.IsDevicesMinimumValue)
+          ret.AppendSpaced("less than");
+
+        if (this.UseEUStyle)
+          ret.AppendSpaced(this.Distance.ToString(false) + " meters.");
+        else
+          ret.AppendSpaced(this.Distance.ToString(false) + " miles.");
+  }
+
+      return ret.ToString();
+    }
+#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -183,5 +213,8 @@ namespace ENG.Metar.Decoder
       if (UseEUStyle && IsDevicesMinimumValue)
         warnings.Add("IsDeviceMinimumValue flag is not used in EU style and will be ignored.");
     }
+
+    #endregion Inherited
+
   }
 }

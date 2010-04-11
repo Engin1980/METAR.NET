@@ -8,8 +8,10 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about windshears in metar.
   /// </summary>
-  public class WindShearInfo : List<WindShear>, MetarItem
+  public class WindShearInfo : List<WindShear>, IMetarItem
   {
+    #region Properties
+
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private bool _IsAllRunways;
     ///<summary>
@@ -26,6 +28,34 @@ namespace ENG.Metar.Decoder
         _IsAllRunways = value;
       }
     }
+
+    #endregion Properties
+
+    #region Inherited
+
+#if INFO
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      if (IsAllRunways)
+        ret.AppendSpaced("Windshear all runways. ");
+      else
+      {
+        ret.AppendSpaced("Windshear at runways");
+        this.ForEach(i => ret.AppendSpaced(i.Runway + ","));
+
+        ret[ret.Length - 2] = '.';
+      }
+
+      return ret.ToString();
+    }
+#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -66,5 +96,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
   }
 }

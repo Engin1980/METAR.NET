@@ -9,8 +9,10 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents day-time information when metar was presented.
   /// </summary>
-  public class DayTime : MetarItem
+  public class DayTime : IMetarItem
   {
+    #region Properties
+
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private int _Day;
     ///<summary>
@@ -66,6 +68,27 @@ namespace ENG.Metar.Decoder
       }
     }
 
+
+    #endregion Properties
+
+    #region Inherited
+
+#if INFO
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.AppendSpaced("day " + Day.ToString() + ", " + Hour.ToString("0") + ":" + Minute.ToString("00"));
+
+      return ret.ToString();
+    }
+#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -89,5 +112,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
   }
 }

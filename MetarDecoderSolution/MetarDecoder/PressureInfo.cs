@@ -9,8 +9,9 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents pressure info.
   /// </summary>
-  public class PressureInfo  : MetarItem
+  public class PressureInfo  : IMetarItem
   {
+    #region Nested
 
     /// <summary>
     /// Pressure unit.
@@ -26,6 +27,10 @@ namespace ENG.Metar.Decoder
       /// </summary>
       mmHq
     }
+
+    #endregion Nested
+
+    #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private eUnit _Unit;
@@ -86,6 +91,10 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    #endregion Properties
+
+    #region Methods
+
     /// <summary>
     /// Sets pressure value.
     /// </summary>
@@ -102,6 +111,24 @@ namespace ENG.Metar.Decoder
         mmHq = value;
     }
 
+    #endregion Methods
+
+    #region Inherited
+#if INFO
+   /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <returns></returns>
+public string ToInfo(bool verbose)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.AppendSpaced("Current pressure " + this.Value.ToString((this.Unit == eUnit.hPa ? "0" : "00.00")));
+
+      return ret.ToString();
+    }
+#endif //INFO
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -136,5 +163,8 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion
+
+    #endregion Inherited
+
   }
 }
