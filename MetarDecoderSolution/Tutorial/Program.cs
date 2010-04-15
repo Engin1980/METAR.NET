@@ -33,7 +33,7 @@ namespace Tutorial
       catch (ENG.Metar.Decoder.MetarDecodeException ex)
       {
         // Error during decode
-        Console.WriteLine("Unable to parse metar from string.");
+        Console.WriteLine("Unable to parse metar from string. "+ ex.Message);
       }
       catch (Exception ex)
       {
@@ -59,6 +59,8 @@ namespace Tutorial
 
     private static void DownloadMetarForHamburgAsynchronically()
     {
+      Console.WriteLine("Downloading metar - asynchro...");
+
       // this specifies the downloader - from where and how the metar will be downloaded.
       ENG.Metar.Downloader.IMetarRetrieve retriever =
         new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
@@ -85,6 +87,8 @@ namespace Tutorial
 
     private static void DownloadMetarForHamburgSynchronically()
     {
+      Console.WriteLine("Downloading metar - synchro...");
+
       // here will be the result
        string eddhMetar;
 

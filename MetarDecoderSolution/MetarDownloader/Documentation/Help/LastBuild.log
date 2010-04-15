@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\MetarDownloader.shfbproj" started="11.4.2010 17:38:23">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\MetarDownloader.shfbproj" started="15.4.2010 11:10:18">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -28,11 +28,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.2500
+    Last step completed in 00:00:00.1406
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -41,22 +41,22 @@ GenerateRefInfo:
   MrefBuilder (v2.4.10520.1)
   Copyright c Microsoft 2006
   Info: Loaded 1 assemblies for reflection and 6 dependency assemblies.
-  Info: Wrote information on 2 namespaces, 7 types, and 21 members
+  Info: Wrote information on 2 namespaces, 8 types, and 24 members
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:04.7188
+    Last step completed in 00:00:02.5156
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     0 attribute nodes removed
     0 explicit interface implementations removed
     0 local and base class EII elements removed
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -69,7 +69,7 @@ TransformManifest:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:05.7344
+    Last step completed in 00:00:02.5156
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
@@ -184,27 +184,27 @@ C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt;
 C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\SplitScreen.js
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Presentation.css
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:02.0625
+    Last step completed in 00:00:00.7188
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.1250
+    Last step completed in 00:00:00.0781
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -217,7 +217,7 @@ BuildReferenceTopics:
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match '*.xml'.
   Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
-  Info: CopyFromIndexComponent: Indexed 170139 elements in 107 files.
+  Info: CopyFromIndexComponent: Indexed 170145 elements in 107 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
@@ -829,7 +829,7 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\ENG.Metar.Downloader.xml'.
-  Info: CopyFromIndexComponent: Indexed 131332 elements in 118 files.
+  Info: CopyFromIndexComponent: Indexed 131367 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -904,126 +904,81 @@ BuildReferenceTopics:
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
-  Info: ResolveReferenceLinksComponent2: Loaded 170139 reference targets.
+  Info: ResolveReferenceLinksComponent2: Loaded 170145 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:ENG.Metar.Downloader
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Downloader
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.Downloader
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.Downloader
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.Downloader
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Downloader.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.Downloader
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Downloader.Downloader.DownloadMetar
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Downloader.Downloader.DownloadMetarAsync
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Downloader.#ctor(ENG.Metar.Downloader.IMetarRetrieve)
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Downloader.#ctor(ENG.Metar.Downloader.IMetarRetrieve)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarRetriever&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.#ctor(ENG.Metar.Downloader.IMetarRetrieve)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;ICAO&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String,ENG.Metar.Downloader.IMetarRetrieve)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String,ENG.Metar.Downloader.IMetarRetrieve)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String,ENG.Metar.Downloader.IMetarRetrieve)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;icao&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String,ENG.Metar.Downloader.IMetarRetrieve)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarRetriever&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetar(System.String,ENG.Metar.Downloader.IMetarRetrieve)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;icao&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;downloadMetarCompletedDelegate&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.IMetarRetrieve,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.IMetarRetrieve,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;icao&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.IMetarRetrieve,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metarRetriever&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.IMetarRetrieve,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;downloadMetarCompletedDelegate&quot;/&gt; documentation for M:ENG.Metar.Downloader.Downloader.DownloadMetarAsync(System.String,ENG.Metar.Downloader.IMetarRetrieve,ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate)
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.IMetarRetrieve
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.IMetarRetrieve
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.IMetarRetrieve
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.IMetarRetrieve
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.IMetarRetrieve.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.IMetarRetrieve.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.IMetarRetrieve.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sourceStream&quot;/&gt; documentation for M:ENG.Metar.Downloader.IMetarRetrieve.DecodeMetar(System.IO.Stream)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.IMetarRetrieve.GetUrlForICAO(System.String)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.IMetarRetrieve.GetUrlForICAO(System.String)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.IMetarRetrieve.GetUrlForICAO(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;icao&quot;/&gt; documentation for M:ENG.Metar.Downloader.IMetarRetrieve.GetUrlForICAO(System.String)
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.MetarDownloadException
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.MetarDownloadException
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.MetarDownloadException
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.MetarDownloadException
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Downloader.MetarDownloadException
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Downloader.MetarDownloadException.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarDownloadException.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarDownloadException.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarDownloadException.#ctor
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;info&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;context&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String)
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String,System.Exception)
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String,System.Exception)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String,System.Exception)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;inner&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarDownloadException.#ctor(System.String,System.Exception)
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.MetarResult
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.MetarResult
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.MetarResult
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.MetarResult
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Downloader.MetarResult
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Downloader.MetarResult.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarResult.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarResult.#ctor
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.MetarResult.#ctor(System.Exception)
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarResult.#ctor(System.Exception)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;ex&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarResult.#ctor(System.Exception)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.MetarResult.#ctor(System.String)
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.MetarResult.#ctor(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;metar&quot;/&gt; documentation for M:ENG.Metar.Downloader.MetarResult.#ctor(System.String)
   Info: BuildAssembler: Building topic P:ENG.Metar.Downloader.MetarResult.Exception
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Downloader.MetarResult.Exception
   Info: BuildAssembler: Building topic P:ENG.Metar.Downloader.MetarResult.IsSuccessful
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Downloader.MetarResult.IsSuccessful
   Info: BuildAssembler: Building topic P:ENG.Metar.Downloader.MetarResult.Result
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Downloader.MetarResult.Result
   Info: BuildAssembler: Building topic N:ENG.Metar.Downloader.Retrievers
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Downloader.Retrievers
+  Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever
+  Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever.DecodeMetar(System.IO.Stream)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever.GetUrlForICAO(System.String)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.NoaaGovRetriever.GetUrlForICAO(System.String)
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.#ctor
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sourceStream&quot;/&gt; documentation for M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.DecodeMetar(System.IO.Stream)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.GetUrlForICAO(System.String)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.GetUrlForICAO(System.String)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.GetUrlForICAO(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;icao&quot;/&gt; documentation for M:ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever.GetUrlForICAO(System.String)
   Info: BuildAssembler: Building topic T:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.#ctor
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.DecodeMetar(System.IO.Stream)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sourceStream&quot;/&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.DecodeMetar(System.IO.Stream)
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;icao&quot;/&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
-  Info: Processed 48 topics
-    Last step completed in 00:01:25.3906
+  Info: Processed 54 topics
+    Last step completed in 00:01:24.5469
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -1032,7 +987,7 @@ GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:00.9219
+    Last step completed in 00:00:02.0781
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
@@ -1042,15 +997,15 @@ Copyright c 2008-2009, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
-Processed 48 HTML files
+Processed 54 HTML files
 Sorting keywords and generating See Also indices
 Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhk
 Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhc
-    Last step completed in 00:00:00.8125
+    Last step completed in 00:00:00.8281
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
@@ -1062,7 +1017,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1078,13 +1033,13 @@ Build1xHelpFile:
   
   
   
-  Compile time: 0 minutes, 4 seconds
+  Compile time: 0 minutes, 5 seconds
   
-  50	Topics
+  56	Topics
   
-  541	Local links
+  621	Local links
   
-  359	Internet links
+  414	Internet links
   
   0	Graphics
   
@@ -1092,19 +1047,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm, 150,894 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm, 166,214 bytes
   
-  Compression decreased file by 667,118 bytes.
+  Compression decreased file by 743,131 bytes.
   
-    Last step completed in 00:00:07.0000
+    Last step completed in 00:00:07.9219
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.1563
+    Last step completed in 00:00:00.2031
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.11.2010 05:40 odp..  Total time: 00:01:48,0313
+Build completed successfully at 04.15.2010 11:12 dop..  Total time: 00:01:42,2344
 
 </buildStep>
 </shfbBuild>

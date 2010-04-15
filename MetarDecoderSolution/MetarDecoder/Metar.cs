@@ -29,7 +29,7 @@ namespace ENG.Metar.Decoder
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eType _Type;
+    private eType _Type = eType.METAR;
     ///<summary>
     /// Sets/gets Type value.
     ///</summary>
@@ -45,7 +45,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private string _ICAO;
+    private string _ICAO = "----";
     ///<summary>
     /// Sets/gets ICAO value.
     ///</summary>
@@ -155,7 +155,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private CloudInfo _Clouds = new CloudInfo() { };
+    private CloudInfo _Clouds = null;
     ///<summary>
     /// Sets/gets Clouds value.
     ///</summary>
@@ -167,13 +167,11 @@ namespace ENG.Metar.Decoder
       }
       set
       {
-        if (value == null)
-          throw new ArgumentNullException("This value cannot be null.");
         _Clouds = value;
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int _Temperature;
+    private int _Temperature = 20;
     ///<summary>
     /// Sets/gets Temperature value.
     ///</summary>
@@ -189,7 +187,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int _DewPoint;
+    private int _DewPoint = 10;
     ///<summary>
     /// Sets/gets DewPoint value.
     ///</summary>
@@ -205,7 +203,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private PressureInfo _Pressure = new PressureInfo() { QNH = 1013 };
+    private PressureInfo _Pressure = new PressureInfo();
     ///<summary>
     /// Sets/gets Pressure value.
     ///</summary>
@@ -271,7 +269,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendInfo _Trend = new TrendInfo() { Type = null };
+    private TrendInfo _Trend = new TrendInfo();
     ///<summary>
     /// Sets/gets Trend value. Allways value is in here, when no info found, trend type is null.
     /// Trend in metar is required, (NOSIG text is minimum).
@@ -284,8 +282,6 @@ namespace ENG.Metar.Decoder
       }
       set
       {
-        if (value == null)
-          throw new ArgumentNullException("This value cannot be null. Use TrendInfo () with Type = null instead.");
         _Trend = value;
       }
     }
@@ -318,6 +314,9 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion Properties
+
+    #region .ctor
+    #endregion .ctor
 
     #region Static methods
 
@@ -640,33 +639,39 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeClouds(Group[] grp, ref Metar obj)
     {
-      CloudInfo ret = new CloudInfo();
 
-      if (grp[1].Success)
-        ret.SetNSC();
-      else if (grp[2].Success)
-        ret.SetSKC();
-      else if (grp[3].Success)
+      if (grp[0].Length > 0)
       {
-        if (grp[3].Value == "///")
-          ret.SetVerticalVisibility(null);
+        CloudInfo ret = new CloudInfo();
+
+        if (grp[1].Success)
+          ret.SetNSC();
+        else if (grp[2].Success)
+          ret.SetSKC();
+        else if (grp[3].Success)
+        {
+          if (grp[3].Value == "///")
+            ret.SetVerticalVisibility(null);
+          else
+            ret.SetVerticalVisibility(
+              grp[3].GetIntValue());
+        }
         else
-          ret.SetVerticalVisibility(
-            grp[3].GetIntValue());
+        {
+          string str = grp[0].Value;
+          Match m = Regex.Match(str, R_CLOUD_ITEM);
+
+          while (m.Success)
+          {
+            ret.Add(xDecodeCloud(m));
+            m = m.NextMatch();
+          }
+        }
+
+        obj.Clouds = ret;
       }
       else
-      {
-        string str = grp[0].Value;
-        Match m = Regex.Match(str, R_CLOUD_ITEM);
-
-        while (m.Success)
-        {
-          ret.Add(xDecodeCloud(m));
-          m = m.NextMatch();
-        }
-      }
-
-      obj.Clouds = ret;
+        obj.Clouds = null;
     }
     private static Cloud xDecodeCloud(Match m)
     {
@@ -822,7 +827,7 @@ namespace ENG.Metar.Decoder
         obj.Trend = ret;
       }
       else
-        obj.Trend = new TrendInfo() { Type = null };
+        obj.Trend = null;
     }
     private static TrendTime xDecodeTrendDate(Match m)
     {
@@ -836,6 +841,9 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeTrendWind(Group[] grp, ref Metar obj)
     {
+      if (obj.Trend == null)
+        return;
+
       if (grp[0].Success)
       {
         Wind ret = new Wind();
@@ -865,6 +873,9 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeTrendVisibility(Group[] grp, ref Metar obj)
     {
+      if (obj.Trend == null)
+        return;
+
       if (grp[0].Success)
       {
         TrendVisibility ret = new TrendVisibility();
@@ -888,6 +899,9 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeTrendPhenoms(Group[] grp, ref Metar obj)
     {
+      if (obj.Trend == null)
+        return;
+
       if (grp[0].Success)
       {
         if (grp[2].Success)
@@ -920,6 +934,9 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeTrendClouds(Group[] grp, ref Metar obj)
     {
+      if (obj.Trend == null)
+        return;
+
       if (grp[0].Success)
       {
         CloudInfo ret = new CloudInfo();
@@ -1018,7 +1035,8 @@ public string ToInfo(InfoFormatter formatter)
       ret.AppendSpaced(this.Visibility.ToMetar());
       if (this.Phenomens != null)
         ret.AppendSpaced(this.Phenomens.ToMetar());
-      ret.AppendSpaced(this.Clouds.ToMetar());
+      if (this.Clouds != null)
+        ret.AppendSpaced(this.Clouds.ToMetar());
       ret.AppendSpaced(IntToMetarString(this.Temperature) + "/" + IntToMetarString(this.DewPoint));
       ret.AppendSpaced(this.Pressure.ToMetar());
       if (this.RePhenomens != null)

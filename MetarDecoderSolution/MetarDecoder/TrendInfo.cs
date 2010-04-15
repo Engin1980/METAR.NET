@@ -37,11 +37,11 @@ namespace ENG.Metar.Decoder
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eType? _Type = eType.NOSIG;
+    private eType _Type = eType.NOSIG;
     ///<summary>
     /// Sets/gets Type value.
     ///</summary>
-    public eType? Type
+    public eType Type
     {
       get
       {
@@ -187,10 +187,6 @@ namespace ENG.Metar.Decoder
     /// <returns></returns>
     public string ToMetar()
     {
-      if (this.Type == null)
-        return "";
-      else
-      {
         StringBuilder ret = new StringBuilder();
 
         ret.AppendSpaced(this.Type.ToString());
@@ -206,7 +202,6 @@ namespace ENG.Metar.Decoder
           ret.AppendSpaced(this.Clouds.ToMetar());
 
         return ret.ToString().TrimEnd();
-      }
     }
 
     #region MetarItem Members

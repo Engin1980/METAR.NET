@@ -14,7 +14,7 @@ namespace ENG.Metar.Decoder
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int _Day;
+    private int _Day = DateTime.Now.Day;
     ///<summary>
     /// Sets/gets Day value.
     ///</summary>
@@ -32,7 +32,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int _Hour;
+    private int _Hour = DateTime.Now.Hour;
     ///<summary>
     /// Sets/gets Hour value.
     ///</summary>
@@ -50,7 +50,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int _Minute;
+    private int _Minute = DateTime.Now.Minute;
     ///<summary>
     /// Sets/gets Minute value.
     ///</summary>
@@ -70,6 +70,26 @@ namespace ENG.Metar.Decoder
 
 
     #endregion Properties
+
+    #region .ctor
+    /// <summary>
+    /// Initializes a new Instance of ENG.Metar.Decoder.DayTime
+    /// </summary>
+    public DayTime()
+    { }
+    /// <summary>
+    /// Initializes a new Instance of ENG.Metar.Decoder.DayTime
+    /// </summary>
+    /// <param name="day"></param>
+    /// <param name="hour"></param>
+    /// <param name="minute"></param>
+    public DayTime(int day, int hour, int minute)
+    {
+      this.Day = day;
+      this.Hour = hour;
+      this.Minute = minute;
+    }
+    #endregion .ctor
 
     #region Inherited
 

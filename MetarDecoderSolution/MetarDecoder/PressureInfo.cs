@@ -33,7 +33,7 @@ namespace ENG.Metar.Decoder
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eUnit _Unit;
+    private eUnit _Unit = eUnit.hPa;
     ///<summary>
     /// Sets/gets Unit value.
     ///</summary>
@@ -50,7 +50,7 @@ namespace ENG.Metar.Decoder
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private double _Value;
+    private double _Value = 1013;
     ///<summary>
     /// Sets/gets pressure value.
     ///</summary>

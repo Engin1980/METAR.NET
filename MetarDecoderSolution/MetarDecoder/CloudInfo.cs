@@ -13,7 +13,7 @@ namespace ENG.Metar.Decoder
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _IsSKC;
+    private bool _IsSKC = true;
     ///<summary>
     /// Gets "is sky clear" value. That is SKC in metar.
     ///</summary>
@@ -25,7 +25,7 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _IsNSC;
+    private bool _IsNSC = false;
     ///<summary>
     /// Gets "no significant cloud" value. That is NSC in metar.
     ///</summary>
@@ -38,7 +38,7 @@ namespace ENG.Metar.Decoder
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _IsVerticalVisibility;
+    private bool _IsVerticalVisibility = false;
     ///<summary>
     /// Gets if cloud info is represented by vertical visibility. E.g. VV040 in metar.
     ///</summary>
@@ -51,7 +51,7 @@ namespace ENG.Metar.Decoder
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int? _VVDistance;
+    private int? _VVDistance = null;
     ///<summary>
     /// Gets vertical visibility distance (in houndreds of feet). E.g. VV040. 
     /// If not known, value is null. That is VV/// in metar.
