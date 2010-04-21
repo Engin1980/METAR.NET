@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -149,37 +150,63 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
 
     /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-    public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
+
+      /*TREND-INFO
+       * 0 - true if trend is NOSIG
+       * 1 - trend type short (e.g. NOSIG)
+       * 2 - trend type long (e.g. no signifi...)
+       * 3 - true if trend-times are present
+       * 4 - TREND-TIMES-INFO
+       * 5 - WIND-INFO for trend, or null
+       * 6 - VISIBILITY-INFO for trend, or null
+       * 7 - PHENOMS-INFO, or null
+       * 8 - CLOUD-INFO, or null
+       * */
+
+      string f = null;
+      try
+      {
+        f = formatter.TrendFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+        formatter.TrendFormat,
+       this.Type == eType.NOSIG,
+        this.Type,
+        Common.TypeToString(this.Type),
+        (this.Times != null && this.Times.Count != 0),
+        this.Times == null ? null : GetTimesInfo(formatter),
+        this.Wind != null ? this.Wind.ToInfo(formatter) : null,
+        this.Visibility != null ? this.Visibility.ToInfo(formatter) : null,
+        this.Phenomens != null ? this.Phenomens.ToInfo(formatter) : null,
+        this.Clouds != null ? this.Clouds.ToInfo(formatter) : null
+        );
+
+      return ret;
+    }
+
+    private string GetTimesInfo(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
-      //if (this.Type != null)
-      //{
-
-      //    ret.AppendSpaced(this.Type.ToString());
-      //    this.Times.ForEach(
-      //      i => ret.AppendSpaced(i.ToInfo(verbose)));
-      //    if (Wind != null)
-      //      ret.AppendSpaced(Wind.ToInfo(verbose));
-      //    if (Visibility != null)
-      //      ret.AppendSpaced(this.Visibility.ToInfo(verbose));
-      //    if (Phenomens != null)
-      //      ret.AppendSpaced(this.Phenomens.ToInfo(verbose));
-      //    if (Clouds != null)
-      //      ret.AppendSpaced(this.Clouds.ToInfo(verbose));
-
-      //}
+      this.Times.ForEach(t => ret.Append(t.ToInfo(formatter)));
 
       return ret.ToString();
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -187,21 +214,21 @@ namespace ENG.Metar.Decoder
     /// <returns></returns>
     public string ToMetar()
     {
-        StringBuilder ret = new StringBuilder();
+      StringBuilder ret = new StringBuilder();
 
-        ret.AppendSpaced(this.Type.ToString());
-        this.Times.ForEach(
-          i => ret.AppendSpaced(i.ToMetar()));
-        if (Wind != null)
-          ret.AppendSpaced(Wind.ToMetar());
-        if (Visibility != null)
-          ret.AppendSpaced(this.Visibility.ToMetar());
-        if (Phenomens != null)
-          ret.AppendSpaced(this.Phenomens.ToMetar());
-        if (Clouds != null)
-          ret.AppendSpaced(this.Clouds.ToMetar());
+      ret.AppendSpaced(this.Type.ToString());
+      this.Times.ForEach(
+        i => ret.AppendSpaced(i.ToMetar()));
+      if (Wind != null)
+        ret.AppendSpaced(Wind.ToMetar());
+      if (Visibility != null)
+        ret.AppendSpaced(this.Visibility.ToMetar());
+      if (Phenomens != null)
+        ret.AppendSpaced(this.Phenomens.ToMetar());
+      if (Clouds != null)
+        ret.AppendSpaced(this.Clouds.ToMetar());
 
-        return ret.ToString().TrimEnd();
+      return ret.ToString().TrimEnd();
     }
 
     #region MetarItem Members

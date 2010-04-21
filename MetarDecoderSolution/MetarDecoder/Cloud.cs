@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -169,46 +170,46 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-    public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = null;
 
-      switch (this.Type)
+      /* CLOUD
+       * 0 - type (short)
+       * 1 - type (long)
+       * 2 - altitude in hundreds formatted to 000
+       * 3 - altitude in number
+       * 4 - true if CB
+       * 5 - true if TCU
+       * */
+
+      string f = null;
+      try
       {
-        case eType.BKN:
-          ret.AppendSpaced("broken");
-          break;
-        case eType.FEW:
-          ret.AppendSpaced("few");
-          break;
-        case eType.OVC:
-          ret.AppendSpaced("overcast");
-          break;
-        case eType.SCT:
-          ret.AppendSpaced("scattered");
-          break;
-        default:
-          throw new NotImplementedException();
+        f = formatter.CloudFormat;
       }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
 
-      ret.Append((this.Altitude * 100).ToString() + " ft ");
+      ret = formatter.Format(
+       f,
+        this.Type,
+        Common.TypeToString(this.Type),
+        this.Altitude.ToString("000"),
+        (this.Altitude * 100).ToString(),
+        this.IsCB,
+        this.IsTCU);
 
-      if (this.IsCB)
-        ret.Append("cumulonimbus, ");
-      else if (this.IsTCU)
-        ret.Append("towering cumulus, ");
-      else
-        ret.Append(", ");
-
-      return ret.ToString();
+      return ret;
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.

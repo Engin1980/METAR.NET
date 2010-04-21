@@ -76,6 +76,9 @@
     <Compile Include="Extensions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Formatters\InfoFormatter.cs" />
+    <Compile Include="Formatters\LongInfoFormatter.cs" />
+    <Compile Include="Formatters\ShortInfoFormatter.cs" />
     <Compile Include="MetarDecodeException.cs" />
     <Compile Include="IMetarItem.cs" />
     <Compile Include="NonNegInt.cs">
@@ -158,9 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Documentation\MetarDecoder.shfbproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formatters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

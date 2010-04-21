@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESystem;
+using ESystem.Extensions;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -99,23 +100,44 @@ namespace ENG.Metar.Decoder
     #endregion Properties
 
     #region Inherited
-#if INFO
-   /// <summary>
+
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = null;
 
-      ret.AppendSpaced(eTypeToString(this.Type));
-      ret.AppendSpaced(this.Hour.ToString() + ":" + this.Minute.ToString("00"));
+      /* TREND-TIME-INFO
+       * 0 - time type (short)
+       * 1 - time type (long)
+       * 2 - hour
+       * 3 - minute
+       * */
 
-      return ret.ToString();
+      string f = null;
+      try
+      {
+        f = formatter.TrendTimeFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+            formatter.TrendTimeFormat,
+            this.Type,
+            eTypeToString(this.Type),
+            this.Hour,
+            this.Minute.ToString("00"));
+
+      return ret;
     }
 
- #endif //INFO
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -146,21 +168,21 @@ public string ToInfo(bool verbose)
     #endregion Inherited
 
     #region Private
-    
-private string eTypeToString(eType eType)
-{
-  switch (eType)
-  {
-    case eType.AT:
-      return "at";
-    case eType.FM:
-      return "from";
-    case eType.TL:
-      return "until";
-    default:
-      throw new NotImplementedException();
-  }
-}
+
+    private string eTypeToString(eType eType)
+    {
+      switch (eType)
+      {
+        case eType.AT:
+          return "at";
+        case eType.FM:
+          return "from";
+        case eType.TL:
+          return "until";
+        default:
+          throw new NotImplementedException();
+      }
+    }
     #endregion Private
 
   }

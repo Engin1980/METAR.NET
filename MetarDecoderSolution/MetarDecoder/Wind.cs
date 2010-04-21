@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESystem;
+using ESystem.Extensions;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -69,8 +70,8 @@ namespace ENG.Metar.Decoder
       }
       set
       {
-        if ((value.HasValue) && (!value.Value.IsBetween (0,360)))
-          throw new ArgumentOutOfRangeException ("Value must be between 0 and 360.");
+        if ((value.HasValue) && (!value.Value.IsBetween(0, 360)))
+          throw new ArgumentOutOfRangeException("Value must be between 0 and 360.");
         _Direction = value;
       }
     }
@@ -161,9 +162,19 @@ namespace ENG.Metar.Decoder
         return (Variability != null);
       }
     }
+
+    /// <summary>
+    /// Return true if wind is calm.
+    /// </summary>
+    public bool IsCalm
+    {
+      get
+      {
+        return (!GustSpeed.HasValue && Speed == 0);
+      }
+    }
     #endregion Properties
 
-#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
@@ -171,32 +182,34 @@ namespace ENG.Metar.Decoder
     /// <returns></returns>
     public string ToInfo(InfoFormatter formatter)
     {
-      /* 
-     * WIND:
-     * 0 - direction
-     * 1 - direction as N/NE/...
-     * 2 - wind speed
-     * 3 - wind speed unit
-     * 4 - wind-gust-speed, if none, wind speed is used
-     * 5 - WIND-VARIES
-     * */
 
-      StringBuilder ret = new StringBuilder();
+      string ret;
 
-      string s = (GustSpeed.HasValue ? formatter.WindGustingFormat : formatter.WindFormat);
+      string f = null;
+      try
+      {
+        f = formatter.WindFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
 
-      ret.AppendFormat(
-        s,
-        Direction,
-        Direction.HasValue ? Common.HeadingToString(Direction.Value) : "",
-        Speed,
-        Unit.ToString(),
-        GustSpeed.HasValue ? GustSpeed.Value : Speed,
-        IsVarying ? Variability.ToInfo (formatter) : "");
+      ret = formatter.Format(
+        formatter.WindFormat,
+        Direction, //0
+        Direction.HasValue ? Common.HeadingToString(Direction.Value) : "", //1
+        Speed, //2
+        Unit.ToString(), //3
+        GustSpeed, //4
+        GustSpeed.HasValue ? GustSpeed.Value : Speed, //5
+        IsVarying ? Variability.FromDirection.ToString() : null, //6
+        IsVarying ? Variability.ToDirection.ToString() : null,
+        IsCalm); // 7
 
       return ret.ToString();
     }
-#endif //INFO
     #region Inherits
 
     /// <summary>

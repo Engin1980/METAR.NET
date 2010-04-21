@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -166,42 +167,51 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
-   /// <summary>
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = "";
 
-      ret.AppendSpaced("Runway " + Runway + " visibility");
+      /*
+       * 
+       * RUNWAY-VISIBILITY
+       * 0 - device measure restrition string, or null
+       * 1 - distance
+       * 2 - distance unit (short)
+       * 3 - distance unit (long)
+       * 4 - runway designator
+       * 5 - tendency as string, or null
+       * 6 - variable visibility distance, or null
+   
+       */
 
-      if (this.DeviceMeasurementRestriction.HasValue)
-        if (this.DeviceMeasurementRestriction.Value == eDeviceMeasurementRestriction.P)
-          ret.AppendSpaced("more than");
-        else
-          ret.AppendSpaced("less than");
+      string f = null;
+      try
+      {
+        f = formatter.RunwayVisibilityFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
 
-      ret.AppendSpaced(this.Distance.ToString());
-      if (this.VariableVisibility.HasValue)
-        ret.AppendSpaced(" to " + this.VariableVisibility.Value.ToString());
+      ret = formatter.Format(
+            formatter.RunwayVisibilityFormat,
+            Common.DeviceMeasureRestrictionToString(DeviceMeasurementRestriction),
+            this.Distance,
+            this.IsInFeet ? "ft" : "m",
+            this.IsInFeet ? "feet" : "meters",
+            this.Runway,
+            Common.TendencyToString(this.Tendency),
+            VariableVisibility);
 
-      if (this.Tendency.HasValue)
-        if (this.Tendency.Value == eTendency.D)
-          ret.AppendSpaced(verbose ? "decreasing" : "decr.");
-        else if (this.Tendency.Value == eTendency.U)
-          ret.AppendSpaced(verbose ? "increasing" : "incr.");
-
-      if (!this.IsInFeet)
-        ret.AppendSpaced("meters.");
-      else
-        ret.AppendSpaced("feet.");
-
-      return ret.ToString();
+      return ret;
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.

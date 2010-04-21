@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -34,28 +35,45 @@ namespace ENG.Metar.Decoder
     #endregion Properties
 
     #region Inherited
-#if INFO
-   /// <summary>
+
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = null;
 
-      ret.AppendSpaced("windsheer at runway " + Runway);
+      /* WIND-SHEAR-FORMAT
+       * 0 - runway designator 
+       * */
 
-      return ret.ToString();
+      string f = null;
+      try
+      {
+        f = formatter.WindShearFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+            formatter.WindShearFormat,
+            Runway);
+
+      return ret;
     }
-#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
     /// <returns></returns>
     public string ToMetar()
     {
-      return("RWY" + Runway);
+      return ("RWY" + Runway);
     }
 
     #region MetarItem Members

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -141,33 +142,57 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
-   /// <summary>
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
-    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <param name="formatter">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public virtual string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = "";
 
-      ret.AppendSpaced("Visibility");
-      if (IsClear)
-        ret.AppendSpaced("unlimited.");  
-      else
+      /* VISIBILITY
+      * 0 - isClear
+      * 1 - distance
+      * 2 - distance unit
+      * 3 - distance unit long
+      * 4 - distance direction (if any), or null; not used at trend visibility (= is null)
+      * 5 - not used
+      * 6 - true if it is minimum measurable distance, or false
+      * 7 - other distance if used, or null; not used at trend visibility (= is null)
+      * 8 - other distance direction if other distance used, or null; not used at trend visibility (= is null)
+      * 9 - true if runwayVisibility definitions is present, false otherwise; not used at trend visibility (= is null)
+      * 10 - (iter) RUNWAY-VISIBILITY; not used at trend visibility (= is null)
+      * */
+
+      string f = null;
+      try
       {
-        if (this.IsDevicesMinimumValue)
-          ret.AppendSpaced("less than");
+        f = formatter.VisibilityFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
 
-        if (this.UseEUStyle)
-          ret.AppendSpaced(this.Distance.ToString(false) + " meters.");
-        else
-          ret.AppendSpaced(this.Distance.ToString(false) + " miles.");
-  }
+      ret = formatter.Format(
+        formatter.VisibilityFormat,
+        this.IsClear, //0
+        this.Distance.ToString(false),
+        this.UseEUStyle ? "m" : "sm",
+        this.UseEUStyle ? "meters" : "miles",
+        null,
+        null,
+        this.IsDevicesMinimumValue, // 6
+        null,
+        null
+        , null
+        , null
+        );
 
-      return ret.ToString();
+      return ret;
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESystem;
+using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder
 {
@@ -59,27 +59,6 @@ namespace ENG.Metar.Decoder
     #endregion Properties
 
     #region Inherited
-
-#if INFO
-    /// <summary>
-    /// Returns item in text string.
-    /// </summary>
-    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
-    /// <returns></returns>
-    public string ToInfo(InfoFormatter formatter)
-    {
-      StringBuilder ret = new StringBuilder();
-
-      ret.AppendFormat(
-        formatter.WindVaryingFormat,
-        FromDirection,
-        Common.HeadingToString(FromDirection),
-        ToDirection,
-        Common.HeadingToString(ToDirection));
-
-      return ret.ToString();
-    }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.

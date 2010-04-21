@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -1057,40 +1058,60 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
 
     /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-    public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = null;
 
-      if (IsForAllRunways)
-        ret.AppendSpaced("All runways condition:");
-      else if (IsObsolete)
-        ret.AppendSpaced("All runways last known condition:");
-      else
-        ret.AppendSpaced("Runway " + Runway + " condition:");
+      /* RUNWAY CONDITION INFO
+       * 0 - true if is for all runways
+       * 1 - true if info is obsolete
+       * 2 - true if runway is cleared
+       * 3 - runway designator
+       * 4 - deposit int value, or null
+       * 5 - deposit description (never null)
+       * 6 - contamination int value, or null
+       * 7 - contamination string (never null)
+       * 8 - depth int value, or null
+       * 9 - depth string (never null)
+       * 10 - friction int value, or null
+       * 11 - friction string (never null)
+       * */
 
-      if (verbose)
+      string f = null;
+      try
       {
-        ret.AppendSpaced(eDepositToString(this.Deposit) + " at ");
-        ret.AppendSpaced(eContaminationToString(this.Contamination) + ",");
-        ret.AppendSpaced(DepthToString(this.Depth) + ",");
-        ret.AppendSpaced(FrictionToString(this.Friction) + ".");
+        f = formatter.RunwayConditionFormat;
       }
-      else
-      {
-        ret.AppendSpaced(eDepositToString(this.Deposit) + ",");
-        ret.AppendSpaced("braking action: " + FrictionToString(this.Friction) + ".");
-      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+        formatter.RunwayConditionFormat,
+        this.IsForAllRunways,
+        this.IsObsolete,
+        this.IsCleared,
+        this.Runway,
+        this.Deposit,
+        eDepositToString(this.Deposit),
+        this.Contamination,
+        eContaminationToString(this.Contamination),
+        this.Depth,
+        eDepthToString(this.Depth),
+        this.Friction,
+        this.eFrictionToString(this.Friction)
+        );
 
       return ret.ToString();
     }
-#endif //INFO
 
     private string eContaminationToString(eContamination? value)
     {
@@ -1125,19 +1146,19 @@ namespace ENG.Metar.Decoder
       return ret;
     }
 
-    private string DepthToString(eDepth value)
+    private string eDepthToString(eDepth value)
     {
       if ((int)value < 91)
         return ((int)value).ToString() + "mm";
       else
         return (((int)value - 90) * 5) + "cm";
     }
-    private string DepthToString(eDepth? value)
+    private string eDepthToString(eDepth? value)
     {
       if (!value.HasValue)
         return "(depth not reported)";
       else
-        return DepthToString(value.Value);
+        return eDepthToString(value.Value);
     }
 
     private string eDepositToString(eDeposit value)
@@ -1189,7 +1210,7 @@ namespace ENG.Metar.Decoder
         return eDepositToString(value.Value);
     }
 
-    private string FrictionToString(eFriction value)
+    private string eFrictionToString(eFriction value)
     {
       if ((int)value < 91)
         return "friction coefficient 0." + value.ToString("00");
@@ -1229,12 +1250,12 @@ namespace ENG.Metar.Decoder
         return ret.ToString();
       }
     }
-    private string FrictionToString(eFriction? value)
+    private string eFrictionToString(eFriction? value)
     {
       if (!value.HasValue)
         return "braking action not reported";
       else
-        return FrictionToString(value.Value);
+        return eFrictionToString(value.Value);
     }
 
     /// <summary>
@@ -1250,11 +1271,16 @@ namespace ENG.Metar.Decoder
       if (IsCleared)
         ret.Append("CLDR//");
       else
+      {
         ret.Append(
-        (Deposit.HasValue ? ((int)Deposit.Value).ToString() : "/") +
-        (Contamination.HasValue ? ((int)Contamination.Value).ToString() : "/") +
-        (Depth.HasValue ? Depth.Value.ToString("00") : "//") +
-        (Friction.HasValue ? Friction.Value.ToString("00") : "//"));
+          (Deposit.HasValue ? ((int)Deposit.Value).ToString() : "/"));
+        ret.Append(
+              (Contamination.HasValue ? ((int)Contamination.Value).ToString() : "/"));
+        ret.Append(
+        (Depth.HasValue ? ((int)Depth.Value).ToString("00") : "//"));
+        ret.Append(
+        (Friction.HasValue ? ((int)Friction.Value).ToString("00") : "//"));
+      }
 
       return ret.ToString();
     }

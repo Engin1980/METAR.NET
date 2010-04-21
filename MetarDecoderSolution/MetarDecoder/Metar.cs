@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using ESystem.Extensions;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -937,7 +939,7 @@ namespace ENG.Metar.Decoder
       if (obj.Trend == null)
         return;
 
-      if (grp[0].Success)
+      if (grp[0].Success && grp[0].Value.Length > 0)
       {
         CloudInfo ret = new CloudInfo();
 
@@ -976,43 +978,104 @@ namespace ENG.Metar.Decoder
     #endregion Decoders
 
     #region Inherited
-#if INFO
-public string ToInfo(InfoFormatter formatter)
-{
-  StringBuilder ret = new StringBuilder();
+    public string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
 
-  /*
-     * METAR:
-     * 0 - icao
-     * 1 - date-day
-     * 2 - date-hour
-     * 3 - date-minute
-     * 4 - temperature
-     * 5 - dew-point
-     * 6 - wind
-     * 
-   * */
+      string f = null;
+      try
+      {
+        f = formatter.MetarFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
 
-  ret.AppendFormat(
-    formatter.MetarFormat,
-    this.ICAO,
+      ret = formatter.Format(
+        formatter.MetarFormat,
+        this.ICAO,
     this.Date.Day,
     this.Date.Hour,
     this.Date.Minute,
-    this.Temperature,
-    this.DewPoint,
-    this.Wind.ToInfo (formatter),
-    this.Visibility.ToInfo(formatter));
+    this.Wind.ToInfo(formatter)
+        , this.Visibility.ToInfo(formatter)
+        , this.Phenomens.ToInfo(formatter)
+        , this.Clouds != null ? this.Clouds.ToInfo(formatter) : null
+        , this.Temperature
+        , this.DewPoint
+        , this.Pressure.ToInfo(formatter)
+        , (this.WindShears != null) ? this.WindShears.ToInfo(formatter) : null
+        , (this.RunwayConditions != null) ? this.RunwayConditions.ToInfo(formatter) : null
+        , (this.Trend != null) ? this.Trend.ToInfo(formatter) : null
+        , this.Remark
+        );
 
-        string pom = ret.ToString();
+      return ret;
+    }
 
-        pom = formatter.Normalize(pom);
+    public string ToInfo(InfoFormatter formatter,
+      bool removeDoubleSpaces, bool updatePunctuation,
+      bool addSpacesAfterPunctuation, bool updateCasing)
+    {
+      StringBuilder ret = new StringBuilder(ToInfo(formatter));
 
-  return pom.ToString();
-}
+      if (removeDoubleSpaces)
+        while (ret.ToString().Contains("  "))
+          ret.Replace("  ", " ");
 
-    #endif //INFO
-    
+      if (updatePunctuation)
+      {
+        // mezery pred znaky
+        ret.Replace(" .", ".");
+        ret.Replace(" ,", ",");
+        ret.Replace(" ;", ";");
+
+        // double-znaky
+        ret.Replace(",,", ",");
+        ret.Replace("..", ".");
+        ret.Replace(";;", ";");
+
+        // double-kombinace
+        ret.Replace(",.", ".");
+        ret.Replace(";.", ".");
+        ret.Replace(",;", ";");
+      }
+
+      if (addSpacesAfterPunctuation)
+      {
+        for (int i = 0; i < ret.Length - 1; i++)
+        {
+          if (ret[i].IsIn(',', '.', ';'))
+            if (ret[i + 1] != ' ')
+              ret.Insert(i + 1, ' ');
+        }
+      }
+
+      if (updateCasing)
+      {
+        int i = 0;
+        bool nextUpper = false;
+        while (i < ret.Length - 2)
+        {
+          if (nextUpper)
+            if (ret[i].IsNotIn(',', '.', ';', ' '))
+            {
+              ret[i] = Char.ToUpper(ret[i]);
+              nextUpper = false;
+            }
+
+          if (ret[i] == '.')
+            nextUpper = true;
+          i++;
+        }
+      }
+
+      return ret.ToString();
+    }
+
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>

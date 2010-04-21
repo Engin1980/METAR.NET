@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -85,16 +86,49 @@ public string ToInfo(bool verbose)
 
     #region MetarItem Members
 
-#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <returns></returns>
-    public string ToInfo()
+    public string ToInfo(InfoFormatter formatter)
     {
-      throw new NotImplementedException();
+      string ret = null;
+
+      /* RUNWAYS CONDITIONS INFO
+       * 0 - true if SNOCLO, or false
+       * 1 - true if runway condition list is non-empty, or false
+       * 2 - RUNWAY CONDITION INFO
+       * */
+
+      string f = null;
+      try
+      {
+        f = formatter.RunwayConditionsFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+        formatter.RunwayConditionsFormat,
+        this.IsSNOCLO,
+        this.Count != 0,
+        GetRunwayConditionInfo(formatter)
+        );
+
+      return ret;
     }
-#endif //INFO
+
+    private object GetRunwayConditionInfo(InfoFormatter formatter)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      this.ForEach(r => ret.Append(r.ToInfo(formatter)));
+
+      return ret;
+    }
 
     /// <summary>
     /// Proceed sanity check of inserted values.

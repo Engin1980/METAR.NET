@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -21,7 +22,7 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return (_IsSKC);
+        return ((this.Count == 0) && _IsSKC);
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -33,7 +34,7 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return (_IsNSC);
+        return ((this.Count == 0) && _IsNSC);
       }
     }
 
@@ -46,7 +47,7 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return (_IsVerticalVisibility);
+        return ((this.Count == 0) && _IsVerticalVisibility);
       }
     }
 
@@ -77,6 +78,7 @@ namespace ENG.Metar.Decoder
       _IsSKC = true;
       _IsNSC = false;
       _IsVerticalVisibility = false;
+      this.Clear();
     }
 
     /// <summary>
@@ -87,6 +89,7 @@ namespace ENG.Metar.Decoder
       _IsSKC = false;
       _IsNSC = true;
       _IsVerticalVisibility = false;
+      this.Clear();
     }
 
     /// <summary>
@@ -99,53 +102,59 @@ namespace ENG.Metar.Decoder
       _IsNSC = false;
       _IsVerticalVisibility = true;
       _VVDistance = distance;
+      this.Clear();
     }
 
     #endregion Methods
 
     #region Implemented
 
-#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-    public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
+
+      /* CLOUDS INFO
+       * 0 - true if NSC, or false
+       * 1 - true if SKC, or false
+       * 2 - distance if vertical visibility, or null
+       * 3 - (iter) CLOUD info, or null if SKC, NSG or VV or empty.
+       * */
+
+      string f = null;
+      try
+      {
+        f = formatter.CloudsFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+        formatter.CloudsFormat,
+        this.IsNSC,
+        this.IsSKC,
+        this.VVDistance,
+        (IsNSC || IsSKC || IsVerticalVisibility || this.Count == 0) ? null : GetCloudInfos(formatter)
+        );
+
+      return ret;
+    }
+
+    private object GetCloudInfos(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
-      if (this.IsNSC)
-        ret.AppendSpaced("No significant clouds.");
-      else if (this.IsSKC)
-        ret.AppendSpaced("Sky clear.");
-      else if (this.IsVerticalVisibility)
-      {
-        ret.AppendSpaced("Vertical visibility");
-        if (VVDistance.HasValue)
-          ret.AppendSpaced ((VVDistance.Value*100).ToString() + " ft.");
-        else
-          ret.AppendSpaced (" unknown.");
-        }
-      else
-      {
-        if (this.Count > 0)
-        {
-        ret.AppendSpaced("Clouds: ");
-        if (verbose)
-          ret.AppendSpaced(this[0].ToInfo(verbose));
-        else
-        {
-          this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose)));
-          ret[ret.Length-2] = '.';
-        }
-        }
-    
-      }
+      this.ForEach(c => ret.Append(c.ToInfo(formatter)));
 
-      return ret.ToString();
+      return ret;
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -163,7 +172,7 @@ namespace ENG.Metar.Decoder
       {
         StringBuilder ret = new StringBuilder();
 
-        this.ForEach( 
+        this.ForEach(
           i => ret.AppendSpaced(i.ToMetar()));
 
         return ret.ToString().TrimEnd();
@@ -184,7 +193,7 @@ namespace ENG.Metar.Decoder
       if ((IsSKC || IsNSC) && IsVerticalVisibility)
         errors.Add("Vertical visibility cannot be set true with IsSKC or IsNSC flags.");
       if ((IsSKC || IsNSC || IsVerticalVisibility) && (Count > 0))
-        warnings.Add ("When one of flags IsSKC, IsNSC or IsVerticalVisibility are set to true, cloud defining content (wich is now not empty) will be ignored.");
+        warnings.Add("When one of flags IsSKC, IsNSC or IsVerticalVisibility are set to true, cloud defining content (wich is now not empty) will be ignored.");
     }
 
     #endregion

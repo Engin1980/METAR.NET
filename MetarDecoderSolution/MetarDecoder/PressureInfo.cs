@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESystem;
+using ESystem.Extensions;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents pressure info.
   /// </summary>
-  public class PressureInfo  : IMetarItem
+  public class PressureInfo : IMetarItem
   {
     #region Nested
 
@@ -69,7 +70,7 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return ((int) Value);
+        return ((int)Value);
       }
       set
       {
@@ -83,11 +84,11 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return (Value/33.86 );
+        return (Value / 33.86);
       }
       set
       {
-        _Value = value*33.86 ;
+        _Value = value * 33.86;
       }
     }
 
@@ -106,7 +107,7 @@ namespace ENG.Metar.Decoder
       if (value <= 0)
         throw new ArgumentException("Pressure value cannot be less or equal 0.", "value");
       if (unit == eUnit.hPa)
-        QNH = (int) value;
+        QNH = (int)value;
       else
         mmHq = value;
     }
@@ -114,26 +115,51 @@ namespace ENG.Metar.Decoder
     #endregion Methods
 
     #region Inherited
-#if INFO
-   /// <summary>
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
     {
-      StringBuilder ret = new StringBuilder();
+      string ret = null;
 
-      ret.AppendSpaced("Current pressure " + this.Value.ToString((this.Unit == eUnit.hPa ? "0" : "00.00")));
+      /* PRESSURE
+       * 0 - value in mmHq
+       * 1 - value in hPa
+       * 2 - value in current unit
+       * 3 - current unit (short)
+       * 4 - current unit (long)
+       * */
 
-      return ret.ToString();
+      string f = null;
+      try
+      {
+        f = formatter.PressureFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+            formatter.PressureFormat,
+            this.mmHq,
+            this.QNH,
+            (this.Unit == eUnit.hPa) ? this.QNH : this.mmHq,
+            this.Unit,
+            Common.PressureUnitToString(this.Unit)
+            );
+
+      return ret;
     }
-#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
     /// <returns></returns>
-    public  string ToMetar()
+    public string ToMetar()
     {
       StringBuilder ret = new StringBuilder();
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -23,11 +24,13 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return (_IsNSW);
+        return ((this.Count == 0) && _IsNSW);
       }
       set
       {
         _IsNSW = value;
+        if (value)
+          this.Clear();
       }
     }
 
@@ -49,41 +52,52 @@ namespace ENG.Metar.Decoder
     #endregion .ctor
 
     #region Inherited
-#if INFO
-   /// <summary>
+
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
+
+      /* PHENOMS-INFO
+       * 0 - true when isNSW
+       * 1 - true if some phenoms are present
+       * 2 - PHENOM-INFO
+       * */
+
+      string f = null;
+      try
+      {
+        f = isRE ? formatter.RePhenomsFormat : formatter.PhenomsFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+            f,
+            this.IsNSW,
+            this.Count != 0,
+            GetPhenomInfo(formatter)
+            );
+
+      return ret;
+    }
+
+    private string GetPhenomInfo(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
-      if (this.IsNSW)
-        ret.AppendSpaced("No significant weather.");
-      else
-      {
-        if (this.Count > 0)
-        {
-          if (verbose)
-            ret.AppendSpaced(this[0].ToInfo(verbose));
-          else
-          {
-            if (isRE)
-              ret.AppendSpaced("Recent weather:");
-            else
-              ret.AppendSpaced("Weather:");
-
-            this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose) + ";"));
-
-            ret[ret.Length - 2] = '.';
-          }
-        }
-      }
+      this.ForEach(ph => ret.Append(ph.ToInfo(formatter)));
 
       return ret.ToString();
     }
-#endif //INFO
+
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -97,7 +111,7 @@ public string ToInfo(bool verbose)
         StringBuilder ret = new StringBuilder();
 
         this.ForEach(
-          i => ret.AppendSpaced (((isRE)? "RE" : "") + i.ToMetar()));
+          i => ret.AppendSpaced(((isRE) ? "RE" : "") + i.ToMetar()));
 
         return ret.ToString().TrimEnd();
       }

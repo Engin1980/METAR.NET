@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -12,7 +13,7 @@ namespace ENG.Metar.Decoder
   public class Visibility : TrendVisibility
   {
     #region Nested
-    
+
     /// <summary>
     /// Represents world direction
     /// </summary>
@@ -131,7 +132,7 @@ namespace ENG.Metar.Decoder
     }
     #endregion Properties
 
-    #region Methods    
+    #region Methods
     /// <summary>
     /// Set distance in meters. Sets EU style.
     /// </summary>
@@ -175,7 +176,6 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
@@ -183,28 +183,64 @@ namespace ENG.Metar.Decoder
     /// <returns></returns>
     public string ToInfo(InfoFormatter formatter)
     {
+      string ret = "";
+
+      //VISIBILITY
+      //0 - isClear
+      //1 - distance
+      //2 - distance unit
+      //3 - distance unit long
+      //4 - distance direction (if any), or null
+      //5 - not used
+      //6 - true if it is minimum measurable distance, or false
+      //7 - other distance if used, or null
+      //8 - other distance direction if other distance used, or null
+      //9 - true if runwayVisibility definitions is present, false otherwise
+      //10 - (iter) RUNWAY-VISIBILITY
+
+
+      // 11 - 
+      // 
+
+      string f = null;
+      try
+      {
+        f = formatter.VisibilityFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+  f,
+  this.IsClear, //0
+  this.Distance.ToString(false),
+  this.UseEUStyle ? "m" : "sm",
+  this.UseEUStyle ? "meters" : "miles",
+  this.DirectionSpecification.HasValue ? this.DirectionSpecification.Value.ToString() : null,
+  null,
+  this.IsDevicesMinimumValue, // 6
+  this.OtherDistance.HasValue ? this.OtherDistance.Value.ToString(false) : "-",
+  this.OtherDistance.HasValue ? this.OtherDirectionSpecification.Value.ToString() : "-"
+  , (this.Runways != null && this.Runways.Count > 0)
+  , GetRunwaysVisibilities(formatter)
+  );
+
+      return ret;
+    }
+
+    private object GetRunwaysVisibilities(InfoFormatter formatter)
+    {
       StringBuilder ret = new StringBuilder();
 
-      string s;
-      if (IsClear)
-        s = formatter.VisibilityClearFormat;
-      else if (OtherDistance.HasValue)
-        s = formatter.VisibilityWithOtherDistanceFormat;
-      else
-        s = formatter.VisibilityFormat;
+      Runways.ForEach(r => ret.Append(r.ToInfo(formatter)));
 
-      ret.AppendFormat(
-        s,
-        this.Distance.ToString(false),
-        this.UseEUStyle ? "meters" : "sm",
-        this.DirectionSpecification.HasValue ? this.DirectionSpecification.Value.ToString() : "",
-        "K/S",
-        this.OtherDistance.HasValue ? this.OtherDistance.Value.ToString(false) : "-",
-        this.OtherDistance.HasValue ? this.OtherDirectionSpecification.Value.ToString() : "-");
-
-      return ret.ToString();
+      return ret;
     }
-#endif //INFO
+
+
 
     private string eDirectionToInfo(eDirection eDirection, bool verbose)
     {
@@ -213,7 +249,7 @@ namespace ENG.Metar.Decoder
       switch (eDirection)
       {
         case eDirection.E:
-          ret = (verbose ? "east": "E");
+          ret = (verbose ? "east" : "E");
           break;
         case eDirection.N:
           ret = (verbose ? "north" : "N");
@@ -266,7 +302,7 @@ namespace ENG.Metar.Decoder
 
         if (OtherDistance.HasValue)
         {
-          ret.Append(OtherDistance.Value.Value.ToString("0000"));
+          ret.Append(" " + OtherDistance.Value.Value.ToString("0000"));
           ret.Append(OtherDirectionSpecification.ToString());
         }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="15.4.2010 11:04:29">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="21.4.2010 17:53:02">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -29,11 +29,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.7656
+    Last step completed in 00:00:00.1094
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -42,11 +42,11 @@ GenerateRefInfo:
   MrefBuilder (v2.4.10520.1)
   Copyright c Microsoft 2006
   Info: Loaded 1 assemblies for reflection and 7 dependency assemblies.
-  Info: Wrote information on 1 namespaces, 38 types, and 476 members
+  Info: Wrote information on 2 namespaces, 57 types, and 645 members
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:04.7656
+    Last step completed in 00:00:02.9219
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -57,7 +57,7 @@ Applying visibility properties to reflection information file
     4 attribute nodes removed
     0 explicit interface implementations removed
     84 local and base class EII elements removed
-    Last step completed in 00:00:00.1094
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -70,7 +70,7 @@ TransformManifest:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:03.5938
+    Last step completed in 00:00:02.9219
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
@@ -185,12 +185,12 @@ C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt;
 C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\SplitScreen.js
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Presentation.css
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:00.9688
+    Last step completed in 00:00:00.8125
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -199,13 +199,13 @@ Merging conceptual and additional tables of contents...
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.3594
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.1094
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -218,7 +218,7 @@ BuildReferenceTopics:
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match '*.xml'.
   Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
-  Info: CopyFromIndexComponent: Indexed 170741 elements in 107 files.
+  Info: CopyFromIndexComponent: Indexed 170940 elements in 107 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
@@ -830,7 +830,7 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml'.
-  Info: CopyFromIndexComponent: Indexed 131875 elements in 118 files.
+  Info: CopyFromIndexComponent: Indexed 131917 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -905,7 +905,7 @@ BuildReferenceTopics:
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
-  Info: ResolveReferenceLinksComponent2: Loaded 170741 reference targets.
+  Info: ResolveReferenceLinksComponent2: Loaded 170940 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:ENG.Metar.Decoder
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder
@@ -925,6 +925,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(ENG.Metar.Decoder.Cloud.eType,System.Int32,System.Boolean,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(System.String,System.Int32)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SetClouds(System.String,System.Int32,System.Boolean,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Cloud.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Cloud.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.Type
@@ -951,6 +954,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SetNSC
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SetSKC
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.SetVerticalVisibility(System.Nullable{System.Int32})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.VVDistance
@@ -1015,6 +1021,7 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Metar.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Metar
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Metar
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Metar.ToInfo
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Metar.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Clouds
@@ -1037,6 +1044,18 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.RunwayConditions
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Temperature
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;removeDoubleSpaces&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;updatePunctuation&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;addSpacesAfterPunctuation&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;updateCasing&quot;/&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Trend
@@ -1090,6 +1109,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.#ctor(System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PhenomInfo.IsNSW
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PressureInfo
@@ -1103,6 +1125,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.QNH
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.Set(System.Double,ENG.Metar.Decoder.PressureInfo.eUnit)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PressureInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.PressureInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PressureInfo.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.Unit
@@ -1229,6 +1254,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.IsObsolete
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayCondition.Runway
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayCondition.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.RunwayCondition.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayCondition.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition.eContamination
@@ -1252,6 +1280,9 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.RunwayConditionInfo.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayConditionInfo.IsSNOCLO
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility
@@ -1268,6 +1299,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.Runway
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.Tendency
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.RunwayVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayVisibility.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.VariableVisibility
@@ -1285,6 +1319,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Phenomens
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Times
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Type
@@ -1302,6 +1339,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Hour
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Minute
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTime.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.TrendTime.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTime.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Type
@@ -1321,7 +1361,14 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.TrendTimeInfo.Sort
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendTimeInfo.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.GetTimeInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.GetTimeInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.GetTimeInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.GetTimeInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendVisibility
@@ -1342,6 +1389,8 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetMiles(ENG.Metar.Decoder.Racional,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetMiles(System.Int32,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SetSKC
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.UseEUStyle
@@ -1362,6 +1411,8 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Visibility.eDirection)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Visibility.eDirection,System.Int32,ENG.Metar.Decoder.Visibility.eDirection)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Visibility.eDirection
@@ -1379,6 +1430,9 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.IsVarying
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Speed
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Wind.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.Wind.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Wind.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Unit
@@ -1394,6 +1448,9 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShear.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindShear.Runway
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShear.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.WindShear.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShear.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindShearInfo
@@ -1413,6 +1470,9 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShearInfo.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindShearInfo.IsAllRunways
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShearInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.WindShearInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShearInfo.ToMetar
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindVariable
@@ -1428,8 +1488,160 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindVariable.ToDirection
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindVariable.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindVariable.ToMetar
-  Info: Processed 370 topics
-    Last step completed in 00:02:50.5469
+  Info: BuildAssembler: Building topic N:ENG.Metar.Decoder.Formatters
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder.Formatters
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Formatters.InfoFormatter
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Formatters.InfoFormatter
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Formatters.InfoFormatter
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;values&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.MetarFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.InfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomItemFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendTimeFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendTimesFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.VisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.WindFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.WindShearFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.WindShearsFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eCloudFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eCloudFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eMetarFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eMetarFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePhenomFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePhenomFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePhenomItemFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePhenomItemFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePhenomsFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePressureFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.ePressureFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eRunwayConditionFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eRunwayConditionFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eRunwayConditionsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eRunwayConditionsFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eRunwayVisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eRunwayVisibilityFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eTrendFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eTrendFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eTrendTimeFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eTrendTimeFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eTrendTimesFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eTrendTimesFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eVisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eVisibilityFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eWindFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eWindFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eWindShearFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eWindShearFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter.eWindShearsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.InfoFormatter.eWindShearsFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.LongInfoFormatter
+  Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.InfoFormatter'.
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Formatters.LongInfoFormatter
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Formatters.LongInfoFormatter
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Formatters.LongInfoFormatter
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.MetarFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomItemFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomItemFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RePhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimeFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimeFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimesFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimesFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.VisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.VisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.WindFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.WindFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.WindShearFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.WindShearFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.WindShearsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.WindShearsFormat
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.ShortInfoFormatter
+  Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.InfoFormatter'.
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Formatters.ShortInfoFormatter
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Formatters.ShortInfoFormatter
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Formatters.ShortInfoFormatter
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.MetarFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomItemFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomItemFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RePhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimeFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimeFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimesFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimesFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.VisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.VisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
+  Info: Processed 476 topics
+    Last step completed in 00:01:58.5156
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -1438,7 +1650,7 @@ GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:04.3594
+    Last step completed in 00:00:05.0625
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
@@ -1448,19 +1660,19 @@ Copyright c 2008-2009, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
-Processed 370 HTML files
+Processed 476 HTML files
 Sorting keywords and generating See Also indices
 Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhk
 Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhc
-    Last step completed in 00:00:02.4219
+    Last step completed in 00:00:01.6563
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1.x index file...
@@ -1468,7 +1680,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0781
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1486,11 +1698,11 @@ Build1xHelpFile:
   
   Compile time: 0 minutes, 13 seconds
   
-  372	Topics
+  478	Topics
   
-  5,669	Local links
+  7,223	Local links
   
-  3,152	Internet links
+  3,572	Internet links
   
   0	Graphics
   
@@ -1498,19 +1710,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 711,292 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 891,002 bytes
   
-  Compression decreased file by 5,159,336 bytes.
+  Compression decreased file by 6,492,239 bytes.
   
-    Last step completed in 00:00:18.0938
+    Last step completed in 00:00:15.6875
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.5000
+    Last step completed in 00:00:00.3906
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.15.2010 11:07 dop..  Total time: 00:03:27,5000
+Build completed successfully at 04.21.2010 05:55 odp..  Total time: 00:02:28,9219
 
 </buildStep>
 </shfbBuild>

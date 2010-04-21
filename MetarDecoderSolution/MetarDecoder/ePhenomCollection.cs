@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -20,20 +21,20 @@ namespace ENG.Metar.Decoder
       /// <summary>
       /// Light. Value "-"
       /// </summary>
-      Light = 100, 
+      Light = 100,
       /// <summary>
       /// Heavy. Value "+"
       /// </summary>
-      Heavy, 
+      Heavy,
       /// <summary>
       /// In vicinity
       /// </summary>
-      VC, 
+      VC,
       // Description
       /// <summary>
       /// Shallow
       /// </summary>
-      MI= 200, 
+      MI = 200,
       /// <summary>
       /// Patches
       /// </summary>
@@ -178,33 +179,56 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
-    /// <summary>
-    /// Returns item in text string.
-    /// </summary>
-    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
-    /// <returns></returns>
-    public string ToInfo(bool verbose)
+    internal string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
+
+      /* PHENOM-FORMAT
+       * 0 - true if some phenoms are in block
+       * 1 - PHENOM-INFO
+       * */
+
+      string f = null;
+      try
+      {
+        f = formatter.PhenomFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+        formatter.PhenomFormat,
+        this.Count != 0,
+        GetPhenomInfo(formatter)
+        );
+
+      return ret;
+    }
+
+    private string GetPhenomInfo(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
-      if (this.Count > 0)
-      {
-        if (verbose)
-        {
-          ret.AppendSpaced(ePhenomToInfo(this[0]));
-        }
-        else
-        {
-          this.ForEach(i => ret.AppendSpaced(ePhenomToInfo(i)));
-        }
+      /* PHENOM-FORMAT
+ * 0 - phenom-item-abbreviation (e.g. RA)
+ * 1 - phenom item string (e.g. rain)
+ * */
 
-        ret[ret.Length - 2] = '.';
-      }
+      foreach (var fItem in this)
+      {
+        ret.Append(
+          formatter.Format(
+            formatter.PhenomItemFormat,
+            fItem,
+            ePhenomToInfo(fItem)));
+
+      } // foreach (var fItem in this)
 
       return ret.ToString();
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -224,7 +248,7 @@ namespace ENG.Metar.Decoder
           ret.Append(fItem.ToString());
       } // foreach (var fItem in this)
 
-        return ret.ToString();
+      return ret.ToString();
     }
 
     /// <summary>
@@ -236,8 +260,8 @@ namespace ENG.Metar.Decoder
     {
       if (IsCorrectPhenomOrder())
       {
-        warnings.Add (
-          "There is invalid order of phenoms. The are expected 5 disjoint groups (in brackets) containing " + 
+        warnings.Add(
+          "There is invalid order of phenoms. The are expected 5 disjoint groups (in brackets) containing " +
           "(-,+,VC) (MI,BC,PR,DR,BL,SH,TS,FZ) (DZ,RA,SN,SG,IC,PL,GR,GS) (BR,FG,FU,VA,DU,SA,HZ) (PO,SQ,FC,SS,DS).");
       }
     }
@@ -281,7 +305,7 @@ namespace ENG.Metar.Decoder
           break;
         case ePhenom.DR:
           ret = "low drifting";
-          break; 
+          break;
         case ePhenom.DS:
           ret = "dust storm";
           break;
@@ -329,47 +353,47 @@ namespace ENG.Metar.Decoder
           break;
         case ePhenom.PO:
           ret = "dust or sand whirls";
-            break;
+          break;
         case ePhenom.PR:
-            ret = "partial";
-            break;
+          ret = "partial";
+          break;
         case ePhenom.RA:
-            ret = "rain";
-            break;
+          ret = "rain";
+          break;
         case ePhenom.SA:
-            ret = "sand";
-            break;
+          ret = "sand";
+          break;
         case ePhenom.SG:
-            ret = "snow grains";
-            break;
+          ret = "snow grains";
+          break;
         case ePhenom.SH:
-            ret = "shower";
-            break;
+          ret = "shower";
+          break;
         case ePhenom.SN:
-            ret = "snow";
-            break;
+          ret = "snow";
+          break;
         case ePhenom.SQ:
-            ret = "squalls";
-            break;
+          ret = "squalls";
+          break;
         case ePhenom.SS:
-            ret = "sand storm";
-            break;
+          ret = "sand storm";
+          break;
         case ePhenom.TS:
-            ret = "thunderstorm"; 
-            break;
+          ret = "thunderstorm";
+          break;
         case ePhenom.VA:
-            ret = "volcanic ash";
-            break;
+          ret = "volcanic ash";
+          break;
         case ePhenom.VC:
-            ret = "in vicinity";
-            break;
+          ret = "in vicinity";
+          break;
         default:
-            throw new NotImplementedException();
+          throw new NotImplementedException();
       }
 
 #if DEBUG
 
-      ret += ((int)value).ToString();
+      //ret += ((int)value).ToString();
 
 #endif
 

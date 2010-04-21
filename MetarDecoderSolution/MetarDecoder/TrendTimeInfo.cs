@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -12,21 +13,45 @@ namespace ENG.Metar.Decoder
   {
     #region Inherited
 
-#if INFO
-   /// <summary>
+    /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
+
+      /* TREND-TIMES-FORMAT
+       * 0 - trend times
+       * */
+
+      string f = null;
+      try
+      {
+        f = formatter.TrendTimesFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+            formatter.TrendTimesFormat,
+            GetTimeInfo(formatter));
+
+      return ret;
+    }
+
+    public string GetTimeInfo(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
-      this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose)));
+      this.ForEach(i => ret.Append(i.ToInfo(formatter)));
 
       return ret.ToString();
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.

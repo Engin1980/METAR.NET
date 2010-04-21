@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESystem;
+using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder
 {

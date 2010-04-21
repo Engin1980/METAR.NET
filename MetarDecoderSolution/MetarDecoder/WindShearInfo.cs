@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
@@ -33,29 +34,51 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
     /// <summary>
     /// Returns item in text string.
     /// </summary>
     /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-public string ToInfo(bool verbose)
+    public string ToInfo(InfoFormatter formatter)
+    {
+      string ret = null;
+
+      /* WIND SHEARS INFO
+       * 0 - true if is non-empty
+       * 1 - True if is for all runways
+       * 2 - true if inner content is non-empty
+       * 3 - WIND-SHEAR-INFO
+       * */
+
+      string f = null;
+      try
+      {
+        f = formatter.WindShearsFormat;
+      }
+      catch { }
+      if (f == null)
+        return null;
+      else if (f.Length == 0)
+        return "";
+
+      ret = formatter.Format(
+            formatter.WindShearsFormat,
+            (this.IsAllRunways || this.Count != 0),
+            IsAllRunways,
+            this.Count != 0,
+            GetWindshearInfo(formatter));
+
+      return ret;
+    }
+
+    private string GetWindshearInfo(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
-      if (IsAllRunways)
-        ret.AppendSpaced("Windshear all runways. ");
-      else
-      {
-        ret.AppendSpaced("Windshear at runways");
-        this.ForEach(i => ret.AppendSpaced(i.Runway + ","));
-
-        ret[ret.Length - 2] = '.';
-      }
+      this.ForEach(ws => ret.Append(ws.ToInfo(formatter)));
 
       return ret.ToString();
     }
-#endif //INFO
 
     /// <summary>
     /// Returns item in metar string.
@@ -67,7 +90,7 @@ public string ToInfo(bool verbose)
         return "WS ALL RWY";
       else
       {
-        StringBuilder b = new StringBuilder();        
+        StringBuilder b = new StringBuilder();
 
         foreach (var fItem in this)
         {
