@@ -173,10 +173,10 @@ namespace ENG.Metar.Decoder
     formatter.eUnitToString(Common.eUnit.m, false) : formatter.eUnitToString(Common.eUnit.mi, false),
   this.UseEUStyle ? 
     formatter.eUnitToString(Common.eUnit.m, true) : formatter.eUnitToString(Common.eUnit.mi, true),
-  this.DirectionSpecification.HasValue ? this.DirectionSpecification.Value.ToString() : null,
+  this.DirectionSpecification.HasValue ? formatter.eDirectionToString(this.DirectionSpecification.Value, false) : null,
   this.IsDevicesMinimumValue, // 6
   this.OtherDistance.HasValue ? this.OtherDistance.Value.ToString(false) : "-",
-  this.OtherDistance.HasValue ? this.OtherDirectionSpecification.Value.ToString() : "-"
+  this.OtherDistance.HasValue ? formatter.eDirectionToString(this.OtherDirectionSpecification.Value, false) : null
   , (this.Runways != null && this.Runways.Count > 0)
   , GetRunwaysVisibilities(formatter)
   );
