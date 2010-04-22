@@ -190,7 +190,7 @@ namespace ENG.Metar.Decoder.Formatters
     public override string WindShearFormat
     {
       get {
-        string ret = "runway {0}";
+        string ret = "runway {0}, ";
 
         return ret;
       }
@@ -516,7 +516,7 @@ namespace ENG.Metar.Decoder.Formatters
       else
       {
         if ((int)value.Value < 91)
-          return "friction coefficient 0." + value.Value.ToString("00");
+          return "friction coefficient 0." + ((int) value.Value).ToString("00");
         else
         {
           StringBuilder ret = new StringBuilder();

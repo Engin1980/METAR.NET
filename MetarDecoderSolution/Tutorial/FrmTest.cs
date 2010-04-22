@@ -159,7 +159,7 @@ namespace Tutorial
       if (mtr == null) return;
 
       ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-        new ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter();
+        new ENG.Metar.Decoder.Formatters.LongInfoFormatter();
 
       string str = mtr.ToInfo(ifo, true, true, true, true);
 
