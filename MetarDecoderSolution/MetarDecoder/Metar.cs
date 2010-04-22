@@ -716,9 +716,9 @@ namespace ENG.Metar.Decoder
     }
     private static Cloud xDecodeCloud(Match m)
     {
-      Cloud ret = new Cloud();
+      Cloud ret = null;
 
-      ret.SetClouds(
+      ret = new Cloud(
         m.Groups[2].Value, m.Groups[3].GetIntValue(), m.Groups[4].Value == "CB", m.Groups[4].Value == "TCU");
 
       return ret;

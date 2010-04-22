@@ -108,6 +108,42 @@ namespace ENG.Metar.Decoder
 
     #endregion Properties
 
+    #region .ctor
+
+    /// <summary>
+    /// Initializes a new Instance of ENG.Metar.Decoder.Cloud
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="altitude"></param>
+    public Cloud(eType type, NonNegInt altitude) : this (type, altitude, false, false)
+    { }
+
+    /// <summary>
+    /// Initializes a new Instance of ENG.Metar.Decoder.Cloud
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="altitude"></param>
+    /// <param name="isCB"></param>
+    /// <param name="isTCU"></param>
+    public Cloud (eType type, NonNegInt altitude, bool isCB, bool isTCU)
+    {
+      this.SetClouds(type, altitude, isCB, isTCU);
+    }
+
+    /// <summary>
+    /// Initializes a new Instance of ENG.Metar.Decoder.Cloud
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="altitude"></param>
+    /// <param name="isCB"></param>
+    /// <param name="isTCU"></param>
+    public Cloud(string type, NonNegInt altitude, bool isCB, bool isTCU)
+    {
+      this.SetClouds(type, altitude, isCB, isTCU);
+    }
+
+    #endregion .ctor
+
     #region Methods
 
     /// <summary>
