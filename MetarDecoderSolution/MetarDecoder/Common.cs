@@ -14,7 +14,7 @@ namespace ENG.Metar.Decoder
       if (!heading.IsBetween(0, 360))
         throw new ArgumentException("Invalid heading. Should be between 0 to 360.");
 
-      if ((heading < 22) || (heading < 337))
+      if ((heading < 22) || (heading > 337))
         return "N";
       else if (heading < 67)
         return "NE";
@@ -61,13 +61,13 @@ namespace ENG.Metar.Decoder
         switch (tendency.Value)
         {
           case RunwayVisibility.eTendency.D:
-            return "decreasing";
+            ret= "decreasing";
             break;
           case RunwayVisibility.eTendency.N:
-            return "stable";
+            ret="stable";
             break;
           case RunwayVisibility.eTendency.U:
-            return "increasing";
+            ret="increasing";
             break;
           default:
             throw new NotImplementedException();
@@ -113,22 +113,26 @@ namespace ENG.Metar.Decoder
         throw new NotImplementedException();
     }
 
-    internal static object TypeToString(TrendInfo.eType eType)
+    internal static string TypeToString(TrendInfo.eType eType)
     {
+      string ret = null;
+
       switch (eType)
       {
         case TrendInfo.eType.BECMG:
-          return "becoming";
+          ret = "becoming";
           break;
         case TrendInfo.eType.NOSIG:
-          return "no significant change.";
+          ret =  "no significant change.";
           break;
         case TrendInfo.eType.TEMPO:
-          return "temporally";
+          ret = "temporally";
           break;
         default:
           throw new NotImplementedException();
       }
+
+      return ret;
     }
   }
 }

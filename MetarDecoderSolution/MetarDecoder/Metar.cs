@@ -18,6 +18,11 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// Types of metar. Now METAR only supported, SPECI not supported.
     /// </summary>
+    ///<remarks>
+    /// METAR is the name of the code for an aerodrome routine meteorological report. SPECI is the name of the code
+    /// for an aerodrome special meteorological report. A METAR report and a SPECI report may have a trend forecast
+    /// appended.
+    ///</remarks>
     public enum eType
     {
       /// <summary>
@@ -35,6 +40,13 @@ namespace ENG.Metar.Decoder
     ///<summary>
     /// Sets/gets Type value.
     ///</summary>
+    ///<remarks>
+    ///The code name METAR or SPECI shall be included at the beginning of each individual
+    ///report.
+    ///When a deterioration of one weather element is accompanied by an improvement in
+    ///another element (for example, lowering of clouds and an improvement in visibility), a single
+    ///SPECI report shall be issued.
+    ///</remarks>
     public eType Type
     {
       get
@@ -51,6 +63,10 @@ namespace ENG.Metar.Decoder
     ///<summary>
     /// Sets/gets ICAO value.
     ///</summary>
+    ///<remarks>
+    ///The identiﬁcation of the reporting station in each individual report shall be indicated by
+    ///means of the ICAO location indicator.
+    ///</remarks>
     public string ICAO
     {
       get
@@ -74,6 +90,12 @@ namespace ENG.Metar.Decoder
     ///<summary>
     /// Sets/gets Date value.
     ///</summary>
+    ///<remarks>
+    ///The day of the month and the time of observation in hours and minutes UTC followed, with-
+    ///out a space, by the letter indicator Z shall be included in each individual METAR report.
+    ///This group shall be included in each individual SPECI report. In SPECI reports, this group
+    ///shall indicate the time of occurrence of the change(s) which justiﬁed the issue of the report.
+    ///</remarks>
     public DayTime Date
     {
       get
@@ -93,6 +115,16 @@ namespace ENG.Metar.Decoder
     /// Sets/gets IsAUTO value. The optional code word AUTO shall be inserted before the wind group 
     /// when a report contains fully automated observations without human intervention. 
     ///</summary>
+    ///<remarks>
+    ///The optional code word AUTO shall be inserted before the wind group when a report con-
+    ///tains fully automated observations without human intervention. The ICAO requirement is
+    ///that all of the speciﬁed elements shall be reported. However, if any element cannot be
+    ///observed, the group in which it would have been encoded shall be replaced by the appro-
+    ///  priate number of solidi. The number of solidi depends on the number of symbolic
+    ///  letters for the speciﬁc group which is not able to be reported; i.e. four for the visibility
+    ///  group, two for the present weather group and three or six for the cloud group, as appro-
+    ///  priate.
+    ///  </remarks>
     public bool IsAUTO
     {
       get
@@ -513,26 +545,23 @@ namespace ENG.Metar.Decoder
         ret.SetSKC();
       else if (grp[3].Success)
       {
-        ret.UseEUStyle = true;
-        ret.Distance = grp[4].GetIntValue();
+        int distance = grp[4].GetIntValue();
+        Visibility.eDirection? dir = null;
+        int? otherDist = null;
+          Visibility.eDirection? otherDir = null;
+
         if (grp[5].Success)
-        {
-          ret.DirectionSpecification = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
+          dir = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
             typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[5].Value);
-        }
-        else
-          ret.DirectionSpecification = null;
+
         if (grp[6].Success)
         {
-          ret.OtherDistance = grp[7].GetIntValue();
-          ret.OtherDirectionSpecification = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
+          otherDist = grp[7].GetIntValue();
+          otherDir = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
             typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[8].Value);
         }
-        else
-        {
-          ret.OtherDistance = null;
-          ret.OtherDirectionSpecification = null;
-        }
+
+          ret.SetMeters(distance, dir, otherDist, otherDir);
       }
       else
         ret.SetMiles(new Racional(
@@ -886,8 +915,7 @@ namespace ENG.Metar.Decoder
           ret.SetCAVOK();
         else if (grp[3].Success)
         {
-          ret.UseEUStyle = true;
-          ret.Distance = grp[3].GetIntValue();
+          ret.SetMeters(grp[3].GetIntValue());
         }
         else
           ret.SetMiles(new Racional(
@@ -978,6 +1006,11 @@ namespace ENG.Metar.Decoder
     #endregion Decoders
 
     #region Inherited
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="formatter">Formatter used to format string.</param>
+    /// <returns></returns>
     public string ToInfo(InfoFormatter formatter)
     {
       string ret = null;
@@ -1015,6 +1048,15 @@ namespace ENG.Metar.Decoder
       return ret;
     }
 
+    /// <summary>
+    /// Returns item in text string.
+    /// </summary>
+    /// <param name="formatter">Formatter used to format string.</param>
+    /// <param name="addSpacesAfterPunctuation">True to removes spaces before . , ;</param>
+    /// <param name="removeDoubleSpaces">True to replaces double spaces by single space</param>
+    /// <param name="updateCasing">True to set upper case after dot (.).</param>
+    /// <param name="updatePunctuation">True to remove first char from combinations like ,. ,; ;. and doubles, like ,, .. ;; </param>
+    /// <returns></returns>
     public string ToInfo(InfoFormatter formatter,
       bool removeDoubleSpaces, bool updatePunctuation,
       bool addSpacesAfterPunctuation, bool updateCasing)
@@ -1117,16 +1159,7 @@ namespace ENG.Metar.Decoder
     }
 
     #region MetarItem Members
-#if INFO
-    /// <summary>
-    /// Returns item in text string.
-    /// </summary>
-    /// <returns></returns>
-    public string ToInfo()
-    {
-      throw new NotImplementedException();
-    }
-#endif //INFO
+
     /// <summary>
     /// Proceed sanity check of inserted values.
     /// </summary>
@@ -1137,13 +1170,34 @@ namespace ENG.Metar.Decoder
       Date.SanityCheck(ref errors, ref warnings);
       Wind.SanityCheck(ref errors, ref warnings);
       Visibility.SanityCheck(ref errors, ref warnings);
-      if (Phenomens != null) Phenomens.SanityCheck(ref errors, ref warnings);
-      if (Clouds != null) Clouds.SanityCheck(ref errors, ref warnings);
+      if (Phenomens != null)
+      {
+        if (Phenomens.IsEmpty()) warnings.Add("Phenomens are used but are empty.");
+        Phenomens.SanityCheck(ref errors, ref warnings);
+      }
+      if (Clouds != null)
+      {
+        if (Clouds.IsEmpty()) warnings.Add("Clouds are used but are empty.");
+        Clouds.SanityCheck(ref errors, ref warnings);
+      }
       Pressure.SanityCheck(ref errors, ref warnings);
-      if (RePhenomens != null) RePhenomens.SanityCheck(ref errors, ref warnings);
-      if (WindShears != null) WindShears.SanityCheck(ref errors, ref warnings);
-      if (RunwayConditions != null) RunwayConditions.SanityCheck(ref errors, ref warnings);
-      Trend.SanityCheck(ref errors, ref warnings);
+      if (RePhenomens != null)
+      {
+        if (RePhenomens.IsEmpty()) warnings.Add("Re-phenomens are used but are empty.");
+        RePhenomens.SanityCheck(ref errors, ref warnings);
+      }
+      if (WindShears != null)
+      {
+        if (WindShears.IsEmpty()) warnings.Add("Windshears are used but are empty.");
+        WindShears.SanityCheck(ref errors, ref warnings);
+      }
+      if (RunwayConditions != null)
+      {
+        if (RunwayConditions.IsEmpty()) warnings.Add("Runway conditions are used but are empty.");
+        RunwayConditions.SanityCheck(ref errors, ref warnings);
+      }
+      if (Trend != null)
+        Trend.SanityCheck(ref errors, ref warnings);
     }
 
     #endregion MetarItem Members

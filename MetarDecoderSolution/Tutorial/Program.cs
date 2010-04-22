@@ -2,22 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Tutorial
 {
   class Program
   {
+    [STAThread]
     static void Main(string[] args)
     {
-      DownloadMetarForHamburgSynchronically();
+      Application.EnableVisualStyles();
+      Application.SetCompatibleTextRenderingDefault(false);
 
-      DownloadMetarForHamburgAsynchronically();
+      FrmTest f = new FrmTest();
+      f.Show();
+      f.Focus();
+      System.Windows.Forms.Application.Run(f);
+      
 
-      DecodeAndEncodeMetar();
+      //DownloadMetarForHamburgSynchronically();
 
-      PrintShortInfo();
+      //DownloadMetarForHamburgAsynchronically();
 
-      PrintLongInfo();
+      //DecodeAndEncodeMetar();
+
+      //PrintShortInfo();
+
+      //PrintLongInfo();
     }
 
     private static void DecodeAndEncodeMetar()

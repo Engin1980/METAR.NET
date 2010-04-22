@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable 1591 // odstrani warning kvuli dokumentaci
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +28,8 @@ namespace ENG.Metar.Decoder.Formatters
       get
       {
         string ret =
-           "[8|Wind calm.]" +
-          "[!8|Wind {1} at {5} {3}.]";
+           "[1|Wind calm.]" +
+          "[!1|Wind {3} at {7} {5}.]";
 
         return ret;
       }

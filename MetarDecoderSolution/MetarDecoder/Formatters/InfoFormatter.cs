@@ -13,174 +13,534 @@ namespace ENG.Metar.Decoder.Formatters
   public abstract class InfoFormatter
   {
 
+    /// <summary>
+    /// Metar info values for info-strings. Source is metar.<see cref="ENG.Metar.Decoder.Metar"/>
+    /// </summary>
     public enum eMetarFormat
     {
+      /// <summary>
+      /// Icao code, 4 chars
+      /// </summary>
       ICAO = 0,
+      /// <summary>
+      /// Number of day of metar
+      /// </summary>
       DateDay = 1,
+      /// <summary>
+      /// Hour of metar
+      /// </summary>
       DateHour = 2,
+      /// <summary>
+      /// Minute of metar, allways formatted as two numbers.
+      /// </summary>
       DateMinute = 3,
-      Wind = 4,
-      VisibilityWithRunwayVisibility = 5,
-      Phenomens = 6,
-      Clouds = 7,
+      /// <summary>
+      /// Wind format. <see cref="eWindFormat"/>
+      /// </summary>
+      WindFormat = 4,
+      /// <summary>
+      /// Visibility format including runway visibility. <see cref="eVisibilityFormat"/>
+      /// </summary>
+      VisibilityFormat = 5,
+      /// <summary>
+      /// Phenomens format. <see cref="ePhenomsFormat"/>
+      /// </summary>
+      PhenomsFormat = 6,
+      /// <summary>
+      /// Clouds format. <see cref="eCloudsFormat"/>
+      /// </summary>
+      CloudsFormat = 7,
+      /// <summary>
+      /// Temperature value.
+      /// </summary>
       Temperature = 8,
+      /// <summary>
+      /// Dewpoint value.
+      /// </summary>
       DewPoint = 9,
-      PressureInfo = 10,
-      WindShearOrNull = 11,
-      RunwayConditionsOrNull = 12,
-      TrendOrNull = 13,
+      /// <summary>
+      /// Pressure format. <see cref="ePressureFormat"/>
+      /// </summary>
+      PressureFormat = 10,
+      /// <summary>
+      /// Windshear format, or null if not used. <see cref="eWindShearsFormat"/>
+      /// </summary>
+      WindShearFormatOrNull = 11,
+      /// <summary>
+      /// RunwayConditionsFormat, or null if not used. <see cref="eRunwayConditionsFormat"/>
+      /// </summary>
+      RunwayConditionsFormatOrNull = 12,
+      /// <summary>
+      /// Trend format, or null if not used. <see cref="eTrendFormat"/>
+      /// </summary>
+      TrendFormatOrNull = 13,
+      /// <summary>
+      /// Remark string, or null if not present.
+      /// </summary>
       RemarkOrNull = 14
     }
 
+    /// <summary>
+    /// Wind info values for info-strings. <see cref="ENG.Metar.Decoder.Wind"/>
+    /// </summary>
     public enum eWindFormat
     {
-      Direction = 0,
-      DirectionAsCardinalPoint = 1,
-      WindSpeed = 2,
-      WindSpeedUnit = 3,
-      WindGustSpeedOrNull = 4,
-      MaximumWindSpeed = 5,
-      VaryingWindFromOrNull = 6,
-      VaryingWindToOrNull = 7,
-      IsCalm = 8
+      /// <summary>
+      /// True if wind is variable (VRB).
+      /// </summary>
+      IsVariable = 0,
+      /// <summary>
+      /// True if wind is calm.
+      /// </summary>
+      IsCalm = 1,
+      /// <summary>
+      /// Wind direction, as single value (not formatted to "000"), or null if wind is variable.
+      /// </summary>
+      DirectionOrNull = 2,
+      /// <summary>
+      /// Gets direction as one of values N/NE/E/SE/S/SW/W/NW. Null if wind is variable.
+      /// </summary>
+      DirectionAsCardinalPointOrNull = 3,
+      /// <summary>
+      /// Speed of wind.
+      /// </summary>
+      WindSpeed = 4,
+      /// <summary>
+      /// Unit of wind-speed.
+      /// </summary>
+      WindSpeedUnit = 5,
+      /// <summary>
+      /// Wind gust speed, or null if no gusts.
+      /// </summary>
+      WindGustSpeedOrNull = 6,
+      /// <summary>
+      /// Maximum of values WindSpeed and WindGustSpeed.
+      /// </summary>
+      MaximumWindSpeed = 7,
+      /// <summary>
+      /// If varying wind, first value "from-where". Null if not used.
+      /// </summary>
+      VaryingWindFromOrNull = 8,
+      /// <summary>
+      /// If varying wind, second value "to-where". Null if not used.
+      /// </summary>
+      VaryingWindToOrNull = 9,
     }
 
     /// <summary>
-    /// 
+    /// Visibility values for info-strings.  <see cref="ENG.Metar.Decoder.Visibility"/>
     /// </summary>
     /// <remarks>
     /// This is also used for trend-visibility
     /// </remarks>
     public enum eVisibilityFormat
     {
+      /// <summary>
+      /// True if visibility is ok (CAVOK or SKC).
+      /// </summary>
       IsClear = 0,
-      Distance = 1,
+      /// <summary>
+      /// Visibility distance, or null if is clear.
+      /// </summary>
+      DistanceOrNull = 1,
+      /// <summary>
+      /// Unit of visibility in short (m/sm)
+      /// </summary>
       DistanceUnit = 2,
+      /// <summary>
+      /// Units of visibility as long string (meters/miles)
+      /// </summary>
       DistanceUnitLongString = 3,
+      /// <summary>
+      /// Visibility distance direction, or null if not used. This value is not used at trend part of metar.
+      /// </summary>
       DistanceDirectionOrNullNotTrend = 4,
-      NotUsed5 = 5,
-      IsMinimumMeasurable = 6,
-      OtherDistanceOrNullNotTrend = 7,
-      OtherDistanceDirectionOrNullNotTrend = 8,
-      IsRunwayVisibilityPresentNotTrend = 9,
-      RunwayVisibilityFormatNotTrend = 10
+      /// <summary>
+      /// True if value is minimum of measurable value of measuring device.
+      /// </summary>
+      IsMinimumMeasurable = 5,
+      /// <summary>
+      /// Second direction measured visibility if present, null otherwise.  This value is not used at trend part of metar.
+      /// </summary>
+      OtherDistanceOrNullNotTrend = 6,
+      /// <summary>
+      /// Second direction of second visibility, if present, null otherwise.  This value is not used at trend part of metar.
+      /// </summary>
+      OtherDistanceDirectionOrNullNotTrend = 7,
+      /// <summary>
+      /// Returns true if there are any specifications of runway visibility, null otherwise.  This value is not used at trend part of metar.
+      /// </summary>
+      IsRunwayVisibilityPresentNotTrend = 8,
+      /// <summary>
+      /// Runways visibility specification if exists. <see cref="eRunwayVisibilityFormat"/>. Null if not present.  This value is not used at trend part of metar.
+      /// </summary>
+      RunwayVisibilityFormatNotTrend = 9
     }
 
+    /// <summary>
+    /// Runway visibility for info-strings. <see cref="ENG.Metar.Decoder.RunwayVisibility"/>
+    /// </summary>
     public enum eRunwayVisibilityFormat
     {
+      /// <summary>
+      /// Device measure restriction (at least/at most). Or null if not used.
+      /// </summary>
       DeviceMeasureRestrictionOrNull = 0,
+      /// <summary>
+      /// Visibility distance.
+      /// </summary>
       Distance = 1,
+      /// <summary>
+      /// Visibility distance unit as short string (m/ft).
+      /// </summary>
       DistanceUnit = 2,
+      /// <summary>
+      /// Visibility distance unit as long string (meters, feet).
+      /// </summary>
       DistanceUnitLongString = 3,
+      /// <summary>
+      /// Runway designator.
+      /// </summary>
       RunwayDesignator = 4,
+      /// <summary>
+      /// Visibility tendency as string (increasing/decreasing/stable), null if not present.
+      /// </summary>
       TendencyAsStringOrNull = 5,
+      /// <summary>
+      /// Visibility varies value, or null if not used.
+      /// </summary>
       VariableVisibilityDistanceOrNull = 6
     }
 
     /// <summary>
-    /// 
+    /// Phenoms values for info-strings.  <see cref="ENG.Metar.Decoder.PhenomInfo"/>
     /// </summary>
     /// <remarks>
-    /// Also used for re-phenoms
+    /// This represents the whole phenomens block, like "+RABR -SNTS".
+    /// Also used for re-phenoms.
     /// </remarks>
     public enum ePhenomsFormat
     {
+      /// <summary>
+      /// True if there is no significant weather.
+      /// </summary>
       IsNSW = 0,
+      /// <summary>
+      /// True if there are any phenoms present.
+      /// </summary>
       ArePhenomsPresent = 1,
+      /// <summary>
+      /// Phenom format. <see cref="ePhenomFormat"/>
+      /// </summary>
       PhenomFormat = 2
     }
 
+    /// <summary>
+    /// Phenoms block values for info-string. <see cref="ENG.Metar.Decoder.ePhenomCollection"/>
+    /// </summary>
+    /// <remarks>
+    /// This represents the one phenomens block, like "+RABR" or "-SNTS".
+    /// </remarks>
     public enum ePhenomFormat
     {
+      /// <summary>
+      /// True if there are any phenoms items.
+      /// </summary>
       ArePhenomsPresent = 0,
+      /// <summary>
+      /// PhenomItemFormat. <see cref="ePhenomItemFormat"/>
+      /// </summary>
       PhenomItemFormat = 1
     }
+
+    /// <summary>
+    /// Phenom item for info-string. <see cref="ENG.Metar.Decoder.ePhenomCollection"/>
+    /// </summary>
+    /// <remarks>
+    /// This represents the one phenomen, like "+", "RA", "BR", "-", "SN" or "TS".
+    /// </remarks>
     public enum ePhenomItemFormat
     {
+      /// <summary>
+      /// Phenom item as short string, e.g. SN
+      /// </summary>
       PhenomItemAbbreviation = 0,
+      /// <summary>
+      /// Phenom item as string text, e.g. "snow".
+      /// </summary>
       PhenomItemAsString = 1
     }
 
+    /// <summary>
+    /// Clouds values for info-string. <see cref="ENG.Metar.Decoder.CloudInfo"/>
+    /// </summary>
+    public enum eCloudsFormat
+    {
+      /// <summary>
+      /// True if no significant clouds.
+      /// </summary>
+      IsNSC = 0,
+      /// <summary>
+      /// True if sky is clear.
+      /// </summary>
+      IsSKC = 1,
+      /// <summary>
+      /// Value of vertical visibility if used, null otherwise.
+      /// </summary>
+      VerticalVisibilityDistanceOrNull = 2,
+      /// <summary>
+      /// CloudFormat if used, null otherwise. <see cref="eCloudFormat"/>
+      /// </summary>
+      CloudFormatOrNull = 3
+    }
+
+    /// <summary>
+    /// Cloud values for info-string. <see cref="ENG.Metar.Decoder.Cloud"/>
+    /// </summary>
     public enum eCloudFormat
     {
+      /// <summary>
+      /// Cloud type as short string (FEW, OVC, ...)
+      /// </summary>
       Type = 0,
+      /// <summary>
+      /// Cloud type as long string (few, overcast, ...)
+      /// </summary>
       TypeAsLongString = 1,
+      /// <summary>
+      /// Altitude in hundreds feet, e.g. 020. Formatted to "000".
+      /// </summary>
       AltitudeInHundreds = 2,
+      /// <summary>
+      /// Altitude in feet, e.g. 8000.
+      /// </summary>
       Altitude = 3,
+      /// <summary>
+      /// True if CB.
+      /// </summary>
       IsCB = 4,
+      /// <summary>
+      /// True if cloud is towering cumulus.
+      /// </summary>
       IsTCU = 5
     }
 
+    /// <summary>
+    /// Pressure values for info-string. <see cref="ENG.Metar.Decoder.PressureInfo"/>
+    /// </summary>
     public enum ePressureFormat
     {
+      /// <summary>
+      /// Pressure value in mmHq.
+      /// </summary>
       ValueInMMHQ = 0,
+      /// <summary>
+      /// Pressure value in hPa.
+      /// </summary>
       ValueInHPA = 1,
+      /// <summary>
+      /// Pressure value in current pressure unit (as loaded from metar os set by programmer).
+      /// </summary>
       ValueInCurrentUnit = 2,
+      /// <summary>
+      /// Current unit as short string (hPa, ...).
+      /// </summary>
       CurrentUnit = 3,
+      /// <summary>
+      /// Current unit as long string (hectopascals, ...)
+      /// </summary>
       CurrentUnitLongString = 4
     }
 
+    /// <summary>
+    /// Runway conditions format values for info-string. <see cref="ENG.Metar.Decoder.RunwayConditionInfo"/>
+    /// </summary>
     public enum eRunwayConditionsFormat
     {
+      /// <summary>
+      /// True if airport is closed due to snow. (SNOCLO).
+      /// </summary>
       IsSNOCLO = 0,
+      /// <summary>
+      /// True if there are some condition info about runways.
+      /// </summary>
       AreRunwayConditionsPresent = 1,
-      RunwayConditionFormat
+      /// <summary>
+      /// RunwayConditionFormat or null if empty. <see cref="eRunwayConditionFormat"/>
+      /// </summary>
+      RunwayConditionFormatOrNull = 2
     }
 
+    /// <summary>
+    /// Runway condition format values for info-string. <see cref="ENG.Metar.Decoder.RunwayCondition"/>
+    /// </summary>
     public enum eRunwayConditionFormat
     {
+      /// <summary>
+      /// True if this set is for all runways
+      /// </summary>
       IsForAllRunways = 0,
+      /// <summary>
+      /// True if information is obsolete (from prevous metar).
+      /// </summary>
       IsObsolete = 1,
+      /// <summary>
+      /// True if runway is cleared.
+      /// </summary>
       IsCleared = 2,
+      /// <summary>
+      /// Runway designator.
+      /// </summary>
       RunwayDesignator = 3,
+      /// <summary>
+      /// Deposit value as represented in metar, or null if empty (//).
+      /// </summary>
       DepositNumOrNull = 4,
+      /// <summary>
+      /// Deposit value as string, special value if empty.
+      /// </summary>
       DepositStringNeverNull = 5,
+      /// <summary>
+      /// Contamination value as represented in metar, or null if empty (//).
+      /// </summary>
       ContaminationNumOrNull = 6,
+      /// <summary>
+      /// Contamination  value as string, special value if empty.
+      /// </summary>
       ContaminationStringNeverNull = 7,
+      /// <summary>
+      /// Depth value as represented in metar, or null if empty (//).
+      /// </summary>
       DepthNumOrNull = 8,
+      /// <summary>
+      /// Depth  value as string, special value if empty.
+      /// </summary>
       DepthStringNeverNull = 9,
+      /// <summary>
+      /// Friction/braking action value as represented in metar, or null if empty (//).
+      /// </summary>
       FrictionNumOrNull = 10,
+      /// <summary>
+      /// Friction/braking action value as string, special value if empty.
+      /// </summary>
       FrictionNumNeverNull = 11
     }
 
+    /// <summary>
+    /// Windshears values for info-string. <see cref="ENG.Metar.Decoder.WindShearInfo"/>
+    /// </summary>
     public enum eWindShearsFormat
     {
+      /// <summary>
+      /// True if windshear info is not empty.
+      /// </summary>
       IsNonEmpty = 0,
+      /// <summary>
+      /// True if windshear warning is for all runways.
+      /// </summary>
       IsForAllRunways = 1,
+      /// <summary>
+      /// True if some runway WS warning is present.
+      /// </summary>
       IsSomeRunwaysPresent = 2,
-      WindShearFormat = 3
+      /// <summary>
+      /// WindShearFormat or null if no WS runway warning is present. <see cref="eWindShearFormat"/>
+      /// </summary>
+      WindShearFormatOrNull = 3
     }
 
+    /// <summary>
+    /// Windshear value for info-string. <see cref="ENG.Metar.Decoder.WindShear"/>
+    /// </summary>
     public enum eWindShearFormat
     {
+      /// <summary>
+      /// Runway designator.
+      /// </summary>
       RunwayDesignator = 0
     }
 
+    /// <summary>
+    /// Trend values for info-string. <see cref="ENG.Metar.Decoder.TrendInfo"/>
+    /// </summary>
     public enum eTrendFormat
     {
+      /// <summary>
+      /// True if trend is no-significatn-change (NOSIG).
+      /// </summary>
       IsNOSIG = 0,
+      /// <summary>
+      /// Trend type as short string (NOSIG/BECMG, ...)
+      /// </summary>
       TrendType = 1,
+      /// <summary>
+      /// Trend type as long string (no significant change, ... )
+      /// </summary>
       TrendTypeLongString = 2,
+      /// <summary>
+      /// True if trend times are present.
+      /// </summary>
       AreTrendTimesPresent = 3,
-      TrendTimesInfoFormat = 4,
-      WindFormat = 5,
-      VisibilityFormat = 6,
-      PhenomsFormat = 7,
-      CloudsFormat = 8
-    }
-    public enum eTrendTimesFormat
-    {
-      TrendTimes = 0
+      /// <summary>
+      /// Trend times format, or null if not present. <see cref="eTrendTimesFormat"/>
+      /// </summary>
+      TrendTimesFormatOrNull = 4,
+      /// <summary>
+      /// Trend wind format, or null if not present. <see cref="eWindFormat"/>
+      /// </summary>
+      WindFormatOrNull = 5,
+      /// <summary>
+      /// Trend visibility format, or null if not present. <see cref="eVisibilityFormat"/>
+      /// </summary>
+      VisibilityFormatOrNull = 6,
+      /// <summary>
+      /// Trend phenomens format, or null if not present. <see cref="ePhenomsFormat"/>
+      /// </summary>
+      PhenomsFormatOrNull = 7,
+      /// <summary>
+      /// Cloud info format, or null if not present. <see cref="eCloudFormat"/>
+      /// </summary>
+      CloudsFormatOrNull = 8
     }
 
+    /// <summary>
+    /// Trend times values for info-string. <see cref="ENG.Metar.Decoder.TrendTimeInfo"/>
+    /// </summary>
+    public enum eTrendTimesFormat
+    {
+      /// <summary>
+      /// Trend time format or null if empty or not present.  <see cref="eTrendTimeFormat"/>
+      /// </summary>
+      TrendTimeFormatOrNull = 0
+    }
+
+    /// <summary>
+    /// Trend time values for info-string <see cref="ENG.Metar.Decoder.TrendTime"/>
+    /// </summary>
     public enum eTrendTimeFormat
     {
+      /// <summary>
+      /// Trend time type as short string (AT, FM, ...)
+      /// </summary>
       TimeType = 0,
+      /// <summary>
+      /// Trend time type as long string (at, from, ...)
+      /// </summary>
       TimeTypeLongString = 1,
+      /// <summary>
+      /// Trend time hour.
+      /// </summary>
       Hour = 2,
+      /// <summary>
+      /// Trend time minute, formatted to "00".
+      /// </summary>
       Minute = 3
     }
 
+    /// <summary>
+    /// Gets the metar format string.
+    /// </summary>
+    /// <value></value>
     public abstract string MetarFormat { get; }
 
     /// <summary>

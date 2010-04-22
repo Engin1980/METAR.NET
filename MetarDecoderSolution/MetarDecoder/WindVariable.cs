@@ -10,6 +10,13 @@ namespace ENG.Metar.Decoder
   /// Represents wind variability between values.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
+  /// <remarks>
+  /// If, during the 10-minute period preceding the observation, the total variation in wind direc-
+  /// tion is 60° or more but less than 180° and the mean wind speed is 3 knots (2 m s–1 or
+  /// 6 km h–1) or more, the observed two extreme directions between which the wind has var-
+  /// ied shall be given for dndndnVdxdxdx in clockwise order. Otherwise this group shall not be
+  /// included.
+  /// </remarks>
   public class WindVariable : IMetarItem
   {
     #region Properties
@@ -76,9 +83,13 @@ namespace ENG.Metar.Decoder
     /// <param name="warnings">Found warnings.</param>
     public void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
-      // nothing
-      if (FromDirection == ToDirection)
-        warnings.Add("Significant variable wind range is 0.");
+      int diff = (FromDirection > ToDirection) ? (ToDirection + 360 - FromDirection) : ToDirection - FromDirection;
+      if (diff < 60)
+        warnings.Add(
+          "Significant variable wind range should be more or equal 60 degrees. Lower values should not be taken as significant.");
+      if (diff > 180)
+        warnings.Add(
+          "Significant variable wind range should be less or equal 180 degrees. Greater values should be taken as variable (VRB) wind.");
     }
 
     #endregion Inherited

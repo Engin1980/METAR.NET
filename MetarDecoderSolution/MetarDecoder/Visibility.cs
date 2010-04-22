@@ -139,12 +139,7 @@ namespace ENG.Metar.Decoder
     /// <param name="distance">Visibility distance.</param>
     public override void SetMeters(int distance)
     {
-      UseEUStyle = true;
-      Distance = distance;
-      DirectionSpecification = null;
-      OtherDistance = null;
-      OtherDirectionSpecification = null;
-      IsDevicesMinimumValue = false;
+      SetMeters (distance, null, null, null);
     }
 
     /// <summary>
@@ -154,8 +149,7 @@ namespace ENG.Metar.Decoder
     /// <param name="way">Direction specification.</param>
     public void SetMeters(int distance, eDirection way)
     {
-      SetMeters(distance);
-      DirectionSpecification = way;
+      SetMeters(distance, way, null, null);
     }
 
     /// <summary>
@@ -167,9 +161,25 @@ namespace ENG.Metar.Decoder
     /// <param name="secondWay">Other visibility direction</param>
     public void SetMeters(int distance, eDirection way, int secondDistance, eDirection secondWay)
     {
-      SetMeters(distance, way);
-      OtherDistance = secondDistance;
-      OtherDirectionSpecification = secondWay;
+      SetMeters(distance, way, secondDistance, secondWay);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="distance"></param>
+    /// <param name="way"></param>
+    /// <param name="secondDistance"></param>
+    /// <param name="secondWay"></param>
+    public void SetMeters(int distance, eDirection? way, int? secondDistance, eDirection? secondWay)
+    {
+      UseEUStyle = true;
+      IsDevicesMinimumValue = false;
+
+      this.Distance = distance;
+      this.DirectionSpecification = way;
+      this.OtherDistance = secondDistance;
+      this.OtherDirectionSpecification = secondWay;
     }
 
     #endregion Methods
@@ -181,13 +191,13 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="formatter">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-    public string ToInfo(InfoFormatter formatter)
+    public override string ToInfo(InfoFormatter formatter)
     {
       string ret = "";
 
       //VISIBILITY
       //0 - isClear
-      //1 - distance
+      //1 - distanceOrNull
       //2 - distance unit
       //3 - distance unit long
       //4 - distance direction (if any), or null
@@ -216,7 +226,7 @@ namespace ENG.Metar.Decoder
       ret = formatter.Format(
   f,
   this.IsClear, //0
-  this.Distance.ToString(false),
+  this.Distance.HasValue ?  this.Distance.Value.ToString(false) : null,
   this.UseEUStyle ? "m" : "sm",
   this.UseEUStyle ? "meters" : "miles",
   this.DirectionSpecification.HasValue ? this.DirectionSpecification.Value.ToString() : null,
@@ -296,7 +306,7 @@ namespace ENG.Metar.Decoder
       }
       else if (UseEUStyle)
       {
-        ret.Append(Distance.Value.ToString("0000"));
+        ret.Append(Distance.Value.Value.ToString("0000"));
         if (DirectionSpecification.HasValue)
           ret.Append(DirectionSpecification.ToString());
 
@@ -311,7 +321,7 @@ namespace ENG.Metar.Decoder
       {
         if (IsDevicesMinimumValue)
           ret.Append("M");
-        ret.Append(Distance.ToString(false) + "SM");
+        ret.Append(Distance.Value.ToString(false) + "SM");
       }
 
       foreach (var fItem in Runways)

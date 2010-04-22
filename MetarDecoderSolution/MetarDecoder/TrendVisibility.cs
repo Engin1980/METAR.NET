@@ -24,7 +24,7 @@ namespace ENG.Metar.Decoder
       {
         return (_UseEUStyle);
       }
-      set
+      protected set
       {
         _UseEUStyle = value;
       }
@@ -41,7 +41,7 @@ namespace ENG.Metar.Decoder
       {
         return (_IsDevicesMinimumValue);
       }
-      set
+      protected set
       {
         _IsDevicesMinimumValue = value;
       }
@@ -58,24 +58,24 @@ namespace ENG.Metar.Decoder
       {
         return (_IsClear);
       }
-      set
+      protected set
       {
         _IsClear = value;
       }
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private Racional _Distance;
+    private Racional? _Distance;
     ///<summary>
     /// Sets/gets distance value.
     ///</summary>
-    public Racional Distance
+    public Racional? Distance
     {
       get
       {
         return (_Distance);
       }
-      set
+      protected set
       {
         _Distance = value;
       }
@@ -147,13 +147,13 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="formatter">If false, only basic information is returned. If true, all (complex) information is provided.</param>
     /// <returns></returns>
-    public string ToInfo(InfoFormatter formatter)
+    public virtual string ToInfo(InfoFormatter formatter)
     {
       string ret = "";
 
       /* VISIBILITY
       * 0 - isClear
-      * 1 - distance
+      * 1 - distanceOrNull
       * 2 - distance unit
       * 3 - distance unit long
       * 4 - distance direction (if any), or null; not used at trend visibility (= is null)
@@ -179,7 +179,7 @@ namespace ENG.Metar.Decoder
       ret = formatter.Format(
         formatter.VisibilityFormat,
         this.IsClear, //0
-        this.Distance.ToString(false),
+        this.Distance.HasValue ? this.Distance.Value.ToString(false) : null,
         this.UseEUStyle ? "m" : "sm",
         this.UseEUStyle ? "meters" : "miles",
         null,
@@ -211,13 +211,13 @@ namespace ENG.Metar.Decoder
       }
       else if (UseEUStyle)
       {
-        ret.Append(Distance.Value.ToString("0000"));
+        ret.Append(((int)Distance.Value).ToString("0000"));
       }
       else
       {
         if (IsDevicesMinimumValue)
           ret.Append("M");
-        ret.Append(Distance.ToString(false) + "SM");
+        ret.Append(Distance.Value.ToString(false) + "SM");
       }
 
       return ret.ToString();

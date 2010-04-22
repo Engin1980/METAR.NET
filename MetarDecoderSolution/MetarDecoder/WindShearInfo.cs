@@ -37,7 +37,7 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// Returns item in text string.
     /// </summary>
-    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <param name="formatter">Formatter used to format string.</param>
     /// <returns></returns>
     public string ToInfo(InfoFormatter formatter)
     {
@@ -122,5 +122,10 @@ namespace ENG.Metar.Decoder
 
     #endregion Inherited
 
+
+    internal bool IsEmpty()
+    {
+      return (!IsAllRunways && this.Count == 0);
+    }
   }
 }

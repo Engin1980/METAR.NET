@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable 1591 // odstrani warning kvuli dokumentaci
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,8 +30,8 @@ namespace ENG.Metar.Decoder.Formatters
     {
       get {
         return 
-          "[8|Wind calm.]" +
-          "[!8|Wind {0} at {2}{3}[4| gusting to {4}{3}] [6| varying between {6} and {7}].]";
+          "[1|Wind calm.]" +
+          "[!1|Wind {2} at {4}{5}[6| gusting to {6}{5}] [8| varying between {8} and {9}].]";
       }
     }
     
@@ -37,23 +39,10 @@ namespace ENG.Metar.Decoder.Formatters
     {
       get {
 
-        //VISIBILITY
-        //0 - isClear
-        //1 - distance
-        //2 - distance unit
-        //3 - distance unit long
-        //4 - distance direction (if any), or null
-        //5 - not used
-        //6 - true if it is minimum measurable distance, or false
-        //7 - other distance if used, or null
-        //8 - other distance direction if other distance used, or null
-        //9 - true if runwayVisibility definitions is present, false otherwise
-        //10 - RUNWAY-VISIBILITY
-        // 
 
         return
           "[0|Visibility unlimited.]" +
-          "[!0|Visibility {1}[6| at most] {3}[4| ({4})]. [9|{10}]]";
+          "[!0|Visibility {1}[5| at most] {3}[4| ({4})]. [8|{9}]]";
       }
     }
 

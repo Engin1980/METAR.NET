@@ -147,5 +147,10 @@ public string ToInfo(bool verbose)
 
     #endregion Inherited
 
+
+    internal bool IsEmpty()
+    {
+      return (!IsSNOCLO && this.Count == 0);
+    }
   }
 }

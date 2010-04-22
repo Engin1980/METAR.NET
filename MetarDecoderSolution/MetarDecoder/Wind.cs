@@ -11,6 +11,18 @@ namespace ENG.Metar.Decoder
   /// Represents information about wind.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
+  /// <remarks>
+  /// The mean true direction in degrees rounded off to the nearest 10 degrees from which the
+  /// wind is blowing and the mean speed of the wind over the 10-minute period immediately
+  /// preceding the observation shall be reported for dddff followed, without a space, by one of
+  /// the abbreviations KMH, KT  or MPS, to specify the unit used for reporting wind speed.
+  /// Values of wind direction less than 100° shall be preceded by 0 and a wind from true north
+  /// shall be reported as 360. Values of wind speed less than 10 units shall be preceded by 0.
+  /// However, when the 10-minute period includes a marked discontinuity in the wind charac-
+  /// teristics, only data after the discontinuity shall be used for obtaining mean wind speed and
+  /// maximum gust values, and mean wind direction and variations of the wind direction, hence
+  /// the time interval in these circumstances shall be correspondingly reduced.
+  /// </remarks>
   public class Wind : IMetarItem
   {
     #region Nested
@@ -79,6 +91,13 @@ namespace ENG.Metar.Decoder
     ///<summary>
     /// Sets/gets true if wind si variable (VRB). Do not confuse with wind variability!
     ///</summary>
+    ///<remarks>
+    ///In the case of variable wind direction, ddd shall be encoded as VRB when the mean wind
+    ///speed is less than 3 knots (2 m s–1 or 6 km h–1). A variable wind at higher speeds shall be
+    ///reported only when the variation of wind direction is 180° or more or when it is impossible
+    ///to determine a single wind direction, for example when a thunderstorm passes over the
+    ///aerodrome.
+    ///</remarks>
     public bool IsVariable
     {
       get
@@ -109,6 +128,8 @@ namespace ENG.Metar.Decoder
       }
       set
       {
+        if (value > 100)
+          throw new Exception("Unable to capture greater speed than 100kts.");
         _Speed = value;
       }
     }
@@ -120,6 +141,13 @@ namespace ENG.Metar.Decoder
     ///<summary>
     /// Sets/gets GustSpeed value. Null if no gusts defined.
     ///</summary>
+    ///<remarks>
+    ///If, during the 10-minute period preceding the observation, the maximum wind gust speed
+    ///exceeds the mean speed by 10 knots (5 m s–1 or 20 km h–1) or more, this maximum speed
+    ///shall be reported as Gfmfm immediately after dddff, followed immediately, without a space,
+    ///by one of the abbreviations KMH, KT or MPS to specify the units used for reporting wind
+    ///speed. Otherwise the element Gfmfm shall not be included.
+    ///</remarks>
     public NonNegInt? GustSpeed
     {
       get
@@ -128,6 +156,8 @@ namespace ENG.Metar.Decoder
       }
       set
       {
+        if (value > 100)
+          throw new Exception("Unable to capture greater speed than 100kts.");
         _GustSpeed = value;
       }
     }
@@ -137,7 +167,7 @@ namespace ENG.Metar.Decoder
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private WindVariable _Variability = null;
     ///<summary>
-    /// Sets/gets variable value. Null if not used.
+    /// Sets/gets variable value. Null if not used. <see cref="IsVarying"/><see cref="WindVariable"/>
     ///</summary>
     public WindVariable Variability
     {
@@ -152,7 +182,7 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns true if wind is varying between two headings..
+    /// Returns true if wind is varying between two headings.. <see cref="Variability"/> <see cref="WindVariable"/>
     /// </summary>
     /// <value></value>
     public bool IsVarying
@@ -178,7 +208,7 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// Returns item in text string.
     /// </summary>
-    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
+    /// <param name="formatter">Formatter used to format string.</param>
     /// <returns></returns>
     public string ToInfo(InfoFormatter formatter)
     {
@@ -198,19 +228,19 @@ namespace ENG.Metar.Decoder
 
       ret = formatter.Format(
         formatter.WindFormat,
-        Direction, //0
-        Direction.HasValue ? Common.HeadingToString(Direction.Value) : "", //1
-        Speed, //2
-        Unit.ToString(), //3
-        GustSpeed, //4
-        GustSpeed.HasValue ? GustSpeed.Value : Speed, //5
-        IsVarying ? Variability.FromDirection.ToString() : null, //6
+        IsVariable,
+        Direction, 
+        Direction.HasValue ? Common.HeadingToString(Direction.Value) : null, 
+        Speed, 
+        Unit.ToString(),
+        GustSpeed, 
+        GustSpeed.HasValue ? GustSpeed.Value : Speed,
+        IsVarying ? Variability.FromDirection.ToString() : null, 
         IsVarying ? Variability.ToDirection.ToString() : null,
-        IsCalm); // 7
+        IsCalm); 
 
       return ret.ToString();
     }
-    #region Inherits
 
     /// <summary>
     /// Returns item in metar string.
@@ -246,17 +276,13 @@ namespace ENG.Metar.Decoder
     {
       if (GustSpeed.HasValue)
       {
-        if (GustSpeed.Value < Speed)
-          errors.Add("Wind gust speed is less than wind speed.");
-        if (GustSpeed.Value == Speed)
-          warnings.Add("Wind gust speed is equal to wind speed.");
+        if (GustSpeed.Value < (Speed + 10))
+          errors.Add("Wind gust speed should be reported only if is at least 10KT faster than mean wind speed.");
       }
 
       if (Variability != null)
         Variability.SanityCheck(ref errors, ref warnings);
     }
-
-    #endregion Inherits
 
   }
 }
