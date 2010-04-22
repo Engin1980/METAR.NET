@@ -148,8 +148,8 @@ namespace ENG.Metar.Decoder
             this.mmHq,
             this.QNH,
             (this.Unit == eUnit.hPa) ? this.QNH : this.mmHq,
-            this.Unit,
-            Common.PressureUnitToString(this.Unit)
+            formatter.PressureInfoUnitToString (this.Unit, false),
+            formatter.PressureInfoUnitToString (this.Unit, true)
             );
 
       return ret;
@@ -182,10 +182,13 @@ namespace ENG.Metar.Decoder
     /// <param name="warnings">Found warnings.</param>
     public void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
-      if ((Unit == eUnit.hPa) && !Value.IsBetween(800d, 1100d))
-        warnings.Add("Current pressure value in hPA is not probably correct (" + Value.ToString() + ")");
-      if ((Unit == eUnit.mmHq) && !Value.IsBetween(25d, 35d))
-        warnings.Add("Current pressure value in hPA is not probably correct (" + Value.ToString() + ")");
+      if (!Value.IsBetween(800, 1100))
+      {
+        if (Unit == eUnit.hPa)
+          warnings.Add("Current pressure value in hPA is not probably correct (" + Value.ToString() + ")");
+        else if (Unit == eUnit.mmHq)
+          warnings.Add("Current pressure value in mmHq is not probably correct (" + this.mmHq.ToString() + ")");
+      }
     }
 
     #endregion

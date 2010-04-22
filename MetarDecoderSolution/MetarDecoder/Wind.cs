@@ -229,15 +229,17 @@ namespace ENG.Metar.Decoder
       ret = formatter.Format(
         formatter.WindFormat,
         IsVariable,
+        IsCalm,
         Direction, 
-        Direction.HasValue ? Common.HeadingToString(Direction.Value) : null, 
+        Direction.HasValue ? formatter.eDirectionToString (Common.HeadingToeDirection (Direction.Value), false) : null,
+        Direction.HasValue ? formatter.eDirectionToString(Common.HeadingToeDirection(Direction.Value), true) : null,
         Speed, 
-        Unit.ToString(),
+        Unit.ToString().ToLower(),
         GustSpeed, 
         GustSpeed.HasValue ? GustSpeed.Value : Speed,
         IsVarying ? Variability.FromDirection.ToString() : null, 
-        IsVarying ? Variability.ToDirection.ToString() : null,
-        IsCalm); 
+        IsVarying ? Variability.ToDirection.ToString() : null
+        );
 
       return ret.ToString();
     }

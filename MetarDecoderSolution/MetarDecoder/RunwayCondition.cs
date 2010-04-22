@@ -1101,161 +1101,16 @@ namespace ENG.Metar.Decoder
         this.IsCleared,
         this.Runway,
         this.Deposit,
-        eDepositToString(this.Deposit),
+        formatter.RunwayConditionDepositToString (this.Deposit),
         this.Contamination,
-        eContaminationToString(this.Contamination),
+        formatter.RunwayConditionContaminationToString(this.Contamination),
         this.Depth,
-        eDepthToString(this.Depth),
+        formatter.RunwayConditionDepthToString (this.Depth),
         this.Friction,
-        this.eFrictionToString(this.Friction)
+        formatter.RunwayConditionFrictionToString (this.Friction)
         );
 
       return ret.ToString();
-    }
-
-    private string eContaminationToString(eContamination? value)
-    {
-      if (!value.HasValue)
-        return "Contamination not reported";
-      else
-        return eContaminationToString(value.Value);
-    }
-    private string eContaminationToString(eContamination value)
-    {
-      string ret;
-
-      switch (value)
-      {
-        case eContamination.LessThan10Percent:
-          ret = "0-10%";
-          break;
-        case eContamination.LessThan25Percent:
-          ret = "10-25%";
-          break;
-        case eContamination.LessThan50Percent:
-          ret = "25-50%";
-          break;
-        case eContamination.MoreThan50Percent:
-          ret = "50-100%";
-          break;
-        default:
-          ret = "N/A";
-          break;
-      }
-
-      return ret;
-    }
-
-    private string eDepthToString(eDepth value)
-    {
-      if ((int)value < 91)
-        return ((int)value).ToString() + "mm";
-      else
-        return (((int)value - 90) * 5) + "cm";
-    }
-    private string eDepthToString(eDepth? value)
-    {
-      if (!value.HasValue)
-        return "(depth not reported)";
-      else
-        return eDepthToString(value.Value);
-    }
-
-    private string eDepositToString(eDeposit value)
-    {
-      string ret;
-      switch (value)
-      {
-        case eDeposit.CleanDry:
-          ret = "clean dry runway";
-          break;
-        case eDeposit.CompactSnow:
-          ret = "compact snow";
-          break;
-        case eDeposit.DrySnow:
-          ret = "dry snow";
-          break;
-        case eDeposit.FrozentRutsRidges:
-          ret = "frozen ruts/ridges";
-          break;
-        case eDeposit.Ice:
-          ret = "ice";
-          break;
-        case eDeposit.RimeOrFrost:
-          ret = "rime/frost";
-          break;
-        case eDeposit.Slush:
-          ret = "slush";
-          break;
-        case eDeposit.WetDamp:
-          ret = "wet/damp";
-          break;
-        case eDeposit.WetOrWetPatches:
-          ret = "wet/wet patches";
-          break;
-        case eDeposit.WetSnow:
-          ret = "wet snow";
-          break;
-        default:
-          throw new NotSupportedException();
-      }
-
-      return ret;
-    }
-    private string eDepositToString(eDeposit? value)
-    {
-      if (!value.HasValue)
-        return "unreported deposit";
-      else
-        return eDepositToString(value.Value);
-    }
-
-    private string eFrictionToString(eFriction value)
-    {
-      if ((int)value < 91)
-        return "friction coefficient 0." + value.ToString("00");
-      else
-      {
-        StringBuilder ret = new StringBuilder();
-        ret.AppendSpaced("braking action ");
-        switch ((int)value)
-        {
-          case 91:
-            ret.Append("poor");
-            break;
-          case 92:
-            ret.Append("medium-poor");
-            break;
-          case 93:
-            ret.Append("medium");
-            break;
-          case 94:
-            ret.Append("medium-good");
-            break;
-          case 95:
-            ret.Append("good");
-            break;
-          case 96:
-          case 97:
-          case 98:
-            ret.Append("(reserved value)");
-            break;
-          case 99:
-            ret.Append("unreliable");
-            break;
-          default:
-            throw new NotSupportedException();
-        }
-
-        return ret.ToString();
-      }
-    }
-    private string eFrictionToString(eFriction? value)
-    {
-      if (!value.HasValue)
-        return "braking action not reported";
-      else
-        return eFrictionToString(value.Value);
     }
 
     /// <summary>

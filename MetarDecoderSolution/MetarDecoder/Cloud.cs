@@ -201,8 +201,8 @@ namespace ENG.Metar.Decoder
 
       ret = formatter.Format(
        f,
-        this.Type,
-        Common.TypeToString(this.Type),
+        formatter.CloudTypeToString(this.Type, false),
+        formatter.CloudTypeToString(this.Type, true),
         this.Altitude.ToString("000"),
         (this.Altitude * 100).ToString(),
         this.IsCB,

@@ -6,133 +6,106 @@ using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder
 {
-  static class  Common
+  
+  /// <summary>
+  /// Represents static class with common info
+  /// </summary>
+  public static class  Common
   {
 
-    public static string HeadingToString(int heading)
+    /// <summary>
+    /// Units.
+    /// </summary>
+    public enum eUnit
+    {
+      /// <summary>
+      /// Kilometres
+      /// </summary>
+      km,
+      /// <summary>
+      /// Metres
+      /// </summary>
+      m,
+      /// <summary>
+      /// Miles
+      /// </summary>
+      mi,
+      /// <summary>
+      /// Feet
+      /// </summary>
+      ft,
+      /// <summary>
+      /// Knots
+      /// </summary>
+      kt
+    }
+
+    /// <summary>
+    /// World directions
+    /// </summary>
+    public enum eDirection
+    {
+      /// <summary>
+      /// North
+      /// </summary>
+      N,
+      /// <summary>
+      /// NorthEast
+      /// </summary>
+      NE,
+      /// <summary>
+      /// East
+      /// </summary>
+      E,
+      /// <summary>
+      /// SouthEast
+      /// </summary>
+      SE,
+      /// <summary>
+      /// South
+      /// </summary>
+      S,
+      /// <summary>
+      /// SouthWest
+      /// </summary>
+      SW,
+      /// <summary>
+      /// West
+      /// </summary>
+      W,
+      /// <summary>
+      /// NortWest
+      /// </summary>
+      NW
+    }
+
+    /// <summary>
+    /// Converts direction as integer into enum eDirection. <see cref="eDirection"/>
+    /// </summary>
+    /// <param name="heading">Heading, values from 0 to 360</param>
+    /// <returns></returns>
+    public static eDirection HeadingToeDirection(int heading)
     {
       if (!heading.IsBetween(0, 360))
         throw new ArgumentException("Invalid heading. Should be between 0 to 360.");
 
       if ((heading < 22) || (heading > 337))
-        return "N";
+        return  eDirection.N;
       else if (heading < 67)
-        return "NE";
+        return eDirection.NE;
       else if (heading < 117)
-        return "E";
+        return eDirection.E;
       else if (heading < 157)
-        return "SE";
+        return  eDirection.SE;
       else if (heading < 202)
-        return "S";
+        return eDirection.S;
       else if (heading < 247)
-        return "SW";
+        return eDirection.SW;
       else if (heading < 292)
-        return "W";
+        return eDirection.W;
       else if (heading < 338)
-        return "NW";
+        return eDirection.NW;
       else throw new ApplicationException("Invalid program state - unable recognize direction");
-    }
-
-    internal static string DeviceMeasureRestrictionToString(RunwayVisibility.eDeviceMeasurementRestriction? restriction)
-    {
-      string ret = "";
-      if (restriction.HasValue)
-        switch (restriction.Value)
-        {
-          case RunwayVisibility.eDeviceMeasurementRestriction.M:
-            ret = "at most";
-            break;
-          case RunwayVisibility.eDeviceMeasurementRestriction.P:
-            ret = "at least";
-            break;
-          default:
-            throw new NotImplementedException();
-        }
-      else
-        ret = null;
-
-      return ret;
-    }
-
-    internal static string TendencyToString(RunwayVisibility.eTendency? tendency)
-    {
-      string ret;
-      if (tendency.HasValue)
-        switch (tendency.Value)
-        {
-          case RunwayVisibility.eTendency.D:
-            ret= "decreasing";
-            break;
-          case RunwayVisibility.eTendency.N:
-            ret="stable";
-            break;
-          case RunwayVisibility.eTendency.U:
-            ret="increasing";
-            break;
-          default:
-            throw new NotImplementedException();
-        }
-      else
-        ret = null;
-
-      return ret;
-    }
-
-    internal static object TypeToString(Cloud.eType type)
-    {
-      string ret;
-
-      switch (type)
-      {
-        case ENG.Metar.Decoder.Cloud.eType.BKN:
-          ret = "broken";
-          break;
-        case ENG.Metar.Decoder.Cloud.eType.FEW:
-          ret = "few";
-          break;
-        case ENG.Metar.Decoder.Cloud.eType.OVC:
-          ret = "overcast";
-          break;
-        case ENG.Metar.Decoder.Cloud.eType.SCT:
-          ret = "scattered";
-          break;
-        default:
-          throw new NotImplementedException();
-      }
-
-      return ret;
-    }
-
-    internal static string PressureUnitToString(PressureInfo.eUnit unit)
-    {
-      if (unit == PressureInfo.eUnit.hPa)
-        return "hectopascals";
-      else if (unit == PressureInfo.eUnit.mmHq)
-        return "mm of Hq";
-      else
-        throw new NotImplementedException();
-    }
-
-    internal static string TypeToString(TrendInfo.eType eType)
-    {
-      string ret = null;
-
-      switch (eType)
-      {
-        case TrendInfo.eType.BECMG:
-          ret = "becoming";
-          break;
-        case TrendInfo.eType.NOSIG:
-          ret =  "no significant change.";
-          break;
-        case TrendInfo.eType.TEMPO:
-          ret = "temporally";
-          break;
-        default:
-          throw new NotImplementedException();
-      }
-
-      return ret;
     }
   }
 }

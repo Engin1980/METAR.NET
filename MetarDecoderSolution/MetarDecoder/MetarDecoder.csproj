@@ -76,6 +76,7 @@
     <Compile Include="Extensions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Formatters\CzechLongInfoFormatter.cs" />
     <Compile Include="Formatters\InfoFormatter.cs" />
     <Compile Include="Formatters\LongInfoFormatter.cs" />
     <Compile Include="Formatters\ShortInfoFormatter.cs" />

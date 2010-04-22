@@ -7,64 +7,51 @@ using System.Text;
 
 namespace ENG.Metar.Decoder.Formatters
 {
-  /// <summary>
-  /// Represents formatter to convert metar into long information string.
-  /// </summary>
-  /// <seealso cref="T:ENG.Metar.Decoder.InfoFormatter"/>
-  public class LongInfoFormatter : InfoFormatter
+  public class CzechLongInfoFormatter : InfoFormatter
   {
 
     public override string MetarFormat
     {
-      get {
+      get
+      {
         return
-        "METAR for {0} issued at day {1}, {2}:{3}Z. " +
+        "METAR pro {0} vydán dne {1}, {2}:{3}Z. " +
         "{4} {5} {6} {7}" +
-        "Temperature {8}°C. Dew point {9}°C. " +
-        "{10} {11} {12}"+
-        "{13}[14| Remark: {14}].";
+        "Teplota {8}°C. Rosný bod {9}°C. " +
+        "{10} {11} {12}" +
+        "{13}[14| Poznámky: {14}].";
       }
     }
 
     public override string WindFormat
     {
-      get {
-        return 
-          "[1|Wind calm.]" +
-          "[!1|Wind [0|variable][!0|{2}] at {5}{6}[7| gusting to {7}{6}] [9| varying between {9} and {10}].]";
+      get
+      {
+        return
+          "[1|Bezvětří.]" +
+          "[!1|Vítr [0|proměnlivý][!0|{2}] o rychlosti {5}{6}[7| v nárazech až {7}{6}] [9| proměnlivý od {9} do {10}].]";
       }
     }
-    
+
     public override string VisibilityFormat
     {
-      get {
+      get
+      {
 
 
         return
-          "[0|Visibility unlimited.]" +
-          "[!0|Visibility[5| at most] {1}  {3}[4| ({4})]. [8|{9}]]";
+          "[0|Neomezená viditelnost.]" +
+          "[!0|Viditelnost[5| maximálně] {1}  {3}[4| ({4})]. [8|{9}]]";
       }
     }
 
     public override string RunwayVisibilityFormat
     {
-      get {
-
-        /*
- * 
- * RUNWAY-VISIBILITY
- * 0 - device measure restrition string, or null
- * 1 - distance
- * 2 - distance unit (short)
- * 3 - distance unit (long)
- * 4 - runway designator
- * 5 - tendency as string, or null
- * 6 - variable visibility distance, or null
-   
- */
+      get
+      {
 
         string ret =
-          "Runway {4} visibility [0| {0}] {1}[6| to {6}] {2}[5| {5}].";
+          "Runway {4} viditelnost [0| {0}] {1}[6| to {6}] {2}[5| {5}].";
 
         return ret;
       }
@@ -74,18 +61,11 @@ namespace ENG.Metar.Decoder.Formatters
     {
       get
       {
-        /* CLOUDS INFO
- * 0 - true if NSC, or false
- * 1 - true if SKC, or false
- * 2 - distance if vertical visibility, or null
- * 3 - (iter) CLOUD info, or null if empty
- * */
-
         string ret =
-          "[0|No significant clouds.]" +
-          "[1|Sky clear.]" +
-          "[2|Vertical visibility {2} meters.]" +
-          "[3|Clouds: {3}.]";
+          "[0|Bez význačné oblačnosti.]" +
+          "[1|Bez oblačnosti.]" +
+          "[2|Vertikální viditelnost {2} metrů.]" +
+          "[3|Oblačnost: {3}.]";
 
         return ret;
       }
@@ -93,15 +73,8 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string CloudFormat
     {
-      get {
-        /* CLOUD
- * 0 - type (short)
- * 1 - type (long)
- * 2 - altitude in hundreds formatted to 000
- * 3 - altitude in number
- * 4 - true if CB
- * 5 - true if TCU
- * */
+      get
+      {
 
         string ret =
           " {3} ft {1}[4| cumulonimbus][5| towering cumulus]; ";
@@ -112,18 +85,11 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string PressureFormat
     {
-      get { 
-
-          /* PRESSURE
-   * 0 - value in mmHq
-   * 1 - value in hPa
-   * 2 - value in current unit
-   * 3 - current unit (short)
-   * 4 - current unit (long)
-   * */
+      get
+      {
 
         string ret =
-          "Current pressure {2} {3}."
+          "Tlak {2} {3}."
           ;
 
         return ret;
@@ -132,9 +98,10 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string RunwayConditionsFormat
     {
-      get {
+      get
+      {
         string ret =
-          "[0|Airport is closed due to snow.]" +
+          "[0|Letiště uzavřeno kvůli sněhu.]" +
           "[1|{2}]";
 
         return ret;
@@ -143,44 +110,31 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string RunwayConditionFormat
     {
-      get {
-        /* RUNWAY CONDITION INFO
-   * 0 - true if is for all runways
-   * 1 - true if info is obsolete
-   * 2 - true if runway is cleared
-   * 3 - runway designator
-   * 4 - deposit int value, or null
-   * 5 - deposit description (never null)
-   * 6 - contamination int value, or null
-   * 7 - contamination string (never null)
-   * 8 - depth int value, or null
-   * 9 - depth string (never null)
-   * 10 - friction int value, or null
-   * 11 - friction string (never null)
-   * */
-
+      get
+      {
         string ret =
-          "[0|All runways are ][!0|Runway {3} is ]" +
-          "[2|cleared.]" +
+          "[0|Všechny ravneje jsou ][!0|Ravnej {3} je ]" +
+          "[2|očištěna/y.]" +
          "[!2|" +
-          "covered[8| by {9}][4| of {5}][6| over {7}][10|, {11}]. " +
+          "pokrytá[8| {9}][4| z {5}][6| na {7}][10|, {11}]. " +
           "]" +
-          "[1|This information can be obsolete.]";
+          "[1|Tato informace může být zastaralá.]";
 
         return ret;
-        
-      
+
+
       }
     }
 
     public override string WindShearsFormat
     {
-      get {
+      get
+      {
 
         string ret =
-          "[0|" + 
-          "[1|Windshear reported at all runways.]" +
-          "[2|Windshear reported at {3}.]" +
+          "[0|" +
+          "[1|Střih větru na všech ravnejích.]" +
+          "[2|Střih větru na {3}.]" +
           "]";
 
         return ret;
@@ -189,8 +143,9 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string WindShearFormat
     {
-      get {
-        string ret = "runway {0}";
+      get
+      {
+        string ret = "ranveji {0}";
 
         return ret;
       }
@@ -198,9 +153,10 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string PhenomsFormat
     {
-      get {
+      get
+      {
         string ret =
-          "[0|No significat weather.][1|Weather: {2}.]";
+          "[0|Počasí bez význačných jevů.][1|Počasí: {2}.]";
 
         return ret;
       }
@@ -211,7 +167,7 @@ namespace ENG.Metar.Decoder.Formatters
       get
       {
         string ret =
-          "[0|No previous significant weather.][1|Previous weather: {2}.]";
+          "[0|Dříve bez význačných jevů.][1|Předchozí počasí: {2}.]";
 
         return ret;
       }
@@ -243,18 +199,19 @@ namespace ENG.Metar.Decoder.Formatters
       get
       {
         string ret =
-          "[0| No significant change expected.]" +
+          "[0| Trend počasí: žádné význačné změny.]" +
           "[!0|" +
-          "Weather trend {2} {4}: [5|{5}] [6|{6}] [7|{7}] [8|{8}]" +
+          "Trend počasí {2} {4}: [5|{5}] [6|{6}] [7|{7}] [8|{8}]" +
           "]";
 
         return ret;
       }
-    }   
+    }
 
     public override string TrendTimesFormat
     {
-      get {
+      get
+      {
         string ret = "{0}";
 
         return ret;
@@ -263,7 +220,8 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string TrendTimeFormat
     {
-      get {
+      get
+      {
         string ret =
           "{1} {2}:{3}Z ";
 
@@ -278,28 +236,28 @@ namespace ENG.Metar.Decoder.Formatters
       switch (value)
       {
         case Common.eDirection.N:
-          ret = useLong ? "north" : "N";
+          ret = useLong ? "sever" : "S";
           break;
         case Common.eDirection.E:
-          ret = useLong ? "east" : "E";
+          ret = useLong ? "východ" : "V";
           break;
         case Common.eDirection.NE:
-          ret = useLong ? "northeast" : "NE";
+          ret = useLong ? "severovýchod" : "SV";
           break;
         case Common.eDirection.NW:
-          ret = useLong ? "northwest" : "NW";
+          ret = useLong ? "severozápad" : "SZ";
           break;
         case Common.eDirection.S:
-          ret = useLong ? "south" : "S";
+          ret = useLong ? "jih" : "J";
           break;
         case Common.eDirection.SE:
-          ret = useLong ? "southeast" : "SE";
+          ret = useLong ? "jihovýchod" : "JV";
           break;
         case Common.eDirection.SW:
-          ret = useLong ? "southwest" : "SW";
+          ret = useLong ? "jihozápad" : "JZ";
           break;
         case Common.eDirection.W:
-          ret = useLong ? "west" : "W";
+          ret = useLong ? "západ" : "Z";
           break;
         default:
           throw new NotImplementedException();
@@ -310,15 +268,15 @@ namespace ENG.Metar.Decoder.Formatters
 
     public override string RunwayVisibilityDeviceMeasureRestrictionToString(RunwayVisibility.eDeviceMeasurementRestriction? value)
     {
-           string ret = "";
+      string ret = "";
       if (value.HasValue)
         switch (value)
         {
           case RunwayVisibility.eDeviceMeasurementRestriction.M:
-            ret = "at most";
+            ret = "maximálně";
             break;
           case RunwayVisibility.eDeviceMeasurementRestriction.P:
-            ret = "at least";
+            ret = "minimálně";
             break;
           default:
             throw new NotImplementedException();
@@ -336,13 +294,13 @@ namespace ENG.Metar.Decoder.Formatters
         switch (value.Value)
         {
           case RunwayVisibility.eTendency.D:
-            ret = "decreasing";
+            ret = "klesající";
             break;
           case RunwayVisibility.eTendency.N:
-            ret = "stable";
+            ret = "stabilní";
             break;
           case RunwayVisibility.eTendency.U:
-            ret = "increasing";
+            ret = "vzrůstající";
             break;
           default:
             throw new NotImplementedException();
@@ -360,16 +318,16 @@ namespace ENG.Metar.Decoder.Formatters
       switch (type)
       {
         case ENG.Metar.Decoder.Cloud.eType.BKN:
-          ret = useLong ? "broken" : "BKN";
+          ret = useLong ? "oblačno až skoro zataženo" : "BKN";
           break;
         case ENG.Metar.Decoder.Cloud.eType.FEW:
-          ret = useLong ? "few" : "FEW";
+          ret = useLong ? "skoro jasno" : "FEW";
           break;
         case ENG.Metar.Decoder.Cloud.eType.OVC:
-          ret = useLong ? "overcast" : "OVC";
+          ret = useLong ? "zataženo" : "OVC";
           break;
         case ENG.Metar.Decoder.Cloud.eType.SCT:
-          ret = useLong ? "scattered" : "SCT";
+          ret = useLong ? "polojasno" : "SCT";
           break;
         default:
           throw new NotImplementedException();
@@ -385,7 +343,7 @@ namespace ENG.Metar.Decoder.Formatters
       switch (value)
       {
         case PressureInfo.eUnit.hPa:
-          ret = useLong ? "hectopascals" : "hPa";
+          ret = useLong ? "hectopascalů" : "hPa";
           break;
         case PressureInfo.eUnit.mmHq:
           ret = useLong ? "mm of Hq" : "mmHq";
@@ -403,13 +361,13 @@ namespace ENG.Metar.Decoder.Formatters
       switch (value)
       {
         case TrendInfo.eType.BECMG:
-          ret = useLong ? "becoming" : "becmg";
+          ret = useLong ? "nastává" : "becmg";
           break;
         case TrendInfo.eType.NOSIG:
-          ret = useLong ?"no significant change" : "nosig";
+          ret = useLong ? "bez význačných změn" : "nosig";
           break;
         case TrendInfo.eType.TEMPO:
-          ret = useLong ?"temporally" : "tempo";
+          ret = useLong ? "občasně" : "tempo";
           break;
         default:
           throw new NotImplementedException();
@@ -421,7 +379,7 @@ namespace ENG.Metar.Decoder.Formatters
     public override string RunwayConditionContaminationToString(RunwayCondition.eContamination? value)
     {
       if (!value.HasValue)
-        return "Contamination not reported";
+        return "(kontaminace nehlášena)";
       else
       {
         string ret;
@@ -452,7 +410,7 @@ namespace ENG.Metar.Decoder.Formatters
     public override string RunwayConditionDepthToString(RunwayCondition.eDepth? value)
     {
       if (!value.HasValue)
-        return "(depth not reported)";
+        return "(výška nánosu nehlášena)";
       else
       {
         if ((int)value < 91)
@@ -465,41 +423,41 @@ namespace ENG.Metar.Decoder.Formatters
     public override string RunwayConditionDepositToString(RunwayCondition.eDeposit? value)
     {
       if (!value.HasValue)
-        return "unreported deposit";
+        return "(typ nánosu nehlášen)";
       else
       {
         string ret;
         switch (value)
         {
           case RunwayCondition.eDeposit.CleanDry:
-            ret = "clean dry runway";
+            ret = "čistá suchá ranvej";
             break;
           case RunwayCondition.eDeposit.CompactSnow:
-            ret = "compact snow";
+            ret = "pevný sníh";
             break;
           case RunwayCondition.eDeposit.DrySnow:
-            ret = "dry snow";
+            ret = "suchý sníh";
             break;
           case RunwayCondition.eDeposit.FrozentRutsRidges:
-            ret = "frozen ruts/ridges";
+            ret = "zmrzlé koleje";
             break;
           case RunwayCondition.eDeposit.Ice:
-            ret = "ice";
+            ret = "led";
             break;
           case RunwayCondition.eDeposit.RimeOrFrost:
-            ret = "rime/frost";
+            ret = "jinovatka/námraza";
             break;
           case RunwayCondition.eDeposit.Slush:
-            ret = "slush";
+            ret = "rozbředlý sníh";
             break;
           case RunwayCondition.eDeposit.WetDamp:
-            ret = "wet/damp";
+            ret = "morký/nečištěný";
             break;
           case RunwayCondition.eDeposit.WetOrWetPatches:
-            ret = "wet/wet patches";
+            ret = "mokrý/mokré skvrny";
             break;
           case RunwayCondition.eDeposit.WetSnow:
-            ret = "wet snow";
+            ret = "mokrý sníh";
             break;
           default:
             throw new NotSupportedException();
@@ -512,39 +470,39 @@ namespace ENG.Metar.Decoder.Formatters
     public override string RunwayConditionFrictionToString(RunwayCondition.eFriction? value)
     {
       if (!value.HasValue)
-        return "braking action not reported";
+        return "(brzdný účinek nehlášen)";
       else
       {
         if ((int)value.Value < 91)
-          return "friction coefficient 0." + value.Value.ToString("00");
+          return "koeficient přilnavosti 0." + value.Value.ToString("00");
         else
         {
           StringBuilder ret = new StringBuilder();
-          ret.AppendSpaced("braking action ");
+          ret.AppendSpaced("brzdný účinek ");
           switch ((int)value)
           {
             case 91:
-              ret.Append("poor");
+              ret.Append("špatný");
               break;
             case 92:
-              ret.Append("medium-poor");
+              ret.Append("střední až špatný");
               break;
             case 93:
-              ret.Append("medium");
+              ret.Append("střední");
               break;
             case 94:
-              ret.Append("medium-good");
+              ret.Append("dobrý až střední");
               break;
             case 95:
-              ret.Append("good");
+              ret.Append("dobrý");
               break;
             case 96:
             case 97:
             case 98:
-              ret.Append("(reserved value)");
+              ret.Append("(nepoužito)");
               break;
             case 99:
-              ret.Append("unreliable");
+              ret.Append("nespolehlivý");
               break;
             default:
               throw new NotSupportedException();
@@ -565,97 +523,97 @@ namespace ENG.Metar.Decoder.Formatters
       switch (value)
       {
         case ePhenomCollection.ePhenom.BC:
-          ret = "patches";
+          ret = "shluky";
           break;
         case ePhenomCollection.ePhenom.BL:
-          ret = "blowing";
+          ret = "foukající";
           break;
         case ePhenomCollection.ePhenom.BR:
-          ret = "mist";
+          ret = "mlha";
           break;
         case ePhenomCollection.ePhenom.DR:
-          ret = "low drifting";
+          ret = "nízko letící";
           break;
         case ePhenomCollection.ePhenom.DS:
-          ret = "dust storm";
+          ret = "prachová bouře";
           break;
         case ePhenomCollection.ePhenom.DU:
-          ret = "dust";
+          ret = "prach";
           break;
         case ePhenomCollection.ePhenom.DZ:
-          ret = "drizzle";
+          ret = "mrholení";
           break;
         case ePhenomCollection.ePhenom.FC:
-          ret = "funnel cloud";
+          ret = "nálevkovitý mrak";
           break;
         case ePhenomCollection.ePhenom.FG:
-          ret = "fog";
+          ret = "mlha";
           break;
         case ePhenomCollection.ePhenom.FU:
-          ret = "smoke";
+          ret = "kouř";
           break;
         case ePhenomCollection.ePhenom.FZ:
-          ret = "freezing";
+          ret = "mrznoucí";
           break;
         case ePhenomCollection.ePhenom.GR:
-          ret = "hail";
+          ret = "krupobití";
           break;
         case ePhenomCollection.ePhenom.GS:
-          ret = "snow pellets";
+          ret = "sněhové kuličky";
           break;
         case ePhenomCollection.ePhenom.Heavy:
-          ret = "heavy";
+          ret = "silný";
           break;
         case ePhenomCollection.ePhenom.HZ:
-          ret = "haze";
+          ret = "kouřmo";
           break;
         case ePhenomCollection.ePhenom.IC:
-          ret = "ice crystals";
+          ret = "ledové krystalky";
           break;
         case ePhenomCollection.ePhenom.Light:
-          ret = "light";
+          ret = "slabý";
           break;
         case ePhenomCollection.ePhenom.MI:
-          ret = "shallow";
+          ret = "mělký";
           break;
         case ePhenomCollection.ePhenom.PL:
-          ret = "ice pellets";
+          ret = "ledové kuličky";
           break;
         case ePhenomCollection.ePhenom.PO:
-          ret = "dust or sand whirls";
+          ret = "prachové nebo sněhové víry";
           break;
         case ePhenomCollection.ePhenom.PR:
-          ret = "partial";
+          ret = "částečný";
           break;
         case ePhenomCollection.ePhenom.RA:
-          ret = "rain";
+          ret = "déšť";
           break;
         case ePhenomCollection.ePhenom.SA:
-          ret = "sand";
+          ret = "písek";
           break;
         case ePhenomCollection.ePhenom.SG:
-          ret = "snow grains";
+          ret = "sněhová zrna";
           break;
         case ePhenomCollection.ePhenom.SH:
-          ret = "shower";
+          ret = "přeháňka";
           break;
         case ePhenomCollection.ePhenom.SN:
-          ret = "snow";
+          ret = "sníh";
           break;
         case ePhenomCollection.ePhenom.SQ:
-          ret = "squalls";
+          ret = "hromobití";
           break;
         case ePhenomCollection.ePhenom.SS:
-          ret = "sand storm";
+          ret = "písečná bouře";
           break;
         case ePhenomCollection.ePhenom.TS:
-          ret = "thunderstorm";
+          ret = "bouřka";
           break;
         case ePhenomCollection.ePhenom.VA:
-          ret = "volcanic ash";
+          ret = "vulkanický popel";
           break;
         case ePhenomCollection.ePhenom.VC:
-          ret = "in vicinity";
+          ret = "v blízkosti";
           break;
         default:
           throw new NotImplementedException();
@@ -671,19 +629,19 @@ namespace ENG.Metar.Decoder.Formatters
       switch (value)
       {
         case Common.eUnit.ft:
-          ret = useLong ? "feet" : "ft";
+          ret = useLong ? "stop" : "ft";
           break;
         case Common.eUnit.km:
-          ret = useLong ? "kilometer(s)" : "km";
+          ret = useLong ? "kilometrů" : "km";
           break;
         case Common.eUnit.kt:
-          ret = useLong ? "knot(s)" : "kt(s)";
+          ret = useLong ? "uzlů" : "kt(s)";
           break;
         case Common.eUnit.m:
-          ret = useLong ? "meter(s)" : "m";
+          ret = useLong ? "metrů" : "m";
           break;
         case Common.eUnit.mi:
-          ret = useLong ? "mile(s)" : "m";
+          ret = useLong ? "mil" : "m";
           break;
         default:
           throw new NotImplementedException();

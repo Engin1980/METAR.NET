@@ -222,8 +222,9 @@ namespace ENG.Metar.Decoder
         ret.Append(
           formatter.Format(
             formatter.PhenomItemFormat,
-            fItem,
-            ePhenomToInfo(fItem)));
+            formatter.PhenomCollectionPhenomToString (fItem, false),
+            formatter.PhenomCollectionPhenomToString (fItem, true)
+            ));
 
       } // foreach (var fItem in this)
 
@@ -286,118 +287,6 @@ namespace ENG.Metar.Decoder
       } // foreach (ePhenom fItem in this)
 
       return true;
-    }
-
-    private string ePhenomToInfo(ePhenom value)
-    {
-      string ret = null;
-
-      switch (value)
-      {
-        case ePhenom.BC:
-          ret = "patches";
-          break;
-        case ePhenom.BL:
-          ret = "blowing";
-          break;
-        case ePhenom.BR:
-          ret = "mist";
-          break;
-        case ePhenom.DR:
-          ret = "low drifting";
-          break;
-        case ePhenom.DS:
-          ret = "dust storm";
-          break;
-        case ePhenom.DU:
-          ret = "dust";
-          break;
-        case ePhenom.DZ:
-          ret = "drizzle";
-          break;
-        case ePhenom.FC:
-          ret = "funnel cloud";
-          break;
-        case ePhenom.FG:
-          ret = "fog";
-          break;
-        case ePhenom.FU:
-          ret = "smoke";
-          break;
-        case ePhenom.FZ:
-          ret = "freezing";
-          break;
-        case ePhenom.GR:
-          ret = "hail";
-          break;
-        case ePhenom.GS:
-          ret = "snow pellets";
-          break;
-        case ePhenom.Heavy:
-          ret = "heavy";
-          break;
-        case ePhenom.HZ:
-          ret = "haze";
-          break;
-        case ePhenom.IC:
-          ret = "ice crystals";
-          break;
-        case ePhenom.Light:
-          ret = "light";
-          break;
-        case ePhenom.MI:
-          ret = "shallow";
-          break;
-        case ePhenom.PL:
-          ret = "ice pellets";
-          break;
-        case ePhenom.PO:
-          ret = "dust or sand whirls";
-          break;
-        case ePhenom.PR:
-          ret = "partial";
-          break;
-        case ePhenom.RA:
-          ret = "rain";
-          break;
-        case ePhenom.SA:
-          ret = "sand";
-          break;
-        case ePhenom.SG:
-          ret = "snow grains";
-          break;
-        case ePhenom.SH:
-          ret = "shower";
-          break;
-        case ePhenom.SN:
-          ret = "snow";
-          break;
-        case ePhenom.SQ:
-          ret = "squalls";
-          break;
-        case ePhenom.SS:
-          ret = "sand storm";
-          break;
-        case ePhenom.TS:
-          ret = "thunderstorm";
-          break;
-        case ePhenom.VA:
-          ret = "volcanic ash";
-          break;
-        case ePhenom.VC:
-          ret = "in vicinity";
-          break;
-        default:
-          throw new NotImplementedException();
-      }
-
-#if DEBUG
-
-      //ret += ((int)value).ToString();
-
-#endif
-
-      return ret;
     }
 
     #endregion Private

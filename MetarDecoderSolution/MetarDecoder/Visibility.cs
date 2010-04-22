@@ -12,56 +12,15 @@ namespace ENG.Metar.Decoder
   /// <seealso cref="T:ENG.Metar.Decoder.TrendVisibility"/>
   public class Visibility : TrendVisibility
   {
-    #region Nested
-
-    /// <summary>
-    /// Represents world direction
-    /// </summary>
-    public enum eDirection
-    {
-      /// <summary>
-      /// North
-      /// </summary>
-      N,
-      /// <summary>
-      /// Northeast
-      /// </summary>
-      NE,
-      /// <summary>
-      /// East
-      /// </summary>
-      E,
-      /// <summary>
-      /// Southeast
-      /// </summary>
-      SE,
-      /// <summary>
-      /// South
-      /// </summary>
-      S,
-      /// <summary>
-      /// Southwest
-      /// </summary>
-      SW,
-      /// <summary>
-      /// West
-      /// </summary>
-      W,
-      /// <summary>
-      /// Northwest
-      /// </summary>
-      NW
-    }
-    #endregion Nested
 
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eDirection? _DirectionSpecification;
+    private Common.eDirection? _DirectionSpecification;
     ///<summary>
     /// Sets/gets directory specification value. (e.g. 3000NE). Null if not used.
     ///</summary>
-    public eDirection? DirectionSpecification
+    public Common.eDirection? DirectionSpecification
     {
       get
       {
@@ -95,12 +54,12 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eDirection? _OtherDirectionSpecification;
+    private Common.eDirection? _OtherDirectionSpecification;
     ///<summary>
     /// Sets/gets other measured distance's direction (e.g. postfix of second part in 3000NE 1200S). Null if not used.
     /// Must be used when OtherDistance is used.
     ///</summary>
-    public eDirection? OtherDirectionSpecification
+    public Common.eDirection? OtherDirectionSpecification
     {
       get
       {
@@ -147,7 +106,7 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="distance">Distance</param>
     /// <param name="way">Direction specification.</param>
-    public void SetMeters(int distance, eDirection way)
+    public void SetMeters(int distance, Common.eDirection way)
     {
       SetMeters(distance, way, null, null);
     }
@@ -159,19 +118,19 @@ namespace ENG.Metar.Decoder
     /// <param name="way">Direction specification.</param>
     /// <param name="secondDistance">Other visibility</param>
     /// <param name="secondWay">Other visibility direction</param>
-    public void SetMeters(int distance, eDirection way, int secondDistance, eDirection secondWay)
+    public void SetMeters(int distance, Common.eDirection way, int secondDistance, Common.eDirection secondWay)
     {
       SetMeters(distance, way, secondDistance, secondWay);
     }
 
     /// <summary>
-    /// 
+    /// Sets distance in meters with direction specifications. All parameters except the first one can be null.
     /// </summary>
     /// <param name="distance"></param>
     /// <param name="way"></param>
     /// <param name="secondDistance"></param>
     /// <param name="secondWay"></param>
-    public void SetMeters(int distance, eDirection? way, int? secondDistance, eDirection? secondWay)
+    public void SetMeters(int distance, Common.eDirection? way, int? secondDistance, Common.eDirection? secondWay)
     {
       UseEUStyle = true;
       IsDevicesMinimumValue = false;
@@ -195,23 +154,6 @@ namespace ENG.Metar.Decoder
     {
       string ret = "";
 
-      //VISIBILITY
-      //0 - isClear
-      //1 - distanceOrNull
-      //2 - distance unit
-      //3 - distance unit long
-      //4 - distance direction (if any), or null
-      //5 - not used
-      //6 - true if it is minimum measurable distance, or false
-      //7 - other distance if used, or null
-      //8 - other distance direction if other distance used, or null
-      //9 - true if runwayVisibility definitions is present, false otherwise
-      //10 - (iter) RUNWAY-VISIBILITY
-
-
-      // 11 - 
-      // 
-
       string f = null;
       try
       {
@@ -227,10 +169,11 @@ namespace ENG.Metar.Decoder
   f,
   this.IsClear, //0
   this.Distance.HasValue ?  this.Distance.Value.ToString(false) : null,
-  this.UseEUStyle ? "m" : "sm",
-  this.UseEUStyle ? "meters" : "miles",
+  this.UseEUStyle ? 
+    formatter.eUnitToString(Common.eUnit.m, false) : formatter.eUnitToString(Common.eUnit.mi, false),
+  this.UseEUStyle ? 
+    formatter.eUnitToString(Common.eUnit.m, true) : formatter.eUnitToString(Common.eUnit.mi, true),
   this.DirectionSpecification.HasValue ? this.DirectionSpecification.Value.ToString() : null,
-  null,
   this.IsDevicesMinimumValue, // 6
   this.OtherDistance.HasValue ? this.OtherDistance.Value.ToString(false) : "-",
   this.OtherDistance.HasValue ? this.OtherDirectionSpecification.Value.ToString() : "-"
@@ -246,45 +189,6 @@ namespace ENG.Metar.Decoder
       StringBuilder ret = new StringBuilder();
 
       Runways.ForEach(r => ret.Append(r.ToInfo(formatter)));
-
-      return ret;
-    }
-
-
-
-    private string eDirectionToInfo(eDirection eDirection, bool verbose)
-    {
-      string ret;
-
-      switch (eDirection)
-      {
-        case eDirection.E:
-          ret = (verbose ? "east" : "E");
-          break;
-        case eDirection.N:
-          ret = (verbose ? "north" : "N");
-          break;
-        case eDirection.NE:
-          ret = (verbose ? "northeast" : "NE");
-          break;
-        case eDirection.NW:
-          ret = (verbose ? "northwest" : "NW");
-          break;
-        case eDirection.S:
-          ret = (verbose ? "south" : "S");
-          break;
-        case eDirection.SE:
-          ret = (verbose ? "southeast" : "SE");
-          break;
-        case eDirection.SW:
-          ret = (verbose ? "southwest" : "SW");
-          break;
-        case eDirection.W:
-          ret = (verbose ? "west" : "W");
-          break;
-        default:
-          throw new NotImplementedException();
-      }
 
       return ret;
     }
@@ -341,9 +245,9 @@ namespace ENG.Metar.Decoder
     {
       base.SanityCheck(ref errors, ref warnings);
 
-      if (UseEUStyle && (Distance.Value > 10000))
+      if (UseEUStyle && Distance.HasValue && (Distance.Value > 10000))
         errors.Add("Maximum value for EU distance is 9999 meters. If more, use CAVOK instead.");
-      else if (!UseEUStyle && (Distance.Value > 10))
+      else if (!UseEUStyle && Distance.HasValue && (Distance.Value > 10))
         errors.Add("Maximum value for non-EU (USA) distance is 10 miles. If more, use SKC instead.");
 
       if (UseEUStyle && IsDevicesMinimumValue)

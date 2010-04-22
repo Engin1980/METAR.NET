@@ -202,12 +202,14 @@ namespace ENG.Metar.Decoder
 
       ret = formatter.Format(
             formatter.RunwayVisibilityFormat,
-            Common.DeviceMeasureRestrictionToString(DeviceMeasurementRestriction),
+            formatter.RunwayVisibilityDeviceMeasureRestrictionToString(DeviceMeasurementRestriction),
             this.Distance,
-            this.IsInFeet ? "ft" : "m",
-            this.IsInFeet ? "feet" : "meters",
+            this.IsInFeet ? 
+              formatter.eUnitToString(Common.eUnit.ft, false) : formatter.eUnitToString(Common.eUnit.m, false),
+            this.IsInFeet ?
+              formatter.eUnitToString(Common.eUnit.ft, true) : formatter.eUnitToString(Common.eUnit.m, true),
             this.Runway,
-            Common.TendencyToString(this.Tendency),
+            formatter.RunwayVisibilityTendencyToString(this.Tendency),
             VariableVisibility);
 
       return ret;

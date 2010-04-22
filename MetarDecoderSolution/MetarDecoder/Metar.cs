@@ -185,6 +185,8 @@ namespace ENG.Metar.Decoder
       }
       set
       {
+        if (value != null)
+          value.SetRePhenomenFlag(false);
         _Phenomens = value;
       }
     }
@@ -267,6 +269,8 @@ namespace ENG.Metar.Decoder
       }
       set
       {
+        if (value != null)
+          value.SetRePhenomenFlag(true);
         _RePhenomens = value;
       }
     }
@@ -546,19 +550,19 @@ namespace ENG.Metar.Decoder
       else if (grp[3].Success)
       {
         int distance = grp[4].GetIntValue();
-        Visibility.eDirection? dir = null;
+        Common.eDirection? dir = null;
         int? otherDist = null;
-          Visibility.eDirection? otherDir = null;
+          Common.eDirection? otherDir = null;
 
         if (grp[5].Success)
-          dir = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
-            typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[5].Value);
+          dir = (ENG.Metar.Decoder.Common.eDirection)Enum.Parse(
+            typeof(ENG.Metar.Decoder.Common.eDirection), grp[5].Value);
 
         if (grp[6].Success)
         {
           otherDist = grp[7].GetIntValue();
-          otherDir = (ENG.Metar.Decoder.Visibility.eDirection)Enum.Parse(
-            typeof(ENG.Metar.Decoder.Visibility.eDirection), grp[8].Value);
+          otherDir = (ENG.Metar.Decoder.Common.eDirection)Enum.Parse(
+            typeof(ENG.Metar.Decoder.Common.eDirection), grp[8].Value);
         }
 
           ret.SetMeters(distance, dir, otherDist, otherDir);
@@ -627,26 +631,32 @@ namespace ENG.Metar.Decoder
 
     }
     private static void DecodePhenoms(Group[] grp, ref Metar obj)
-    {
-      PhenomInfo lst = new PhenomInfo(false);
+    {      
 
       string str = grp[0].Value;
 
-      Match m = Regex.Match(str, R_PHENOM_SET);
-      ePhenomCollection coll = null;
-      while (m.Success)
+      if (string.IsNullOrEmpty(str))
+        obj.Phenomens = null;
+      else
       {
-        coll = new ePhenomCollection();
+        PhenomInfo lst = new PhenomInfo();
 
-        coll = xDecodeePhenomSet(m);
+        Match m = Regex.Match(str, R_PHENOM_SET);
+        ePhenomCollection coll = null;
+        while (m.Success)
+        {
+          coll = new ePhenomCollection();
 
-        lst.Add(coll);
+          coll = xDecodeePhenomSet(m);
 
-        m = m.NextMatch();
+          lst.Add(coll);
 
+          m = m.NextMatch();
+
+        }
+
+        obj.Phenomens = lst;
       }
-
-      obj.Phenomens = lst;
     }
     private static ePhenomCollection xDecodeePhenomSet(Match setMatch)
     {
@@ -735,25 +745,33 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeRePhenoms(Group[] grp, ref Metar obj)
     {
-      PhenomInfo lst = new PhenomInfo(true);
-
       string str = grp[0].Value;
 
-      Match m = Regex.Match(str, R_RE_PHENOM_ITEM);
-      ePhenomCollection coll = null;
-      while (m.Success)
+      if (string.IsNullOrEmpty(str))
       {
-        coll = new ePhenomCollection();
-
-        coll = xDecodeePhenomSet(m);
-
-        lst.Add(coll);
-
-        m = m.NextMatch();
-
+        obj.RePhenomens = null;
       }
+      else
+      {
 
-      obj.RePhenomens = lst;
+        PhenomInfo lst = new PhenomInfo();
+
+        Match m = Regex.Match(str, R_RE_PHENOM_ITEM);
+        ePhenomCollection coll = null;
+        while (m.Success)
+        {
+          coll = new ePhenomCollection();
+
+          coll = xDecodeePhenomSet(m);
+
+          lst.Add(coll);
+
+          m = m.NextMatch();
+
+        }
+
+        obj.RePhenomens = lst;
+      }
     }
     private static void DecodeWS(Group[] grp, ref Metar obj)
     {
@@ -791,6 +809,13 @@ namespace ENG.Metar.Decoder
     }
     private static void DecodeRwyConds(Group[] grp, ref Metar obj)
     {
+      if (grp[0].Success && string.IsNullOrEmpty(grp[0].Value))
+      {
+        obj.RunwayConditions = null;
+      }
+      else
+      {
+
       RunwayConditionInfo ret = new RunwayConditionInfo();
 
       if (grp[0].Success)
@@ -812,8 +837,8 @@ namespace ENG.Metar.Decoder
 
         obj.RunwayConditions = ret;
       }
-      else
-        obj.RunwayConditions = null;
+
+      }
     }
     private static RunwayCondition xDecodeRwyCond(Match m)
     {
@@ -935,10 +960,10 @@ namespace ENG.Metar.Decoder
       if (grp[0].Success)
       {
         if (grp[2].Success)
-          obj.Trend.Phenomens = new PhenomInfo(false) { IsNSW = true };
+          obj.Trend.Phenomens = new PhenomInfo() { IsNSW = true };
         else
         {
-          PhenomInfo lst = new PhenomInfo(false);
+          PhenomInfo lst = new PhenomInfo();
 
           string str = grp[1].Value;
 
@@ -1031,10 +1056,10 @@ namespace ENG.Metar.Decoder
         this.ICAO,
     this.Date.Day,
     this.Date.Hour,
-    this.Date.Minute,
+    this.Date.Minute.ToString("00"),
     this.Wind.ToInfo(formatter)
         , this.Visibility.ToInfo(formatter)
-        , this.Phenomens.ToInfo(formatter)
+        , this.Phenomens != null ? this.Phenomens.ToInfo(formatter) : null
         , this.Clouds != null ? this.Clouds.ToInfo(formatter) : null
         , this.Temperature
         , this.DewPoint
@@ -1090,7 +1115,7 @@ namespace ENG.Metar.Decoder
         for (int i = 0; i < ret.Length - 1; i++)
         {
           if (ret[i].IsIn(',', '.', ';'))
-            if (ret[i + 1] != ' ')
+            if (ret[i + 1] != ' ' && !Char.IsDigit(ret[i+1]))
               ret.Insert(i + 1, ' ');
         }
       }

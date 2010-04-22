@@ -29,7 +29,7 @@ namespace ENG.Metar.Decoder.Formatters
       {
         string ret =
            "[1|Wind calm.]" +
-          "[!1|Wind {3} at {7} {5}.]";
+          "[!1|Wind [0|variable][!0|{2}] at {7} {5}.]";
 
         return ret;
       }
@@ -115,6 +115,66 @@ namespace ENG.Metar.Decoder.Formatters
     public override string TrendTimeFormat
     {
       get { throw new NotImplementedException(); }
+    }
+
+    public override string eDirectionToString(Common.eDirection value, bool useLong)
+    {
+      return new LongInfoFormatter().eDirectionToString(value, useLong);
+    }
+
+    public override string RunwayVisibilityDeviceMeasureRestrictionToString(RunwayVisibility.eDeviceMeasurementRestriction? value)
+    {
+      return new LongInfoFormatter().RunwayVisibilityDeviceMeasureRestrictionToString(value);
+    }
+
+    public override string RunwayVisibilityTendencyToString(RunwayVisibility.eTendency? value)
+    {
+      return new LongInfoFormatter().RunwayVisibilityTendencyToString(value);
+    }
+
+    public override string CloudTypeToString(Cloud.eType value, bool useLong)
+    {
+      return new LongInfoFormatter().CloudTypeToString(value, useLong);
+    }
+
+    public override string PressureInfoUnitToString(PressureInfo.eUnit value, bool useLong)
+    {
+      return new LongInfoFormatter().PressureInfoUnitToString(value, useLong);
+    }
+
+    public override string TrendInfoTypeToString(TrendInfo.eType value, bool useLong)
+    {
+      return new LongInfoFormatter().TrendInfoTypeToString(value, useLong);
+    }
+
+    public override string RunwayConditionContaminationToString(RunwayCondition.eContamination? value)
+    {
+      return new LongInfoFormatter().RunwayConditionContaminationToString(value);
+    }
+
+    public override string RunwayConditionDepthToString(RunwayCondition.eDepth? value)
+    {
+      return new LongInfoFormatter().RunwayConditionDepthToString(value);
+    }
+
+    public override string RunwayConditionDepositToString(RunwayCondition.eDeposit? value)
+    {
+      return new LongInfoFormatter().RunwayConditionDepositToString(value);
+    }
+
+    public override string RunwayConditionFrictionToString(RunwayCondition.eFriction? value)
+    {
+      return new LongInfoFormatter().RunwayConditionFrictionToString(value);
+    }
+
+    public override string PhenomCollectionPhenomToString(ePhenomCollection.ePhenom value, bool useLong)
+    {
+      return new LongInfoFormatter().PhenomCollectionPhenomToString(value, useLong);
+    }
+
+    public override string eUnitToString(Common.eUnit value, bool useLong)
+    {
+      return new LongInfoFormatter().eUnitToString(value, useLong);
     }
   }
 }

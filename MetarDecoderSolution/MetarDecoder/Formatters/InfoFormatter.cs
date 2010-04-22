@@ -13,6 +13,8 @@ namespace ENG.Metar.Decoder.Formatters
   public abstract class InfoFormatter
   {
 
+    #region Enums
+
     /// <summary>
     /// Metar info values for info-strings. Source is metar.<see cref="ENG.Metar.Decoder.Metar"/>
     /// </summary>
@@ -100,31 +102,35 @@ namespace ENG.Metar.Decoder.Formatters
       /// <summary>
       /// Gets direction as one of values N/NE/E/SE/S/SW/W/NW. Null if wind is variable.
       /// </summary>
-      DirectionAsCardinalPointOrNull = 3,
+      DirectionAsCardinalPointShortStringOrNull = 3,
+      /// <summary>
+      /// Gets direction as one of values north, east, .... Null if wind is variable.
+      /// </summary>
+      DirectionAsCardinalPointLongStringOrNull = 4,
       /// <summary>
       /// Speed of wind.
       /// </summary>
-      WindSpeed = 4,
+      WindSpeed = 5,
       /// <summary>
       /// Unit of wind-speed.
       /// </summary>
-      WindSpeedUnit = 5,
+      WindSpeedUnit = 6,
       /// <summary>
       /// Wind gust speed, or null if no gusts.
       /// </summary>
-      WindGustSpeedOrNull = 6,
+      WindGustSpeedOrNull = 7,
       /// <summary>
       /// Maximum of values WindSpeed and WindGustSpeed.
       /// </summary>
-      MaximumWindSpeed = 7,
+      MaximumWindSpeed = 8,
       /// <summary>
       /// If varying wind, first value "from-where". Null if not used.
       /// </summary>
-      VaryingWindFromOrNull = 8,
+      VaryingWindFromOrNull = 9,
       /// <summary>
       /// If varying wind, second value "to-where". Null if not used.
       /// </summary>
-      VaryingWindToOrNull = 9,
+      VaryingWindToOrNull = 10,
     }
 
     /// <summary>
@@ -537,6 +543,10 @@ namespace ENG.Metar.Decoder.Formatters
       Minute = 3
     }
 
+    #endregion Enums
+
+    #region Format properties
+
     /// <summary>
     /// Gets the metar format string.
     /// </summary>
@@ -635,6 +645,106 @@ namespace ENG.Metar.Decoder.Formatters
     /// </summary>
     /// <value></value>
     public abstract string TrendTimeFormat { get; }
+
+    #endregion Format properties
+
+    #region ToString methods
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string eDirectionToString  (Common.eDirection value, bool useLong);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract string RunwayVisibilityDeviceMeasureRestrictionToString(RunwayVisibility.eDeviceMeasurementRestriction? value);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract string RunwayVisibilityTendencyToString(RunwayVisibility.eTendency? value);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string CloudTypeToString(Cloud.eType value, bool useLong);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string PressureInfoUnitToString(PressureInfo.eUnit value, bool useLong);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string TrendInfoTypeToString(TrendInfo.eType value, bool useLong);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract string RunwayConditionContaminationToString(RunwayCondition.eContamination? value);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract string RunwayConditionDepthToString(RunwayCondition.eDepth? value);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract string RunwayConditionDepositToString(RunwayCondition.eDeposit? value);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract string RunwayConditionFrictionToString(RunwayCondition.eFriction? value);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string PhenomCollectionPhenomToString(ePhenomCollection.ePhenom value, bool useLong);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string eUnitToString(Common.eUnit value, bool useLong);
+
+
+    #endregion ToString methods
+
+
+    #region Methods
 
     /// <summary>
     /// Converts a format-string into info-string. Parameters required, used in same way as string.Format.
@@ -749,5 +859,8 @@ namespace ENG.Metar.Decoder.Formatters
       //else
       //  return true; // neni null ==> true;
     }
+
+    #endregion Methods
+
   }
 }

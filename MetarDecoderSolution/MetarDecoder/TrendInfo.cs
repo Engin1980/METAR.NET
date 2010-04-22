@@ -124,6 +124,8 @@ namespace ENG.Metar.Decoder
       }
       set
       {
+        if (value != null)
+          value.SetRePhenomenFlag(false);
         _Phenomens = value;
       }
     }
@@ -186,8 +188,8 @@ namespace ENG.Metar.Decoder
       ret = formatter.Format(
         formatter.TrendFormat,
        this.Type == eType.NOSIG,
-        this.Type,
-        Common.TypeToString(this.Type),
+        formatter.TrendInfoTypeToString(this.Type, false),
+        formatter.TrendInfoTypeToString (this.Type, true),
         (this.Times != null && this.Times.Count != 0),
         this.Times == null ? null : GetTimesInfo(formatter),
         this.Wind != null ? this.Wind.ToInfo(formatter) : null,

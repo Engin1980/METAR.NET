@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="22.4.2010 12:36:54">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="22.4.2010 15:38:25">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -29,11 +29,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.2500
+    Last step completed in 00:00:00.0938
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -42,22 +42,22 @@ GenerateRefInfo:
   MrefBuilder (v2.4.10520.1)
   Copyright c Microsoft 2006
   Info: Loaded 1 assemblies for reflection and 7 dependency assemblies.
-  Info: Wrote information on 2 namespaces, 58 types, and 651 members
+  Info: Wrote information on 2 namespaces, 61 types, and 725 members
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:05.2188
+    Last step completed in 00:00:02.5156
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     4 attribute nodes removed
     0 explicit interface implementations removed
     84 local and base class EII elements removed
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -70,12 +70,12 @@ TransformManifest:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:03.8750
+    Last step completed in 00:00:03.1250
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
@@ -185,16 +185,16 @@ C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt;
 C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\SplitScreen.js
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Presentation.css
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:01.0469
+    Last step completed in 00:00:00.7813
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.1094
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
@@ -205,7 +205,7 @@ Creating Sandcastle configuration files...
 Merging custom build component configurations
 C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.0781
+    Last step completed in 00:00:00.0938
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -218,7 +218,7 @@ BuildReferenceTopics:
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match '*.xml'.
   Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
-  Info: CopyFromIndexComponent: Indexed 170947 elements in 107 files.
+  Info: CopyFromIndexComponent: Indexed 171029 elements in 107 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
@@ -830,7 +830,7 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml'.
-  Info: CopyFromIndexComponent: Indexed 132035 elements in 118 files.
+  Info: CopyFromIndexComponent: Indexed 132055 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -905,7 +905,7 @@ BuildReferenceTopics:
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
-  Info: ResolveReferenceLinksComponent2: Loaded 170947 reference targets.
+  Info: ResolveReferenceLinksComponent2: Loaded 171029 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:ENG.Metar.Decoder
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder
@@ -958,6 +958,13 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToMetar
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.VVDistance
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Common
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Common
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Common.HeadingToeDirection(System.Int32)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Common.HeadingToeDirection(System.Int32)
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common.eDirection
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common.eUnit
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.DayTime
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.DayTime
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.DayTime
@@ -1086,6 +1093,7 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.NonNegInt.Value
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PhenomInfo
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.PhenomInfo
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PhenomInfo.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.PhenomInfo
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.PhenomInfo
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.BinarySearch
@@ -1096,7 +1104,8 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.LastIndexOf
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.Reverse
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.Sort
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.#ctor(System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PhenomInfo.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PhenomInfo.IsNSW
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
@@ -1388,19 +1397,17 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Visibility.Runways
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Visibility.eDirection)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Visibility.eDirection,System.Int32,ENG.Metar.Decoder.Visibility.eDirection)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Visibility.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Visibility.eDirection})
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Visibility.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Visibility.eDirection})
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;distance&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Visibility.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Visibility.eDirection})
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;way&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Visibility.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Visibility.eDirection})
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;secondDistance&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Visibility.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Visibility.eDirection})
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;secondWay&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Visibility.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Visibility.eDirection})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Common.eDirection)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,ENG.Metar.Decoder.Common.eDirection,System.Int32,ENG.Metar.Decoder.Common.eDirection)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Common.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Common.eDirection})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;distance&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Common.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Common.eDirection})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;way&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Common.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Common.eDirection})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;secondDistance&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Common.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Common.eDirection})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;secondWay&quot;/&gt; documentation for M:ENG.Metar.Decoder.Visibility.SetMeters(System.Int32,System.Nullable{ENG.Metar.Decoder.Common.eDirection},System.Nullable{System.Int32},System.Nullable{ENG.Metar.Decoder.Common.eDirection})
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToMetar
-  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Visibility.eDirection
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Wind
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.MetarItem'.
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Wind
@@ -1473,6 +1480,104 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindVariable.ToMetar
   Info: BuildAssembler: Building topic N:ENG.Metar.Decoder.Formatters
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder.Formatters
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter
+  Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.#ctor
+  Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter
+  Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.#ctor
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;type&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.MetarFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomItemFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomItemFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomsFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RePhenomsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendTimeFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendTimeFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendTimesFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.TrendTimesFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.VisibilityFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.VisibilityFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.WindFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.WindFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.WindShearFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.WindShearFormat
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.WindShearsFormat
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.WindShearsFormat
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.InfoFormatter
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Formatters.InfoFormatter
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
@@ -1482,20 +1587,62 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;values&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomItemFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PhenomsFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendTimeFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.TrendTimesFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.VisibilityFormat
@@ -1531,8 +1678,28 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;type&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.MetarFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomItemFormat
@@ -1541,16 +1708,50 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomsFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RePhenomsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimeFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimeFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.TrendTimesFormat
@@ -1575,8 +1776,28 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.MetarFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.MetarFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomItemFormat
@@ -1585,16 +1806,50 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomsFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PressureInfoUnitToString(ENG.Metar.Decoder.PressureInfo.eUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RePhenomsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RePhenomsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionContaminationToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eContamination})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepositToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDeposit})
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionDepthToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eDepth})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionFrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayCondition.eFriction})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayConditionsFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityDeviceMeasureRestrictionToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.RunwayVisibilityTendencyToString(System.Nullable{ENG.Metar.Decoder.RunwayVisibility.eTendency})
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendFormat
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendInfoTypeToString(ENG.Metar.Decoder.TrendInfo.eType,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimeFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimeFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.TrendTimesFormat
@@ -1607,8 +1862,8 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
-  Info: Processed 478 topics
-    Last step completed in 00:02:47.4219
+  Info: Processed 554 topics
+    Last step completed in 00:03:36.4063
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -1617,7 +1872,7 @@ GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
   Copyright c Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:02.6250
+    Last step completed in 00:00:04.5156
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
@@ -1627,11 +1882,11 @@ Copyright c 2008-2009, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
-Processed 478 HTML files
+Processed 554 HTML files
 Sorting keywords and generating See Also indices
 Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhk
 Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhc
-    Last step completed in 00:00:01.8281
+    Last step completed in 00:00:01.7813
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
@@ -1643,11 +1898,11 @@ Updating table of contents with additional content items and determining default
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1.x index file...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1663,13 +1918,13 @@ Build1xHelpFile:
   
   
   
-  Compile time: 0 minutes, 13 seconds
+  Compile time: 0 minutes, 14 seconds
   
-  480	Topics
+  556	Topics
   
-  7,323	Local links
+  8,553	Local links
   
-  3,598	Internet links
+  4,048	Internet links
   
   0	Graphics
   
@@ -1677,19 +1932,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 907,156 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 1,039,996 bytes
   
-  Compression decreased file by 6,536,724 bytes.
+  Compression decreased file by 7,588,405 bytes.
   
-    Last step completed in 00:00:16.5156
+    Last step completed in 00:00:17.9219
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.3438
+    Last step completed in 00:00:00.4375
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.22.2010 12:40 odp..  Total time: 00:03:20,3594
+Build completed successfully at 04.22.2010 03:42 odp..  Total time: 00:04:08,2344
 
 </buildStep>
 </shfbBuild>

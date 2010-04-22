@@ -180,8 +180,10 @@ namespace ENG.Metar.Decoder
         formatter.VisibilityFormat,
         this.IsClear, //0
         this.Distance.HasValue ? this.Distance.Value.ToString(false) : null,
-        this.UseEUStyle ? "m" : "sm",
-        this.UseEUStyle ? "meters" : "miles",
+  this.UseEUStyle ?
+    formatter.eUnitToString(Common.eUnit.m, false) : formatter.eUnitToString(Common.eUnit.mi, false),
+  this.UseEUStyle ?
+    formatter.eUnitToString(Common.eUnit.m, true) : formatter.eUnitToString(Common.eUnit.mi, true),
         null,
         null,
         this.IsDevicesMinimumValue, // 6
@@ -230,9 +232,9 @@ namespace ENG.Metar.Decoder
     /// <param name="warnings">Found warnings.</param>
     public virtual void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
-      if (UseEUStyle && (Distance.Value > 10000))
+      if (UseEUStyle && Distance.HasValue && (Distance.Value > 10000))
         errors.Add("Maximum value for EU distance is 9999 meters. If more, use CAVOK instead.");
-      else if (!UseEUStyle && (Distance.Value > 10))
+      else if (!UseEUStyle && Distance.HasValue && (Distance.Value > 10))
         errors.Add("Maximum value for non-EU (USA) distance is 10 miles. If more, use SKC instead.");
 
       if (UseEUStyle && IsDevicesMinimumValue)

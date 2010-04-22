@@ -12,6 +12,10 @@ namespace ENG.Metar.Decoder
   public class PhenomInfo : List<ePhenomCollection>, IMetarItem
   {
     private bool isRE;
+    internal void SetRePhenomenFlag(bool isRe)
+    {
+      this.isRE = isRe;
+    }
 
     #region Properties
 
@@ -35,21 +39,6 @@ namespace ENG.Metar.Decoder
     }
 
     #endregion Properties
-
-    #region .ctor
-
-    /// <summary>
-    /// Creates new instance. Parameter is true if instance is used for re-phenoms. See Metar.RePhenomens.
-    /// </summary>
-    /// <param name="isRe">True if re-phenoms, false otherwise.</param>
-    /// <remarks>
-    /// If argument is true, when converted, data are represented in metar with prefix RE.
-    /// </remarks>
-    public PhenomInfo(bool isRe)
-    {
-      this.isRE = isRe;
-    }
-    #endregion .ctor
 
     #region Inherited
 
