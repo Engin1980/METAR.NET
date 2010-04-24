@@ -170,9 +170,9 @@ namespace ENG.Metar.Decoder
       else
       {
         int dom = a.Denominator*b.Denominator;
-        int num = a.Numerator*(dom/a.Denominator) + 
+        int nom = a.Numerator*(dom/a.Denominator) + 
           b.Numerator*(dom/b.Denominator);
-        ret = new Racional (num, dom);
+        ret = new Racional (nom, dom);
       }
 
       ret = ret.Abbreviate();
