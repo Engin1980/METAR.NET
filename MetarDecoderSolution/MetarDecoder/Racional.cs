@@ -24,12 +24,203 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="numerator"></param>
     /// <param name="denominator"></param>
+    /// <exception cref="ArithmeticException">
+    /// Raised when denominator is zero.
+    /// </exception>
     public Racional(int numerator, int denominator)
     {
-      if (denominator == 0) throw new Exception("Denominator cannot be 0.");
+      if (denominator == 0) throw new ArithmeticException("Denominator cannot be 0.");
 
       this.Numerator = numerator;
       this.Denominator = denominator;
+    }
+
+    /// <summary>
+    /// Converts string to Racional number using / or : as delimiters between numerator and denominator.
+    /// Exception is throw in case of failure.
+    /// </summary>
+    /// <param name="value">String value to convert.</param>
+    /// <returns>Returned racional number.</returns>
+    /// <exception cref="FormatException">Thrown in case that whole string does not contain
+    /// delimiter between numerator and denominator ( / or : are expected), or in case that
+    /// numerator or denominator cannot be parsed as integer values.</exception>
+    /// <exception cref="ArgumentNullException">Thrown in case that argument "value" is null.</exception>
+    /// <exception cref="OutOfMemoryException">Thrown in case that
+    /// numerator or denominator parsed values are less than <see cref="int.MinValue"/>
+    /// or greater than <see cref="int.MaxValue"/> of int data type.</exception>
+    public static Racional Parse(string value)
+    {
+      Racional ret = Parse(value, System.Globalization.NumberStyles.Integer, null);
+      return ret;
+    }
+    /// <summary>
+    /// Converts string to Racional number using / or : as delimiters between numerator and denominator.
+    /// Exception is throw in case of failure.
+    /// </summary>
+    /// <param name="value">String value to convert.</param>
+    /// <param name="style">A bitwise combination of enumeration values that indicates the style elements that 
+    /// can be present in s. A typical value to specify is 
+    /// <see cref="System.Globalization.NumberStyles.Integer"> Integer</see></param>
+    /// <returns>Returned racional number.</returns>
+    /// <exception cref="FormatException">Thrown in case that whole string does not contain
+    /// delimiter between numerator and denominator ( / or : are expected), or in case that
+    /// numerator or denominator cannot be parsed as integer values.</exception>
+    /// <exception cref="ArgumentNullException">Thrown in case that argument "value" is null.</exception>
+    /// <exception cref="OutOfMemoryException">Thrown in case that
+    /// numerator or denominator parsed values are less than <see cref="int.MinValue"/>
+    /// or greater than <see cref="int.MaxValue"/> of int data type.</exception>
+    /// <exception cref="ArgumentException">Thrown when style is not a NumberStyles value. -or- style 
+    /// is not a combination of AllowHexSpecifier and HexNumber values accepted for numerator or
+    /// denominator parsing to int.</exception>
+    public static Racional Parse(string value, System.Globalization.NumberStyles style)
+    {
+      Racional ret = Parse(value, System.Globalization.NumberStyles.Integer, null);
+      return ret;
+    }
+    /// <summary>
+    /// Converts string to Racional number using / or : as delimiters between numerator and denominator.
+    /// Exception is throw in case of failure.
+    /// </summary>
+    /// <param name="value">String value to convert.</param>
+    /// <param name="provider">An object that supplies culture-specific information about the format for integer
+    /// parsing of numerator and denominator from value.</param>
+    /// <returns>Returned racional number.</returns>
+    /// <exception cref="FormatException">Thrown in case that whole string does not contain
+    /// delimiter between numerator and denominator ( / or : are expected), or in case that
+    /// numerator or denominator cannot be parsed as integer values.</exception>
+    /// <exception cref="ArgumentNullException">Thrown in case that argument "value" is null.</exception>
+    /// <exception cref="OutOfMemoryException">Thrown in case that
+    /// numerator or denominator parsed values are less than <see cref="int.MinValue"/>
+    /// or greater than <see cref="int.MaxValue"/> of int data type.</exception>
+    public static Racional Parse(string value, IFormatProvider provider)
+    {
+      Racional ret = Parse(value, System.Globalization.NumberStyles.Integer, provider);
+      return ret;
+    }
+    /// <summary>
+    /// Converts string to Racional number using / or : as delimiters between numerator and denominator.
+    /// Exception is throw in case of failure.
+    /// </summary>
+    /// <param name="value">String value to convert.</param>
+    /// <param name="style">A bitwise combination of enumeration values that indicates the style elements that 
+    /// can be present in s. A typical value to specify is 
+    /// <see cref="System.Globalization.NumberStyles.Integer"> Integer</see></param>
+    /// <param name="provider">An object that supplies culture-specific information about the format for integer
+    /// parsing of numerator and denominator from value.</param>
+    /// <returns>Returned racional number.</returns>
+    /// <exception cref="FormatException">Thrown in case that whole string does not contain
+    /// delimiter between numerator and denominator ( / or : are expected), or in case that
+    /// numerator or denominator cannot be parsed as integer values.</exception>
+    /// <exception cref="ArgumentNullException">Thrown in case that argument "value" is null.</exception>
+    /// <exception cref="OutOfMemoryException">Thrown in case that
+    /// numerator or denominator parsed values are less than <see cref="int.MinValue"/>
+    /// or greater than <see cref="int.MaxValue"/> of int data type.</exception>
+    /// <exception cref="ArgumentException">Thrown when style is not a NumberStyles value. -or- style 
+    /// is not a combination of AllowHexSpecifier and HexNumber values accepted for numerator or
+    /// denominator parsing to int.</exception>
+    public static Racional Parse(string value, System.Globalization.NumberStyles style, IFormatProvider provider)
+    {
+      if (value == null)
+        throw new ArgumentNullException();
+
+
+      int ind;
+
+      ind = value.IndexOf('/');
+      if (ind < 0)
+        ind = value.IndexOf(':');
+      if (ind < 0)
+        throw new FormatException("Delimiter \"/\" or \":\" not found in string.");
+
+      string numString = value.Substring(0, ind);
+      string denString = value.Substring(ind + 1);
+
+      int num;
+      int den;
+      try
+      {
+        num = int.Parse(numString, style, provider);
+      }
+      catch (FormatException ex)
+      {
+        throw new FormatException("Value \"" + numString + "\" is not correct value for numerator.", ex);
+      }
+      catch (OutOfMemoryException ex)
+      {
+        throw new OutOfMemoryException("Value of numerator \"" + numString + "\": " + ex.Message, ex);
+      }
+      catch (ArgumentException ex)
+      {
+        throw new ArgumentException("Value of numerator \"" + numString + "\": " + ex.Message, ex);
+      }
+
+      try
+      {
+        den = int.Parse(denString, style, provider);
+      }
+      catch (FormatException ex)
+      {
+        throw new FormatException("Value \"" + denString + "\" is not correct value for denominator.", ex);
+      }
+      catch (OutOfMemoryException ex)
+      {
+        throw new OutOfMemoryException("Value of denominator \"" + denString + "\": " + ex.Message, ex);
+      }
+      catch (ArgumentException ex)
+      {
+        throw new ArgumentException("Value of denominator \"" + denString + "\": " + ex.Message, ex);
+      }
+
+      Racional ret = new Racional(num, den);
+
+      return ret;
+    }
+
+    /// <summary>
+    /// Try to convert value string to result racional number.
+    /// Returns true in case of success, false otherwise.
+    /// </summary>
+    /// <param name="value">Input string value with / or : as delimiters between numerator and denominator.</param>
+    /// <param name="result">If method returs true, here is parsed racional number. If methods returns false, 
+    /// value is undefined.</param>
+    /// <returns>True if parse was successful, false otherwise.</returns>
+    public static bool TryParse(string value, out Racional result)
+    {
+      bool ret = TryParse(value, System.Globalization.NumberStyles.Integer, null, out result);
+
+      return ret;
+      
+    }
+
+    /// <summary>
+    /// Try to convert value string to result racional number.
+    /// Returns true in case of success, false otherwise.
+    /// </summary>
+    /// <param name="value">Input string value with / or : as delimiters between numerator and denominator.</param>
+    /// <param name="style">A bitwise combination of enumeration values that indicates the style elements that 
+    /// can be present in s. A typical value to specify is 
+    /// <see cref="System.Globalization.NumberStyles.Integer"> Integer</see></param>
+    /// <param name="provider">An object that supplies culture-specific information about the format for integer
+    /// parsing of numerator and denominator from value.</param>
+    /// <param name="result">If method returs true, here is parsed racional number. If methods returns false, 
+    /// value is undefined.</param>
+    /// <returns>True if parse was successful, false otherwise.</returns>
+    public static bool TryParse(string value, System.Globalization.NumberStyles style,
+      IFormatProvider provider, out Racional result)
+    {
+      bool ret;
+      try
+      {
+        result = Racional.Parse(value, style, provider);
+        ret = true;
+      }
+      catch (Exception)
+      {
+        result = default(Racional);
+        ret = false;
+      }
+
+      return ret;
     }
 
     /// <summary>
@@ -39,7 +230,7 @@ namespace ENG.Metar.Decoder
     {
       get
       {
-        return Numerator / Denominator;
+        return Numerator / (double) Denominator;
       }
     }
 
@@ -175,7 +366,7 @@ namespace ENG.Metar.Decoder
         ret = new Racional (nom, dom);
       }
 
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -188,7 +379,7 @@ namespace ENG.Metar.Decoder
     {
       Racional ret = new Racional(
         a.Numerator + b * a.Denominator, a.Denominator);
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -209,7 +400,7 @@ namespace ENG.Metar.Decoder
           b.Numerator * (dom / b.Denominator);
         ret = new Racional(num, dom);
       }
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -222,7 +413,7 @@ namespace ENG.Metar.Decoder
     {
       Racional ret = new Racional(
         a.Numerator - b * a.Denominator, a.Denominator);
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -235,7 +426,7 @@ namespace ENG.Metar.Decoder
     {
       Racional ret = new Racional(
         b * a.Denominator - a.Numerator, a.Denominator);
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -250,7 +441,7 @@ namespace ENG.Metar.Decoder
         int dom = a.Denominator * b.Denominator;
         int num = a.Numerator * b.Denominator;
         ret = new Racional(num , dom );
-        ret = ret.Abbreviate();
+        ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -263,7 +454,7 @@ namespace ENG.Metar.Decoder
     {
       Racional ret = new Racional(
         a.Numerator*b, a.Denominator);
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -274,12 +465,10 @@ namespace ENG.Metar.Decoder
     /// <returns></returns>
     public static Racional operator /(Racional a, Racional b)
     {
-      Racional ret;
-      int num = a.Numerator * b.Denominator;
-      int dom = a.Denominator * b.Numerator;
-        ret = new Racional(num , dom );
+      Racional ret =
+        a * b.FlipOver();
 
-        ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -291,7 +480,7 @@ namespace ENG.Metar.Decoder
     public static Racional operator /(Racional a, int b)
     {
       Racional ret = a / new Racional(b, 1);
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
     }
     /// <summary>
@@ -303,16 +492,16 @@ namespace ENG.Metar.Decoder
     public static Racional operator /(int b, Racional a)
     {
       Racional ret = new Racional(b, 1) / a;
-      ret = ret.Abbreviate();
+      ret = ret.Normalize();
       return ret;
-    }
+    }    
 
     /// <summary>
     /// Operator implicit conversion to double
     /// </summary>
     /// <param name="a"></param>
     /// <returns></returns>
-    public static implicit operator double (Racional a)
+    public static explicit operator double (Racional a)
     {
       return a.Value;
     }
@@ -353,15 +542,15 @@ namespace ENG.Metar.Decoder
       }
 
       ret = new Racional(intVal, mult);
-      ret.Abbreviate();
+      ret.Normalize();
       return ret;
     }
 
     /// <summary>
-    /// Abbreviates the racional. E.g. from 2/4 to 1/2.
+    /// Abbreviates the racional and movers minus sign into numerator, if exists. E.g. from 2/-4 to -1/2.
     /// </summary>
     /// <returns></returns>
-    public Racional Abbreviate()
+    public Racional Normalize()
     {
       Racional ret;
       int dom = Denominator;
@@ -371,6 +560,18 @@ namespace ENG.Metar.Decoder
         nsd = -nsd;
       ret = new Racional(num / nsd, dom / nsd);
       return ret;
+    }
+
+    /// <summary>
+    /// Returns new instance of racinal number which has flipped numerator and denominator values.
+    /// </summary>
+    /// <returns>Racional number with flipped over numerator and denominator values.</returns>
+    /// <exception cref="ArithmeticException">
+    /// Raised when denominator is zero.
+    /// </exception>
+    public Racional FlipOver()
+    {
+      return new Racional(this.Denominator, this.Numerator);
     }
 
     private static int GetGreatestCommonDivisor(int u, int v)
