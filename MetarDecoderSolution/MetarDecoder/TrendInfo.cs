@@ -233,18 +233,16 @@ namespace ENG.Metar.Decoder
       return ret.ToString().TrimEnd();
     }
 
-    #region MetarItem Members
-
-#if INFO
     /// <summary>
-    /// Returns item in text string.
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
     /// </summary>
-    /// <returns></returns>
-    public string ToInfo()
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
     {
-      throw new NotImplementedException();
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
     }
-#endif //INFO
+
+    #region MetarItem Members
 
     /// <summary>
     /// Proceed sanity check of inserted values.

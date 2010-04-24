@@ -172,6 +172,15 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    /// <summary>
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
+    /// </summary>
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
+    {
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
+    }
+
     #region MetarItem Members
 
     /// <summary>

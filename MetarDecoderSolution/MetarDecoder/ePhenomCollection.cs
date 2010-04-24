@@ -253,6 +253,15 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
+    /// </summary>
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
+    {
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
+    }
+
+    /// <summary>
     /// Proceed sanity check of inserted values.
     /// </summary>
     /// <param name="errors">Found errors.</param>

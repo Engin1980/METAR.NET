@@ -1086,60 +1086,13 @@ namespace ENG.Metar.Decoder
       bool removeDoubleSpaces, bool updatePunctuation,
       bool addSpacesAfterPunctuation, bool updateCasing)
     {
-      StringBuilder ret = new StringBuilder(ToInfo(formatter));
+      string ret = (ToInfo(formatter));
 
-      if (removeDoubleSpaces)
-        while (ret.ToString().Contains("  "))
-          ret.Replace("  ", " ");
+      ret = Formatters.InfoFormatter.CleanOutInfo(
+        ret,
+        removeDoubleSpaces, updatePunctuation, addSpacesAfterPunctuation, updateCasing);
 
-      if (updatePunctuation)
-      {
-        // mezery pred znaky
-        ret.Replace(" .", ".");
-        ret.Replace(" ,", ",");
-        ret.Replace(" ;", ";");
-
-        // double-znaky
-        ret.Replace(",,", ",");
-        ret.Replace("..", ".");
-        ret.Replace(";;", ";");
-
-        // double-kombinace
-        ret.Replace(",.", ".");
-        ret.Replace(";.", ".");
-        ret.Replace(",;", ";");
-      }
-
-      if (addSpacesAfterPunctuation)
-      {
-        for (int i = 0; i < ret.Length - 1; i++)
-        {
-          if (ret[i].IsIn(',', '.', ';'))
-            if (ret[i + 1] != ' ' && !Char.IsDigit(ret[i+1]))
-              ret.Insert(i + 1, ' ');
-        }
-      }
-
-      if (updateCasing)
-      {
-        int i = 0;
-        bool nextUpper = false;
-        while (i < ret.Length - 2)
-        {
-          if (nextUpper)
-            if (ret[i].IsNotIn(',', '.', ';', ' '))
-            {
-              ret[i] = Char.ToUpper(ret[i]);
-              nextUpper = false;
-            }
-
-          if (ret[i] == '.')
-            nextUpper = true;
-          i++;
-        }
-      }
-
-      return ret.ToString();
+      return ret;
     }
 
 
@@ -1181,6 +1134,15 @@ namespace ENG.Metar.Decoder
         ret.Append("RMK " + this.Remark);
 
       return ret.ToString().TrimEnd();
+    }
+
+    /// <summary>
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
+    /// </summary>
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
+    {
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
     }
 
     #region MetarItem Members

@@ -65,7 +65,7 @@ namespace ENG.Metar.Decoder
 
     #endregion Properties
 
-    #region Inherited
+    #region Methods
 
     /// <summary>
     /// Returns item in metar string.
@@ -74,6 +74,15 @@ namespace ENG.Metar.Decoder
     public string ToMetar()
     {
       return FromDirection.ToString("000") + "V" + ToDirection.ToString("000");
+    }
+
+    /// <summary>
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
+    /// </summary>
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
+    {
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
     }
 
     /// <summary>
@@ -92,7 +101,7 @@ namespace ENG.Metar.Decoder
           "Significant variable wind range should be less or equal 180 degrees. Greater values should be taken as variable (VRB) wind.");
     }
 
-    #endregion Inherited
+    #endregion Methods
 
   }
 }

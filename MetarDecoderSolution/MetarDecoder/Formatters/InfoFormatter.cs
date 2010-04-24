@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Collections;
+using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder.Formatters
 {
@@ -858,6 +859,76 @@ namespace ENG.Metar.Decoder.Formatters
       //  return (((ICollection)obj).Count != 0); // Coll.count != 0 ==> return true
       //else
       //  return true; // neni null ==> true;
+    }
+
+    /// <summary>
+    /// Cleans out assembled info string from ugly phenomens, like double dots .. at end of sentences, etc.
+    /// See parameters.
+    /// </summary>
+    /// <param name="info">Text to clear.</param>
+    /// <param name="addSpacesAfterPunctuation">True to removes spaces before . , ;</param>
+    /// <param name="removeDoubleSpaces">True to replaces double spaces by single space</param>
+    /// <param name="updateCasing">True to set upper case after dot (.).</param>
+    /// <param name="updatePunctuation">True to remove first char from combinations like ,. ,; ;. and doubles, like ,, .. ;; </param>
+    /// <returns></returns>
+    public static string CleanOutInfo(string info,
+     bool removeDoubleSpaces, bool updatePunctuation,
+     bool addSpacesAfterPunctuation, bool updateCasing)
+    {
+      StringBuilder ret = new StringBuilder(info);
+
+      if (removeDoubleSpaces)
+        while (ret.ToString().Contains("  "))
+          ret.Replace("  ", " ");
+
+      if (updatePunctuation)
+      {
+        // mezery pred znaky
+        ret.Replace(" .", ".");
+        ret.Replace(" ,", ",");
+        ret.Replace(" ;", ";");
+
+        // double-znaky
+        ret.Replace(",,", ",");
+        ret.Replace("..", ".");
+        ret.Replace(";;", ";");
+
+        // double-kombinace
+        ret.Replace(",.", ".");
+        ret.Replace(";.", ".");
+        ret.Replace(",;", ";");
+      }
+
+      if (addSpacesAfterPunctuation)
+      {
+        for (int i = 0; i < ret.Length - 1; i++)
+        {
+          if (ret[i].IsIn(',', '.', ';'))
+            if (ret[i + 1] != ' ' && !Char.IsDigit(ret[i + 1]))
+              ret.Insert(i + 1, ' ');
+        }
+      }
+
+      if (updateCasing)
+      {
+        int i = 0;
+        bool nextUpper = false;
+        while (i < ret.Length - 2)
+        {
+          if (nextUpper)
+            if (ret[i].IsNotIn(',', '.', ';', ' '))
+            {
+              ret[i] = Char.ToUpper(ret[i]);
+              nextUpper = false;
+            }
+
+          if (ret[i] == '.')
+            nextUpper = true;
+          i++;
+        }
+      }
+
+      return ret.ToString();
     }
 
     #endregion Methods

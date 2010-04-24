@@ -34,35 +34,6 @@ namespace ENG.Metar.Decoder
 
     #region Inherited
 
-#if INFO
-
-   /// <summary>
-    /// Returns item in text string.
-    /// </summary>
-    /// <param name="verbose">If false, only basic information is returned. If true, all (complex) information is provided.</param>
-    /// <returns></returns>
-public string ToInfo(bool verbose)
-    {
-      StringBuilder ret = new StringBuilder();
-
-      if (IsSNOCLO)
-        ret.AppendSpaced("Closed due to snow.");
-      else
-      {
-        if (this.Count > 0)
-        {
-          ret.AppendSpaced("Runway conditions:");
-
-          this.ForEach(i => ret.AppendSpaced(i.ToInfo(verbose)));
-
-          ret[ret.Length - 2] = '.';
-        }
-      }
-
-      return ret.ToString();
-    }
-#endif //INFO
-
     /// <summary>
     /// Returns item in metar string.
     /// </summary>
@@ -82,6 +53,15 @@ public string ToInfo(bool verbose)
 
         return ret.ToString().TrimEnd();
       }
+    }
+
+    /// <summary>
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
+    /// </summary>
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
+    {
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
     }
 
     #region MetarItem Members

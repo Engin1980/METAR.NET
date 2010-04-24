@@ -118,6 +118,15 @@ public string ToInfo(bool verbose)
       return this.Day.ToString("00") + this.Hour.ToString("00") + this.Minute.ToString("00") + "Z";
     }
 
+    /// <summary>
+    /// Returns a <see cref="T:System.String"/> that represents the current instance.
+    /// </summary>
+    /// <returns>A <see cref="T:System.String"/> that represents the current instance.</returns>
+    public override string ToString()
+    {
+      return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
+    }
+
     #region IMetarItem Members
 
 
