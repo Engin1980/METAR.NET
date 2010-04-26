@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="22.4.2010 15:38:25">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="24.4.2010 13:37:19">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -29,53 +29,53 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.1875
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 GenerateRefInfo:
   MrefBuilder (v2.4.10520.1)
-  Copyright c Microsoft 2006
+  Copyright ę Microsoft 2006
   Info: Loaded 1 assemblies for reflection and 7 dependency assemblies.
-  Info: Wrote information on 2 namespaces, 61 types, and 725 members
+  Info: Wrote information on 2 namespaces, 61 types, and 734 members
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:02.5156
+    Last step completed in 00:00:03.7500
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     4 attribute nodes removed
     0 explicit interface implementations removed
     84 local and base class EII elements removed
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.0781
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 TransformManifest:
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ApplyVSDocModel.xsl'.
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl'.
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:03.1250
+    Last step completed in 00:00:03.7969
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
@@ -185,40 +185,40 @@ C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt;
 C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\SplitScreen.js
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Presentation.css
 C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:00.7813
+    Last step completed in 00:00:00.7031
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.1094
+    Last step completed in 00:00:00.1406
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0781
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.0938
+    Last step completed in 00:00:00.0781
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 BuildReferenceTopics:
   BuildAssembler (v2.4.10520.1)
-  Copyright c Microsoft 2006
+  Copyright ę Microsoft 2006
   Info: CopyFromFileComponent: Instantiating component.
   Info: CopyFromFileComponent: Loading data file 'C:\Program Files\Sandcastle\Presentation\vs2005\Transforms\skeleton.xml'.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match '*.xml'.
   Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
-  Info: CopyFromIndexComponent: Indexed 171029 elements in 107 files.
+  Info: CopyFromIndexComponent: Indexed 171041 elements in 107 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
@@ -830,7 +830,7 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml'.
-  Info: CopyFromIndexComponent: Indexed 132055 elements in 118 files.
+  Info: CopyFromIndexComponent: Indexed 132065 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -845,24 +845,24 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Instantiating component.
   Info: ShowMissingComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Show Missing Documentation Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved
+      Show Missing Documentation Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved
       http://SHFB.CodePlex.com
   Info: VersionInfoComponent: Instantiating component.
   Info: VersionInfoComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Version Information Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved
+      Version Information Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved
       http://SHFB.CodePlex.com
   Info: CodeBlockComponent: Instantiating component.
   Info: CodeBlockComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Code Block Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved.
+      Code Block Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved.
       Portions copyright (c) 2003, Jonathan de Halleux, All rights reserved.
       http://SHFB.CodePlex.com
   Info: TransformComponent: Instantiating component.
   Info: PostTransformComponent: Instantiating component.
   Info: PostTransformComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Post-Transform Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved
+      Post-Transform Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved
       http://SHFB.CodePlex.com
   Info: SharedContentComponent: Instantiating component.
   Info: SharedContentComponent: Searching for files that match 'C:\Program Files\Sandcastle\Presentation\vs2005\content\shared_content.xml'.
@@ -905,18 +905,29 @@ BuildReferenceTopics:
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
-  Info: ResolveReferenceLinksComponent2: Loaded 171029 reference targets.
+  Info: ResolveReferenceLinksComponent2: Loaded 171041 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:ENG.Metar.Decoder
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Cloud
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Cloud
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Cloud.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Cloud
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Cloud
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Cloud.#ctor
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Cloud.SetClouds
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.#ctor
-  Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Cloud.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;type&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;altitude&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;type&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;altitude&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isCB&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isTCU&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(ENG.Metar.Decoder.Cloud.eType,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;type&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;altitude&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isCB&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isTCU&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.Altitude
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.IsCB
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.IsTCU
@@ -1137,24 +1148,27 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic Fields.T:ENG.Metar.Decoder.Racional
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Addition
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Division
-  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Implicit
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Explicit
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Multiply
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.op_Subtraction
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.Parse
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.ToString
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Racional.TryParse
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.#ctor(System.Int32,System.Int32)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;numerator&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.#ctor(System.Int32,System.Int32)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;denominator&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.#ctor(System.Int32,System.Int32)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Abbreviate
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.Abbreviate
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.CompareTo(ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.CompareTo(ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;other&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.CompareTo(ENG.Metar.Decoder.Racional)
   Info: BuildAssembler: Building topic F:ENG.Metar.Decoder.Racional.Denominator
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Equals(System.Object)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.FlipOver
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.FromDouble(System.Double)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.FromDouble(System.Double)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;val&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.FromDouble(System.Double)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.GetHashCode
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Normalize
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.Normalize
   Info: BuildAssembler: Building topic F:ENG.Metar.Decoder.Racional.Numerator
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Addition(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
@@ -1180,6 +1194,9 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Equality(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Double
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Double
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Double
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Int32
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Int32
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Explicit(ENG.Metar.Decoder.Racional)~System.Int32
@@ -1191,9 +1208,6 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_GreaterThanOrEqual(ENG.Metar.Decoder.Racional,ENG.Metar.Decoder.Racional)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Implicit(ENG.Metar.Decoder.Racional)~System.Double
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(ENG.Metar.Decoder.Racional)~System.Double
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(ENG.Metar.Decoder.Racional)~System.Double
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.op_Implicit(System.Int32)~ENG.Metar.Decoder.Racional
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(System.Int32)~ENG.Metar.Decoder.Racional
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Implicit(System.Int32)~ENG.Metar.Decoder.Racional
@@ -1229,10 +1243,16 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;b&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;a&quot;/&gt; documentation for M:ENG.Metar.Decoder.Racional.op_Subtraction(System.Int32,ENG.Metar.Decoder.Racional)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Parse(System.String)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Parse(System.String,System.Globalization.NumberStyles)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.Parse(System.String,System.IFormatProvider)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.ToString
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.ToString
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.ToString(System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Racional.ToString(System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.TryParse(System.String,ENG.Metar.Decoder.Racional@)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Racional.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,ENG.Metar.Decoder.Racional@)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Racional.Value
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.MetarItem'.
@@ -1862,15 +1882,15 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
-  Info: Processed 554 topics
-    Last step completed in 00:03:36.4063
+  Info: Processed 566 topics
+    Last step completed in 00:02:59.5313
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
     Last step completed in 00:00:04.5156
 </buildStep>
@@ -1878,23 +1898,23 @@ GenerateIntermediateTOC:
 Extracting HTML info for Help 1.x and/or website...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 Sandcastle Help File Builder HTML Extract, version 1.8.0.1
-Copyright c 2008-2009, Eric Woodruff, All Rights Reserved
+Copyright &#169; 2008-2009, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
-Processed 554 HTML files
+Processed 566 HTML files
 Sorting keywords and generating See Also indices
 Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhk
 Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhc
-    Last step completed in 00:00:01.7813
+    Last step completed in 00:00:02.0469
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1.x index file...
@@ -1902,7 +1922,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1918,13 +1938,13 @@ Build1xHelpFile:
   
   
   
-  Compile time: 0 minutes, 14 seconds
+  Compile time: 0 minutes, 15 seconds
   
-  556	Topics
+  568	Topics
   
-  8,553	Local links
+  8,702	Local links
   
-  4,048	Internet links
+  4,153	Internet links
   
   0	Graphics
   
@@ -1932,19 +1952,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 1,039,996 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 1,068,950 bytes
   
-  Compression decreased file by 7,588,405 bytes.
+  Compression decreased file by 7,732,790 bytes.
   
-    Last step completed in 00:00:17.9219
+    Last step completed in 00:00:18.5000
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.4375
+    Last step completed in 00:00:00.5781
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.22.2010 03:42 odp..  Total time: 00:04:08,2344
+Build completed successfully at 04.24.2010 01:40 odp..  Total time: 00:03:34,7031
 
 </buildStep>
 </shfbBuild>
