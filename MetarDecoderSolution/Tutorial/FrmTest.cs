@@ -40,7 +40,7 @@ namespace Tutorial
       }
       catch (Exception ex)
       {
-        AddInfo("Sync download failed - " + ex.Info ());
+        AddInfo("Sync download failed - " + ex.GetMessages ());
       }
     }
 
@@ -85,7 +85,7 @@ namespace Tutorial
         }
         else
         {
-          AddInfo("Asynchro download failed - " + result.Exception.Info());
+          AddInfo("Asynchro download failed - " + result.Exception.GetMessages());
         }
       }
     }
@@ -118,7 +118,7 @@ namespace Tutorial
       }
       catch (Exception ex)
       {
-        AddInfo("Error - " + ex.Info());
+        AddInfo("Error - " + ex.GetMessages());
       }
 
       return ret;

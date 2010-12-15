@@ -54,9 +54,8 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ESystemSolution\ESystem\bin\Debug\ESystem.dll</HintPath>
+    <Reference Include="ESystem.Extensions">
+      <HintPath>..\..\ESystemSolution\ESystem.Extensions\bin\Debug\ESystem.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

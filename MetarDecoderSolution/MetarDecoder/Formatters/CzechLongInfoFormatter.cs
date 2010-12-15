@@ -474,7 +474,7 @@ namespace ENG.Metar.Decoder.Formatters
       else
       {
         if ((int)value.Value < 91)
-          return "koeficient přilnavosti 0." + value.Value.ToString("00");
+          return "koeficient přilnavosti 0." + ((int)value.Value).ToString("00");
         else
         {
           StringBuilder ret = new StringBuilder();
