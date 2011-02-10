@@ -11,11 +11,12 @@ copy ..\..\MetarDecoderSVL\bin\Debug\ESystem.* .\
 
 echo Inserting Metar Decoder project
 copy ..\..\MetarDecoderSVL\bin\Debug\ENG.* .\
-copy ..\..\MetarDecoderSVL\Documentation\Help\MetarDecoder.chm .\
+REM copy ..\..\MetarDecoderSVL\Documentation\Help\MetarDecoder.chm .\
 
 echo Inserting Metar Downloader project
 copy ..\..\MetarDownloaderSVL\bin\Debug\ENG.* .\
-copy ..\..\MetarDownloaderSVL\Documentation\Help\MetarDownloader.chm .\
+REM copy ..\..\MetarDownloaderSVL\Documentation\Help\MetarDownloader.chm .\
 
 echo Release created
+echo Documentation for Silverlight not included !
 Pause
