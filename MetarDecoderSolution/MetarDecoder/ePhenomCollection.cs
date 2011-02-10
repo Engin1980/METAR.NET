@@ -170,7 +170,7 @@ namespace ENG.Metar.Decoder
         return ePhenom.Heavy;
       else
       {
-        ePhenom ret = (ePhenom)Enum.Parse(typeof(ePhenom), value);
+        ePhenom ret = (ePhenom)Enum.Parse(typeof(ePhenom), value, false);
         return ret;
       }
     }

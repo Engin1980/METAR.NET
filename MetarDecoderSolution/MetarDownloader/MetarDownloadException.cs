@@ -9,8 +9,10 @@ namespace ENG.Metar.Downloader
   /// Raised when some error occurs during metar downloading or decoding.
   /// Inner exception should contain more accurate information.
   /// </summary>
+#if SILVERLIGHT == false
   [global::System.Serializable]
-  public class MetarDownloadException : ApplicationException
+#endif
+  public class MetarDownloadException : Exception
   {
     /// <summary>
     /// Initializes a new Instance of ENG.Metar.Downloader.MetarDownloadException
@@ -23,6 +25,9 @@ namespace ENG.Metar.Downloader
     /// <param name="message"></param>
     /// <param name="inner"></param>
     public MetarDownloadException(string message, Exception inner) : base(message, inner) { }
+
+#if SILVERLIGHT == FALSE
+
     /// <summary>
     /// Initializes a new Instance of ENG.Metar.Downloader.MetarDownloadException
     /// </summary>
@@ -32,5 +37,7 @@ namespace ENG.Metar.Downloader
     System.Runtime.Serialization.SerializationInfo info,
     System.Runtime.Serialization.StreamingContext context)
       : base(info, context) { }
+
+#endif
   }
 }

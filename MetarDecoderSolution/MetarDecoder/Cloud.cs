@@ -187,7 +187,7 @@ namespace ENG.Metar.Decoder
     /// <param name="isTCU">True if cloud is towering cumulus (TCU).</param>
     public void SetClouds(string type, int altitude, bool isCB, bool isTCU)
     {
-      eType t = (eType)Enum.Parse(typeof(eType), type);
+      eType t = (eType)Enum.Parse(typeof(eType), type, false);
       SetClouds(t, altitude, isCB, isTCU);
     }
 
@@ -198,7 +198,7 @@ namespace ENG.Metar.Decoder
     /// <param name="altitude">Altitude in hunderds of ft.</param>
     public void SetClouds(string type, int altitude)
     {
-      eType t = (eType)Enum.Parse(typeof(eType), type);
+      eType t = (eType)Enum.Parse(typeof(eType), type, false);
       SetClouds(t, altitude);
     }
 

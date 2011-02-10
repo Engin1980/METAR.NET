@@ -497,7 +497,7 @@ namespace ENG.Metar.Decoder
     #region Decoders
     private static void DecodeMetarPrefix(Group[] grp, ref Metar obj)
     {
-      obj.Type = (eType)Enum.Parse(typeof(eType), grp[0].Value);
+      obj.Type = (eType)Enum.Parse(typeof(eType), grp[0].Value, false);
     }
     private static void DecodeICAO(Group[] grp, ref Metar obj)
     {
@@ -526,7 +526,7 @@ namespace ENG.Metar.Decoder
         ret.Direction = grp[2].GetIntValue();
       ret.Speed = grp[3].GetIntValue();
       ret.GustSpeed = (grp[5].Success ? (int?)grp[5].GetIntValue() : null);
-      ret.Unit = (Wind.eUnit)Enum.Parse(typeof(Wind.eUnit), grp[6].Value);
+      ret.Unit = (Wind.eUnit)Enum.Parse(typeof(Wind.eUnit), grp[6].Value, false);
 
       if (grp[7].Success)
       {
@@ -556,13 +556,13 @@ namespace ENG.Metar.Decoder
 
         if (grp[5].Success)
           dir = (ENG.Metar.Decoder.Common.eDirection)Enum.Parse(
-            typeof(ENG.Metar.Decoder.Common.eDirection), grp[5].Value);
+            typeof(ENG.Metar.Decoder.Common.eDirection), grp[5].Value, false);
 
         if (grp[6].Success)
         {
           otherDist = grp[7].GetIntValue();
           otherDir = (ENG.Metar.Decoder.Common.eDirection)Enum.Parse(
-            typeof(ENG.Metar.Decoder.Common.eDirection), grp[8].Value);
+            typeof(ENG.Metar.Decoder.Common.eDirection), grp[8].Value, false);
         }
 
           ret.SetMeters(distance, dir, otherDist, otherDir);
@@ -600,7 +600,7 @@ namespace ENG.Metar.Decoder
 
         if (m.Groups[5].Success)
           rwy.DeviceMeasurementRestriction = (RunwayVisibility.eDeviceMeasurementRestriction)Enum.Parse(
-            typeof(RunwayVisibility.eDeviceMeasurementRestriction), m.Groups[5].Value);
+            typeof(RunwayVisibility.eDeviceMeasurementRestriction), m.Groups[5].Value, false);
         else
           rwy.DeviceMeasurementRestriction = null;
 
@@ -620,7 +620,7 @@ namespace ENG.Metar.Decoder
           {
             rwy.IsInFeet = false;
             rwy.Tendency = (RunwayVisibility.eTendency)
-              Enum.Parse(typeof(RunwayVisibility.eTendency), m.Groups[9].Value);
+              Enum.Parse(typeof(RunwayVisibility.eTendency), m.Groups[9].Value, false);
           }
 
         }
@@ -672,7 +672,7 @@ namespace ENG.Metar.Decoder
           ret.Add(ePhenomCollection.ePhenom.Heavy);
         else
           ret.Add(
-            (ePhenomCollection.ePhenom)Enum.Parse(typeof(ePhenomCollection.ePhenom), m.Value));
+            (ePhenomCollection.ePhenom)Enum.Parse(typeof(ePhenomCollection.ePhenom), m.Value, false));
         m = m.NextMatch();
       }
 
@@ -869,7 +869,7 @@ namespace ENG.Metar.Decoder
           ret.Type = TrendInfo.eType.NOSIG;
         else
         {
-          ret.Type = (TrendInfo.eType)Enum.Parse(typeof(TrendInfo.eType), grp[3].Value);
+          ret.Type = (TrendInfo.eType)Enum.Parse(typeof(TrendInfo.eType), grp[3].Value, false);
 
           Match m = Regex.Match(grp[4].Value, RT_TYPEDATE);
           while (m.Success)
@@ -889,7 +889,7 @@ namespace ENG.Metar.Decoder
     {
       TrendTime ret = new TrendTime();
 
-      ret.Type = (TrendTime.eType)Enum.Parse(typeof(TrendTime.eType), m.Groups[1].Value);
+      ret.Type = (TrendTime.eType)Enum.Parse(typeof(TrendTime.eType), m.Groups[1].Value, false);
       ret.Hour = int.Parse(m.Groups[2].Value);
       ret.Minute = int.Parse(m.Groups[3].Value);
 
@@ -910,7 +910,7 @@ namespace ENG.Metar.Decoder
           ret.Direction = grp[2].GetIntValue();
         ret.Speed = grp[3].GetIntValue();
         ret.GustSpeed = (grp[5].Success ? (int?)grp[5].GetIntValue() : null);
-        ret.Unit = (Wind.eUnit)Enum.Parse(typeof(Wind.eUnit), grp[6].Value);
+        ret.Unit = (Wind.eUnit)Enum.Parse(typeof(Wind.eUnit), grp[6].Value, false);
 
         if (grp[7].Success)
         {

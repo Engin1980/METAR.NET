@@ -105,7 +105,9 @@ namespace ENG.Metar.Decoder
         return eDirection.W;
       else if (heading < 338)
         return eDirection.NW;
-      else throw new ApplicationException("Invalid program state - unable recognize direction");
+      else 
+        throw new Exception("Invalid program state - unable recognize direction");
+        
     }
   }
 }

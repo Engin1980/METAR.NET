@@ -40,6 +40,8 @@ namespace ENG.Metar.Downloader
       retr = metarRetriever;
     }
 
+#if SILVERLIGHT == false
+
     /// <summary>
     /// Download metar synchronously.
     /// </summary>
@@ -57,6 +59,11 @@ namespace ENG.Metar.Downloader
 
       return ret;
     }
+
+#endif
+
+
+#if SILVERLIGHT == false
 
     /// <summary>
     /// Download metar synchronously.
@@ -91,6 +98,8 @@ namespace ENG.Metar.Downloader
 
       return ret;
     }
+
+#endif
 
     /// <summary>
     /// Download metar asynchronously.
@@ -129,25 +138,77 @@ namespace ENG.Metar.Downloader
       t.Start();
     }
 
+    private class MyRequest
+    {
+      public WebRequest Request = null;
+      public WebResponse Response = null;
+      public Stream Stream = null;
+      public DownloadMetarCompletedDelegate Finisher = null;
+    }
+
     /// <summary>
     /// Used to download metar asynchronously.
     /// </summary>
     private void DownloadAsynchronously()
     {
       string icao = aIcao;
-      DownloadMetarCompletedDelegate del = aDel;
+
       MetarResult ret = null;
+
+      WebRequest req = HttpWebRequest.Create(
+        retr.GetUrlForICAO(icao));
+
+      MyRequest mr = new MyRequest()
+      {
+        Request = req,
+        Finisher = aDel
+      };
+
       try
       {
-        string met = DownloadMetar(icao);
-        ret = new MetarResult(met);
+
+        req.BeginGetResponse(new AsyncCallback(_BeginGetResponseCallback), mr);
+
       }
       catch (Exception ex)
       {
-        ret = new MetarResult(ex);
+        ret = new MetarResult(
+          new MetarDownloadException("Failed to download metar from web.", ex));
       }
 
-      del(ret);
+      if (ret != null)
+        mr.Finisher(ret);
+    }
+
+    private void _BeginGetResponseCallback(IAsyncResult asynchronousResult)
+    {
+      MetarResult ret = null;
+      MyRequest myRequestState = (MyRequest)asynchronousResult.AsyncState;
+
+      try
+      {
+        // State of request is asynchronous.
+        WebRequest myHttpWebRequest = myRequestState.Request;
+        myRequestState.Response = (HttpWebResponse)myHttpWebRequest.EndGetResponse(asynchronousResult);
+
+        // Read the response into a Stream object.
+        Stream responseStream = myRequestState.Response.GetResponseStream();
+        myRequestState.Stream = responseStream;
+
+        string metar = retr.DecodeMetar(responseStream);
+
+        myRequestState.Stream.Close();
+        myRequestState.Response.Close();
+
+        ret = new MetarResult(metar);
+      }
+      catch (WebException ex)
+      {
+        ret = new MetarResult(
+          new Exception("Failed to download data with metar.", ex));
+      }
+
+      myRequestState.Finisher(ret);
     }
 
   }

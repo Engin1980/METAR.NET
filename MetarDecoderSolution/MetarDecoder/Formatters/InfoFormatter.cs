@@ -905,7 +905,7 @@ namespace ENG.Metar.Decoder.Formatters
         {
           if (ret[i].IsIn(',', '.', ';'))
             if (ret[i + 1] != ' ' && !Char.IsDigit(ret[i + 1]))
-              ret.Insert(i + 1, ' ');
+              ret.Insert(i + 1, ' '.ToString());
         }
       }
 
