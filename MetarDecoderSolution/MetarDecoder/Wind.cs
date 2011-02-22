@@ -24,7 +24,14 @@ namespace ENG.Metar.Decoder
   /// the time interval in these circumstances shall be correspondingly reduced.
   /// </remarks>
   public class Wind : IMetarItem
-  {    
+  {
+    #region Nested
+    [Obsolete("This type is obsolete and is no more used. Use eDistanceUnit or eSpeedUnit enumerations.", true)]
+    public enum eUnit
+    {
+      ObsoleteUseDistanceUnitEnumeration
+    }
+    #endregion Nested
 
     #region Properties
 
