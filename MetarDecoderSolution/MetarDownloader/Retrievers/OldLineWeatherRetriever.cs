@@ -21,7 +21,7 @@ namespace ENG.Metar.Downloader.Retrievers
     /// <returns></returns>
     public string GetUrlForICAO(string icao)
     {
-      return "http://www.oldlineweather.com/wxmetar.php?station=" + icao;
+      return "http://www.oldlineweather.com/wxmetar.php?station=" + icao.ToUpper();
     }
 
     /// <summary>

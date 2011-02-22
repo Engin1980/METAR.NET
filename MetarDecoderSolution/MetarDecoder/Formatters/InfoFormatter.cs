@@ -739,7 +739,15 @@ namespace ENG.Metar.Decoder.Formatters
     /// <param name="value"></param>
     /// <param name="useLong"></param>
     /// <returns></returns>
-    public abstract string eUnitToString(Common.eUnit value, bool useLong);
+    public abstract string eDistanceUnitToString(Common.eDistanceUnit value, bool useLong);
+
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="useLong"></param>
+    /// <returns></returns>
+    public abstract string eSpeedUnitToString(Common.eSpeedUnit value, bool useLong);
 
 
     #endregion ToString methods

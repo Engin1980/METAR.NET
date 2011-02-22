@@ -14,31 +14,64 @@ namespace ENG.Metar.Decoder
   {
 
     /// <summary>
-    /// Units.
+    /// Distance units.
     /// </summary>
-    public enum eUnit
+    public enum eDistanceUnit
     {
       /// <summary>
       /// Kilometres
       /// </summary>
-      km,
+      km = 0,
       /// <summary>
       /// Metres
       /// </summary>
-      m,
+      m = 1,
       /// <summary>
       /// Miles
       /// </summary>
-      mi,
+      mi = 2,
       /// <summary>
       /// Feet
       /// </summary>
-      ft,
+      ft = 3
+    }
+
+    private static double[,] distanceUnitConversionTable = new double[,] {
+      {1, 1000, 0.621371192, 3280.8399},
+      {0.001, 1, 0.000621371192, 3.2808399},
+      {1.609344 , 1609.344, 1, 5280 },
+      {0.0003048, 0.3048, 0.000189393939 ,1}
+    };
+
+    /// <summary>
+    /// Speed units
+    /// </summary>
+    public enum eSpeedUnit
+    {
       /// <summary>
       /// Knots
       /// </summary>
-      kt
+      kt = 0,
+      /// <summary>
+      /// Kilometers per hour
+      /// </summary>
+      kph = 1,
+      /// <summary>
+      /// Miles per hour
+      /// </summary>
+      mps = 2,
+      /// <summary>
+      /// Miles per hour
+      /// </summary>
+      miph = 3
     }
+
+    private static double[,] speedUnitConversionTable = new double[,] {
+      { 1, 1.85200, 0.5144444444444445, 1.1508},
+      { 0.539956803, 1, 0.539956803, 0.6214},
+      {0.539956803, 3.6, 1, 2.2369},
+      {0.539956803, 0.539956803, 0.539956803, 1}
+    };
 
     /// <summary>
     /// World directions
@@ -108,6 +141,34 @@ namespace ENG.Metar.Decoder
       else 
         throw new Exception("Invalid program state - unable recognize direction");
         
+    }
+
+    /// <summary>
+    /// Converts value from one distance unit to other.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="sourceUnit"></param>
+    /// <param name="targetUnit"></param>
+    /// <returns></returns>
+    public static double Convert(double value, eDistanceUnit sourceUnit, eDistanceUnit targetUnit)
+    {
+      double ret = value * distanceUnitConversionTable[(int)sourceUnit, (int)targetUnit];
+
+      return ret;
+    }
+
+    /// <summary>
+    /// Converts value from one speed unit to other.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="sourceUnit"></param>
+    /// <param name="targetUnit"></param>
+    /// <returns></returns>
+    public static double Convert(double value, eSpeedUnit sourceUnit, eSpeedUnit targetUnit)
+    {
+      double ret = value * speedUnitConversionTable[(int)sourceUnit, (int)targetUnit];
+
+      return ret;
     }
   }
 }

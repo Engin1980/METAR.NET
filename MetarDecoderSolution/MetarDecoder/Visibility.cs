@@ -170,9 +170,9 @@ namespace ENG.Metar.Decoder
   this.IsClear, //0
   this.Distance.HasValue ?  this.Distance.Value.ToString(false) : null,
   this.UseEUStyle ? 
-    formatter.eUnitToString(Common.eUnit.m, false) : formatter.eUnitToString(Common.eUnit.mi, false),
+    formatter.eDistanceUnitToString(Common.eDistanceUnit.m, false) : formatter.eDistanceUnitToString(Common.eDistanceUnit.mi, false),
   this.UseEUStyle ? 
-    formatter.eUnitToString(Common.eUnit.m, true) : formatter.eUnitToString(Common.eUnit.mi, true),
+    formatter.eDistanceUnitToString(Common.eDistanceUnit.m, true) : formatter.eDistanceUnitToString(Common.eDistanceUnit.mi, true),
   this.DirectionSpecification.HasValue ? formatter.eDirectionToString(this.DirectionSpecification.Value, false) : null,
   this.IsDevicesMinimumValue, // 6
   this.OtherDistance.HasValue ? this.OtherDistance.Value.ToString(false) : "-",

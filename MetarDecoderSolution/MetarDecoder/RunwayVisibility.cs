@@ -205,9 +205,9 @@ namespace ENG.Metar.Decoder
             formatter.RunwayVisibilityDeviceMeasureRestrictionToString(DeviceMeasurementRestriction),
             this.Distance,
             this.IsInFeet ? 
-              formatter.eUnitToString(Common.eUnit.ft, false) : formatter.eUnitToString(Common.eUnit.m, false),
+              formatter.eDistanceUnitToString(Common.eDistanceUnit.ft, false) : formatter.eDistanceUnitToString(Common.eDistanceUnit.m, false),
             this.IsInFeet ?
-              formatter.eUnitToString(Common.eUnit.ft, true) : formatter.eUnitToString(Common.eUnit.m, true),
+              formatter.eDistanceUnitToString(Common.eDistanceUnit.ft, true) : formatter.eDistanceUnitToString(Common.eDistanceUnit.m, true),
             this.Runway,
             formatter.RunwayVisibilityTendencyToString(this.Tendency),
             VariableVisibility);

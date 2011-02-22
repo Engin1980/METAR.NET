@@ -172,9 +172,14 @@ namespace ENG.Metar.Decoder.Formatters
       return new LongInfoFormatter().PhenomCollectionPhenomToString(value, useLong);
     }
 
-    public override string eUnitToString(Common.eUnit value, bool useLong)
+    public override string eDistanceUnitToString(Common.eDistanceUnit value, bool useLong)
     {
-      return new LongInfoFormatter().eUnitToString(value, useLong);
+      return new LongInfoFormatter().eDistanceUnitToString(value, useLong);
+    }
+
+    public override string eSpeedUnitToString (Common.eSpeedUnit value, bool useLong)
+    {
+      return new LongInfoFormatter().eSpeedUnitToString(value, useLong);
     }
   }
 }

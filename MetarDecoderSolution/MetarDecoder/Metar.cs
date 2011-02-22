@@ -449,7 +449,7 @@ namespace ENG.Metar.Decoder
     private const string R_WS = @"RWY(\d{2}(R|L|C)?)";
     private const string R_WSS = @"(?#ws)( (WS ALL RWY)| (WS( " + R_WS + ")*))?";
     private const string R_RWY_CONDS = @"(?#rwyCond)(( SNOCLO)|(( " + R_RWY_COND + ")*))?";
-    private const string R_RWY_COND = @"R(\d{2}(L|R|C)*)/((\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2})|(CLDR//))";
+    private const string R_RWY_COND = @"R(\d{2}(L|R|C)*)/((\d|/)(\d|/)(\d{2}|/{2})(\d{2}|/{2})|(CLRD//))";
     // trends
     private const string RT_TYPEDATES = @"(?#tr-type-date)( (NOSIG)| ((TEMPO|BECMG)(( " + RT_TYPEDATE + ")*)))?";
     private const string RT_TYPEDATE = @"(FM|TL|AT)(\d{2})(\d{2})";
@@ -526,7 +526,7 @@ namespace ENG.Metar.Decoder
         ret.Direction = grp[2].GetIntValue();
       ret.Speed = grp[3].GetIntValue();
       ret.GustSpeed = (grp[5].Success ? (int?)grp[5].GetIntValue() : null);
-      ret.Unit = (Wind.eUnit)Enum.Parse(typeof(Wind.eUnit), grp[6].Value, false);
+      ret.Unit = (Common.eSpeedUnit)Enum.Parse(typeof(Common.eSpeedUnit), grp[6].Value.ToLower(), false);
 
       if (grp[7].Success)
       {
@@ -910,7 +910,7 @@ namespace ENG.Metar.Decoder
           ret.Direction = grp[2].GetIntValue();
         ret.Speed = grp[3].GetIntValue();
         ret.GustSpeed = (grp[5].Success ? (int?)grp[5].GetIntValue() : null);
-        ret.Unit = (Wind.eUnit)Enum.Parse(typeof(Wind.eUnit), grp[6].Value, false);
+        ret.Unit = (Common.eSpeedUnit)Enum.Parse(typeof(Common.eSpeedUnit), grp[6].Value, false);
 
         if (grp[7].Success)
         {

@@ -622,26 +622,45 @@ namespace ENG.Metar.Decoder.Formatters
       return ret;
     }
 
-    public override string eUnitToString(Common.eUnit value, bool useLong)
+    public override string eDistanceUnitToString(Common.eDistanceUnit value, bool useLong)
     {
       string ret = "";
 
       switch (value)
       {
-        case Common.eUnit.ft:
+        case Common.eDistanceUnit.ft:
           ret = useLong ? "stop" : "ft";
           break;
-        case Common.eUnit.km:
+        case Common.eDistanceUnit.km:
           ret = useLong ? "kilometrů" : "km";
           break;
-        case Common.eUnit.kt:
-          ret = useLong ? "uzlů" : "kt(s)";
-          break;
-        case Common.eUnit.m:
+        case Common.eDistanceUnit.m:
           ret = useLong ? "metrů" : "m";
           break;
-        case Common.eUnit.mi:
+        case Common.eDistanceUnit.mi:
           ret = useLong ? "mil" : "m";
+          break;
+        default:
+          throw new NotImplementedException();
+      }
+
+      return ret;
+    }
+
+    public override string eSpeedUnitToString(Common.eSpeedUnit value, bool useLong)
+    {
+      string ret = "";
+
+      switch (value)
+      {
+        case Common.eSpeedUnit.kph:
+          ret = useLong ? "km/h" : "km/h";
+          break;
+        case Common.eSpeedUnit.mps:
+          ret = useLong ? "m/s" : "m/s";
+          break;
+        case Common.eSpeedUnit.kt:
+          ret = useLong ? "uzlů" : "kt(s)";
           break;
         default:
           throw new NotImplementedException();

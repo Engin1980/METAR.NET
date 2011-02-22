@@ -16,7 +16,7 @@ namespace ENG.Metar.Decoder
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private bool _UseEUStyle;
     ///<summary>
-    /// Sets/gets if to use E-U style in ToMetar method.
+    /// Sets/gets if to use E-U style in ToMetar method. If E-U style, visibility is in meters, if false, visibility is in NM.
     ///</summary>
     public bool UseEUStyle
     {
@@ -27,6 +27,20 @@ namespace ENG.Metar.Decoder
       protected set
       {
         _UseEUStyle = value;
+      }
+    }
+
+    /// <summary>
+    /// Returns distance unit. If EUStyle, returns meters, if non-eu style, returns miles.
+    /// </summary>
+    public Common.eDistanceUnit DistanceUnit
+    {
+      get
+      {
+        if (UseEUStyle)
+          return Common.eDistanceUnit.m;
+        else
+          return Common.eDistanceUnit.mi;
       }
     }
 
@@ -67,7 +81,7 @@ namespace ENG.Metar.Decoder
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private Racional? _Distance;
     ///<summary>
-    /// Sets/gets distance value.
+    /// Sets/gets distance value. If style is E-U, value is in meters. If style is non-EU, value is in NM.
     ///</summary>
     public Racional? Distance
     {
@@ -80,6 +94,9 @@ namespace ENG.Metar.Decoder
         _Distance = value;
       }
     }
+
+
+
 
     #endregion Properties
 
@@ -138,6 +155,21 @@ namespace ENG.Metar.Decoder
       SetMiles((Racional)distance, isDevicesMinimumValue);
     }
 
+    /// <summary>
+    /// Returns distance converted to selected unit. If distance has no value, null is returned.
+    /// </summary>
+    /// <param name="targetUnit"></param>
+    /// <returns></returns>
+    public double? GetDistanceIn(Common.eDistanceUnit targetUnit)
+    {
+      if (Distance.HasValue == false)
+        return null;
+
+      double ret = Common.Convert(Distance.Value.Value, DistanceUnit, targetUnit);
+
+      return ret;
+    }
+
     #endregion Methods
 
     #region Inherited
@@ -181,9 +213,9 @@ namespace ENG.Metar.Decoder
         this.IsClear, //0
         this.Distance.HasValue ? this.Distance.Value.ToString(false) : null,
   this.UseEUStyle ?
-    formatter.eUnitToString(Common.eUnit.m, false) : formatter.eUnitToString(Common.eUnit.mi, false),
+    formatter.eDistanceUnitToString(Common.eDistanceUnit.m, false) : formatter.eDistanceUnitToString(Common.eDistanceUnit.mi, false),
   this.UseEUStyle ?
-    formatter.eUnitToString(Common.eUnit.m, true) : formatter.eUnitToString(Common.eUnit.mi, true),
+    formatter.eDistanceUnitToString(Common.eDistanceUnit.m, true) : formatter.eDistanceUnitToString(Common.eDistanceUnit.mi, true),
         null,
         null,
         this.IsDevicesMinimumValue, // 6

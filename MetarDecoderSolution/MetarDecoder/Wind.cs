@@ -24,38 +24,18 @@ namespace ENG.Metar.Decoder
   /// the time interval in these circumstances shall be correspondingly reduced.
   /// </remarks>
   public class Wind : IMetarItem
-  {
-    #region Nested
-    /// <summary>
-    /// Wind-speed unit
-    /// </summary>
-    public enum eUnit
-    {
-      /// <summary>
-      /// Metres per second (used e.g. in Russia)
-      /// </summary>
-      MPS,
-      /// <summary>
-      /// Knots (most common)
-      /// </summary>
-      KT,
-      /// <summary>
-      /// Kilometers per hour
-      /// </summary>
-      KMH
-    }
-    #endregion Nested
+  {    
 
     #region Properties
 
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private eUnit _Unit = eUnit.KT;
+    private ENG.Metar.Decoder.Common.eSpeedUnit _Unit = ENG.Metar.Decoder.Common.eSpeedUnit.kt;
     ///<summary>
     /// Sets/gets unit of wind speed.
     ///</summary>
-    public eUnit Unit
+    public ENG.Metar.Decoder.Common.eSpeedUnit Unit
     {
       get
       {
