@@ -132,6 +132,26 @@ namespace ENG.Metar.Decoder
 
     #endregion Inherited
 
+    /// <summary>
+    /// Returns true if any phenom collection contains selected phenom.
+    /// </summary>
+    /// <param name="phenom"></param>
+    /// <returns></returns>
+    public bool Contains(ePhenomCollection.ePhenom phenom)
+    {
+      bool ret = false;
+
+      foreach (var fItem in this)
+      {
+        if (fItem.Contains(phenom))
+        {
+          ret = true;
+          break;
+        }
+      } // foreach (var fItem in this)
+
+      return ret;
+    }
 
     internal bool IsEmpty()
     {
