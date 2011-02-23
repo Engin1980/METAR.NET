@@ -83,7 +83,8 @@ namespace ENG.Metar.Decoder
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private NonNegInt _Altitude;
     ///<summary>
-    /// Sets/gets Altitude value, in hundreds of feet, e.g. OVC040 for 4000 ft.
+    /// Sets/gets Altitude value, in hundreds of feet, e.g. OVC040 for 4000 ft above airport or station.
+    /// To get altitude in other unit, see method <seealso cref="GetAltitudeIn"/>
     ///</summary>
     public NonNegInt Altitude
     {
@@ -200,6 +201,23 @@ namespace ENG.Metar.Decoder
     {
       eType t = (eType)Enum.Parse(typeof(eType), type, false);
       SetClouds(t, altitude);
+    }
+
+    /// <summary>
+    /// Returns cloud altitude in selected distance unit.
+    /// </summary>
+    /// <param name="distanceUnit"></param>
+    /// <returns></returns>
+    public double GetAltitudeIn(ENG.Metar.Decoder.Common.eDistanceUnit distanceUnit)
+    {
+      double ret = 0;
+      int inFt = this.Altitude * 100;
+      if (distanceUnit == Common.eDistanceUnit.ft)
+        ret = inFt;
+      else
+        ret = Common.Convert(inFt, Common.eDistanceUnit.ft, distanceUnit);
+
+        return ret;
     }
 
     #endregion Methods
