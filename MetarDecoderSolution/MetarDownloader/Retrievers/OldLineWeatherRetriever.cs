@@ -38,8 +38,8 @@ namespace ENG.Metar.Downloader.Retrievers
       System.IO.StreamReader rdr = new System.IO.StreamReader(sourceStream);
       string pom = rdr.ReadToEnd();
       rdr = null;
-
-      string rgx = @"METAR = (([A-Z]|[0-9]|/| )+)";
+      
+      string rgx = @"METAR = (([A-Z]|[0-9]|/|[+\-]| )+)";
 
       Match m = Regex.Match(pom, rgx);
       if (m.Success)
