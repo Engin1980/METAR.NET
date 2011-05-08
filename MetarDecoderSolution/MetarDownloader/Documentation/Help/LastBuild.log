@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\MetarDownloader.shfbproj" started="21.4.2010 17:45:33">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\MetarDownloader.shfbproj" started="29.3.2011 12:36:37">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -9,11 +9,11 @@ Found HTML 1.x help compiler in 'C:\Program Files\HTML Help Workshop\'
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\MetarDownloader.csproj
-    Found project 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\MetarDownloader.csproj'
+Source: C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\MetarDownloader.csproj
+    Found project 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\MetarDownloader.csproj'
 
 Parsing project files
-    Found assembly 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\bin\Debug\ENG.Metar.Downloader.dll'
+    Found assembly 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\bin\Debug\ENG.Metar.Downloader.dll'
 
 References to use:
     System
@@ -24,52 +24,52 @@ References to use:
     System.Xml.Linq
 
 Copying XML comments files
-    C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\bin\Debug\ENG.Metar.Downloader.xml -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\ENG.Metar.Downloader.xml
+    C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\bin\Debug\ENG.Metar.Downloader.xml -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\ENG.Metar.Downloader.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.0625
+    Last step completed in 00:00:00.0938
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 GenerateRefInfo:
   MrefBuilder (v2.4.10520.1)
-  Copyright c Microsoft 2006
+  Copyright ę Microsoft 2006
   Info: Loaded 1 assemblies for reflection and 6 dependency assemblies.
   Info: Wrote information on 2 namespaces, 8 types, and 24 members
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:01.9219
+    Last step completed in 00:00:19.1406
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.2656
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     0 attribute nodes removed
     0 explicit interface implementations removed
     0 local and base class EII elements removed
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.1875
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 TransformManifest:
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ApplyVSDocModel.xsl'.
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl'.
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:02.4219
+    Last step completed in 00:00:24.5469
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
@@ -78,113 +78,113 @@ Modifying help topic filenames in reflection information file
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm_dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\alert_caution.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\alert_note.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\alert_security.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_adm.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_kw.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\box.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\Caution.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\CFW.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\collall.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\collapse.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\collapse_all.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\copycode.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\copycodeHighlight.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dropdown.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dropdownHover.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpdown.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpdown_orange.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpdown_orange_up.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpup.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\exp.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\expall.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\expand_all.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\filter1a.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\filter1c.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\footer.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\gradient.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\greencheck.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\greychck.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\header_prev_next.jpg
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\header_sql_tutorial_blank.jpg
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\header_sql_tutorial_logo.GIF
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm_dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\LastChild.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\load.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\load_hover.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\note.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pencil.GIF
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privclass.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privdelegate.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privenum.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privenumeration.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privevent.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privextension.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privfield.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privinterface.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privmethod.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privproperty.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privstructure.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protclass.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protdelegate.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protenum.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protenumeration.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protevent.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protextension.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protfield.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protinterface.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protmethod.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protoperator.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protproperty.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protstructure.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubclass.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubdelegate.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubenum.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubenumeration.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubevent.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubextension.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubfield.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubinterface.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubmethod.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\puboperator.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubproperty.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubstructure.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\requirements1a.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\requirements1c.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\save.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\save_hover.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\security.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\seealso1a.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\seealso1c.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\static.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\xna.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\CheckboxMenu.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\CommonUtilities.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\Dropdown.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\EventUtilities.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\script_feedBack.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\script_manifold.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\SplitScreen.js
-C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Presentation.css
-C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:00.9531
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\adm_dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\alert_caution.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\alert_note.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\alert_security.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_adm.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\big_kw.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\box.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\Caution.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\CFW.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\collall.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\collapse.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\collapse_all.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\copycode.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\copycodeHighlight.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dropdown.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\dropdownHover.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpdown.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpdown_orange.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpdown_orange_up.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\drpup.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\exp.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\expall.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\expand_all.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\filter1a.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\filter1c.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\footer.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\gradient.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\greencheck.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\greychck.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\header_prev_next.jpg
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\header_sql_tutorial_blank.jpg
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\header_sql_tutorial_logo.GIF
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_adm_dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\kw_dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\LastChild.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\load.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\load_hover.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\note.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pencil.GIF
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privenumeration.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privextension.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\privstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protenumeration.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protextension.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protoperator.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\protstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubenumeration.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubextension.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\puboperator.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\pubstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\requirements1a.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\requirements1c.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\save.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\save_hover.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\security.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\seealso1a.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\seealso1c.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\static.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\icons\xna.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\CheckboxMenu.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\CommonUtilities.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\Dropdown.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\EventUtilities.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\script_feedBack.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\script_manifold.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\scripts\SplitScreen.js
+C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Presentation.css
+C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
+    Last step completed in 00:00:02.3750
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -193,25 +193,25 @@ No additional content to copy
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\sandcastle.config
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.3594
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 BuildReferenceTopics:
   BuildAssembler (v2.4.10520.1)
-  Copyright c Microsoft 2006
+  Copyright ę Microsoft 2006
   Info: CopyFromFileComponent: Instantiating component.
   Info: CopyFromFileComponent: Loading data file 'C:\Program Files\Sandcastle\Presentation\vs2005\Transforms\skeleton.xml'.
   Info: CopyFromIndexComponent: Instantiating component.
@@ -828,8 +828,29 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'T:Microsoft.Build.Framework.RequiredRuntimeAttribute' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
-  Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\ENG.Metar.Downloader.xml'.
-  Info: CopyFromIndexComponent: Indexed 131367 elements in 118 files.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.DataRowComparer' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'P:System.Data.DataRowComparer.Default' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.DataRowExtensions' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String,System.Data.DataRowVersion)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.DataTableExtensions' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataTableExtensions.AsEnumerable(System.Data.DataTable)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0})' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0},System.Data.DataTable,System.Data.LoadOption)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.TypedTableBase`1' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.#ctor' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.GetEnumerator' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.System#Collections#IEnumerable#GetEnumerator' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\ENG.Metar.Downloader.xml'.
+  Info: CopyFromIndexComponent: Indexed 131021 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -844,24 +865,24 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Instantiating component.
   Info: ShowMissingComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Show Missing Documentation Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved
+      Show Missing Documentation Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved
       http://SHFB.CodePlex.com
   Info: VersionInfoComponent: Instantiating component.
   Info: VersionInfoComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Version Information Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved
+      Version Information Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved
       http://SHFB.CodePlex.com
   Info: CodeBlockComponent: Instantiating component.
   Info: CodeBlockComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Code Block Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved.
+      Code Block Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved.
       Portions copyright (c) 2003, Jonathan de Halleux, All rights reserved.
       http://SHFB.CodePlex.com
   Info: TransformComponent: Instantiating component.
   Info: PostTransformComponent: Instantiating component.
   Info: PostTransformComponent: 
       [Sandcastle Help File Builder BuildAssembler Components, version 1.8.0.1]
-      Post-Transform Component. Copyright c 2006-2009, Eric Woodruff, All Rights Reserved
+      Post-Transform Component. Copyright ę 2006-2009, Eric Woodruff, All Rights Reserved
       http://SHFB.CodePlex.com
   Info: SharedContentComponent: Instantiating component.
   Info: SharedContentComponent: Searching for files that match 'C:\Program Files\Sandcastle\Presentation\vs2005\content\shared_content.xml'.
@@ -877,33 +898,33 @@ BuildReferenceTopics:
   Info: SharedContentComponent: Loading shared content file 'C:\Program Files\Sandcastle\Presentation\vs2005\content\feedBack_content.xml'.
   Info: SharedContentComponent: Found 1 files in C:\Program Files\Sandcastle\Presentation\vs2005\content\feedback_content.xml.
   Info: SharedContentComponent: Searching for files that match 'SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'roottopictitle' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'rootlink' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'runningheadertext' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'locationinformation' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'assemblynameandmodule' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'copycode' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'locale' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'roottopictitle' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'rootlink' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'runningheadertext' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'locationinformation' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'assemblynameandmodule' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'copycode' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'locale' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\SharedBuilderContent.xml'.
   Info: SharedContentComponent: Found 1 files in SharedBuilderContent.xml.
   Info: SharedContentComponent: Searching for files that match 'PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'header' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'footer' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_send' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_headerfeedback' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'feedback_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'feedback_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'feedback_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'header' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'footer' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_send' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_headerfeedback' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'feedback_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'feedback_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'feedback_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
   Info: SharedContentComponent: Found 1 files in PresentationStyleBuilderContent.xml.
   Info: SharedContentComponent: Loaded 581 shared content items.
   Info: ResolveReferenceLinksComponent2: Instantiating component.
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
-  Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
+  Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
   Info: ResolveReferenceLinksComponent2: Loaded 170145 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:ENG.Metar.Downloader
@@ -978,34 +999,34 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Downloader.Retrievers.USAS1VatsimRetriever.GetUrlForICAO(System.String)
   Info: Processed 54 topics
-    Last step completed in 00:01:39.4063
+    Last step completed in 00:01:53.4688
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
-  Copyright c Microsoft 2005-2006
+  Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:06.6719
+    Last step completed in 00:00:07.8438
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
 [c:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe]
 Sandcastle Help File Builder HTML Extract, version 1.8.0.1
-Copyright c 2008-2009, Eric Woodruff, All Rights Reserved
+Copyright &#169; 2008-2009, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
 Processed 54 HTML files
 Sorting keywords and generating See Also indices
-Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhk
-Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhc
-    Last step completed in 00:00:07.3750
+Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhk
+Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\MetarDownloader.hhc
+    Last step completed in 00:00:02.4375
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
@@ -1017,7 +1038,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1027,19 +1048,19 @@ Build1xHelpFile:
   
   
   
-  Compiling c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm
+  Compiling c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm
   
   
   
   
   
-  Compile time: 0 minutes, 15 seconds
+  Compile time: 0 minutes, 7 seconds
   
   56	Topics
   
   621	Local links
   
-  414	Internet links
+  413	Internet links
   
   0	Graphics
   
@@ -1047,19 +1068,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm, 166,196 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDownloader\Documentation\Help\Working\Output\MetarDownloader.chm, 165,742 bytes
   
-  Compression decreased file by 743,149 bytes.
+  Compression decreased file by 742,730 bytes.
   
-    Last step completed in 00:00:24.6719
+    Last step completed in 00:00:12.5000
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.4844
+    Last step completed in 00:00:00.2344
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.21.2010 05:47 odp..  Total time: 00:02:24,5469
+Build completed successfully at 03.29.2011 12:39 odp..  Total time: 00:03:04,1563
 
 </buildStep>
 </shfbBuild>

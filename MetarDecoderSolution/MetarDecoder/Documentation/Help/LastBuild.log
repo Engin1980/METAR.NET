@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="24.4.2010 13:37:19">
+<shfbBuild product="Sandcastle Help File Builder Utilities" version="1.8.0.1" projectFile="C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\MetarDecoder.shfbproj" started="29.3.2011 12:36:35">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -9,14 +9,14 @@ Found HTML 1.x help compiler in 'C:\Program Files\HTML Help Workshop\'
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\MetarDecoder.csproj
-    Found project 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\MetarDecoder.csproj'
+Source: C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\MetarDecoder.csproj
+    Found project 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\MetarDecoder.csproj'
 
 Parsing project files
-    Found assembly 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ENG.Metar.Decoder.dll'
+    Found assembly 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ENG.Metar.Decoder.dll'
 
 References to use:
-    ESystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL
+    ESystem.Extensions
     System
     System.Core
     System.Data
@@ -25,15 +25,15 @@ References to use:
     System.Xml.Linq
 
 Copying XML comments files
-    C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ENG.Metar.Decoder.xml -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml
+    C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\bin\Debug\ENG.Metar.Decoder.xml -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Angličtina (Spojen&#233; st&#225;ty))...
-    Last step completed in 00:00:00.1875
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -42,22 +42,22 @@ GenerateRefInfo:
   MrefBuilder (v2.4.10520.1)
   Copyright ę Microsoft 2006
   Info: Loaded 1 assemblies for reflection and 7 dependency assemblies.
-  Info: Wrote information on 2 namespaces, 61 types, and 734 members
+  Info: Wrote information on 2 namespaces, 63 types, and 766 members
   XslTransform (v2.4.10520.1)
   Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl'.
-    Last step completed in 00:00:03.7500
+    Last step completed in 00:00:22.2969
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0313
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
-    4 attribute nodes removed
+    6 attribute nodes removed
     0 explicit interface implementations removed
     84 local and base class EII elements removed
-    Last step completed in 00:00:00.0781
+    Last step completed in 00:00:00.2969
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -70,7 +70,7 @@ TransformManifest:
   XslTransform (v2.4.10520.1)
   Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
-    Last step completed in 00:00:03.7969
+    Last step completed in 00:00:24.3125
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
@@ -79,133 +79,133 @@ Modifying help topic filenames in reflection information file
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm_dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\alert_caution.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\alert_note.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\alert_security.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_adm.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_kw.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\box.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\Caution.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\CFW.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\collall.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\collapse.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\collapse_all.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\copycode.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\copycodeHighlight.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dropdown.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dropdownHover.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpdown.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpdown_orange.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpdown_orange_up.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpup.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\exp.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\expall.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\expand_all.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\filter1a.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\filter1c.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\footer.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\gradient.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\greencheck.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\greychck.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\header_prev_next.jpg
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\header_sql_tutorial_blank.jpg
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\header_sql_tutorial_logo.GIF
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm_dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_dev.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_dev_arch.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\LastChild.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\load.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\load_hover.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\note.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pencil.GIF
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privclass.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privdelegate.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privenum.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privenumeration.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privevent.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privextension.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privfield.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privinterface.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privmethod.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privproperty.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privstructure.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protclass.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protdelegate.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protenum.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protenumeration.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protevent.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protextension.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protfield.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protinterface.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protmethod.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protoperator.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protproperty.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protstructure.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubclass.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubdelegate.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubenum.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubenumeration.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubevent.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubextension.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubfield.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubinterface.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubmethod.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\puboperator.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubproperty.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubstructure.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\requirements1a.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\requirements1c.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\save.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\save_hover.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\security.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\seealso1a.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\seealso1c.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\static.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\xna.gif
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\CheckboxMenu.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\CommonUtilities.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\Dropdown.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\EventUtilities.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\script_feedBack.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\script_manifold.js
-C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\SplitScreen.js
-C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Presentation.css
-C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
-    Last step completed in 00:00:00.7031
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\adm_dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\alert_caution.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\alert_note.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\alert_security.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_adm.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\big_kw.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\box.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\Caution.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\CFW.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\collall.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\collapse.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\collapse_all.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\copycode.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\copycodeHighlight.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dropdown.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\dropdownHover.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpdown.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpdown_orange.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpdown_orange_up.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\drpup.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\exp.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\expall.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\expand_all.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\filter1a.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\filter1c.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\footer.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\gradient.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\greencheck.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\greychck.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\header_prev_next.jpg
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\header_sql_tutorial_blank.jpg
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\header_sql_tutorial_logo.GIF
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_adm_dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_dev.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\kw_dev_arch.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\LastChild.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\load.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\load_hover.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\note.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pencil.GIF
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privenumeration.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privextension.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\privstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protenumeration.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protextension.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protoperator.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\protstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubenumeration.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubextension.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\puboperator.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\pubstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\requirements1a.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\requirements1c.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\save.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\save_hover.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\security.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\seealso1a.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\seealso1c.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\static.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\icons\xna.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\CheckboxMenu.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\CommonUtilities.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\Dropdown.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\EventUtilities.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\script_feedBack.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\script_manifold.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\scripts\SplitScreen.js
+C:\Program Files\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Presentation.css
+C:\Program Files\Sandcastle\Presentation\vs2005\styles\Whidbey\presentation.css -&gt; C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\styles\Whidbey\presentation.css
+    Last step completed in 00:00:01.7813
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.1406
+    Last step completed in 00:00:00.2031
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\sandcastle.config
+C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\sandcastle.config
     No additional help attributes defined.  The 'HTML Help 2 Attributes' component was not added.
-    Last step completed in 00:00:00.0781
+    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -218,7 +218,7 @@ BuildReferenceTopics:
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match '*.xml'.
   Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
-  Info: CopyFromIndexComponent: Indexed 171041 elements in 107 files.
+  Info: CopyFromIndexComponent: Indexed 171077 elements in 107 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
@@ -829,8 +829,29 @@ BuildReferenceTopics:
   Warn: CopyFromIndexComponent: Entries for the key 'T:Microsoft.Build.Framework.RequiredRuntimeAttribute' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
   Warn: CopyFromIndexComponent: Entries for the key 'P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion' occur in both 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\en\Microsoft.Build.Framework.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\Microsoft.Build.Framework.xml'. The last entry will be used.
-  Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml'.
-  Info: CopyFromIndexComponent: Indexed 132065 elements in 118 files.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.DataRowComparer' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'P:System.Data.DataRowComparer.Default' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.DataRowExtensions' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String,System.Data.DataRowVersion)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.DataTableExtensions' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataTableExtensions.AsEnumerable(System.Data.DataTable)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0})' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.DataTableExtensions.CopyToDataTable``1(System.Collections.Generic.IEnumerable{``0},System.Data.DataTable,System.Data.LoadOption)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'T:System.Data.TypedTableBase`1' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.#ctor' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.GetEnumerator' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Warn: CopyFromIndexComponent: Entries for the key 'M:System.Data.TypedTableBase`1.System#Collections#IEnumerable#GetEnumerator' occur in both 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.xml' and 'C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.xml'. The last entry will be used.
+  Info: CopyFromIndexComponent: Searching for files that match 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\ENG.Metar.Decoder.xml'.
+  Info: CopyFromIndexComponent: Indexed 131750 elements in 118 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -878,34 +899,34 @@ BuildReferenceTopics:
   Info: SharedContentComponent: Loading shared content file 'C:\Program Files\Sandcastle\Presentation\vs2005\content\feedBack_content.xml'.
   Info: SharedContentComponent: Found 1 files in C:\Program Files\Sandcastle\Presentation\vs2005\content\feedback_content.xml.
   Info: SharedContentComponent: Searching for files that match 'SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'roottopictitle' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'rootlink' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'runningheadertext' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'locationinformation' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'assemblynameandmodule' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'copycode' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'locale' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'roottopictitle' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'rootlink' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'runningheadertext' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'locationinformation' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'assemblynameandmodule' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'copycode' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'locale' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\SharedBuilderContent.xml'.
   Info: SharedContentComponent: Found 1 files in SharedBuilderContent.xml.
   Info: SharedContentComponent: Searching for files that match 'PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'header' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'footer' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_send' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'fb_headerfeedback' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'feedback_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'feedback_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
-  Info: SharedContentComponent: Overriding shared content item 'feedback_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Loading shared content file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'header' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'footer' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_send' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'fb_headerfeedback' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'feedback_alias' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'feedback_product' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
+  Info: SharedContentComponent: Overriding shared content item 'feedback_body' with value in file 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\PresentationStyleBuilderContent.xml'.
   Info: SharedContentComponent: Found 1 files in PresentationStyleBuilderContent.xml.
   Info: SharedContentComponent: Loaded 581 shared content items.
   Info: ResolveReferenceLinksComponent2: Instantiating component.
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Program Files\Sandcastle\Data\Reflection' for targets files of the form '*.xml'.
-  Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
-  Info: ResolveReferenceLinksComponent2: Loaded 171041 reference targets.
+  Info: ResolveReferenceLinksComponent2: Searching directory 'C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working' for targets files of the form 'reflection.xml'.
+  Info: ResolveReferenceLinksComponent2: Loaded 171077 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:ENG.Metar.Decoder
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder
@@ -929,6 +950,9 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;isCB&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;isTCU&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.#ctor(System.String,ENG.Metar.Decoder.NonNegInt,System.Boolean,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.Altitude
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.GetAltitudeIn(ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Cloud.GetAltitudeIn(ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;distanceUnit&quot;/&gt; documentation for M:ENG.Metar.Decoder.Cloud.GetAltitudeIn(ENG.Metar.Decoder.Common.eDistanceUnit)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.IsCB
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.IsTCU
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
@@ -940,6 +964,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Cloud.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Cloud.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Cloud.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Cloud.Type
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Cloud.eType
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.CloudInfo
@@ -968,13 +993,27 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.CloudInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.CloudInfo.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.CloudInfo.VVDistance
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Common
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.Common
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.Common.Convert
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eDistanceUnit,ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eDistanceUnit,ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eDistanceUnit,ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sourceUnit&quot;/&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eDistanceUnit,ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;targetUnit&quot;/&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eDistanceUnit,ENG.Metar.Decoder.Common.eDistanceUnit)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eSpeedUnit,ENG.Metar.Decoder.Common.eSpeedUnit)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eSpeedUnit,ENG.Metar.Decoder.Common.eSpeedUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eSpeedUnit,ENG.Metar.Decoder.Common.eSpeedUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sourceUnit&quot;/&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eSpeedUnit,ENG.Metar.Decoder.Common.eSpeedUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;targetUnit&quot;/&gt; documentation for M:ENG.Metar.Decoder.Common.Convert(System.Double,ENG.Metar.Decoder.Common.eSpeedUnit,ENG.Metar.Decoder.Common.eSpeedUnit)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Common.HeadingToeDirection(System.Int32)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Common.HeadingToeDirection(System.Int32)
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common.eDirection
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common.eDistanceUnit
+  Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common.eSpeedUnit
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Common.eUnit
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.DayTime
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.DayTime
@@ -992,6 +1031,7 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.DayTime.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.DayTime.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.DayTime.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.DayTime.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.ePhenomCollection
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.ePhenomCollection
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.ePhenomCollection.#ctor
@@ -1012,6 +1052,7 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.ePhenomCollection.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.ePhenomCollection.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.ePhenomCollection.ePhenom
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Extensions
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Extensions
@@ -1066,6 +1107,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Metar.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Metar.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Trend
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Type
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Metar.Visibility
@@ -1107,6 +1149,7 @@ BuildReferenceTopics:
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PhenomInfo.#ctor
   Info: BuildAssembler: Building topic Methods.T:ENG.Metar.Decoder.PhenomInfo
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.PhenomInfo
+  Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.Contains
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.BinarySearch
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.CopyTo
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.FindIndex
@@ -1117,12 +1160,16 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic Overload:ENG.Metar.Decoder.PhenomInfo.Sort
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PhenomInfo.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.Contains(ENG.Metar.Decoder.ePhenomCollection.ePhenom)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.Contains(ENG.Metar.Decoder.ePhenomCollection.ePhenom)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;phenom&quot;/&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.Contains(ENG.Metar.Decoder.ePhenomCollection.ePhenom)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PhenomInfo.IsNSW
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PhenomInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PhenomInfo.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PressureInfo
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.PressureInfo
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.PressureInfo.#ctor
@@ -1138,6 +1185,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PressureInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.PressureInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.PressureInfo.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.Unit
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.PressureInfo.Value
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.PressureInfo.eUnit
@@ -1275,6 +1323,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayCondition.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayCondition.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayCondition.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition.eContamination
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition.eDeposit
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayCondition.eDepth
@@ -1301,6 +1350,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;formatter&quot;/&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayConditionInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayConditionInfo.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.MetarItem'.
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.RunwayVisibility
@@ -1319,6 +1369,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.RunwayVisibility.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.RunwayVisibility.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.RunwayVisibility.VariableVisibility
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility.eDeviceMeasurementRestriction
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.RunwayVisibility.eTendency
@@ -1338,6 +1389,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendInfo.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Type
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Visibility
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendInfo.Wind
@@ -1357,6 +1409,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTime.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTime.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTime.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendTime.Type
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendTime.eType
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendTimeInfo
@@ -1379,6 +1432,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendTimeInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendTimeInfo.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.TrendVisibility
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.TrendVisibility
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendVisibility.#ctor
@@ -1388,6 +1442,10 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.TrendVisibility.#ctor
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.Distance
+  Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.DistanceUnit
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.GetDistanceIn(ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.GetDistanceIn(ENG.Metar.Decoder.Common.eDistanceUnit)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;targetUnit&quot;/&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.GetDistanceIn(ENG.Metar.Decoder.Common.eDistanceUnit)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.IsClear
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.IsDevicesMinimumValue
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.SanityCheck(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String}@)
@@ -1401,6 +1459,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.TrendVisibility.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.TrendVisibility.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.TrendVisibility.UseEUStyle
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Visibility
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Visibility
@@ -1428,6 +1487,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Visibility.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Visibility.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Wind
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.MetarItem'.
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.Wind
@@ -1447,6 +1507,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Wind.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Wind.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Wind.ToString
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Unit
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Wind.Variability
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Wind.eUnit
@@ -1464,6 +1525,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShear.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShear.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShear.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindShearInfo
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.WindShearInfo
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.WindShearInfo.#ctor
@@ -1485,6 +1547,7 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShearInfo.ToInfo(ENG.Metar.Decoder.Formatters.InfoFormatter)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindShearInfo.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindShearInfo.ToString
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.WindVariable
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target 'T:ENG.Metar.Decoder.MetarItem'.
   Info: BuildAssembler: Building topic AllMembers.T:ENG.Metar.Decoder.WindVariable
@@ -1498,6 +1561,7 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.WindVariable.ToDirection
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindVariable.ToMetar
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.WindVariable.ToMetar
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.WindVariable.ToString
   Info: BuildAssembler: Building topic N:ENG.Metar.Decoder.Formatters
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:ENG.Metar.Decoder.Formatters
   Info: BuildAssembler: Building topic T:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter
@@ -1522,11 +1586,16 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.MetarFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.MetarFormat
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
@@ -1605,6 +1674,8 @@ BuildReferenceTopics:
   Info: BuildAssembler: Building topic Properties.T:ENG.Metar.Decoder.Formatters.InfoFormatter
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:ENG.Metar.Decoder.Formatters.InfoFormatter.#ctor
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.CleanOutInfo(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.CleanOutInfo(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudsFormat
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.CloudTypeToString(ENG.Metar.Decoder.Cloud.eType,System.Boolean)
@@ -1615,10 +1686,14 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.InfoFormatter.Format(System.String,System.Object[])
@@ -1708,11 +1783,16 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.MetarFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.LongInfoFormatter.MetarFormat
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.LongInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
@@ -1806,11 +1886,16 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
   Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDirectionToString(ENG.Metar.Decoder.Common.eDirection,System.Boolean)
-  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eUnitToString(ENG.Metar.Decoder.Common.eUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eDistanceUnitToString(ENG.Metar.Decoder.Common.eDistanceUnit,System.Boolean)
+  Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;value&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;useLong&quot;/&gt; documentation for M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.eSpeedUnitToString(ENG.Metar.Decoder.Common.eSpeedUnit,System.Boolean)
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.MetarFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.MetarFormat
   Info: BuildAssembler: Building topic M:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.PhenomCollectionPhenomToString(ENG.Metar.Decoder.ePhenomCollection.ePhenom,System.Boolean)
@@ -1882,8 +1967,8 @@ BuildReferenceTopics:
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearFormat
   Info: BuildAssembler: Building topic P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
   Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:ENG.Metar.Decoder.Formatters.ShortInfoFormatter.WindShearsFormat
-  Info: Processed 566 topics
-    Last step completed in 00:02:59.5313
+  Info: Processed 600 topics
+    Last step completed in 00:02:54.5625
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -1892,7 +1977,7 @@ GenerateIntermediateTOC:
   XslTransform (v2.4.10520.1)
   Copyright ę Microsoft 2005-2006
   Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
-    Last step completed in 00:00:04.5156
+    Last step completed in 00:00:02.3125
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for Help 1.x and/or website...
@@ -1902,11 +1987,11 @@ Copyright &#169; 2008-2009, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
 Using LCID '1033', code page '65001', encoding charset 'UTF-8'.
-Processed 566 HTML files
+Processed 600 HTML files
 Sorting keywords and generating See Also indices
-Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhk
-Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhc
-    Last step completed in 00:00:02.0469
+Saving Help 1.x keyword index to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhk
+Saving Help 1.x table of contents to C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\MetarDecoder.hhc
+    Last step completed in 00:00:02.9375
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1.x table of contents file...
@@ -1914,7 +1999,7 @@ Generating HTML Help 1.x table of contents file...
 </buildStep>
 <buildStep step="UpdateTableOfContents">
 Updating table of contents with additional content items and determining default topic...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1.x index file...
@@ -1922,7 +2007,7 @@ Generating HTML Help 1.x index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1.x project file...
-    Last step completed in 00:00:00.0469
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1.x file...
@@ -1932,19 +2017,19 @@ Build1xHelpFile:
   
   
   
-  Compiling c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm
+  Compiling c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm
   
   
   
   
   
-  Compile time: 0 minutes, 15 seconds
+  Compile time: 0 minutes, 16 seconds
   
-  568	Topics
+  602	Topics
   
-  8,702	Local links
+  9,170	Local links
   
-  4,153	Internet links
+  4,250	Internet links
   
   0	Graphics
   
@@ -1952,19 +2037,19 @@ Build1xHelpFile:
   
   
   
-  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2008\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 1,068,950 bytes
+  Created c:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\MetarDecoder\Documentation\Help\Working\Output\MetarDecoder.chm, 1,120,074 bytes
   
-  Compression decreased file by 7,732,790 bytes.
+  Compression decreased file by 8,136,188 bytes.
   
-    Last step completed in 00:00:18.5000
+    Last step completed in 00:00:18.5625
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.5781
+    Last step completed in 00:00:00.7500
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 04.24.2010 01:40 odp..  Total time: 00:03:34,7031
+Build completed successfully at 03.29.2011 12:40 odp..  Total time: 00:04:09,8438
 
 </buildStep>
 </shfbBuild>
