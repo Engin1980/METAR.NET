@@ -13,9 +13,16 @@ namespace ENG.Metar.Decoder
   public static class  Common
   {
 
+    /// <summary>
+    /// This enumeration is obsolete. Use <see cref="eDistanceUnit">eDistanceUnit</see>
+    /// or <see cref="eSpeedUnit">eSpeedUnit</see> enumerations.
+    /// </summary>
     [Obsolete("This type is obsolete and is no more used. Use eDistanceUnit or eSpeedUnit enumerations.", true)]
     public enum eUnit 
     { 
+      /// <summary>
+      /// Obsolete.
+      /// </summary>
       ObsoleteUseDistanceUnitEnumeration
     }
 
