@@ -26,9 +26,17 @@ namespace ENG.Metar.Decoder
   public class Wind : IMetarItem
   {
     #region Nested
+
+    /// <summary>
+    /// This enumeration is obsolete. Use <see cref="Common.eDistanceUnit">eDistanceUnit</see>
+    /// or <see cref="Common.eSpeedUnit">eSpeedUnit</see> enumerations.
+    /// </summary>
     [Obsolete("This type is obsolete and is no more used. Use eDistanceUnit or eSpeedUnit enumerations.", true)]
     public enum eUnit
     {
+      /// <summary>
+      /// Obsolete
+      /// </summary>
       ObsoleteUseDistanceUnitEnumeration
     }
     #endregion Nested
