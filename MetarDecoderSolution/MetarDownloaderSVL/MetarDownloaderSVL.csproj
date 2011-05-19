@@ -76,6 +76,7 @@
     <Compile Include="..\MetarDownloader\Retrievers\USAS1VatsimRetriever.cs">
       <Link>Retrievers\USAS1VatsimRetriever.cs</Link>
     </Compile>
+    <Compile Include="IMetarRetriever.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

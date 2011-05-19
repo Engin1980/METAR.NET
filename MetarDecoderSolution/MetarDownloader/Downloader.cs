@@ -15,7 +15,8 @@ namespace ENG.Metar.Downloader
     /// <summary>
     /// Local decoder used to retrieve metar.
     /// </summary>
-    IMetarRetrieve retr;
+    /// 
+    ENG.Metar.Downloader.IMetarRetriever retr;
     /// <summary>
     /// Delegate used to announce when asynchronous download is completed.
     /// Is used for both, successful and unsuccessful downloads.
@@ -35,7 +36,7 @@ namespace ENG.Metar.Downloader
     /// Initializes a new Instance of ENG.Metar.Downloader.Downloader
     /// </summary>
     /// <param name="metarRetriever">Metar retrievere used to decode metar from source stream</param>
-    public Downloader(IMetarRetrieve metarRetriever)
+    public Downloader(IMetarRetriever metarRetriever)
     {
       retr = metarRetriever;
     }
@@ -51,7 +52,7 @@ namespace ENG.Metar.Downloader
     /// <exception cref="MetarDownloadException">
     /// Raised when any error occurs.
     /// </exception>
-    public static string DownloadMetar(string icao, IMetarRetrieve metarRetriever)
+    public static string DownloadMetar(string icao, IMetarRetriever metarRetriever)
     {
       Downloader d = new Downloader(metarRetriever);
 
@@ -110,7 +111,7 @@ namespace ENG.Metar.Downloader
     /// <exception cref="MetarDownloadException">
     /// Raised when any error occurs.
     /// </exception>
-    public static void DownloadMetarAsync(string icao, IMetarRetrieve metarRetriever,
+    public static void DownloadMetarAsync(string icao, IMetarRetriever metarRetriever,
       DownloadMetarCompletedDelegate downloadMetarCompletedDelegate)
     {
       Downloader d = new Downloader(metarRetriever);

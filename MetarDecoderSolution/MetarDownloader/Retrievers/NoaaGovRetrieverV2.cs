@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace ENG.Metar.Downloader.Retrievers
 {
   /// <summary>
-  /// This class is able to download metar from web OldLineWeather.
+  /// Downloads metar from web noaa.gov.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Downloader.IMetarRetrieve"/>
-  public class OldLineWeatherRetriever : IMetarRetriever
+  public class NoaaGovRetrieverV2 : IMetarRetriever
   {
     #region IMetarRetrieve Members
 
@@ -21,7 +20,7 @@ namespace ENG.Metar.Downloader.Retrievers
     /// <returns></returns>
     public string GetUrlForICAO(string icao)
     {
-      return "http://www.oldlineweather.com/wxmetar.php?station=" + icao.ToUpper();
+      return "http://weather.noaa.gov/pub/data/observations/metar/stations/" + icao.ToUpper() + ".TXT";
     }
 
     /// <summary>
@@ -33,23 +32,11 @@ namespace ENG.Metar.Downloader.Retrievers
     /// <exception cref="MetarDownloadException">Returns if anything fails. Inner exception should contain more accurate info.</exception>
     public string DecodeMetar(System.IO.Stream sourceStream)
     {
-      string ret = null;
-
       System.IO.StreamReader rdr = new System.IO.StreamReader(sourceStream);
-      string pom = rdr.ReadToEnd();
-      rdr = null;
-      
-      string rgx = @"METAR = (([A-Z]|[0-9]|/|[+\-]| )+)";
+      rdr.ReadLine();
+      string r = rdr.ReadLine();
 
-      Match m = Regex.Match(pom, rgx);
-      if (m.Success)
-        ret = m.Groups[1].Value;
-      else
-        throw new MetarDownloadException("Unable to decode information from page. Incorrect ICAO?");
-
-      ret = "METAR " + ret;
-
-      return ret;
+      return "METAR " + r;
     }
 
     #endregion

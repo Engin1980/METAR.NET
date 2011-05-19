@@ -12,7 +12,7 @@ namespace ENG.Metar.Downloader.Retrievers
   /// significantly from real weather.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Downloader.IMetarRetrieve"/>
-  public class USAS1VatsimRetriever : IMetarRetrieve
+  public class USAS1VatsimRetriever : IMetarRetriever
   {
     /// <summary>
     /// URL

@@ -24,7 +24,7 @@ namespace Tutorial
       string metar;
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-      ENG.Metar.Downloader.IMetarRetrieve retriever =
+      ENG.Metar.Downloader.IMetarRetriever retriever =
         new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
 
       try
@@ -61,7 +61,7 @@ namespace Tutorial
       AddInfo("Downloading metar - asynchro...");
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-      ENG.Metar.Downloader.IMetarRetrieve retriever =
+      ENG.Metar.Downloader.IMetarRetriever retriever =
         new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
 
       ENG.Metar.Downloader.Downloader.DownloadMetarAsync(

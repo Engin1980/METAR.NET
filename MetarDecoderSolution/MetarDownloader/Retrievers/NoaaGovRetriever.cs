@@ -9,6 +9,8 @@ namespace ENG.Metar.Downloader.Retrievers
   /// Downloads metar from web noaa.gov.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Downloader.IMetarRetrieve"/>
+  /// 
+  [Obsolete("Use NoaaGovRetrieverV2 class. The web has changed the URL and this class will not work now.")]
   public class NoaaGovRetriever : IMetarRetrieve
   {
     #region IMetarRetrieve Members
