@@ -8,13 +8,13 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Common interface to describe metar element.
   /// </summary>
-  public interface IMetarItem
+  public interface ICodeItem
   {
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    string ToMetar();
+    string ToCode();
     /// <summary>
     /// Proceed sanity check of inserted values.
     /// </summary>

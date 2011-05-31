@@ -10,7 +10,7 @@ namespace ENG.Metar.Decoder
   /// Represents info about runway conditions (contamination, depth and braking action).
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class RunwayCondition : IMetarItem
+  public class RunwayCondition : ICodeItem
   {
     #region Nested
 
@@ -1114,10 +1114,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 

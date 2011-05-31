@@ -194,10 +194,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public override string ToMetar()
+    public override string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
@@ -230,7 +230,7 @@ namespace ENG.Metar.Decoder
 
       foreach (var fItem in Runways)
       {
-        ret.Append(" " + fItem.ToMetar());
+        ret.Append(" " + fItem.ToCode());
       } // foreach (var fItem in Runways)
 
       return ret.ToString();

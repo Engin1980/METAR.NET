@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about trend visibility.
   /// </summary>
-  public class TrendVisibility : IMetarItem
+  public class TrendVisibility : ICodeItem
   {
     #region Properties
 
@@ -229,10 +229,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public virtual string ToMetar()
+    public virtual string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 

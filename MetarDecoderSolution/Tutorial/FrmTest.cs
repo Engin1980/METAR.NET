@@ -145,7 +145,7 @@ namespace Tutorial
       if (mtr == null) return;
 
       AddInfo("Orig: \r\n" + txtMetar.Text.Trim());
-      AddInfo("EnDe: \r\n" + mtr.ToMetar());
+      AddInfo("EnDe: \r\n" + mtr.ToCode());
 
       AddInfo("...done");
     }

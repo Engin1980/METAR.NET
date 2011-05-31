@@ -12,7 +12,7 @@ namespace ENG.Metar.Decoder
   /// Represents trend time information.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class TrendTime : IMetarItem
+  public class TrendTime : ICodeItem
   {
     #region Nested
 
@@ -139,10 +139,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       return Type.ToString() + Hour.ToString("00") + Minute.ToString("00");
     }

@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about windshears in metar.
   /// </summary>
-  public class WindShearInfo : List<WindShear>, IMetarItem
+  public class WindShearInfo : List<WindShear>, ICodeItem
   {
     #region Properties
 
@@ -81,10 +81,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       if (IsAllRunways)
         return "WS ALL RWY";
@@ -94,7 +94,7 @@ namespace ENG.Metar.Decoder
 
         foreach (var fItem in this)
         {
-          b.AppendSpaced(fItem.ToMetar());
+          b.AppendSpaced(fItem.ToCode());
         } // foreach (var fItem in WindShears)
 
         if (b.Length > 0)

@@ -115,6 +115,9 @@
     <Compile Include="..\MetarDecoder\Racional.cs">
       <Link>Racional.cs</Link>
     </Compile>
+    <Compile Include="..\MetarDecoder\RePhenomInfo.cs">
+      <Link>RePhenomInfo.cs</Link>
+    </Compile>
     <Compile Include="..\MetarDecoder\RunwayCondition.cs">
       <Link>RunwayCondition.cs</Link>
     </Compile>
@@ -126,6 +129,9 @@
     </Compile>
     <Compile Include="..\MetarDecoder\TrendInfo.cs">
       <Link>TrendInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\MetarDecoder\TrendPhenomInfo.cs">
+      <Link>TrendPhenomInfo.cs</Link>
     </Compile>
     <Compile Include="..\MetarDecoder\TrendTime.cs">
       <Link>TrendTime.cs</Link>

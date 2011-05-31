@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace ENG.Metar.Decoder
 {
@@ -43,6 +44,28 @@ namespace ENG.Metar.Decoder
       int ret =
         int.Parse(grp.Value);
       return ret;
+    }
+
+    public static void CopyPropertiesTo(this object source, object target)
+    {
+      PropertyInfo[] sp = source.GetType().GetProperties();
+      PropertyInfo[] tp = target.GetType().GetProperties();
+      PropertyInfo[] shared = GetSharedProperties(sp, tp);
+      object val;
+      foreach (var fItem in shared)
+      {
+        val = fItem.GetValue(source, null);
+        fItem.SetValue(target, val, null);
+      } // foreach (var fItem in shared)
+    }
+
+    private static PropertyInfo[] GetSharedProperties(PropertyInfo[] sp, PropertyInfo[] tp)
+    {
+      List<PropertyInfo> ret = new List<PropertyInfo>();
+      foreach (var fS in sp)
+        foreach (var fT in tp)
+          if (fS.Name == fT.Name) ret.Add(fS);
+      return ret.ToArray();
     }
 
   }

@@ -72,6 +72,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="Decoders\Base\CustomDecoder.cs" />
+    <Compile Include="Decoders\Base\InternalDecoder.cs" />
+    <Compile Include="Decoders\Base\PublicDecoder.cs" />
+    <Compile Include="Decoders\DecodeException.cs" />
+    <Compile Include="Decoders\Common\RemarkDecoder.cs" />
+    <Compile Include="Decoders\TAF\TafDecoder.cs" />
+    <Compile Include="Decoders\TAF\TafPrefixDecoder.cs" />
+    <Compile Include="Decoders\TAF\TNDecoder.cs" />
+    <Compile Include="Decoders\TAF\TXDecoder.cs" />
+    <Compile Include="Decoders\Common\Trend\TrendCloudInfoDecoder.cs" />
+    <Compile Include="Decoders\Common\DayTimeDecoder.cs" />
+    <Compile Include="Decoders\Base\TypeDecoder.cs" />
+    <Compile Include="Decoders\Common\ICAODecoder.cs" />
+    <Compile Include="Decoders\TAF\AMDDecoder.cs" />
+    <Compile Include="Decoders\TAF\CNLDecoder.cs" />
+    <Compile Include="Decoders\TAF\CORDecoder.cs" />
+    <Compile Include="Decoders\TAF\NILDecoder.cs" />
+    <Compile Include="Decoders\Common\DayHourDayHourFlagDecoder.cs" />
+    <Compile Include="Decoders\Common\Trend\TrendPhenomInfoDecoder.cs" />
+    <Compile Include="Decoders\Common\Trend\TrendVisibilityDecoder.cs" />
+    <Compile Include="Decoders\Common\Trend\TrendReportDecoder.cs" />
+    <Compile Include="Decoders\Common\WindDecoder.cs" />
     <Compile Include="Extensions.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -80,7 +102,7 @@
     <Compile Include="Formatters\LongInfoFormatter.cs" />
     <Compile Include="Formatters\ShortInfoFormatter.cs" />
     <Compile Include="MetarDecodeException.cs" />
-    <Compile Include="IMetarItem.cs" />
+    <Compile Include="ICodeItem.cs" />
     <Compile Include="NonNegInt.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -96,7 +118,7 @@
     <Compile Include="Cloud.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CloudInfo.cs">
+    <Compile Include="TrendCloudInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DayTime.cs" />
@@ -110,6 +132,7 @@
     <Compile Include="PressureInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RePhenomInfo.cs" />
     <Compile Include="RunwayCondition.cs" />
     <Compile Include="RunwayConditionInfo.cs" />
     <Compile Include="RunwayVisibility.cs">
@@ -119,6 +142,22 @@
     <Compile Include="TrendTimeInfo.cs" />
     <Compile Include="TrendInfo.cs" />
     <Compile Include="TrendVisibility.cs" />
+    <Compile Include="TrendPhenomInfo.cs" />
+    <Compile Include="Types\Common\DayHourFlag.cs" />
+    <Compile Include="Types\Common\DayTimeFlag.cs" />
+    <Compile Include="Types\Common\DayHourDayHourFlag.cs" />
+    <Compile Include="Types\Common\TimeFlag.cs" />
+    <Compile Include="Types\TAF\Intervals\FMInterval.cs" />
+    <Compile Include="Types\TAF\Intervals\FromToInterval.cs" />
+    <Compile Include="Types\TAF\Intervals\Interval.cs" />
+    <Compile Include="Types\TAF\Taf.cs" />
+    <Compile Include="Types\TAF\TafSubReport.cs" />
+    <Compile Include="Decoders\TAF\TafSubReportDecoder.cs" />
+    <Compile Include="Decoders\TAF\TafSubReportListDecoder.cs" />
+    <Compile Include="Types\TAF\TemperatureExtreme.cs" />
+    <Compile Include="Types\TAF\TemperatureExtremeTN.cs" />
+    <Compile Include="Types\TAF\TemperatureExtremeTX.cs" />
+    <Compile Include="Types\TAF\TrendReport.cs" />
     <Compile Include="Visibility.cs" />
     <Compile Include="Wind.cs" />
     <Compile Include="WindShear.cs" />
@@ -161,6 +200,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Documentation\MetarDecoder.shfbproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Decoders\METAR\" />
+    <Folder Include="Types\Common\Trend\" />
+    <Folder Include="Types\METAR\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

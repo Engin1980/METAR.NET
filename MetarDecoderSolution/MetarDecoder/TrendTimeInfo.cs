@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents set of time infos in metar trend.
   /// </summary>
-  public class TrendTimeInfo : List<TrendTime>, IMetarItem
+  public class TrendTimeInfo : List<TrendTime>, ICodeItem
   {
     #region Inherited
 
@@ -54,14 +54,14 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
-      this.ForEach(i => ret.AppendSpaced(i.ToMetar()));
+      this.ForEach(i => ret.AppendSpaced(i.ToCode()));
 
       return ret.ToString().TrimEnd();
     }

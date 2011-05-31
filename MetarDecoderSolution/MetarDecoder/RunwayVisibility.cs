@@ -10,7 +10,7 @@ namespace ENG.Metar.Decoder
   /// Represents runway visibility information.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class RunwayVisibility : IMetarItem
+  public class RunwayVisibility : ICodeItem
   {
 
     #region Nested
@@ -216,10 +216,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 

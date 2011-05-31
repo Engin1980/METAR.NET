@@ -60,7 +60,7 @@ namespace Tutorial
       if (metarObject != null)
       {
         // creates back metar string
-        string targetMetar = metarObject.ToMetar();
+        string targetMetar = metarObject.ToCode();
 
         // and compare string. should be the same.
         Console.WriteLine("Original metar:");

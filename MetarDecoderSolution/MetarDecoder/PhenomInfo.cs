@@ -9,36 +9,8 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about phenoms. E.g. (+RAHZ -SN)
   /// </summary>
-  public class PhenomInfo : List<ePhenomCollection>, IMetarItem
-  {
-    private bool isRE;
-    internal void SetRePhenomenFlag(bool isRe)
-    {
-      this.isRE = isRe;
-    }
-
-    #region Properties
-
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _IsNSW;
-    ///<summary>
-    /// Sets/gets if no-significant-weather flag is used (NSW).
-    ///</summary>
-    public bool IsNSW
-    {
-      get
-      {
-        return ((this.Count == 0) && _IsNSW);
-      }
-      set
-      {
-        _IsNSW = value;
-        if (value)
-          this.Clear();
-      }
-    }
-
-    #endregion Properties
+  public class PhenomInfo : List<ePhenomCollection>, ICodeItem
+  {    
 
     #region Inherited
 
@@ -47,7 +19,7 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="formatter">Formatter used to format string.</param>
     /// <returns></returns>
-    public string ToInfo(InfoFormatter formatter)
+    public virtual string ToInfo(InfoFormatter formatter)
     {
       string ret = null;
 
@@ -60,7 +32,7 @@ namespace ENG.Metar.Decoder
       string f = null;
       try
       {
-        f = isRE ? formatter.RePhenomsFormat : formatter.PhenomsFormat;
+        f = formatter.PhenomsFormat;
       }
       catch { }
       if (f == null)
@@ -70,7 +42,7 @@ namespace ENG.Metar.Decoder
 
       ret = formatter.Format(
             f,
-            this.IsNSW,
+            false, 
             this.Count != 0,
             GetPhenomInfo(formatter)
             );
@@ -78,7 +50,7 @@ namespace ENG.Metar.Decoder
       return ret;
     }
 
-    private string GetPhenomInfo(InfoFormatter formatter)
+    protected string GetPhenomInfo(InfoFormatter formatter)
     {
       StringBuilder ret = new StringBuilder();
 
@@ -88,22 +60,18 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
-      if (IsNSW)
-        return "NSW";
-      else
-      {
+      
         StringBuilder ret = new StringBuilder();
 
         this.ForEach(
-          i => ret.AppendSpaced(((isRE) ? "RE" : "") + i.ToMetar()));
+          i => ret.AppendSpaced(i.ToCode()));
 
         return ret.ToString().TrimEnd();
-      }
     }
 
     /// <summary>
@@ -124,8 +92,7 @@ namespace ENG.Metar.Decoder
     /// <param name="warnings">Found warnings.</param>
     public void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
-      if (IsNSW && (this.Count > 0))
-        warnings.Add("When IsNSW flag is set to true, phenom definitions will be ignored (now list is nonempty).");
+      // nothing to do here
     }
 
     #endregion
@@ -153,9 +120,9 @@ namespace ENG.Metar.Decoder
       return ret;
     }
 
-    internal bool IsEmpty()
+    internal virtual bool IsEmpty()
     {
-      return ((this.Count == 0) && !IsNSW);
+      return (this.Count == 0);
     }
   }
 }

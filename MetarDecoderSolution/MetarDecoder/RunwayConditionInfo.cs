@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represets sets of runway conditions.
   /// </summary>
-  public class RunwayConditionInfo : List<RunwayCondition>, IMetarItem
+  public class RunwayConditionInfo : List<RunwayCondition>, ICodeItem
   {
     #region Properties
 
@@ -35,10 +35,10 @@ namespace ENG.Metar.Decoder
     #region Inherited
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       if (IsSNOCLO)
         return "SNOCLO";
@@ -48,7 +48,7 @@ namespace ENG.Metar.Decoder
 
         foreach (var fItem in this)
         {
-          ret.AppendSpaced(fItem.ToMetar());
+          ret.AppendSpaced(fItem.ToCode());
         } // foreach (var fItem in RunwayConditions)
 
         return ret.ToString().TrimEnd();

@@ -11,7 +11,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents metar.
   /// </summary>
-  public class Metar : IMetarItem
+  public class Metar : ICodeItem
   {
     #region Nested
 
@@ -185,17 +185,15 @@ namespace ENG.Metar.Decoder
       }
       set
       {
-        if (value != null)
-          value.SetRePhenomenFlag(false);
         _Phenomens = value;
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private CloudInfo _Clouds = null;
+    private TrendCloudInfo _Clouds = null;
     ///<summary>
     /// Sets/gets Clouds value.
     ///</summary>
-    public CloudInfo Clouds
+    public TrendCloudInfo Clouds
     {
       get
       {
@@ -257,11 +255,11 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private PhenomInfo _RePhenomens = null;
+    private RePhenomInfo _RePhenomens = null;
     ///<summary>
     /// Sets/gets RePhenoms value.
     ///</summary>
-    public PhenomInfo RePhenomens
+    public RePhenomInfo RePhenomens
     {
       get
       {
@@ -269,8 +267,6 @@ namespace ENG.Metar.Decoder
       }
       set
       {
-        if (value != null)
-          value.SetRePhenomenFlag(true);
         _RePhenomens = value;
       }
     }
@@ -683,7 +679,7 @@ namespace ENG.Metar.Decoder
 
       if (grp[0].Length > 0)
       {
-        CloudInfo ret = new CloudInfo();
+        TrendCloudInfo ret = new TrendCloudInfo();
 
         if (grp[1].Success)
           ret.SetNSC();
@@ -754,7 +750,7 @@ namespace ENG.Metar.Decoder
       else
       {
 
-        PhenomInfo lst = new PhenomInfo();
+        RePhenomInfo lst = new RePhenomInfo();
 
         Match m = Regex.Match(str, R_RE_PHENOM_ITEM);
         ePhenomCollection coll = null;
@@ -960,10 +956,10 @@ namespace ENG.Metar.Decoder
       if (grp[0].Success)
       {
         if (grp[2].Success)
-          obj.Trend.Phenomens = new PhenomInfo() { IsNSW = true };
+          obj.Trend.Phenomens = new TrendPhenomInfo() { IsNSW = true };
         else
         {
-          PhenomInfo lst = new PhenomInfo();
+          TrendPhenomInfo lst = new TrendPhenomInfo();
 
           string str = grp[1].Value;
 
@@ -994,7 +990,7 @@ namespace ENG.Metar.Decoder
 
       if (grp[0].Success && grp[0].Value.Length > 0)
       {
-        CloudInfo ret = new CloudInfo();
+        TrendCloudInfo ret = new TrendCloudInfo();
 
         if (grp[2].Success)
           ret.SetNSC();
@@ -1097,10 +1093,10 @@ namespace ENG.Metar.Decoder
 
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
@@ -1112,24 +1108,24 @@ namespace ENG.Metar.Decoder
 
       ret.AppendSpaced(this.Type.ToString());
       ret.AppendSpaced(this.ICAO);
-      ret.AppendSpaced(this.Date.ToMetar());
+      ret.AppendSpaced(this.Date.ToCode());
       if (this.IsAUTO) ret.AppendSpaced("AUTO");
-      ret.AppendSpaced(this.Wind.ToMetar());
-      ret.AppendSpaced(this.Visibility.ToMetar());
+      ret.AppendSpaced(this.Wind.ToCode());
+      ret.AppendSpaced(this.Visibility.ToCode());
       if (this.Phenomens != null)
-        ret.AppendSpaced(this.Phenomens.ToMetar());
+        ret.AppendSpaced(this.Phenomens.ToCode());
       if (this.Clouds != null)
-        ret.AppendSpaced(this.Clouds.ToMetar());
+        ret.AppendSpaced(this.Clouds.ToCode());
       ret.AppendSpaced(IntToMetarString(this.Temperature) + "/" + IntToMetarString(this.DewPoint));
-      ret.AppendSpaced(this.Pressure.ToMetar());
+      ret.AppendSpaced(this.Pressure.ToCode());
       if (this.RePhenomens != null)
-        ret.AppendSpaced(this.RePhenomens.ToMetar());
+        ret.AppendSpaced(this.RePhenomens.ToCode());
       if (this.WindShears != null)
-        ret.AppendSpaced(this.WindShears.ToMetar());
+        ret.AppendSpaced(this.WindShears.ToCode());
       if (this.RunwayConditions != null)
-        ret.AppendSpaced(this.RunwayConditions.ToMetar());
+        ret.AppendSpaced(this.RunwayConditions.ToCode());
       if (this.Trend != null)
-        ret.AppendSpaced(this.Trend.ToMetar());
+        ret.AppendSpaced(this.Trend.ToCode());
       if (!string.IsNullOrEmpty(this.Remark))
         ret.Append("RMK " + this.Remark);
 

@@ -23,7 +23,7 @@ namespace ENG.Metar.Decoder
   /// maximum gust values, and mean wind direction and variations of the wind direction, hence
   /// the time interval in these circumstances shall be correspondingly reduced.
   /// </remarks>
-  public class Wind : IMetarItem
+  public class Wind : ICodeItem
   {
     #region Nested
 
@@ -240,10 +240,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
@@ -254,11 +254,11 @@ namespace ENG.Metar.Decoder
       ret.Append(Speed.ToString("00"));
       if (GustSpeed.HasValue)
         ret.Append("G" + GustSpeed.Value.ToString("00"));
-      ret.Append(Unit.ToString());
+      ret.Append(Unit.ToString().ToUpper());
 
       if (IsVarying)
       {
-        ret.Append(" " + Variability.ToMetar());
+        ret.Append(" " + Variability.ToCode());
       }
 
       return ret.ToString();
@@ -288,6 +288,14 @@ namespace ENG.Metar.Decoder
 
       if (Variability != null)
         Variability.SanityCheck(ref errors, ref warnings);
+    }
+
+    public static Wind Calm
+    {
+      get
+      {
+        return new Wind() { Direction = null, Speed = 0, GustSpeed = null };
+      }
     }
 
   }

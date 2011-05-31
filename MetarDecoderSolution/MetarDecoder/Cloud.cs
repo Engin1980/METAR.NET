@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents one cloud (e.g. OVC040TCU).
   /// </summary>
-  public class Cloud : IMetarItem
+  public class Cloud : ICodeItem
   {
     #region Nested
 
@@ -266,10 +266,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 

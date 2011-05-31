@@ -10,7 +10,7 @@ namespace ENG.Metar.Decoder
   /// Represents information about trend. To mark trend as not used. set null value into property type.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class TrendInfo : IMetarItem
+  public class TrendInfo : ICodeItem
   {
     #region Nested
 
@@ -112,11 +112,11 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private PhenomInfo _Phenomens;
+    private TrendPhenomInfo _Phenomens;
     ///<summary>
     /// Sets/gets Phenomens value. Null if not specified in trend.
     ///</summary>
-    public PhenomInfo Phenomens
+    public TrendPhenomInfo Phenomens
     {
       get
       {
@@ -124,19 +124,17 @@ namespace ENG.Metar.Decoder
       }
       set
       {
-        if (value != null)
-          value.SetRePhenomenFlag(false);
         _Phenomens = value;
       }
     }
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private CloudInfo _Clouds;
+    private TrendCloudInfo _Clouds;
     ///<summary>
     /// Sets/gets Clouds value. Null if not specified in trend.
     ///</summary>
-    public CloudInfo Clouds
+    public TrendCloudInfo Clouds
     {
       get
       {
@@ -211,24 +209,24 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
       ret.AppendSpaced(this.Type.ToString());
       this.Times.ForEach(
-        i => ret.AppendSpaced(i.ToMetar()));
+        i => ret.AppendSpaced(i.ToCode()));
       if (Wind != null)
-        ret.AppendSpaced(Wind.ToMetar());
+        ret.AppendSpaced(Wind.ToCode());
       if (Visibility != null)
-        ret.AppendSpaced(this.Visibility.ToMetar());
+        ret.AppendSpaced(this.Visibility.ToCode());
       if (Phenomens != null)
-        ret.AppendSpaced(this.Phenomens.ToMetar());
+        ret.AppendSpaced(this.Phenomens.ToCode());
       if (Clouds != null)
-        ret.AppendSpaced(this.Clouds.ToMetar());
+        ret.AppendSpaced(this.Clouds.ToCode());
 
       return ret.ToString().TrimEnd();
     }

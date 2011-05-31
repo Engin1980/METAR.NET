@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about clouds.
   /// </summary>
-  public class CloudInfo : List<Cloud>, IMetarItem
+  public class TrendCloudInfo : List<Cloud>, ICodeItem
   {
     #region Properties
 
@@ -150,10 +150,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       if (IsSKC)
         return "SKC";
@@ -166,7 +166,7 @@ namespace ENG.Metar.Decoder
         StringBuilder ret = new StringBuilder();
 
         this.ForEach(
-          i => ret.AppendSpaced(i.ToMetar()));
+          i => ret.AppendSpaced(i.ToCode()));
 
         return ret.ToString().TrimEnd();
       }

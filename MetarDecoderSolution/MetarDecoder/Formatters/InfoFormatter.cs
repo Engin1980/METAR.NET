@@ -279,7 +279,7 @@ namespace ENG.Metar.Decoder.Formatters
     }
 
     /// <summary>
-    /// Clouds values for info-string. <see cref="ENG.Metar.Decoder.CloudInfo"/>
+    /// Clouds values for info-string. <see cref="ENG.Metar.Decoder.TrendCloudInfo"/>
     /// </summary>
     public enum eCloudsFormat
     {

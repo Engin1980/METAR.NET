@@ -10,7 +10,7 @@ namespace ENG.Metar.Decoder
   /// Represents windshear information for one runway.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class WindShear : IMetarItem
+  public class WindShear : ICodeItem
   {
     #region Properties
 
@@ -68,10 +68,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       return ("RWY" + Runway);
     }

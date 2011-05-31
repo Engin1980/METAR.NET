@@ -10,7 +10,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents pressure info.
   /// </summary>
-  public class PressureInfo : IMetarItem
+  public class PressureInfo : ICodeItem
   {
     #region Nested
 
@@ -156,10 +156,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 

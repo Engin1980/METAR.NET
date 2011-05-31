@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents day-time information when metar was presented.
   /// </summary>
-  public class DayTime : IMetarItem
+  public class DayTime : ICodeItem
   {
     #region Properties
 
@@ -110,10 +110,10 @@ public string ToInfo(bool verbose)
 #endif //INFO
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       return this.Day.ToString("00") + this.Hour.ToString("00") + this.Minute.ToString("00") + "Z";
     }
@@ -127,7 +127,7 @@ public string ToInfo(bool verbose)
       return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
     }
 
-    #region IMetarItem Members
+    #region ICodeItem Members
 
 
     /// <summary>

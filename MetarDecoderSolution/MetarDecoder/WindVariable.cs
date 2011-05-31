@@ -17,7 +17,7 @@ namespace ENG.Metar.Decoder
   /// ied shall be given for dndndnVdxdxdx in clockwise order. Otherwise this group shall not be
   /// included.
   /// </remarks>
-  public class WindVariable : IMetarItem
+  public class WindVariable : ICodeItem
   {
     #region Properties
 
@@ -68,10 +68,10 @@ namespace ENG.Metar.Decoder
     #region Methods
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       return FromDirection.ToString("000") + "V" + ToDirection.ToString("000");
     }

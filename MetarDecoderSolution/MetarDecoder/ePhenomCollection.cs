@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents set of items defining the phenomen. E.g. +RAHZ.
   /// </summary>
-  public class ePhenomCollection : List<ENG.Metar.Decoder.ePhenomCollection.ePhenom>, IMetarItem
+  public class ePhenomCollection : List<ENG.Metar.Decoder.ePhenomCollection.ePhenom>, ICodeItem
   {
     #region Nested
 
@@ -232,10 +232,10 @@ namespace ENG.Metar.Decoder
     }
 
     /// <summary>
-    /// Returns item in metar string.
+    /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToMetar()
+    public string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
