@@ -71,7 +71,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common.cs" />
+    <Compile Include="Decoders\METAR\AUTODecoder.cs" />
+    <Compile Include="Decoders\METAR\CloudInfoDecoder.cs" />
+    <Compile Include="Decoders\METAR\DewPointDecoder.cs" />
+    <Compile Include="Decoders\METAR\MetarDecoder.cs" />
+    <Compile Include="Decoders\METAR\MetarPrefixDecoder.cs" />
+    <Compile Include="Decoders\METAR\PhenomInfoDecoder.cs" />
+    <Compile Include="Decoders\METAR\PressureInfoDecoder.cs" />
+    <Compile Include="Decoders\METAR\RePhenomInfoDecoder.cs" />
+    <Compile Include="Decoders\METAR\RunwayConditionDecoder.cs" />
+    <Compile Include="Decoders\METAR\RunwayConditionInfoDecoder.cs" />
+    <Compile Include="Decoders\METAR\RunwaysVisibilityDecoder.cs" />
+    <Compile Include="Decoders\METAR\RunwayVisibilityDecoder.cs" />
+    <Compile Include="Decoders\METAR\SeaStateDecoder.cs" />
+    <Compile Include="Decoders\METAR\SeaSurfaceTemperatureDecoder.cs" />
+    <Compile Include="Decoders\METAR\TemperatureDecoder.cs" />
+    <Compile Include="Decoders\METAR\TrendInfoDecoder.cs" />
+    <Compile Include="Decoders\METAR\VisibilityDecoder.cs" />
+    <Compile Include="Decoders\METAR\WindShearDecoder.cs" />
+    <Compile Include="Decoders\METAR\WindShearInfoDecoder.cs" />
+    <Compile Include="Types\Base\Common.cs" />
     <Compile Include="Decoders\Base\CustomDecoder.cs" />
     <Compile Include="Decoders\Base\InternalDecoder.cs" />
     <Compile Include="Decoders\Base\PublicDecoder.cs" />
@@ -87,14 +106,14 @@
     <Compile Include="Decoders\Common\ICAODecoder.cs" />
     <Compile Include="Decoders\TAF\AMDDecoder.cs" />
     <Compile Include="Decoders\TAF\CNLDecoder.cs" />
-    <Compile Include="Decoders\TAF\CORDecoder.cs" />
-    <Compile Include="Decoders\TAF\NILDecoder.cs" />
+    <Compile Include="Decoders\Common\CORDecoder.cs" />
+    <Compile Include="Decoders\Common\NILDecoder.cs" />
     <Compile Include="Decoders\Common\DayHourDayHourFlagDecoder.cs" />
     <Compile Include="Decoders\Common\Trend\TrendPhenomInfoDecoder.cs" />
     <Compile Include="Decoders\Common\Trend\TrendVisibilityDecoder.cs" />
     <Compile Include="Decoders\Common\Trend\TrendReportDecoder.cs" />
     <Compile Include="Decoders\Common\WindDecoder.cs" />
-    <Compile Include="Extensions.cs">
+    <Compile Include="Types\Base\Extensions.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Formatters\CzechLongInfoFormatter.cs" />
@@ -102,8 +121,8 @@
     <Compile Include="Formatters\LongInfoFormatter.cs" />
     <Compile Include="Formatters\ShortInfoFormatter.cs" />
     <Compile Include="MetarDecodeException.cs" />
-    <Compile Include="ICodeItem.cs" />
-    <Compile Include="NonNegInt.cs">
+    <Compile Include="Types\Base\ICodeItem.cs" />
+    <Compile Include="Types\Base\NonNegInt.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,37 +131,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Racional.cs">
+    <Compile Include="Types\Base\Racional.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cloud.cs">
+    <Compile Include="Types\Common\Cloud.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TrendCloudInfo.cs">
+    <Compile Include="Types\Common\Trend\TrendCloudInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DayTime.cs" />
-    <Compile Include="Decoder.cs" />
-    <Compile Include="DecoderCollection.cs" />
-    <Compile Include="ePhenomCollection.cs">
+    <Compile Include="Types\Common\DayTime.cs" />
+    <Compile Include="Types\Base\Decoder.cs" />
+    <Compile Include="Types\Base\DecoderCollection.cs" />
+    <Compile Include="Types\Common\ePhenomCollection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Metar.cs" />
-    <Compile Include="PhenomInfo.cs" />
-    <Compile Include="PressureInfo.cs">
+    <Compile Include="Types\METAR\CloudInfo.cs" />
+    <Compile Include="Types\METAR\Metar.cs" />
+    <Compile Include="Types\Common\PhenomInfo.cs" />
+    <Compile Include="Types\METAR\PressureInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RePhenomInfo.cs" />
-    <Compile Include="RunwayCondition.cs" />
-    <Compile Include="RunwayConditionInfo.cs" />
-    <Compile Include="RunwayVisibility.cs">
+    <Compile Include="Types\METAR\RePhenomInfo.cs" />
+    <Compile Include="Types\METAR\RunwayCondition.cs" />
+    <Compile Include="Types\METAR\RunwayConditionInfo.cs" />
+    <Compile Include="Types\METAR\RunwayVisibility.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TrendTime.cs" />
-    <Compile Include="TrendTimeInfo.cs" />
-    <Compile Include="TrendInfo.cs" />
-    <Compile Include="TrendVisibility.cs" />
-    <Compile Include="TrendPhenomInfo.cs" />
+    <Compile Include="Types\Common\Trend\TrendTime.cs" />
+    <Compile Include="Types\Common\Trend\TrendTimeInfo.cs" />
+    <Compile Include="Types\Common\Trend\TrendInfo.cs" />
+    <Compile Include="Types\Common\Trend\TrendVisibility.cs" />
+    <Compile Include="Types\Common\Trend\TrendPhenomInfo.cs" />
     <Compile Include="Types\Common\DayHourFlag.cs" />
     <Compile Include="Types\Common\DayTimeFlag.cs" />
     <Compile Include="Types\Common\DayHourDayHourFlag.cs" />
@@ -158,11 +178,11 @@
     <Compile Include="Types\TAF\TemperatureExtremeTN.cs" />
     <Compile Include="Types\TAF\TemperatureExtremeTX.cs" />
     <Compile Include="Types\TAF\TrendReport.cs" />
-    <Compile Include="Visibility.cs" />
-    <Compile Include="Wind.cs" />
-    <Compile Include="WindShear.cs" />
-    <Compile Include="WindShearInfo.cs" />
-    <Compile Include="WindVariable.cs">
+    <Compile Include="Types\Common\Visibility.cs" />
+    <Compile Include="Types\Common\Wind.cs" />
+    <Compile Include="Types\METAR\WindShear.cs" />
+    <Compile Include="Types\METAR\WindShearInfo.cs" />
+    <Compile Include="Types\Common\WindVariable.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -199,13 +219,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Documentation\MetarDecoder.shfbproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Decoders\METAR\" />
-    <Folder Include="Types\Common\Trend\" />
-    <Folder Include="Types\METAR\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

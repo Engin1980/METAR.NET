@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ENG.Metar.Decoder.Formatters;
+using ENG.Metar.Decoder.Types.TAF;
 
 namespace ENG.Metar.Decoder
 {
@@ -10,7 +11,7 @@ namespace ENG.Metar.Decoder
   /// Represents information about trend. To mark trend as not used. set null value into property type.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class TrendInfo : ICodeItem
+  public class TrendInfo : TrendReport, ICodeItem
   {
     #region Nested
 
@@ -70,79 +71,6 @@ namespace ENG.Metar.Decoder
       set
       {
         _Times = value;
-      }
-    }
-    /// <summary>
-    /// </summary>
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private Wind _Wind;
-    ///<summary>
-    /// Sets/gets Wind value. Null if not specified in trend.
-    ///</summary>
-    public Wind Wind
-    {
-      get
-      {
-        return (_Wind);
-      }
-      set
-      {
-        _Wind = value;
-      }
-    }
-
-    /// <summary>
-    /// </summary>
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendVisibility _Visibility;
-    ///<summary>
-    /// Sets/gets Visibility value. Null if not specified in trend.
-    ///</summary>
-    public TrendVisibility Visibility
-    {
-      get
-      {
-        return (_Visibility);
-      }
-      set
-      {
-        _Visibility = value;
-      }
-    }
-    /// <summary>
-    /// </summary>
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendPhenomInfo _Phenomens;
-    ///<summary>
-    /// Sets/gets Phenomens value. Null if not specified in trend.
-    ///</summary>
-    public TrendPhenomInfo Phenomens
-    {
-      get
-      {
-        return (_Phenomens);
-      }
-      set
-      {
-        _Phenomens = value;
-      }
-    }
-    /// <summary>
-    /// </summary>
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendCloudInfo _Clouds;
-    ///<summary>
-    /// Sets/gets Clouds value. Null if not specified in trend.
-    ///</summary>
-    public TrendCloudInfo Clouds
-    {
-      get
-      {
-        return (_Clouds);
-      }
-      set
-      {
-        _Clouds = value;
       }
     }
 

@@ -75,10 +75,8 @@ namespace ENG.Metar.Decoder
     /// </summary>
     public void SetSKC()
     {
+      SetAllFlagsOff();
       _IsSKC = true;
-      _IsNSC = false;
-      _IsVerticalVisibility = false;
-      this.Clear();
     }
 
     /// <summary>
@@ -86,10 +84,8 @@ namespace ENG.Metar.Decoder
     /// </summary>
     public void SetNSC()
     {
-      _IsSKC = false;
+      SetAllFlagsOff();
       _IsNSC = true;
-      _IsVerticalVisibility = false;
-      this.Clear();
     }
 
     /// <summary>
@@ -98,10 +94,17 @@ namespace ENG.Metar.Decoder
     /// <param name="distance">Distance in hounded feet. Null if not known.</param>
     public void SetVerticalVisibility(int? distance)
     {
-      _IsSKC = false;
-      _IsNSC = false;
+      SetAllFlagsOff();
       _IsVerticalVisibility = true;
       _VVDistance = distance;
+    }
+
+    protected virtual void SetAllFlagsOff()
+    {
+      _IsSKC = false;
+      _IsNSC = false;
+      _IsVerticalVisibility = false;
+      _VVDistance = null;
       this.Clear();
     }
 
@@ -153,7 +156,7 @@ namespace ENG.Metar.Decoder
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public virtual string ToCode()
     {
       if (IsSKC)
         return "SKC";
@@ -188,7 +191,7 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="errors">Found errors.</param>
     /// <param name="warnings">Found warnings.</param>
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public virtual void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       if (IsSKC && IsNSC)
         errors.Add("Both IsSKC and IsNSC cannot be set at one time.");

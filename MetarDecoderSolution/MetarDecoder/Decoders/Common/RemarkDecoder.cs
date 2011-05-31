@@ -15,12 +15,12 @@ namespace ENG.Metar.Decoder.Decoders
 
     public override string RegEx
     {
-      get { return "(.*)"; }
+      get { return "^RMK (.*)"; }
     }
 
     protected override string _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      return groups[0].Value;
+      return groups[1].Value;
     }
   }
 }

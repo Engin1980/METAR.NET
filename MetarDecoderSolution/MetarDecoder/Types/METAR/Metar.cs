@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using ESystem.Extensions;
 using ENG.Metar.Decoder.Formatters;
+using ENG.Metar.Decoder.Decoders.METAR;
 
 namespace ENG.Metar.Decoder
 {
@@ -26,9 +27,13 @@ namespace ENG.Metar.Decoder
     public enum eType
     {
       /// <summary>
-      /// Metar type.
+      /// Metar type - Aerodrome routine meteorological report 
       /// </summary>
-      METAR
+      METAR,
+      /// <summary>
+      /// Speci type - Aerodrome special meteorological report
+      /// </summary>
+      SPECI
     }
 
     #endregion Nested
@@ -336,6 +341,73 @@ namespace ENG.Metar.Decoder
       }
     }
 
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private bool _IsCorrected = false;
+    ///<summary>
+    /// Sets/gets IsCorrected value. Default value is false.
+    ///</summary>
+    public bool IsCorrected
+    {
+      get
+      {
+        return (_IsCorrected);
+      }
+      set
+      {
+        _IsCorrected = value;
+      }
+    }
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private bool _IsMissing = false;
+    ///<summary>
+    /// Sets/gets IsMissing value. Default value is false.
+    ///</summary>
+    public bool IsMissing
+    {
+      get
+      {
+        return (_IsMissing);
+      }
+      set
+      {
+        _IsMissing = value;
+      }
+    }
+
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private Common.eSeaState? _SeaState = null;
+    ///<summary>
+    /// Sets/gets SeaState value. Default value is null.
+    ///</summary>
+    public Common.eSeaState? SeaState
+    {
+      get
+      {
+        return (_SeaState);
+      }
+      set
+      {
+        _SeaState = value;
+      }
+    }
+
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private int? _SeaSurfaceTemperature = null;
+    ///<summary>
+    /// Sets/gets SeaSurfaceTemperature value. Default value is null.
+    ///</summary>
+    public int? SeaSurfaceTemperature
+    {
+      get
+      {
+        return (_SeaSurfaceTemperature);
+      }
+      set
+      {
+        _SeaSurfaceTemperature = value;
+      }
+    }
+
     /// <summary>
     /// Calculates humidity. Very rough aproximation.
     /// </summary>
@@ -353,6 +425,15 @@ namespace ENG.Metar.Decoder
     #endregion .ctor
 
     #region Static methods
+
+    public static Metar Create2(string metarString)
+    {
+      Metar ret = null;
+
+      ret = new MetarDecoder().Decode(metarString);
+
+      return ret;
+    }
 
     /// <summary>
     /// Creates metar instance from string.

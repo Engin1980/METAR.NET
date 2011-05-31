@@ -125,6 +125,20 @@ namespace ENG.Metar.Decoder
       NW
     }
 
+    public enum eSeaState
+    {
+      CalmGlassy = 0,
+      CalmRippled = 1,
+      Smooth=2,
+      Slight=3,
+      Moderate=4,
+      Rought=5,
+      VeryRough=6,
+      High=7,
+      VeryHigh=8,
+      PhenomenalOver=9
+    }
+
     /// <summary>
     /// Converts direction as integer into enum eDirection. <see cref="eDirection"/>
     /// </summary>
@@ -154,7 +168,7 @@ namespace ENG.Metar.Decoder
       else 
         throw new Exception("Invalid program state - unable recognize direction");
         
-    }
+    }    
 
     /// <summary>
     /// Converts value from one distance unit to other.
