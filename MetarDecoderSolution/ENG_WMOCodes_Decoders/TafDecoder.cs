@@ -26,21 +26,21 @@ namespace ENG.WMOCodes.Decoders
         ret.IsCorrected = new CORDecoder().Decode(ref pom);
         ret.IsAmmended = new AMDDecoder().Decode(ref pom);
         ret.ICAO = new ICAODecoder().Decode(ref pom);
-        ret.DayTime = new DayTimeDecoder().Decode(ref pom);
+        ret.DayTime = new DayHourMinuteDecoder().Decode(ref pom);
         ret.IsMissing = new NILDecoder().Decode(ref pom);
         if (ret.IsMissing == false)
         {
-          ret.Period = new DayHourDayHourFlagDecoder().Decode(ref pom);
+          ret.Period = new DayHourDayHourDecoder().Decode(ref pom);
           ret.IsCancelled = new CNLDecoder().Decode(ref pom);
           if (ret.IsCancelled == false)
           {
             ret.Wind = new WindDecoder() { Required=false }.Decode(ref pom);
-            ret.Visibility = new TrendVisibilityDecoder() { Required = false }.Decode(ref pom);
-            ret.Phenomens = new TrendPhenomInfoDecoder() { Required = false }.Decode(ref pom);
+            ret.Visibility = new VisibilityDecoder() { Required = false }.Decode(ref pom);
+            ret.Phenomens = new PhenomInfoWithNSWDecoder() { Required = false }.Decode(ref pom);
             ret.Clouds = new TrendCloudInfoDecoder() { Required = false }.Decode(ref pom);
             ret.MaxTemperature = new TXDecoder() { Required = false }.Decode(ref pom);
             ret.MinTemperature = new TNDecoder() { Required = false }.Decode(ref pom);
-            ret.Trends = new TafSubReportListDecoder().Decode(ref pom);
+            ret.Trends = new TrendInfoForTafListDecoder().Decode(ref pom);
           }
         }
         ret.Remark = new RemarkDecoder().Decode(ref pom);
