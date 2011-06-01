@@ -30,10 +30,6 @@ namespace ENG.WMOCodes.Decoders.Internal.Basic
       {
         ret = _Decode(source);
       } // try
-      catch (DecodeException ex)
-      {
-        throw new DecodeException(Description, ex.InnerException);
-      }
       catch (Exception ex)
       {
         throw new DecodeException(Description, ex);

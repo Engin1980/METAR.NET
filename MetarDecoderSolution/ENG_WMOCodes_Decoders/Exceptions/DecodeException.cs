@@ -18,7 +18,7 @@ namespace ENG.WMOCodes.Decoders.Internal
     }
 
     public DecodeException(string decoderDescription, Exception inner)
-      : base(null, inner)
+      : base("", inner)
     {
       this._Description = decoderDescription;
     }
@@ -43,14 +43,23 @@ namespace ENG.WMOCodes.Decoders.Internal
 
       tree.Append("Decoding failed at ");
 
-      while (curr != null)
+      while (true)
       {
         tree.Append("->" + curr.Description);
-        curr = curr.InnerException as DecodeException;
+        if (curr.InnerException != null && curr.InnerException is DecodeException)
+          curr = curr.InnerException as DecodeException;
+        else
+          break;
       }
 
-      if (curr.InnerException != null)
-        tree.Append(". Reason: " + curr.InnerException.Message);
+      tree.Append(". Reason:");
+
+      Exception ex = curr.InnerException;
+      while (ex != null)
+      {
+        tree.Append(" >> " + curr.InnerException.Message);
+        ex = ex.InnerException;
+      }
 
       return tree.ToString();
     }

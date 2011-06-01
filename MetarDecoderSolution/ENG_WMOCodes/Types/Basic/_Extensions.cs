@@ -48,14 +48,26 @@ namespace ENG.WMOCodes.Types.Basic
 
     public static void CopyPropertiesTo(this object source, object target)
     {
+      error error error
+      // tady je to v lojzovi. kopíruje to i parametry kolekcí, když se kopírují kolekce, což je průser
+      // a netuším co s tím
+
       PropertyInfo[] sp = source.GetType().GetProperties();
       PropertyInfo[] tp = target.GetType().GetProperties();
       PropertyInfo[] shared = GetSharedProperties(sp, tp);
       object val;
+
       foreach (var fItem in shared)
       {
-        val = fItem.GetValue(source, null);
-        fItem.SetValue(target, val, null);
+        try
+        {
+          val = fItem.GetValue(source, null);
+          fItem.SetValue(target, val, null);
+        }
+        catch (Exception ex)
+        {
+          throw new Exception("Failed to copy property " + fItem.Name + " of type " + source.GetType().FullName + ".", ex);
+        }
       } // foreach (var fItem in shared)
     }
 
@@ -64,7 +76,7 @@ namespace ENG.WMOCodes.Types.Basic
       List<PropertyInfo> ret = new List<PropertyInfo>();
       foreach (var fS in sp)
         foreach (var fT in tp)
-          if (fS.Name == fT.Name) ret.Add(fS);
+          if (fS.Name == fT.Name && fS.CanRead && fT.CanWrite) ret.Add(fS);
       return ret.ToArray();
     }
 

@@ -45,24 +45,7 @@ namespace ENG.WMOCodes.Decoders
 
     public static void CopyPropertiesTo(this object source, object target)
     {
-      PropertyInfo[] sp = source.GetType().GetProperties();
-      PropertyInfo[] tp = target.GetType().GetProperties();
-      PropertyInfo[] shared = GetSharedProperties(sp, tp);
-      object val;
-      foreach (var fItem in shared)
-      {
-        val = fItem.GetValue(source, null);
-        fItem.SetValue(target, val, null);
-      } // foreach (var fItem in shared)
-    }
-
-    private static PropertyInfo[] GetSharedProperties(PropertyInfo[] sp, PropertyInfo[] tp)
-    {
-      List<PropertyInfo> ret = new List<PropertyInfo>();
-      foreach (var fS in sp)
-        foreach (var fT in tp)
-          if (fS.Name == fT.Name) ret.Add(fS);
-      return ret.ToArray();
+      ENG.WMOCodes.Types.Basic.Extensions.CopyPropertiesTo(source, target);
     }
   }
 }

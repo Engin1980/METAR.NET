@@ -33,13 +33,9 @@ namespace ENG.WMOCodes.Decoders.Internal.Basic
       {
         ret = _Decode(ref source);
       } // try
-      catch (DecodeException ex)
-      {
-        throw new DecodeException(Description + " ->" + ex.Description, ex.InnerException);
-      }
       catch (Exception ex)
       {
-        throw new DecodeException("Decode failed at " + Description, ex);
+        throw new DecodeException(Description, ex);
       } // catch (Exception ex)
 
       return ret;
