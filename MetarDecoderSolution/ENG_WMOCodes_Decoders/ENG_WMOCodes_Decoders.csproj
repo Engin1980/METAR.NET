@@ -50,8 +50,8 @@
     <Compile Include="Internal\CloudInfoWithNCDDecoder.cs" />
     <Compile Include="Internal\CNLDecoder.cs" />
     <Compile Include="Internal\CORDecoder.cs" />
-    <Compile Include="Internal\DayHourDayHourFlagDecoder.cs" />
-    <Compile Include="Internal\DayTimeDecoder.cs" />
+    <Compile Include="Internal\DayHourDayHourDecoder.cs" />
+    <Compile Include="Internal\DayHourMinuteDecoder.cs" />
     <Compile Include="Internal\DewPointDecoder.cs" />
     <Compile Include="Internal\ICAODecoder.cs" />
     <Compile Include="Internal\MetarPrefixDecoder.cs" />
@@ -62,7 +62,7 @@
     <Compile Include="Internal\RePhenomInfoDecoder.cs" />
     <Compile Include="Internal\RunwayConditionDecoder.cs" />
     <Compile Include="Internal\RunwayConditionInfoDecoder.cs" />
-    <Compile Include="Internal\RunwaysVisibilityDecoder.cs" />
+    <Compile Include="Internal\RunwayVisibilityListDecoder.cs" />
     <Compile Include="Internal\RunwayVisibilityDecoder.cs" />
     <Compile Include="Internal\SeaStateDecoder.cs" />
     <Compile Include="Internal\SeaSurfaceTemperatureDecoder.cs" />
@@ -71,7 +71,6 @@
     <Compile Include="Internal\TafSubReportListDecoder.cs" />
     <Compile Include="Internal\TemperatureDecoder.cs" />
     <Compile Include="Internal\TNDecoder.cs" />
-    <Compile Include="Internal\TrendCloudInfoDecoder.cs" />
     <Compile Include="Internal\TrendInfoDecoder.cs" />
     <Compile Include="Internal\TrendPhenomInfoDecoder.cs" />
     <Compile Include="Internal\TrendReportDecoder.cs" />
