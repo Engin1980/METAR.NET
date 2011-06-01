@@ -9,23 +9,7 @@ namespace ENG.Metar.Decoder.Decoders.Base
   internal abstract class TypeDecoder<T> : InternalDecoder<T>
   {
     public override abstract string Description {get;}
-    public abstract string RegEx {get;}
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _Required = true;
-    ///<summary>
-    /// Sets/gets Required value. Default value is true.
-    ///</summary>
-    public bool Required
-    {
-      get
-      {
-        return (_Required);
-      }
-      set
-      {
-        _Required = value;
-      }
-    }
+    public abstract string RegEx {get;}    
 
     protected sealed override T _Decode(ref string source)
     {

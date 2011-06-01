@@ -6,14 +6,14 @@ using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder.Types.Common
 {
-  public class DayHourDayHourFlag :ICodeItem
+  public class DayHourDayHour :DateTimeTypes.DateTimeType
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayHourFlag _From = new DayHourFlag();
+    private DayHour _From = new DayHour();
     ///<summary>
-    /// Sets/gets From value. Default value is null.
+    /// Sets/gets From value. Default value is new DayHour().
     ///</summary>
-    public DayHourFlag From
+    public DayHour From
     {
       get
       {
@@ -27,11 +27,11 @@ namespace ENG.Metar.Decoder.Types.Common
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayHourFlag _To = new DayHourFlag();
+    private DayHour _To = new DayHour();
     ///<summary>
-    /// Sets/gets To value. Default value is null.
+    /// Sets/gets To value. Default value is new DayHour().
     ///</summary>
-    public DayHourFlag To
+    public DayHour To
     {
       get
       {
@@ -45,13 +45,11 @@ namespace ENG.Metar.Decoder.Types.Common
       }
     }
 
-    #region ICodeItem Members
-
     /// <summary>
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public override string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
@@ -67,12 +65,10 @@ namespace ENG.Metar.Decoder.Types.Common
     /// </summary>
     /// <param name="errors">Found errors.</param>
     /// <param name="warnings">Found warnings.</param>
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       From.SanityCheck(ref errors, ref warnings);
       To.SanityCheck(ref errors, ref warnings);
     }
-
-    #endregion
   }
 }

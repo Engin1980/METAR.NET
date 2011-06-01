@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ESystem.Extensions;
+using ENG.Metar.Decoder.Types.Common.DateTimeTypes;
 
 namespace ENG.Metar.Decoder
 {
   /// <summary>
   /// Represents day-time information when metar was presented.
   /// </summary>
-  public class DayTime : ICodeItem
+  public class DayHourMinute : DateTimeType
   {
     #region Properties
 
@@ -75,7 +76,7 @@ namespace ENG.Metar.Decoder
     /// <summary>
     /// Initializes a new Instance of ENG.Metar.Decoder.DayTime
     /// </summary>
-    public DayTime()
+    public DayHourMinute()
     { }
     /// <summary>
     /// Initializes a new Instance of ENG.Metar.Decoder.DayTime
@@ -83,7 +84,7 @@ namespace ENG.Metar.Decoder
     /// <param name="day"></param>
     /// <param name="hour"></param>
     /// <param name="minute"></param>
-    public DayTime(int day, int hour, int minute)
+    public DayHourMinute(int day, int hour, int minute)
     {
       this.Day = day;
       this.Hour = hour;
@@ -113,9 +114,9 @@ public string ToInfo(bool verbose)
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public override string ToCode()
     {
-      return this.Day.ToString("00") + this.Hour.ToString("00") + this.Minute.ToString("00") + "Z";
+      return this.Day.ToString("00") + this.Hour.ToString("00") + this.Minute.ToString("00");
     }
 
     /// <summary>
@@ -127,20 +128,15 @@ public string ToInfo(bool verbose)
       return ESystem.Extensions.ObjectExt.ToInlineInfoString(this);
     }
 
-    #region ICodeItem Members
-
-
     /// <summary>
     /// Proceed sanity check of inserted values.
     /// </summary>
     /// <param name="errors">Found errors.</param>
     /// <param name="warnings">Found warnings.</param>
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       // nothing
     }
-
-    #endregion
 
     #endregion Inherited
 

@@ -63,7 +63,7 @@ namespace ENG.Metar.Decoder
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public virtual string ToCode()
     {
       
         StringBuilder ret = new StringBuilder();
@@ -90,7 +90,7 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="errors">Found errors.</param>
     /// <param name="warnings">Found warnings.</param>
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public virtual void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       // nothing to do here
     }

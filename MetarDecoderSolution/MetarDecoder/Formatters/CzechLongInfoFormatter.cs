@@ -354,19 +354,19 @@ namespace ENG.Metar.Decoder.Formatters
       return ret;
     }
 
-    public override string TrendInfoTypeToString(TrendInfo.eType value, bool useLong)
+    public override string TrendInfoTypeToString(MetarTrendInfo.eType value, bool useLong)
     {
       string ret = null;
 
       switch (value)
       {
-        case TrendInfo.eType.BECMG:
+        case MetarTrendInfo.eType.BECMG:
           ret = useLong ? "nastává" : "becmg";
           break;
-        case TrendInfo.eType.NOSIG:
+        case MetarTrendInfo.eType.NOSIG:
           ret = useLong ? "bez význačných změn" : "nosig";
           break;
-        case TrendInfo.eType.TEMPO:
+        case MetarTrendInfo.eType.TEMPO:
           ret = useLong ? "občasně" : "tempo";
           break;
         default:

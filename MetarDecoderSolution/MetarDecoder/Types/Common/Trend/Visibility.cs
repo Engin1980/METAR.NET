@@ -7,9 +7,9 @@ using ENG.Metar.Decoder.Formatters;
 namespace ENG.Metar.Decoder
 {
   /// <summary>
-  /// Represents information about trend visibility.
+  /// Represents information about basic visibility or CAVOK.
   /// </summary>
-  public class TrendVisibility : ICodeItem
+  public class Visibility : ICodeItem
   {
     #region Properties
 

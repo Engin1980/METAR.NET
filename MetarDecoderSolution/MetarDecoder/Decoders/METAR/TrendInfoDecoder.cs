@@ -8,14 +8,14 @@ using ENG.Metar.Decoder.Types.TAF;
 
 namespace ENG.Metar.Decoder.Decoders.METAR
 {
-  class TrendInfoDecoder : CustomDecoder<TrendInfo>
+  class TrendInfoDecoder : CustomDecoder<MetarTrendInfo>
   {
     private const string RT_TYPEDATES = @"((NOSIG)|((TEMPO|BECMG)(( " + RT_TYPEDATE + ")*)))";
     private const string RT_TYPEDATE = @"(FM|TL|AT)(\d{2})(\d{2})";
 
-    protected override TrendInfo _Decode(ref string source)
+    protected override MetarTrendInfo _Decode(ref string source)
     {
-      TrendInfo ret = null;
+      MetarTrendInfo ret = null;
 
       Match m = Regex.Match(source, RT_TYPEDATES);
       if (m.Success)
@@ -29,15 +29,15 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       return ret;
     }
 
-    private TrendInfo DecodeTrend(GroupCollection groups, ref string source)
+    private MetarTrendInfo DecodeTrend(GroupCollection groups, ref string source)
     {
-      TrendInfo ret = new TrendInfo();
+      MetarTrendInfo ret = new MetarTrendInfo();
 
       if (groups[2].Success)
-        ret.Type = TrendInfo.eType.NOSIG;
+        ret.Type = MetarTrendInfo.eType.NOSIG;
       else
       {
-        ret.Type = (TrendInfo.eType)Enum.Parse(typeof(TrendInfo.eType), groups[4].Value, false);
+        ret.Type = (MetarTrendInfo.eType)Enum.Parse(typeof(MetarTrendInfo.eType), groups[4].Value, false);
 
         ret.Times = DecodeTrendDates(groups[5].Value);
 
@@ -47,7 +47,7 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       return ret;
     }
 
-    private void DecodeTrendValues(ref string source, TrendInfo ret)
+    private void DecodeTrendValues(ref string source, MetarTrendInfo ret)
     {
       TrendReport pom = new TrendReportDecoder().Decode(ref source);
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ENG.Metar.Decoder.Decoders.Base;
 using ENG.Metar.Decoder.Decoders.TAF;
+using ENG.Metar.Decoder.Decoders.Common;
 
 namespace ENG.Metar.Decoder.Decoders.METAR
 {
@@ -25,12 +26,12 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       ret.Date = new DayTimeDecoder().Decode(ref p);
       ret.IsMissing = new NILDecoder().Decode(ref p);
       ret.IsAUTO = new AUTODecoder().Decode(ref p);
-      ret.Wind = new WindDecoder().Decode(ref p);
+      ret.Wind = new WindWithVariabilityDecoder().Decode(ref p);
       ret.Visibility = new VisibilityDecoder().Decode(ref p);
       ret.Visibility.Runways =
         new RunwaysVisibilityDecoder().Decode(ref p);
       ret.Phenomens = new PhenomInfoDecoder() { Required = false }.Decode(ref p);
-      ret.Clouds = new CloudInfoDecoder().Decode(ref p);
+      ret.Clouds = new CloudInfoWithNCDDecoder().Decode(ref p);
       ret.Temperature = new TemperatureDecoder().Decode(ref p);
       ret.DewPoint = new DewPointDecoder().Decode(ref p);
       ret.Pressure = new PressureInfoDecoder().Decode(ref p);

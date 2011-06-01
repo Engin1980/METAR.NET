@@ -6,7 +6,10 @@ using ENG.Metar.Decoder.Formatters;
 
 namespace ENG.Metar.Decoder
 {
-public  class TrendPhenomInfo : PhenomInfo
+  /// <summary>
+  /// Standard phenom info (<seealso cref="PhenomInfo"/>) extended by NSW (no significant weather) flag.
+  /// </summary>
+public  class PhenomInfoWithNSW : PhenomInfo
 {
   #region Properties
 
@@ -38,7 +41,7 @@ public  class TrendPhenomInfo : PhenomInfo
   /// </summary>
   /// <param name="formatter">Formatter used to format string.</param>
   /// <returns></returns>
-  public virtual string ToInfo(InfoFormatter formatter)
+  public override string ToInfo(InfoFormatter formatter)
   {
     string ret = null;
 
@@ -73,7 +76,7 @@ public  class TrendPhenomInfo : PhenomInfo
   /// Returns item in code string.
   /// </summary>
   /// <returns></returns>
-  public string ToCode()
+  public override string ToCode()
   {
     if (IsNSW)
       return "NSW";
@@ -104,7 +107,7 @@ public  class TrendPhenomInfo : PhenomInfo
   /// </summary>
   /// <param name="errors">Found errors.</param>
   /// <param name="warnings">Found warnings.</param>
-  public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+  public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
   {
     if (IsNSW && (this.Count > 0))
       warnings.Add("When IsNSW flag is set to true, phenom definitions will be ignored (now list is nonempty).");

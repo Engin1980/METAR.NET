@@ -6,7 +6,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Decoders
 {
-  class DayTimeDecoder : TypeDecoder<DayTime>
+  class DayTimeDecoder : TypeDecoder<DayHourMinute>
   {
     public override string Description
     {
@@ -18,9 +18,9 @@ namespace ENG.Metar.Decoder.Decoders
       get { return @"(\d{2})(\d{2})(\d{2})Z"; }
     }
 
-    protected override DayTime _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    protected override DayHourMinute _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      DayTime ret = new DayTime();
+      DayHourMinute ret = new DayHourMinute();
 
       ret.Day = groups[1].GetIntValue();
       ret.Hour = groups[2].GetIntValue();

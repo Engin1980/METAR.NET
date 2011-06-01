@@ -157,36 +157,6 @@ namespace ENG.Metar.Decoder
       }
     }
 
-    /// <summary>
-    /// </summary>
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private WindVariable _Variability = null;
-    ///<summary>
-    /// Sets/gets variable value. Null if not used. <see cref="IsVarying"/><see cref="WindVariable"/>
-    ///</summary>
-    public WindVariable Variability
-    {
-      get
-      {
-        return (_Variability);
-      }
-      set
-      {
-        _Variability = value;
-      }
-    }
-
-    /// <summary>
-    /// Returns true if wind is varying between two headings.. <see cref="Variability"/> <see cref="WindVariable"/>
-    /// </summary>
-    /// <value></value>
-    public bool IsVarying
-    {
-      get
-      {
-        return (Variability != null);
-      }
-    }
 
     /// <summary>
     /// Return true if wind is calm.
@@ -205,7 +175,7 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="formatter">Formatter used to format string.</param>
     /// <returns></returns>
-    public string ToInfo(InfoFormatter formatter)
+    public virtual string ToInfo(InfoFormatter formatter)
     {
 
       string ret;
@@ -232,8 +202,8 @@ namespace ENG.Metar.Decoder
         Unit.ToString().ToLower(),
         GustSpeed, 
         GustSpeed.HasValue ? GustSpeed.Value : Speed,
-        IsVarying ? Variability.FromDirection.ToString() : null, 
-        IsVarying ? Variability.ToDirection.ToString() : null
+        null, 
+        null
         );
 
       return ret.ToString();
@@ -243,7 +213,7 @@ namespace ENG.Metar.Decoder
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public virtual string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
@@ -254,12 +224,7 @@ namespace ENG.Metar.Decoder
       ret.Append(Speed.ToString("00"));
       if (GustSpeed.HasValue)
         ret.Append("G" + GustSpeed.Value.ToString("00"));
-      ret.Append(Unit.ToString().ToUpper());
-
-      if (IsVarying)
-      {
-        ret.Append(" " + Variability.ToCode());
-      }
+      ret.Append(Unit.ToString().ToUpper());      
 
       return ret.ToString();
     }
@@ -278,16 +243,13 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="errors">Found errors.</param>
     /// <param name="warnings">Found warnings.</param>
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public virtual void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       if (GustSpeed.HasValue)
       {
         if (GustSpeed.Value < (Speed + 10))
           errors.Add("Wind gust speed should be reported only if is at least 10KT faster than mean wind speed.");
       }
-
-      if (Variability != null)
-        Variability.SanityCheck(ref errors, ref warnings);
     }
 
     public static Wind Calm

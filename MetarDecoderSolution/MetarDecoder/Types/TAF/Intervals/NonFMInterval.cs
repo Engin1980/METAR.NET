@@ -4,19 +4,47 @@ using System.Linq;
 using System.Text;
 using ENG.Metar.Decoder.Types.Common;
 using ESystem.Extensions;
+using ENG.Metar.Decoder.Types.Common.DateTimeTypes;
 
 namespace ENG.Metar.Decoder.Types.TAF.Intervals
 {
-  public class FromToInterval : Interval
+  /// <summary>
+  /// Represents TAF TREND interval information. Contains type (BECMG, TEMPO, etc.) and interval validity (e.g. 0220/0302).
+  /// </summary>
+  public class NonFMInterval : Interval
   {
+    /// <summary>
+    /// Represents type of the information, e.g. BECMG, PROB30 TEMPO, etc. 
+    /// </summary>
     public enum eType
     {
+      /// <summary>
+      /// Becoming
+      /// </summary>
       BECMG,
+      /// <summary>
+      /// Temporarily
+      /// </summary>
       TEMPO,
+      /// <summary>
+      /// Temporarily with 30% prob.
+      /// </summary>
       TEMPO_PROB30,
+      /// <summary>
+      /// Temporarily with 40% prob.
+      /// </summary>
       TEMPO_PROB40,
+      /// <summary>
+      /// Unknown, but used in US tafs.
+      /// </summary>
       INTER,
+      /// <summary>
+      /// With 30% prob.
+      /// </summary>
       PROB30,
+      /// <summary>
+      /// With 40% prob.
+      /// </summary>
       PROB40
     }
 
@@ -38,11 +66,11 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
     }
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayHourDayHourFlag _Interval = new DayHourDayHourFlag();
+    private DayHourDayHour _Interval = new DayHourDayHour();
     ///<summary>
-    /// Sets/gets Interval value. Default value is new FromDayTimeToDayTimeFlag(.
+    /// Sets/gets Interval value. Default value is new FromDayTimeToDayTimeFlag().
     ///</summary>
-    public DayHourDayHourFlag Interval
+    public DayHourDayHour Interval
     {
       get
       {
@@ -54,7 +82,12 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
       }
     }
 
-    public FromToInterval(eType type, DayHourDayHourFlag intervalFlag)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NonFMInterval"/> class.
+    /// </summary>
+    /// <param name="type">The type.</param>
+    /// <param name="intervalFlag">The interval flag.</param>
+    public NonFMInterval(eType type, DayHourDayHour intervalFlag)
     {
       Type = type;
       Interval = intervalFlag;
@@ -74,6 +107,10 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
       return ret.ToString();
     }
 
+    /// <summary>
+    /// Converts enum to string.
+    /// </summary>
+    /// <returns></returns>
     private string GetTypeCode()
     {
       string ret = null;

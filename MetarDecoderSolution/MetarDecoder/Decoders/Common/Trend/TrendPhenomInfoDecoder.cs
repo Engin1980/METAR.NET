@@ -7,7 +7,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Decoders.TAF
 {
-  class TrendPhenomInfoDecoder : TypeDecoder<TrendPhenomInfo>
+  class TrendPhenomInfoDecoder : TypeDecoder<PhenomInfoWithNSW>
   {
     public override string Description
     {
@@ -21,17 +21,17 @@ namespace ENG.Metar.Decoder.Decoders.TAF
       get { return @"(^NSW)|(^" + R_PHENOM_ITEM + "+)"; }
     }
 
-    protected override TrendPhenomInfo _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    protected override PhenomInfoWithNSW _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      TrendPhenomInfo ret = null;
+      PhenomInfoWithNSW ret = null;
 
       if (groups[0].Success)
       {
         if (groups[1].Success)
-          ret = new TrendPhenomInfo() { IsNSW = true };
+          ret = new PhenomInfoWithNSW() { IsNSW = true };
         else
         {
-          ret = new TrendPhenomInfo();
+          ret = new PhenomInfoWithNSW();
 
           string str = groups[2].Value;
           Match m = Regex.Match(str, RegEx);

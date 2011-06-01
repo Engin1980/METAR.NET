@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace ENG.Metar.Decoder.Decoders.METAR
 {
-  class CloudInfoDecoder : CustomDecoder<CloudInfo>
+  class CloudInfoDecoder : CustomDecoder<CloudInfoWithNCD>
   {
     public override string Description
     {
@@ -17,13 +17,13 @@ namespace ENG.Metar.Decoder.Decoders.METAR
 
     private const string prefixPattern = "NCD";
 
-    protected override CloudInfo _Decode(ref string source)
+    protected override CloudInfoWithNCD _Decode(ref string source)
     {
-      CloudInfo ret = null;
+      CloudInfoWithNCD ret = null;
 
       if (source.StartsWith(prefixPattern))
       {
-        ret = new CloudInfo();
+        ret = new CloudInfoWithNCD();
         ret.SetNCD();
         source = source.Substring(prefixPattern.Length);
       }
@@ -33,11 +33,11 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       return ret;
     }
 
-    private CloudInfo DecodeFromTrendCloudInfo(ref string source)
+    private CloudInfoWithNCD DecodeFromTrendCloudInfo(ref string source)
     {
-      TrendCloudInfo pom =
+      CloudInfo pom =
         new TrendCloudInfoDecoder().Decode(ref source);
-      CloudInfo ret = new CloudInfo();
+      CloudInfoWithNCD ret = new CloudInfoWithNCD();
 
       if (pom.IsSKC)
         ret.SetSKC();

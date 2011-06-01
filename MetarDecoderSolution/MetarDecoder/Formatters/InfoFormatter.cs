@@ -135,7 +135,7 @@ namespace ENG.Metar.Decoder.Formatters
     }
 
     /// <summary>
-    /// Visibility values for info-strings.  <see cref="ENG.Metar.Decoder.Visibility"/>
+    /// Visibility values for info-strings.  <see cref="ENG.Metar.Decoder.VisibilityForMetar"/>
     /// </summary>
     /// <remarks>
     /// This is also used for trend-visibility
@@ -279,7 +279,7 @@ namespace ENG.Metar.Decoder.Formatters
     }
 
     /// <summary>
-    /// Clouds values for info-string. <see cref="ENG.Metar.Decoder.TrendCloudInfo"/>
+    /// Clouds values for info-string. <see cref="ENG.Metar.Decoder.CloudInfo"/>
     /// </summary>
     public enum eCloudsFormat
     {
@@ -468,7 +468,7 @@ namespace ENG.Metar.Decoder.Formatters
     }
 
     /// <summary>
-    /// Trend values for info-string. <see cref="ENG.Metar.Decoder.TrendInfo"/>
+    /// Trend values for info-string. <see cref="ENG.Metar.Decoder.MetarTrendInfo"/>
     /// </summary>
     public enum eTrendFormat
     {
@@ -695,7 +695,7 @@ namespace ENG.Metar.Decoder.Formatters
     /// <param name="value"></param>
     /// <param name="useLong"></param>
     /// <returns></returns>
-    public abstract string TrendInfoTypeToString(TrendInfo.eType value, bool useLong);
+    public abstract string TrendInfoTypeToString(MetarTrendInfo.eType value, bool useLong);
 
     /// <summary>
     /// Converts enum to string.

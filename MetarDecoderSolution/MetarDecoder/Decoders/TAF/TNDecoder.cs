@@ -24,7 +24,7 @@ namespace ENG.Metar.Decoder.Decoders.TAF
       TemperatureExtremeTN ret = new TemperatureExtremeTN();
 
       ret.Temperature = groups[1].GetIntValue();
-      ret.Time = new Types.Common.DayHourFlag();
+      ret.Time = new Types.Common.DayHour();
       ret.Time.Day = groups[2].GetIntValue();
       ret.Time.Hour = groups[3].GetIntValue();
 

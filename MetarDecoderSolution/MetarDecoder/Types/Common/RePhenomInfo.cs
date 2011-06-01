@@ -52,7 +52,7 @@ namespace ENG.Metar.Decoder
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public override string ToCode()
     {
         StringBuilder ret = new StringBuilder();
 

@@ -11,7 +11,7 @@ namespace ENG.Metar.Decoder
   /// Represents information about trend. To mark trend as not used. set null value into property type.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class TrendInfo : TrendReport, ICodeItem
+  public class MetarTrendInfo : TrendReport, ICodeItem
   {
     #region Nested
 
@@ -140,7 +140,7 @@ namespace ENG.Metar.Decoder
     /// Returns item in code string.
     /// </summary>
     /// <returns></returns>
-    public string ToCode()
+    public override string ToCode()
     {
       StringBuilder ret = new StringBuilder();
 
@@ -175,7 +175,7 @@ namespace ENG.Metar.Decoder
     /// </summary>
     /// <param name="errors">Found errors.</param>
     /// <param name="warnings">Found warnings.</param>
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       if (Wind != null)
         Wind.SanityCheck(ref errors, ref warnings);

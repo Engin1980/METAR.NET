@@ -7,7 +7,7 @@ using ENG.Metar.Decoder.Types.Common;
 
 namespace ENG.Metar.Decoder.Decoders.TAF
 {
-  class DayHourDayHourFlagDecoder : TypeDecoder<DayHourDayHourFlag>
+  class DayHourDayHourFlagDecoder : TypeDecoder<DayHourDayHour>
   {
     public override string Description
     {
@@ -19,18 +19,18 @@ namespace ENG.Metar.Decoder.Decoders.TAF
       get { return @"((\d{2})(\d{2})/(\d{2})(\d{2}))"; }
     }
 
-    protected override DayHourDayHourFlag _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    protected override DayHourDayHour _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      DayHourDayHourFlag ret = null;
+      DayHourDayHour ret = null;
       
         ret = DecodeRegularTaf(groups);
 
       return ret;
     }
 
-    private DayHourDayHourFlag DecodeRegularTaf(System.Text.RegularExpressions.GroupCollection groups)
+    private DayHourDayHour DecodeRegularTaf(System.Text.RegularExpressions.GroupCollection groups)
     {
-      DayHourDayHourFlag ret = new DayHourDayHourFlag();
+      DayHourDayHour ret = new DayHourDayHour();
 
 
       int fd = groups[2].GetIntValue();
@@ -38,8 +38,8 @@ namespace ENG.Metar.Decoder.Decoders.TAF
       int td = groups[4].GetIntValue();
       int th = groups[5].GetIntValue();
 
-      ret.From = new DayHourFlag(fd, fh);
-      ret.To = new DayHourFlag(td, th);
+      ret.From = new DayHour(fd, fh);
+      ret.To = new DayHour(td, th);
 
       return ret;
     }

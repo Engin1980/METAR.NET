@@ -6,7 +6,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Decoders.METAR
 {
-  class SeaStateDecoder : TypeDecoder<Common.eSeaState?>
+  class SeaStateDecoder : TypeDecoder<ENG.Metar.Decoder.Common.eSeaState?>
   {
     public override string Description
     {
@@ -18,11 +18,11 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       get { return @"^/(\d{2})"; }
     }
 
-    protected override Common.eSeaState? _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    protected override ENG.Metar.Decoder.Common.eSeaState? _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
       int pom = groups[1].GetIntValue();
 
-      Common.eSeaState ret = (Common.eSeaState)pom;
+      ENG.Metar.Decoder.Common.eSeaState ret = (ENG.Metar.Decoder.Common.eSeaState)pom;
 
       return ret;
     }

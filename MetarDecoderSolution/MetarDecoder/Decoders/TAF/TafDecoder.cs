@@ -39,7 +39,7 @@ namespace ENG.Metar.Decoder.Decoders.TAF
             ret.Clouds = new TrendCloudInfoDecoder() { Required = false }.Decode(ref pom);
             ret.MaxTemperature = new TXDecoder() { Required = false }.Decode(ref pom);
             ret.MinTemperature = new TNDecoder() { Required = false }.Decode(ref pom);
-            ret.SubReports = new TafSubReportListDecoder().Decode(ref pom);
+            ret.Trends = new TafSubReportListDecoder().Decode(ref pom);
           }
         }
         ret.Remark = new RemarkDecoder().Decode(ref pom);

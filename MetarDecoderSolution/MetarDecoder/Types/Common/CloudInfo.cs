@@ -9,7 +9,7 @@ namespace ENG.Metar.Decoder
   /// <summary>
   /// Represents information about clouds.
   /// </summary>
-  public class TrendCloudInfo : List<Cloud>, ICodeItem
+  public class CloudInfo : List<Cloud>, ICodeItem
   {
     #region Properties
 

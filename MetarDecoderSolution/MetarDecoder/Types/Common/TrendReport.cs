@@ -27,11 +27,11 @@ namespace ENG.Metar.Decoder.Types.TAF
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendVisibility _Visibility = null;
+    private Visibility _Visibility = null;
     ///<summary>
     /// Sets/gets Visibility value. Default value is null.
     ///</summary>
-    public TrendVisibility Visibility
+    public Visibility Visibility
     {
       get
       {
@@ -44,11 +44,11 @@ namespace ENG.Metar.Decoder.Types.TAF
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendPhenomInfo _Phenomens = null;
+    private PhenomInfoWithNSW _Phenomens = null;
     ///<summary>
     /// Sets/gets Phenomens value. Default value is null.
     ///</summary>
-    public TrendPhenomInfo Phenomens
+    public PhenomInfoWithNSW Phenomens
     {
       get
       {
@@ -61,11 +61,11 @@ namespace ENG.Metar.Decoder.Types.TAF
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private TrendCloudInfo _Clouds = null;
+    private CloudInfo _Clouds = null;
     ///<summary>
     /// Sets/gets Clouds value. Default value is null.
     ///</summary>
-    public TrendCloudInfo Clouds
+    public CloudInfo Clouds
     {
       get
       {

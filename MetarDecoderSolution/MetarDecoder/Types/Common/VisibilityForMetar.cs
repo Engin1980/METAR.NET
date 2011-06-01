@@ -7,10 +7,10 @@ using ENG.Metar.Decoder.Formatters;
 namespace ENG.Metar.Decoder
 {
   /// <summary>
-  /// Describes visibility.
+  /// Describes standard visibility (<seealso cref="Visibility"/>) extended by direction-visibility and runway visibility.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.TrendVisibility"/>
-  public class Visibility : TrendVisibility
+  public class VisibilityForMetar : Visibility
   {
 
     #region Properties

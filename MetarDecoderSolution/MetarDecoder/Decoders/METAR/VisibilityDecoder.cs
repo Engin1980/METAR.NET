@@ -6,7 +6,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Decoders.METAR
 {
-  class VisibilityDecoder : TypeDecoder<Visibility>
+  class VisibilityDecoder : TypeDecoder<VisibilityForMetar>
   {
     public override string Description
     {
@@ -22,9 +22,9 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       }
     }
 
-    protected override Visibility _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    protected override VisibilityForMetar _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      Visibility ret = new Visibility();
+      VisibilityForMetar ret = new VisibilityForMetar();
 
       if (groups[2].Success)
         ret.SetCAVOK();
@@ -33,9 +33,9 @@ namespace ENG.Metar.Decoder.Decoders.METAR
       else if (groups[4].Success)
       {
         int distance = groups[5].GetIntValue();
-        Common.eDirection? dir = null;
+        ENG.Metar.Decoder.Common.eDirection? dir = null;
         int? otherDist = null;
-        Common.eDirection? otherDir = null;
+        ENG.Metar.Decoder.Common.eDirection? otherDir = null;
 
         if (groups[6].Success)
           dir = (ENG.Metar.Decoder.Common.eDirection)Enum.Parse(

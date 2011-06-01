@@ -9,11 +9,11 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
   public class FMInterval : Interval
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayTimeFlag _From = new DayTimeFlag();
+    private DayHourMinute _From = new DayHourMinute();
     ///<summary>
-    /// Sets/gets From value. Default value is new DayTimeFlag().
+    /// Sets/gets From value. Default value is new DayHourMinute().
     ///</summary>
-    public DayTimeFlag From
+    public DayHourMinute From
     {
       get
       {
@@ -31,7 +31,7 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
     /// Initializes a new instance of the <see cref="FMInterval"/> class.
     /// </summary>
     /// <param name="intervalFlag">The interval flag.</param>
-    public FMInterval(DayTimeFlag intervalFlag)
+    public FMInterval(DayHourMinute intervalFlag)
     {
       this.From = intervalFlag;
     }

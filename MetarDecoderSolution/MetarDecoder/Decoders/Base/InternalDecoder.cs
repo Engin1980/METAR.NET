@@ -8,6 +8,22 @@ namespace ENG.Metar.Decoder.Decoders.Base
   internal abstract class InternalDecoder<T>
   {
     public abstract string Description { get; }
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
+    private bool _Required = true;
+    ///<summary>
+    /// Sets/gets Required value. Default value is true.
+    ///</summary>
+    public bool Required
+    {
+      get
+      {
+        return (_Required);
+      }
+      set
+      {
+        _Required = value;
+      }
+    }
 
     public T Decode(ref string source)
     {

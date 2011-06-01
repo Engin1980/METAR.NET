@@ -142,7 +142,7 @@ namespace ENG.Metar.Decoder.Formatters
       return new LongInfoFormatter().PressureInfoUnitToString(value, useLong);
     }
 
-    public override string TrendInfoTypeToString(TrendInfo.eType value, bool useLong)
+    public override string TrendInfoTypeToString(MetarTrendInfo.eType value, bool useLong)
     {
       return new LongInfoFormatter().TrendInfoTypeToString(value, useLong);
     }

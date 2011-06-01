@@ -23,11 +23,11 @@ namespace ENG.Metar.Decoder.Decoders.METAR
 
     protected override PhenomInfo _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      TrendPhenomInfo ret = null;
+      PhenomInfoWithNSW ret = null;
 
       if (groups[0].Success)
       {
-          ret = new TrendPhenomInfo();
+          ret = new PhenomInfoWithNSW();
 
           string str = groups[1].Value;
           Match m = Regex.Match(str, RegEx);

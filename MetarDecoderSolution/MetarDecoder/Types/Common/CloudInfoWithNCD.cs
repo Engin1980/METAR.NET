@@ -5,7 +5,10 @@ using System.Text;
 
 namespace ENG.Metar.Decoder.Types.METAR
 {
-  class CloudInfo : TrendCloudInfo
+  /// <summary>
+  /// Represents cloud info (<seealso cref="CloudInfo"/>) with NCD (no clouds detected) flag.
+  /// </summary>
+  public class CloudInfoWithNCD : CloudInfo
   {
     #region Properties
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]

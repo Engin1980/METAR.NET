@@ -10,13 +10,13 @@ using ENG.Metar.Decoder.Decoders.TAF;
 
 namespace ENG.Metar.Decoder.Decoders
 {
-  internal class TafSubReportDecoder : CustomDecoder<TafSubReport>
+  internal class TafSubReportDecoder : CustomDecoder<TafTrendInfo>
   {
     private class Info
     {
       public eType Type;
-      public DayTimeFlag DayTimeFlag;
-      public DayHourDayHourFlag FromToFlag;
+      public DayHourMinute DayTimeFlag;
+      public DayHourDayHour FromToFlag;
     }
 
     private enum eType
@@ -49,7 +49,7 @@ namespace ENG.Metar.Decoder.Decoders
       }
     }
 
-    protected override TafSubReport _Decode(ref string source)
+    protected override TafTrendInfo _Decode(ref string source)
     {
       Info info = new Info();
 
@@ -58,22 +58,22 @@ namespace ENG.Metar.Decoder.Decoders
       TrendReport tr =
         new TrendReportDecoder().Decode(ref source);
 
-      TafSubReport ret = CreateTafSubReport(info, tr);
+      TafTrendInfo ret = CreateTafSubReport(info, tr);
 
       return ret;
     }
 
-    private TafSubReport CreateTafSubReport(Info info, TrendReport tr)
+    private TafTrendInfo CreateTafSubReport(Info info, TrendReport tr)
     {
-      TafSubReport ret = new TafSubReport();
+      TafTrendInfo ret = new TafTrendInfo();
       tr.CopyPropertiesTo(ret);
 
       switch (info.Type)
       {
         case eType.Becmg:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FromToInterval(
-              Types.TAF.Intervals.FromToInterval.eType.BECMG, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
+              Types.TAF.Intervals.NonFMInterval.eType.BECMG, info.FromToFlag);
           break;
         case eType.Fm:
           ret.Interval =
@@ -83,28 +83,28 @@ namespace ENG.Metar.Decoder.Decoders
           throw new NotSupportedException("At this place the type must be something different from \"None\"");
         case eType.Prob30:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FromToInterval(
-              Types.TAF.Intervals.FromToInterval.eType.PROB30, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
+              Types.TAF.Intervals.NonFMInterval.eType.PROB30, info.FromToFlag);
           break;
         case eType.Prob40:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FromToInterval(
-              Types.TAF.Intervals.FromToInterval.eType.PROB40, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
+              Types.TAF.Intervals.NonFMInterval.eType.PROB40, info.FromToFlag);
           break;
         case eType.Tempo:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FromToInterval(
-              Types.TAF.Intervals.FromToInterval.eType.TEMPO, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
+              Types.TAF.Intervals.NonFMInterval.eType.TEMPO, info.FromToFlag);
           break;
         case eType.Tempo30:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FromToInterval(
-              Types.TAF.Intervals.FromToInterval.eType.TEMPO_PROB30, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
+              Types.TAF.Intervals.NonFMInterval.eType.TEMPO_PROB30, info.FromToFlag);
           break;
         case eType.Tempo40:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FromToInterval(
-              Types.TAF.Intervals.FromToInterval.eType.TEMPO_PROB40, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
+              Types.TAF.Intervals.NonFMInterval.eType.TEMPO_PROB40, info.FromToFlag);
           break;
         default:
           throw new NotImplementedException();
@@ -134,17 +134,17 @@ namespace ENG.Metar.Decoder.Decoders
       return ret;
     }
 
-    private DayHourDayHourFlag GetFromToFlag(ref string source)
+    private DayHourDayHour GetFromToFlag(ref string source)
     {
-      DayHourDayHourFlag ret =
+      DayHourDayHour ret =
         new DayHourDayHourFlagDecoder().Decode(ref source);
 
       return ret;
     }
 
-    private DayTimeFlag GetDayTimeFlag(ref string source)
+    private DayHourMinute GetDayTimeFlag(ref string source)
     {
-      DayTimeFlag ret = new DayTimeFlag();
+      DayHourMinute ret = new DayHourMinute();
       string ds = source.Substring(0, 2);
       string hs = source.Substring(2, 2);
       string ms = source.Substring(4, 2);

@@ -5,10 +5,23 @@ using System.Text;
 
 namespace ENG.Metar.Decoder.Decoders.Base
 {
+  /// <summary>
+  /// Represents public decoder used to decode some type from the source string.
+  /// </summary>
+  /// <typeparam name="T">Resulting type</typeparam>
   public abstract class PublicDecoder<T> 
   {
+    /// <summary>
+    /// Description of the block. Used in exception management in case that error occurs.
+    /// </summary>
     public abstract string Description { get; }
 
+    /// <summary>
+    /// Realises decoding from the source.
+    /// </summary>
+    /// <param name="source">Source string.</param>
+    /// <returns>Resulting object</returns>
+    /// <exception cref="DecodeException">Raised if some error occurs.</exception>
     public T Decode(string source)
     {
       T ret = default(T);
@@ -29,6 +42,14 @@ namespace ENG.Metar.Decoder.Decoders.Base
       return ret;
     }
 
+    /// <summary>
+    /// Realises decoding process from the source string.
+    /// </summary>
+    /// <param name="source">Source string.</param>
+    /// <returns>Decoded object.</returns>
+    /// <remarks>
+    /// Successor have to implement this method to do the real decoding process.
+    /// </remarks>
     protected abstract T _Decode(string source);
   }
 }

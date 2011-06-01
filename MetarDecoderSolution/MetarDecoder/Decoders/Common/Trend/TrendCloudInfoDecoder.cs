@@ -7,7 +7,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Decoders
 {
-  class TrendCloudInfoDecoder : TypeDecoder<TrendCloudInfo>
+  class TrendCloudInfoDecoder : TypeDecoder<CloudInfo>
   {
     public override string Description
     {
@@ -24,13 +24,13 @@ namespace ENG.Metar.Decoder.Decoders
       }
     }
 
-    protected override TrendCloudInfo _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    protected override CloudInfo _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      TrendCloudInfo ret = null;
+      CloudInfo ret = null;
 
       if (groups[0].Success)
       {
-        ret = new TrendCloudInfo();
+        ret = new CloudInfo();
 
         if (groups[2].Success)
           ret.SetNSC();

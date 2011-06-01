@@ -49,23 +49,23 @@ namespace ENG.Metar.Decoder.Types.TAF
     private eTafFlag _TafType = eTafFlag.None;
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private List<TafSubReport> _SubReports = new List<TafSubReport>();
+    private List<TafTrendInfo> _Trends = new List<TafTrendInfo>();
     ///<summary>
     /// Sets/gets SubReports value.
     ///</summary>
-    public List<TafSubReport> SubReports
+    public List<TafTrendInfo> Trends
     {
       get
       {
-        return (_SubReports);
+        return (_Trends);
       }
       set
       {
         if (value == null)
-          throw new ArgumentNullException("Property " + SubReports +
+          throw new ArgumentNullException("Property " + Trends +
             " cannot be null. Invoce Clear() method or set new empty instance.");
 
-        _SubReports = value;
+        _Trends = value;
       }
     }
 
@@ -144,11 +144,11 @@ namespace ENG.Metar.Decoder.Types.TAF
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayTime _DayTime;
+    private DayHourMinute _DayTime;
     ///<summary>
     /// Sets/gets DayTime value.
     ///</summary>
-    public DayTime DayTime
+    public DayHourMinute DayTime
     {
       get
       {
@@ -161,11 +161,11 @@ namespace ENG.Metar.Decoder.Types.TAF
     }
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayHourDayHourFlag _Period;
+    private DayHourDayHour _Period;
     ///<summary>
     /// Sets/gets Period value.
     ///</summary>
-    public DayHourDayHourFlag Period
+    public DayHourDayHour Period
     {
       get
       {
@@ -269,7 +269,7 @@ namespace ENG.Metar.Decoder.Types.TAF
         if (MaxTemperature != null) ret.AppendPreSpaced(MaxTemperature.ToCode());
         if (MinTemperature != null) ret.AppendPreSpaced(MinTemperature.ToCode());
 
-        foreach (var fItem in this.SubReports)
+        foreach (var fItem in this.Trends)
         {
           ret.AppendPreSpaced(fItem.ToCode());
         } // foreach (var fItem in this.SubReports)

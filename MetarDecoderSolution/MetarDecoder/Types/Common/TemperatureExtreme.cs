@@ -25,11 +25,11 @@ namespace ENG.Metar.Decoder.Types.TAF
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private DayHourFlag _Time = new DayHourFlag();
+    private DayHour _Time = new DayHour();
     ///<summary>
     /// Sets/gets Time value. Default value is new DayHourFlag().
     ///</summary>
-    public DayHourFlag Time
+    public DayHour Time
     {
       get
       {

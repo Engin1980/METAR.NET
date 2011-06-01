@@ -6,7 +6,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Decoders
 {
-  class TrendVisibilityDecoder : TypeDecoder<TrendVisibility>
+  class TrendVisibilityDecoder : TypeDecoder<Visibility>
   {
     public override string Description
     {
@@ -22,13 +22,13 @@ namespace ENG.Metar.Decoder.Decoders
       }
     }
 
-    protected override TrendVisibility _Decode(System.Text.RegularExpressions.GroupCollection grp)
+    protected override Visibility _Decode(System.Text.RegularExpressions.GroupCollection grp)
     {
-      TrendVisibility ret = null;
+      Visibility ret = null;
 
       if (grp[0].Success)
       {
-        ret = new TrendVisibility();
+        ret = new Visibility();
         if (grp[2].Success)
           ret.SetCAVOK();
         else if (grp[3].Success)

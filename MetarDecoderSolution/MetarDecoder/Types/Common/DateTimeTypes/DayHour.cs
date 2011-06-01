@@ -6,9 +6,8 @@ using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder.Types.Common
 {
-  public class DayTimeFlag : ICodeItem
+  public class DayHour : DateTimeTypes.DateTimeType
   {
-    #region Properties
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private int _Day = DateTime.Now.Day;
     ///<summary>
@@ -43,43 +42,23 @@ namespace ENG.Metar.Decoder.Types.Common
         _Hour = value;
       }
     }
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int _Minute = DateTime.Now.Minute;
-    ///<summary>
-    /// Sets/gets Minute value. Default value is current minute.
-    ///</summary>
-    public int Minute
+
+    public DayHour(int day, int hour)
     {
-      get
-      {
-        return (_Minute);
-      }
-      set
-      {
-        if (value.IsBetween(0, 59) == false) throw new ArgumentException("Value have to be between 0-59.");
-        _Minute = value;
-      }
+      this.Day = day;
+      this.Hour = hour;
     }
-    #endregion Properties
+    public DayHour() { }
 
-    #region ICodeItem Members
-
-    public string ToCode()
+    public override string ToCode()
     {
-      StringBuilder ret = new StringBuilder();
-
-      ret.Append(Day.ToString("00"));
-      ret.Append(Hour.ToString("00"));
-      ret.Append(Minute.ToString("00"));
-
-      return ret.ToString();
+      return Day.ToString("00") + Hour.ToString("00");
     }
 
-    public void SanityCheck(ref List<string> errors, ref List<string> warnings)
+    public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       // nothing to do
     }
 
-    #endregion
   }
 }
