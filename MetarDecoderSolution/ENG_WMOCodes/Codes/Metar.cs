@@ -432,6 +432,7 @@ namespace ENG.WMOCodes.Codes
     /// </summary>
     /// <param name="metarString"></param>
     /// <returns></returns>
+    [Obsolete("Not supported.")]
     public static Metar Create(string metarString)
     {
       throw new NotImplementedException();

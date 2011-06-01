@@ -24,14 +24,14 @@ namespace Tutorial
       string metar;
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-      ENG.Metar.Downloader.IMetarRetriever retriever =
-        new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
+      ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever retriever = 
+        new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
 
       try
       {
         // synchronously download the metar, parameters are
         // 1) which airport; 2) from which source
-        metar = ENG.Metar.Downloader.Downloader.DownloadMetar(
+        metar = ENG.WMOCodes.Downloaders.Downloader.Download(
           txtIcao.Text.Trim(), retriever);
 
         txtMetar.Text = metar;
@@ -61,18 +61,18 @@ namespace Tutorial
       AddInfo("Downloading metar - asynchro...");
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-      ENG.Metar.Downloader.IMetarRetriever retriever =
-        new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
+      ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever retriever =
+        new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
 
-      ENG.Metar.Downloader.Downloader.DownloadMetarAsync(
-        txtIcao.Text,
-        retriever,
-        new ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate(OnCompleted));
+      ENG.WMOCodes.Downloaders.Downloader.DownloadAsync(
+          txtIcao.Text,
+          retriever,
+          new ENG.WMOCodes.Downloaders.Downloader.DownloadCompletedDelegate(OnCompleted));
 
       AddInfo("... asynchro request send, waiting for result.");
     }
 
-    private void OnCompleted(ENG.Metar.Downloader.MetarResult result)
+    private void OnCompleted(ENG.WMOCodes.Downloaders.RetrieveResult result)
     {
       if (this.InvokeRequired)
         this.Invoke (new Action (() => {OnCompleted(result);}));
@@ -94,7 +94,7 @@ namespace Tutorial
     {
       AddInfo("Performing sanity check...");
 
-      ENG.Metar.Decoder.Metar mtr = GetMetar();
+      ENG.WMOCodes.Codes.Metar mtr = GetMetar();
 
       if (mtr == null) return;
 
@@ -108,13 +108,15 @@ namespace Tutorial
       AddInfo("...done");
     }
 
-    private ENG.Metar.Decoder.Metar GetMetar()
+    private ENG.WMOCodes.Codes.Metar GetMetar()
     {
-      ENG.Metar.Decoder.Metar ret = null;
+      ENG.WMOCodes.Codes.Metar ret = null;
+      ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();
 
       try
       {
-        ret = ENG.Metar.Decoder.Metar.Create(txtMetar.Text);
+        ret = 
+          decoder.Decode (txtMetar.Text);
       }
       catch (Exception ex)
       {
@@ -126,21 +128,22 @@ namespace Tutorial
 
     private void btnTest_Click(object sender, EventArgs e)
     {
-      AddInfo("Performing metar-string test...");
+      MessageBox.Show("Not supported yet.");
+      //AddInfo("Performing metar-string test...");
 
-      string er = null;
+      //string er = null;
 
-      ENG.Metar.Decoder.Metar.CheckMetarString(txtMetar.Text, out er);
+      //ENG.Metar.Decoder.Metar.CheckMetarString(txtMetar.Text, out er);
 
-      AddInfo("Found errors: " + er);
-      AddInfo("...done");
+      //AddInfo("Found errors: " + er);
+      //AddInfo("...done");
     }
 
     private void btnEncDec_Click(object sender, EventArgs e)
     {
       AddInfo("Performing encode-decode test...");
 
-      ENG.Metar.Decoder.Metar mtr = GetMetar();
+      ENG.WMOCodes.Codes.Metar mtr = GetMetar();
 
       if (mtr == null) return;
 
@@ -152,38 +155,44 @@ namespace Tutorial
 
     private void btnLongInfo_Click(object sender, EventArgs e)
     {
-      AddInfo("Performing long-info print...");
+      MessageBox.Show("Not supported yet.");
+#warning TODO Dodelat
 
-      ENG.Metar.Decoder.Metar mtr = GetMetar();
+      //AddInfo("Performing long-info print...");
 
-      if (mtr == null) return;
+      //ENG.Metar.Decoder.Metar mtr = GetMetar();
 
-      ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-        new ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter();
+      //if (mtr == null) return;
 
-      string str = mtr.ToInfo(ifo, true, true, true, true);
+      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
+      //  new ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter();
 
-      AddInfo(str);
+      //string str = mtr.ToInfo(ifo, true, true, true, true);
 
-      AddInfo("...done");
+      //AddInfo(str);
+
+      //AddInfo("...done");
     }
 
     private void btnShortInfo_Click(object sender, EventArgs e)
     {
-      AddInfo("Performing short-info print...");
+      MessageBox.Show("Not supported yet.");
+#warning TODO Dodelat
 
-      ENG.Metar.Decoder.Metar mtr = GetMetar();
+      //AddInfo("Performing short-info print...");
 
-      if (mtr == null) return;
+      //ENG.Metar.Decoder.Metar mtr = GetMetar();
 
-      ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-        new ENG.Metar.Decoder.Formatters.ShortInfoFormatter();
+      //if (mtr == null) return;
 
-      string str = mtr.ToInfo(ifo, true, true, true, true);
+      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
+      //  new ENG.Metar.Decoder.Formatters.ShortInfoFormatter();
 
-      AddInfo(str);
+      //string str = mtr.ToInfo(ifo, true, true, true, true);
 
-      AddInfo("...done");
+      //AddInfo(str);
+
+      //AddInfo("...done");
     }
   }
 }

@@ -8,7 +8,7 @@ using ENG.WMOCodes.Decoders.Internal;
 
 namespace ENG.WMOCodes.Decoders
 {
-  class MetarDecoder : PublicDecoder<Metar>
+  public class MetarDecoder : PublicDecoder<Metar>
   {
     public override string Description
     {

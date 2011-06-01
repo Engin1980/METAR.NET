@@ -67,20 +67,20 @@
     <Compile Include="Internal\SeaStateDecoder.cs" />
     <Compile Include="Internal\SeaSurfaceTemperatureDecoder.cs" />
     <Compile Include="Internal\TafPrefixDecoder.cs" />
-    <Compile Include="Internal\TafSubReportDecoder.cs" />
-    <Compile Include="Internal\TafSubReportListDecoder.cs" />
+    <Compile Include="Internal\TrendInfoForTafDecoder.cs" />
+    <Compile Include="Internal\TrendInfoForTafListDecoder.cs" />
     <Compile Include="Internal\TemperatureDecoder.cs" />
     <Compile Include="Internal\TNDecoder.cs" />
-    <Compile Include="Internal\TrendInfoDecoder.cs" />
-    <Compile Include="Internal\TrendPhenomInfoDecoder.cs" />
+    <Compile Include="Internal\TrendInfoForMetarDecoder.cs" />
+    <Compile Include="Internal\PhenomInfoWithNSWDecoder.cs" />
     <Compile Include="Internal\TrendReportDecoder.cs" />
-    <Compile Include="Internal\TrendVisibilityDecoder.cs" />
-    <Compile Include="Internal\TXDecoder.cs" />
     <Compile Include="Internal\VisibilityDecoder.cs" />
+    <Compile Include="Internal\TXDecoder.cs" />
+    <Compile Include="Internal\VisibilityForMetarDecoder.cs" />
     <Compile Include="Internal\WindDecoder.cs" />
     <Compile Include="Internal\WindShearDecoder.cs" />
     <Compile Include="Internal\WindShearInfoDecoder.cs" />
-    <Compile Include="Internal\WindVariabilityDecoder.cs" />
+    <Compile Include="Internal\WindVariableDecoder.cs" />
     <Compile Include="Internal\WindWithVariabilityDecoder.cs" />
     <Compile Include="MetarDecoder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +92,9 @@
       <Project>{4B8AFAA0-33DB-493C-9DCC-1C85C0998494}</Project>
       <Name>ENG_WMOCodes</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Overview.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

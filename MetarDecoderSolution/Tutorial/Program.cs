@@ -37,15 +37,17 @@ namespace Tutorial
       string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
 
       // into this object decode metar will be stored
-      ENG.Metar.Decoder.Metar metarObject = null;
+      ENG.WMOCodes.Codes.Metar metarObject = null;
+
+      ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();
 
       try
       {
         // try to decode metar - call static Create method
         metarObject =
-          ENG.Metar.Decoder.Metar.Create(sourceMetar);
+          decoder.Decode(sourceMetar);
       }
-      catch (ENG.Metar.Decoder.MetarDecodeException ex)
+      catch (ENG.WMOCodes.Decoders.Internal.DecodeException ex)
       {
         // Error during decode
         Console.WriteLine("Unable to parse metar from string. "+ ex.Message);
@@ -77,17 +79,18 @@ namespace Tutorial
       Console.WriteLine("Downloading metar - asynchro...");
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-      ENG.Metar.Downloader.IMetarRetriever retriever =
-        new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
+      ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever retriever =
+        new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
 
-      ENG.Metar.Downloader.Downloader.DownloadMetarAsync(
+      ENG.WMOCodes.Downloaders.Downloader.DownloadAsync(
         "EDDH",
         retriever,
-        new ENG.Metar.Downloader.Downloader.DownloadMetarCompletedDelegate (OnCompleted));
+        new ENG.WMOCodes.Downloaders.Downloader.DownloadCompletedDelegate(OnCompleted));
 
       // do something other interesting stuff
     }
-    private static void OnCompleted(ENG.Metar.Downloader.MetarResult result)
+
+    private static void OnCompleted(ENG.WMOCodes.Downloaders.RetrieveResult result)
     {
       if (result.IsSuccessful)
       {
@@ -108,15 +111,14 @@ namespace Tutorial
        string eddhMetar;
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-       ENG.Metar.Downloader.IMetarRetriever retriever =
-         new ENG.Metar.Downloader.Retrievers.OldLineWeatherRetriever();
+       ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever retriever =
+         new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
       
       try
       {
         // synchronously download the metar, parameters are
         // 1) which airport; 2) from which source
-        eddhMetar = ENG.Metar.Downloader.Downloader.DownloadMetar(
-          "EDDH", retriever);
+        eddhMetar = ENG.WMOCodes.Downloaders.Downloader.Download("EDDH", retriever);
 
         Console.WriteLine("Metar for Hamburg is: ");
         Console.WriteLine(eddhMetar);
@@ -131,32 +133,36 @@ namespace Tutorial
 
     private static void PrintShortInfo()
     {
-      string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
-      ENG.Metar.Decoder.Metar metar =
-        ENG.Metar.Decoder.Metar.Create(sourceMetar);
+#warning TODO Dodelat
 
-      ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-        new ENG.Metar.Decoder.Formatters.ShortInfoFormatter();
+      //string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
+      //ENG.WMOCodes.Codes.Metar metar =
+      //  ENG.Metar.Decoder.Metar.Create(sourceMetar);
 
-      string str = metar.ToInfo(ifo, true, true, true, true);
+      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
+      //  new ENG.Metar.Decoder.Formatters.ShortInfoFormatter();
 
-      Console.WriteLine(str);
-      Console.ReadKey();
+      //string str = metar.ToInfo(ifo, true, true, true, true);
+
+      //Console.WriteLine(str);
+      //Console.ReadKey();
     }
 
     private static void PrintLongInfo()
     {
-      string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
-      ENG.Metar.Decoder.Metar metar =
-        ENG.Metar.Decoder.Metar.Create(sourceMetar);
+#warning TODO Dodelat
 
-      ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-        new ENG.Metar.Decoder.Formatters.LongInfoFormatter();
+      //string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
+      //ENG.Metar.Decoder.Metar metar =
+      //  ENG.Metar.Decoder.Metar.Create(sourceMetar);
 
-      string str = metar.ToInfo(ifo, true, true, true, true);
+      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
+      //  new ENG.Metar.Decoder.Formatters.LongInfoFormatter();
 
-      Console.WriteLine(str);
-      Console.ReadKey();
+      //string str = metar.ToInfo(ifo, true, true, true, true);
+
+      //Console.WriteLine(str);
+      //Console.ReadKey();
     }
   }
 }

@@ -228,6 +228,7 @@ namespace ENG.WMOCodes.Codes
 
     #endregion Properties
 
+    [Obsolete("Not supported.")]
     public static Taf Create(string taf)
     {
       throw new NotSupportedException();

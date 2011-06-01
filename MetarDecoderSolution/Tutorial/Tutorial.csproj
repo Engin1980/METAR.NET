@@ -66,19 +66,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MetarDecoder\MetarDecoder.csproj">
-      <Project>{96A6EC13-8871-4695-83BE-F2A3907D94B3}</Project>
-      <Name>MetarDecoder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MetarDownloader\MetarDownloader.csproj">
-      <Project>{70D6E24E-D71B-4096-B383-1767646FCC42}</Project>
-      <Name>MetarDownloader</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="FrmTest.resx">
       <DependentUpon>FrmTest.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENG_WMOCodes\ENG_WMOCodes.csproj">
+      <Project>{4B8AFAA0-33DB-493C-9DCC-1C85C0998494}</Project>
+      <Name>ENG_WMOCodes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENG_WMOCodes_Decoders\ENG_WMOCodes_Decoders.csproj">
+      <Project>{2CD3FB96-1955-4035-BC50-66800C84C3BE}</Project>
+      <Name>ENG_WMOCodes_Decoders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENG_WMOCodes_Downloaders\ENG_WMOCodes_Downloaders.csproj">
+      <Project>{5D46B4C3-3CBD-4F70-B92B-710CA65CDB70}</Project>
+      <Name>ENG_WMOCodes_Downloaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENG_WMOCodes_Formatters\ENG_WMOCodes_Formatters.csproj">
+      <Project>{C9817849-7A1D-411D-AF88-6663695191E3}</Project>
+      <Name>ENG_WMOCodes_Formatters</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

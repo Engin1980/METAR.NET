@@ -8,7 +8,7 @@ using ENG.WMOCodes.Types;
 
 namespace ENG.WMOCodes.Decoders.Internal
 {
-  class CloudInfoDecoder : CustomDecoder<CloudInfo>
+  class CloudInfoDecoder : TypeDecoder<CloudInfo>
   {
     public override string Description
     {
@@ -57,7 +57,6 @@ namespace ENG.WMOCodes.Decoders.Internal
             m = m.NextMatch();
           }
         }
-
       }
 
       return ret;

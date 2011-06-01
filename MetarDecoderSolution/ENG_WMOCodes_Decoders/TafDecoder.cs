@@ -8,7 +8,7 @@ using ENG.WMOCodes.Decoders.Internal;
 
 namespace ENG.WMOCodes.Decoders
 {
-  class TafDecoder : PublicDecoder<Taf>
+  public class TafDecoder : PublicDecoder<Taf>
   {
     public override string Description
     {
@@ -37,7 +37,7 @@ namespace ENG.WMOCodes.Decoders
             ret.Wind = new WindDecoder() { Required=false }.Decode(ref pom);
             ret.Visibility = new VisibilityDecoder() { Required = false }.Decode(ref pom);
             ret.Phenomens = new PhenomInfoWithNSWDecoder() { Required = false }.Decode(ref pom);
-            ret.Clouds = new TrendCloudInfoDecoder() { Required = false }.Decode(ref pom);
+            ret.Clouds = new CloudInfoDecoder() { Required = false }.Decode(ref pom);
             ret.MaxTemperature = new TXDecoder() { Required = false }.Decode(ref pom);
             ret.MinTemperature = new TNDecoder() { Required = false }.Decode(ref pom);
             ret.Trends = new TrendInfoForTafListDecoder().Decode(ref pom);
