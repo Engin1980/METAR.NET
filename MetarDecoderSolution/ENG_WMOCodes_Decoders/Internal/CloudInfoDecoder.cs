@@ -8,45 +8,67 @@ using ENG.WMOCodes.Types;
 
 namespace ENG.WMOCodes.Decoders.Internal
 {
-  class CloudInfoDecoder : CustomDecoder<CloudInfoWithNCD>
+  class CloudInfoDecoder : CustomDecoder<CloudInfo>
   {
     public override string Description
     {
-      get { return "Clouds"; }
+      get { return "Cloud information"; }
     }
 
-    private const string prefixPattern = "NCD";
-
-    protected override CloudInfoWithNCD _Decode(ref string source)
+    private const string R_CLOUD_ITEM = @"( ?(FEW|SCT|BKN|OVC)(\d{3})(CB|TCU)?/*)";
+    public override string RegEx
     {
-      CloudInfoWithNCD ret = null;
-
-      if (source.StartsWith(prefixPattern))
+      get
       {
-        ret = new CloudInfoWithNCD();
-        ret.SetNCD();
-        source = source.Substring(prefixPattern.Length);
+        return
+          @"^((NSC)|(SKC)|VV((\d{3})|/{3})|" + R_CLOUD_ITEM + "+)";
       }
-      else
-        ret = DecodeFromTrendCloudInfo(ref source);
+    }
+
+    protected override CloudInfo _Decode(System.Text.RegularExpressions.GroupCollection groups)
+    {
+      CloudInfo ret = null;
+
+      if (groups[0].Success)
+      {
+        ret = new CloudInfo();
+
+        if (groups[2].Success)
+          ret.SetNSC();
+        else if (groups[3].Success)
+          ret.SetSKC();
+        else if (groups[4].Success)
+        {
+          if (groups[4].Value == "///")
+            ret.SetVerticalVisibility(null);
+          else
+            ret.SetVerticalVisibility(
+              groups[4].GetIntValue());
+        }
+        else
+        {
+          string str = groups[1].Value;
+          Match m = Regex.Match(str, R_CLOUD_ITEM);
+
+          while (m.Success)
+          {
+            ret.Add(xDecodeCloud(m));
+
+            m = m.NextMatch();
+          }
+        }
+
+      }
 
       return ret;
     }
 
-    private CloudInfoWithNCD DecodeFromTrendCloudInfo(ref string source)
+    private static Cloud xDecodeCloud(Match m)
     {
-      CloudInfo pom =
-        new TrendCloudInfoDecoder().Decode(ref source);
-      CloudInfoWithNCD ret = new CloudInfoWithNCD();
+      Cloud ret = null;
 
-      if (pom.IsSKC)
-        ret.SetSKC();
-      else if (pom.IsNSC)
-        ret.SetNSC();
-      else if (pom.IsVerticalVisibility)
-        ret.SetVerticalVisibility(pom.VVDistance);
-      else
-        ret.AddRange(pom);
+      ret = new Cloud(
+        m.Groups[2].Value, m.Groups[3].GetIntValue(), m.Groups[4].Value == "CB", m.Groups[4].Value == "TCU");
 
       return ret;
     }

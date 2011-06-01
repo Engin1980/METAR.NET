@@ -21,8 +21,8 @@ namespace ENG.WMOCodes.Decoders.Internal
       try
       {
         ret.Wind = new WindDecoder() { Required = false }.Decode(ref source);
-        ret.Visibility = new TrendVisibilityDecoder() { Required = false }.Decode(ref source);
-        ret.Phenomens = new TrendPhenomInfoDecoder() { Required = false }.Decode(ref source);
+        ret.Visibility = new VisibilityDecoder() { Required = false }.Decode(ref source);
+        ret.Phenomens = new PhenomInfoWithNSWDecoder() { Required = false }.Decode(ref source);
         ret.Clouds = new TrendCloudInfoDecoder() { Required = false }.Decode(ref source);
       } // try
       catch (Exception ex)

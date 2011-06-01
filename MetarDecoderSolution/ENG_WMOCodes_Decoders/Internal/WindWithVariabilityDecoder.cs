@@ -13,7 +13,7 @@ namespace ENG.WMOCodes.Decoders.Internal
     protected override WindWithVariability _Decode(ref string source)
     {
       Wind w = new WindDecoder().Decode(ref source);
-      WindVariable wv = new WindVariabilityDecoder() { Required = false }.Decode(ref source);
+      WindVariable wv = new WindVariableDecoder() { Required = false }.Decode(ref source);
 
       WindWithVariability ret = new WindWithVariability();
       w.CopyPropertiesTo(ret);
