@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Downloader.cs" />
-    <Compile Include="IMetarRetrieve.cs" />
     <Compile Include="IMetarRetriever.cs" />
     <Compile Include="MetarDownloadException.cs" />
     <Compile Include="MetarResult.cs" />
