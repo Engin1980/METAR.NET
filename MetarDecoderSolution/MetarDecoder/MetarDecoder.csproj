@@ -163,17 +163,17 @@
     </Compile>
     <Compile Include="Types\Common\Trend\TrendTime.cs" />
     <Compile Include="Types\Common\Trend\TrendTimeInfo.cs" />
-    <Compile Include="Types\Common\Trend\MetarTrendInfo.cs" />
+    <Compile Include="Types\Common\Trend\TrendInfoForMetar.cs" />
     <Compile Include="Types\Common\Trend\Visibility.cs" />
     <Compile Include="Types\Common\PhenomInfoWithNSW.cs" />
     <Compile Include="Types\Common\DateTimeTypes\DayHour.cs" />
     <Compile Include="Types\Common\DateTimeTypes\DayHourDayHour.cs" />
     <Compile Include="Types\Common\TimeFlag.cs" />
-    <Compile Include="Types\TAF\Intervals\FMInterval.cs" />
-    <Compile Include="Types\TAF\Intervals\NonFMInterval.cs" />
-    <Compile Include="Types\TAF\Intervals\Interval.cs" />
+    <Compile Include="Types\TAF\Intervals\TafIntervalFM.cs" />
+    <Compile Include="Types\TAF\Intervals\TafIntervalNonFM.cs" />
+    <Compile Include="Types\TAF\Intervals\TafInterval.cs" />
     <Compile Include="Types\Common\Taf.cs" />
-    <Compile Include="Types\Common\TafTrendInfo.cs" />
+    <Compile Include="Types\Common\TrendInfoForTaf.cs" />
     <Compile Include="Decoders\TAF\TafSubReportDecoder.cs" />
     <Compile Include="Decoders\TAF\TafSubReportListDecoder.cs" />
     <Compile Include="Types\Common\TemperatureExtreme.cs" />

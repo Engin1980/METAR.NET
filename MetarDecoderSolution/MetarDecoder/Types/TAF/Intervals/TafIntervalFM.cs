@@ -6,7 +6,7 @@ using ENG.Metar.Decoder.Types.Common;
 
 namespace ENG.Metar.Decoder.Types.TAF.Intervals
 {
-  public class FMInterval : Interval
+  public class TafIntervalFM : TafInterval
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private DayHourMinute _From = new DayHourMinute();
@@ -28,10 +28,10 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="FMInterval"/> class.
+    /// Initializes a new instance of the <see cref="TafIntervalFM"/> class.
     /// </summary>
     /// <param name="intervalFlag">The interval flag.</param>
-    public FMInterval(DayHourMinute intervalFlag)
+    public TafIntervalFM(DayHourMinute intervalFlag)
     {
       this.From = intervalFlag;
     }

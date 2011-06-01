@@ -11,7 +11,7 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
   /// <summary>
   /// Represents TAF TREND interval information. Contains type (BECMG, TEMPO, etc.) and interval validity (e.g. 0220/0302).
   /// </summary>
-  public class NonFMInterval : Interval
+  public class TafIntervalNonFM : TafInterval
   {
     /// <summary>
     /// Represents type of the information, e.g. BECMG, PROB30 TEMPO, etc. 
@@ -83,11 +83,11 @@ namespace ENG.Metar.Decoder.Types.TAF.Intervals
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="NonFMInterval"/> class.
+    /// Initializes a new instance of the <see cref="TafIntervalNonFM"/> class.
     /// </summary>
     /// <param name="type">The type.</param>
     /// <param name="intervalFlag">The interval flag.</param>
-    public NonFMInterval(eType type, DayHourDayHour intervalFlag)
+    public TafIntervalNonFM(eType type, DayHourDayHour intervalFlag)
     {
       Type = type;
       Interval = intervalFlag;

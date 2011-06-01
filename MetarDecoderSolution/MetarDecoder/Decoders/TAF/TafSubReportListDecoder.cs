@@ -9,7 +9,7 @@ using ENG.Metar.Decoder.Decoders.Base;
 
 namespace ENG.Metar.Decoder.Types.TAF
 {
-  class TafSubReportListDecoder : CustomDecoder<List<TafTrendInfo>>
+  class TafSubReportListDecoder : CustomDecoder<List<TrendInfoForTaf>>
   {
     public override string Description
     {
@@ -21,10 +21,10 @@ namespace ENG.Metar.Decoder.Types.TAF
       get { return "(^TEMPO)|(^BECMG)|(^FM)|(^PROB40)|(^PROB30)"; }
     }
 
-    protected override List<TafTrendInfo> _Decode(ref string source)
+    protected override List<TrendInfoForTaf> _Decode(ref string source)
     {
-      List<TafTrendInfo> ret = new List<TafTrendInfo>();
-      TafTrendInfo report = null;
+      List<TrendInfoForTaf> ret = new List<TrendInfoForTaf>();
+      TrendInfoForTaf report = null;
 
       string p = source;
       bool found = true;

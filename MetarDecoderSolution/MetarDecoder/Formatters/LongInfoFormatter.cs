@@ -396,19 +396,19 @@ namespace ENG.Metar.Decoder.Formatters
       return ret;
     }
 
-    public override string TrendInfoTypeToString(MetarTrendInfo.eType value, bool useLong)
+    public override string TrendInfoTypeToString(TrendInfoForMetar.eType value, bool useLong)
     {
       string ret = null;
 
       switch (value)
       {
-        case MetarTrendInfo.eType.BECMG:
+        case TrendInfoForMetar.eType.BECMG:
           ret = useLong ? "becoming" : "becmg";
           break;
-        case MetarTrendInfo.eType.NOSIG:
+        case TrendInfoForMetar.eType.NOSIG:
           ret = useLong ?"no significant change" : "nosig";
           break;
-        case MetarTrendInfo.eType.TEMPO:
+        case TrendInfoForMetar.eType.TEMPO:
           ret = useLong ?"temporally" : "tempo";
           break;
         default:

@@ -11,7 +11,7 @@ namespace ENG.Metar.Decoder
   /// Represents information about trend. To mark trend as not used. set null value into property type.
   /// </summary>
   /// <seealso cref="T:ENG.Metar.Decoder.MetarItem"/>
-  public class MetarTrendInfo : TrendReport, ICodeItem
+  public class TrendInfoForMetar : TrendReport, ICodeItem
   {
     #region Nested
 

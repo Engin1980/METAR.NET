@@ -49,11 +49,11 @@ namespace ENG.Metar.Decoder.Types.TAF
     private eTafFlag _TafType = eTafFlag.None;
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private List<TafTrendInfo> _Trends = new List<TafTrendInfo>();
+    private List<TrendInfoForTaf> _Trends = new List<TrendInfoForTaf>();
     ///<summary>
     /// Sets/gets SubReports value.
     ///</summary>
-    public List<TafTrendInfo> Trends
+    public List<TrendInfoForTaf> Trends
     {
       get
       {

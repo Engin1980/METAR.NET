@@ -10,7 +10,7 @@ using ENG.Metar.Decoder.Decoders.TAF;
 
 namespace ENG.Metar.Decoder.Decoders
 {
-  internal class TafSubReportDecoder : CustomDecoder<TafTrendInfo>
+  internal class TafSubReportDecoder : CustomDecoder<TrendInfoForTaf>
   {
     private class Info
     {
@@ -49,7 +49,7 @@ namespace ENG.Metar.Decoder.Decoders
       }
     }
 
-    protected override TafTrendInfo _Decode(ref string source)
+    protected override TrendInfoForTaf _Decode(ref string source)
     {
       Info info = new Info();
 
@@ -58,53 +58,53 @@ namespace ENG.Metar.Decoder.Decoders
       TrendReport tr =
         new TrendReportDecoder().Decode(ref source);
 
-      TafTrendInfo ret = CreateTafSubReport(info, tr);
+      TrendInfoForTaf ret = CreateTafSubReport(info, tr);
 
       return ret;
     }
 
-    private TafTrendInfo CreateTafSubReport(Info info, TrendReport tr)
+    private TrendInfoForTaf CreateTafSubReport(Info info, TrendReport tr)
     {
-      TafTrendInfo ret = new TafTrendInfo();
+      TrendInfoForTaf ret = new TrendInfoForTaf();
       tr.CopyPropertiesTo(ret);
 
       switch (info.Type)
       {
         case eType.Becmg:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
-              Types.TAF.Intervals.NonFMInterval.eType.BECMG, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
+              Types.TAF.Intervals.TafIntervalNonFM.eType.BECMG, info.FromToFlag);
           break;
         case eType.Fm:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.FMInterval(info.DayTimeFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalFM(info.DayTimeFlag);
           break;
         case eType.None:
           throw new NotSupportedException("At this place the type must be something different from \"None\"");
         case eType.Prob30:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
-              Types.TAF.Intervals.NonFMInterval.eType.PROB30, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
+              Types.TAF.Intervals.TafIntervalNonFM.eType.PROB30, info.FromToFlag);
           break;
         case eType.Prob40:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
-              Types.TAF.Intervals.NonFMInterval.eType.PROB40, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
+              Types.TAF.Intervals.TafIntervalNonFM.eType.PROB40, info.FromToFlag);
           break;
         case eType.Tempo:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
-              Types.TAF.Intervals.NonFMInterval.eType.TEMPO, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
+              Types.TAF.Intervals.TafIntervalNonFM.eType.TEMPO, info.FromToFlag);
           break;
         case eType.Tempo30:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
-              Types.TAF.Intervals.NonFMInterval.eType.TEMPO_PROB30, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
+              Types.TAF.Intervals.TafIntervalNonFM.eType.TEMPO_PROB30, info.FromToFlag);
           break;
         case eType.Tempo40:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.NonFMInterval(
-              Types.TAF.Intervals.NonFMInterval.eType.TEMPO_PROB40, info.FromToFlag);
+            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
+              Types.TAF.Intervals.TafIntervalNonFM.eType.TEMPO_PROB40, info.FromToFlag);
           break;
         default:
           throw new NotImplementedException();

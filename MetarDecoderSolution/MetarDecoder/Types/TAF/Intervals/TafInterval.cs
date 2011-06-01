@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ENG.Metar.Decoder.Types.TAF.Intervals
 {
-  public abstract class Interval : ICodeItem
+  public abstract class TafInterval : ICodeItem
   {
     #region ICodeItem Members
 

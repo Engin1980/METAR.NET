@@ -468,7 +468,7 @@ namespace ENG.Metar.Decoder.Formatters
     }
 
     /// <summary>
-    /// Trend values for info-string. <see cref="ENG.Metar.Decoder.MetarTrendInfo"/>
+    /// Trend values for info-string. <see cref="ENG.Metar.Decoder.TrendInfoForMetar"/>
     /// </summary>
     public enum eTrendFormat
     {
@@ -695,7 +695,7 @@ namespace ENG.Metar.Decoder.Formatters
     /// <param name="value"></param>
     /// <param name="useLong"></param>
     /// <returns></returns>
-    public abstract string TrendInfoTypeToString(MetarTrendInfo.eType value, bool useLong);
+    public abstract string TrendInfoTypeToString(TrendInfoForMetar.eType value, bool useLong);
 
     /// <summary>
     /// Converts enum to string.

@@ -310,12 +310,12 @@ namespace ENG.Metar.Decoder
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private MetarTrendInfo _Trend = new MetarTrendInfo();
+    private TrendInfoForMetar _Trend = new TrendInfoForMetar();
     ///<summary>
     /// Sets/gets Trend value. Allways value is in here, when no info found, trend type is null.
     /// Trend in metar is required, (NOSIG text is minimum).
     ///</summary>
-    public MetarTrendInfo Trend
+    public TrendInfoForMetar Trend
     {
       get
       {

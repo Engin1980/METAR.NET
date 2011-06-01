@@ -6,17 +6,17 @@ using ESystem.Extensions;
 
 namespace ENG.Metar.Decoder.Types.TAF
 {
-  public class TafTrendInfo : TrendReport
+  public class TrendInfoForTaf : TrendReport
   {
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private Intervals.Interval _Interval = new Intervals.NonFMInterval(
-      Intervals.NonFMInterval.eType.BECMG, new Common.DayHourDayHour());
+    private Intervals.TafInterval _Interval = new Intervals.TafIntervalNonFM(
+      Intervals.TafIntervalNonFM.eType.BECMG, new Common.DayHourDayHour());
       ///<summary>
       /// Sets/gets Interval value. Default value is new Intervals.FromToInterval(){ Type= Intervals.FromToInterval.eType.BECMG}.
       ///</summary>
-      public Intervals.Interval Interval 
+      public Intervals.TafInterval Interval 
       { 
         get
         {
