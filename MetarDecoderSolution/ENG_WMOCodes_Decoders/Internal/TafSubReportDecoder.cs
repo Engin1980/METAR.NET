@@ -71,39 +71,39 @@ namespace ENG.WMOCodes.Decoders.Internal
       {
         case eType.Becmg:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
-              Types.TAF.Intervals.TafIntervalNonFM.eType.BECMG, info.FromToFlag);
+            new TafIntervalNonFM(
+              TafIntervalNonFM.eType.BECMG, info.FromToFlag);
           break;
         case eType.Fm:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalFM(info.DayTimeFlag);
+            new TafIntervalFM(info.DayTimeFlag);
           break;
         case eType.None:
           throw new NotSupportedException("At this place the type must be something different from \"None\"");
         case eType.Prob30:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
-              Types.TAF.Intervals.TafIntervalNonFM.eType.PROB30, info.FromToFlag);
+            new TafIntervalNonFM(
+              TafIntervalNonFM.eType.PROB30, info.FromToFlag);
           break;
         case eType.Prob40:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
-              Types.TAF.Intervals.TafIntervalNonFM.eType.PROB40, info.FromToFlag);
+            new TafIntervalNonFM(
+              TafIntervalNonFM.eType.PROB40, info.FromToFlag);
           break;
         case eType.Tempo:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
-              Types.TAF.Intervals.TafIntervalNonFM.eType.TEMPO, info.FromToFlag);
+            new TafIntervalNonFM(
+              TafIntervalNonFM.eType.TEMPO, info.FromToFlag);
           break;
         case eType.Tempo30:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
-              Types.TAF.Intervals.TafIntervalNonFM.eType.TEMPO_PROB30, info.FromToFlag);
+            new TafIntervalNonFM(
+              TafIntervalNonFM.eType.TEMPO_PROB30, info.FromToFlag);
           break;
         case eType.Tempo40:
           ret.Interval =
-            new ENG.Metar.Decoder.Types.TAF.Intervals.TafIntervalNonFM(
-              Types.TAF.Intervals.TafIntervalNonFM.eType.TEMPO_PROB40, info.FromToFlag);
+            new TafIntervalNonFM(
+              TafIntervalNonFM.eType.TEMPO_PROB40, info.FromToFlag);
           break;
         default:
           throw new NotImplementedException();

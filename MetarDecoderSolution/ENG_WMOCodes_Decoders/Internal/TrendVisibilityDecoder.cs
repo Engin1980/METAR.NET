@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ENG.WMOCodes.Decoders.Internal.Basic;
 using ENG.WMOCodes.Types;
+using ENG.WMOCodes.Types.Basic;
 
 namespace ENG.WMOCodes.Decoders.Internal
 {

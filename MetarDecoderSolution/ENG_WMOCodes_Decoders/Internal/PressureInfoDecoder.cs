@@ -26,7 +26,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       if (groups[2].Value == "Q")
         ret.Set(groups[3].GetIntValue(), PressureInfo.eUnit.hPa);
       else
-        ret.Set(groups[3].GetIntValue() / 100.0, ENG.Metar.Decoder.PressureInfo.eUnit.mmHq);
+        ret.Set(groups[3].GetIntValue() / 100.0, PressureInfo.eUnit.mmHq);
 
       return ret;
     }

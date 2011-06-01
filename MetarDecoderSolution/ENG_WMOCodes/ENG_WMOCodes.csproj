@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Types\Basic\Extensions.cs" />
+    <Compile Include="Types\Basic\_Extensions.cs" />
     <Compile Include="Types\Basic\ICodeItem.cs" />
     <Compile Include="Types\Basic\NonNegInt.cs" />
     <Compile Include="Types\Basic\Racional.cs" />
