@@ -259,7 +259,7 @@ namespace ENG.WMOCodes.Codes
       if (IsCorrected) ret.AppendPreSpaced("COR");
       if (IsAmmended) ret.AppendPreSpaced("AMD");
       ret.AppendPreSpaced(this.ICAO);
-      ret.AppendPreSpaced(this.DayTime.ToCode());
+      ret.AppendPreSpaced(this.DayTime.ToCode() + "Z");
       if (IsMissing) ret.AppendPreSpaced("NIL");
 
       if (IsMissing == false)

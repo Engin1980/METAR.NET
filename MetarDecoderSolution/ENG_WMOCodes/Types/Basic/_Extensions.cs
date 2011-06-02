@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Reflection;
+using System.Collections;
 
 namespace ENG.WMOCodes.Types.Basic
 {
@@ -47,10 +48,13 @@ namespace ENG.WMOCodes.Types.Basic
     }
 
     public static void CopyPropertiesTo(this object source, object target)
-    {
-      error error error
+    {      
       // tady je to v lojzovi. kopíruje to i parametry kolekcí, když se kopírují kolekce, což je průser
       // a netuším co s tím
+
+      var ins = source.GetType().GetInterfaces();
+      bool areLists = false;
+      areLists = IsList(source) && IsList(target);      
 
       PropertyInfo[] sp = source.GetType().GetProperties();
       PropertyInfo[] tp = target.GetType().GetProperties();
@@ -69,14 +73,47 @@ namespace ENG.WMOCodes.Types.Basic
           throw new Exception("Failed to copy property " + fItem.Name + " of type " + source.GetType().FullName + ".", ex);
         }
       } // foreach (var fItem in shared)
+
+      try
+      {
+      if (areLists)
+        CopyListItems(source as IList, target as IList);
+      } // try
+      catch (Exception ex)
+      {
+        throw new Exception("Failed to copy items between ILists.", ex);
+      } // catch (Exception ex)
+    }
+
+    private static void CopyListItems(IList source, IList target)
+    {
+      foreach (var fItem in source)
+      {
+        target.Add(fItem);
+      } // foreach (var fItem in source)
+    }
+
+    private static bool IsList(object target)
+    {
+      bool ret = false;
+
+      foreach (var fItem in target.GetType().GetInterfaces())
+      {
+        if (fItem.FullName.Contains("System.Collections.Generic.IList"))
+          return true;
+      } // foreach (var fItem in ins)
+      return false;
     }
 
     private static PropertyInfo[] GetSharedProperties(PropertyInfo[] sp, PropertyInfo[] tp)
     {
       List<PropertyInfo> ret = new List<PropertyInfo>();
       foreach (var fS in sp)
+        if (fS.GetIndexParameters().Length == 0)
+        { 
         foreach (var fT in tp)
           if (fS.Name == fT.Name && fS.CanRead && fT.CanWrite) ret.Add(fS);
+        }
       return ret.ToArray();
     }
 

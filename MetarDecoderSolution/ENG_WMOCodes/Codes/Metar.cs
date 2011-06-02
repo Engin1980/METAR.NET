@@ -450,21 +450,23 @@ namespace ENG.WMOCodes.Codes
     /// <param name="metarString"></param>
     /// <param name="error"></param>
     /// <returns></returns>
+    [Obsolete("No more supported. Use decoder classes instead.")]
     public static bool CheckMetarString(string metarString, out string error)
     {
-      error = null;
-      bool ret = false;
-      try
-      {
-        Metar m = Create(metarString);
-        ret = true;
-      } // try
-      catch (Exception ex)
-      {
-        error = ex.Message;
-        ret = false;
-      } // catch (Exception ex)
-      return ret;
+      throw new NotSupportedException();
+      //error = null;
+      //bool ret = false;
+      //try
+      //{
+      //  Metar m = Create(metarString);
+      //  ret = true;
+      //} // try
+      //catch (Exception ex)
+      //{
+      //  error = ex.Message;
+      //  ret = false;
+      //} // catch (Exception ex)
+      //return ret;
     }
 
     #endregion Static methods
@@ -495,7 +497,7 @@ namespace ENG.WMOCodes.Codes
 
       ret.AppendSpaced(this.Type.ToString());
       ret.AppendSpaced(this.ICAO);
-      ret.AppendSpaced(this.Date.ToCode());
+      ret.AppendSpaced(this.Date.ToCode() + "Z");
       if (this.IsAUTO) ret.AppendSpaced("AUTO");
       ret.AppendSpaced(this.Wind.ToCode());
       ret.AppendSpaced(this.Visibility.ToCode());

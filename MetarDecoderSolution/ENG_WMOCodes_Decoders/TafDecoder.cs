@@ -43,11 +43,11 @@ namespace ENG.WMOCodes.Decoders
             ret.Trends = new TrendInfoForTafListDecoder().Decode(ref pom);
           }
         }
-        ret.Remark = new RemarkDecoder().Decode(ref pom);
+        ret.Remark = new RemarkDecoder() { Required = false }.Decode(ref pom);
       }
       catch (Exception ex)
       {
-        throw new Exception("Decoding of TAF failed.", ex);
+        throw new DecodeException(Description, ex);
       }
 
       return ret;
