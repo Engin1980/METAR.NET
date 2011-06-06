@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENG_WMOCodes_Formatters", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Formatters", "Formatters", "{4F75E3F3-F26F-4EC9-99EC-3E3D94D67168}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENG_WMOCodes_Formatters_InfoFormatter", "ENG_WMOCodes_Formatters_InfoFormatter\ENG_WMOCodes_Formatters_InfoFormatter.csproj", "{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENG_WMOCodes_Formatters_ShortInfo", "ENG_WMOCodes_Formatters_ShortInfo\ENG_WMOCodes_Formatters_ShortInfo.csproj", "{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = MetarDecoderSolution.vsmdi
@@ -61,8 +65,20 @@ Global
 		{C9817849-7A1D-411D-AF88-6663695191E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9817849-7A1D-411D-AF88-6663695191E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9817849-7A1D-411D-AF88-6663695191E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D53AA8D-0D19-4D76-81A2-61D1B86005EA} = {4F75E3F3-F26F-4EC9-99EC-3E3D94D67168}
+		{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14} = {4F75E3F3-F26F-4EC9-99EC-3E3D94D67168}
 	EndGlobalSection
 EndGlobal

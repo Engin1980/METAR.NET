@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C9817849-7A1D-411D-AF88-6663695191E3}</ProjectGuid>
+    <ProjectGuid>{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ENG.WMOCodes.Formatters</RootNamespace>
-    <AssemblyName>ENG_WMOCodes_Formatters</AssemblyName>
+    <RootNamespace>ENG.WMOCodes.Formatters.InfoFormatter</RootNamespace>
+    <AssemblyName>ENG_WMOCodes_Formatters_InfoFormatter</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,8 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMetarFormatter.cs" />
-    <Compile Include="ITafFormatter.cs" />
     <Compile Include="MetarFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,6 +46,10 @@
     <ProjectReference Include="..\ENG_WMOCodes\ENG_WMOCodes.csproj">
       <Project>{4B8AFAA0-33DB-493C-9DCC-1C85C0998494}</Project>
       <Name>ENG_WMOCodes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENG_WMOCodes_Formatters\ENG_WMOCodes_Formatters.csproj">
+      <Project>{C9817849-7A1D-411D-AF88-6663695191E3}</Project>
+      <Name>ENG_WMOCodes_Formatters</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

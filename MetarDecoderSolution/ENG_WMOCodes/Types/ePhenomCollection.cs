@@ -63,7 +63,6 @@ namespace ENG.WMOCodes.Types
       /// Freezing
       /// </summary>
       FZ, // Podchlazené (namrzající)
-      // Type
       /// <summary>
       /// Drizzle
       /// </summary>
@@ -125,7 +124,6 @@ namespace ENG.WMOCodes.Types
       /// Haze
       /// </summary>
       HZ, // Zákal 
-      //Other
       /// <summary>
       /// Dust/sand whirls 
       /// </summary>

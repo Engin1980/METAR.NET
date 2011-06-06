@@ -14,26 +14,26 @@ namespace ENG.WMOCodes.Types
     #region Nested
 
     /// <summary>
-    /// List of types of clouds.
+    /// List of types of clouds. Comparable by "int" value.
     /// </summary>
     public enum eType
     {
       /// <summary>
       /// Few clouds.
       /// </summary>
-      FEW,
+      FEW = 1,
       /// <summary>
       /// Scattered clouds.
       /// </summary>
-      SCT,
+      SCT = 2,
       /// <summary>
       /// Broken clouds.
       /// </summary>
-      BKN,
+      BKN = 3,
       /// <summary>
       /// Overcast clouds.
       /// </summary>
-      OVC
+      OVC = 4
     }
 
     #endregion Nested

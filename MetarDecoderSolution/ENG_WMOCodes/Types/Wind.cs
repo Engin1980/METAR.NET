@@ -157,7 +157,6 @@ namespace ENG.WMOCodes.Types
       }
     }
 
-
     /// <summary>
     /// Return true if wind is calm.
     /// </summary>
@@ -166,6 +165,22 @@ namespace ENG.WMOCodes.Types
       get
       {
         return (!GustSpeed.HasValue && Speed == 0);
+      }
+    }
+
+    /// <summary>
+    /// Returns direction of the wind as N/S/E/W/... <seealso cref="Common.eDirection"/>.
+    /// Cannot return value for calm or variable wind.
+    /// </summary>
+    /// <exception cref="Exception">If wind is calm or wind is variable and therefore has no direction value.</exception>
+    public Common.eDirection WorldDirection
+    {
+      get
+      {
+        if (this.Direction.HasValue == false || this.Speed == 0)
+          throw new Exception("Cannot return direction. Wind direction is not specified, probably calm or variable.");
+        Common.eDirection ret = Common.HeadingToeDirection(this.Direction.Value);
+        return ret;
       }
     }
     #endregion Properties
