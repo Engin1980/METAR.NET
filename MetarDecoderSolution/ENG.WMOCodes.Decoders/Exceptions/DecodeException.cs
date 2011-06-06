@@ -8,7 +8,9 @@ namespace ENG.WMOCodes.Decoders.Internal
   /// <summary>
   /// Exception thrown when decoding failed.
   /// </summary>
+#if SILVERLIGHT == false
   [Serializable]
+#endif
   public class DecodeException : Exception
   {
     private string _Description;
@@ -35,6 +37,8 @@ namespace ENG.WMOCodes.Decoders.Internal
       this._Description = decoderDescription;
     }
 
+#if SILVERLIGHT == false
+
     /// <summary>
     /// Initializes a new instance of the <see cref="DecodeException"/> class.
     /// </summary>
@@ -50,6 +54,8 @@ namespace ENG.WMOCodes.Decoders.Internal
     System.Runtime.Serialization.SerializationInfo info,
     System.Runtime.Serialization.StreamingContext context)
       : base(info, context) { }
+
+#endif
 
     /// <summary>
     /// Gets a message that describes the current exception.
