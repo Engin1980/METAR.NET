@@ -118,6 +118,8 @@ namespace ENG.WMOCodes.Types
     {
       get
       {
+#warning TODO Přejmenovat na VariableDistance nebo VaryingDistanceTo nebo tak něco, protože hlavní vlastnost je Distance
+        
         return (_VariableVisibility);
       }
       set
@@ -144,22 +146,22 @@ namespace ENG.WMOCodes.Types
       }
     }
 
-    /// <summary>
-    /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _IsInFeet;
+    private Common.eDistanceUnit _Unit = Common.eDistanceUnit.m;
     ///<summary>
-    /// Sets/gets true if visibility is in feet. Used in US.
+    /// Sets/gets Unit value. Default value is Common.eDistanceUnit.m.
     ///</summary>
-    public bool IsInFeet
+    public Common.eDistanceUnit Unit
     {
       get
       {
-        return (_IsInFeet);
+        return (_Unit);
       }
       set
       {
-        _IsInFeet = value;
+        if (value != Common.eDistanceUnit.m && value != Common.eDistanceUnit.ft)
+          throw new ArgumentException("Value for property Unit of RunwayVisibility have to be feet or meters.");
+        _Unit = value;
       }
     }
 
@@ -181,7 +183,7 @@ namespace ENG.WMOCodes.Types
       ret.Append(Distance.ToString("0000"));
       if (VariableVisibility.HasValue)
         ret.Append("V" + VariableVisibility.Value.ToString("0000"));
-      if (IsInFeet)
+      if (Unit == Common.eDistanceUnit.ft)
         ret.Append("FT");
       else if (Tendency.HasValue)
         ret.Append(Tendency.ToString());

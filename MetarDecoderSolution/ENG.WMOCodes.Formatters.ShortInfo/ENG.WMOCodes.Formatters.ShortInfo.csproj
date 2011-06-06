@@ -8,7 +8,7 @@
     <ProjectGuid>{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ENG.WMOCodes.Formatters.ShortInfo</RootNamespace>
+    <RootNamespace>ENG.WMOCodes.Formatters.ShortInfoFormatter</RootNamespace>
     <AssemblyName>ENG_WMOCodes_Formatters_ShortInfo</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

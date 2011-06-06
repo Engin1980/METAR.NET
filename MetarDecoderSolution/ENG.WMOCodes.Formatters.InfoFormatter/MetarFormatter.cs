@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Formatters.InfoFormatter
 {
@@ -10,8 +11,6 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
   /// </summary>
   public partial class MetarFormatter : ENG.WMOCodes.Formatters.IMetarFormatter
   {
-    #region IMetarFormatter Members
-
     /// <summary>
     /// Returns converted information about metar report.
     /// </summary>
@@ -21,9 +20,11 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
     /// </returns>
     public string ToString(Codes.Metar metar)
     {
-      throw new NotImplementedException();
+      StringBuilder ret =
+        Formatter.ToString(metar);
+
+      return ret.ToString();
     }
 
-    #endregion
   }
 }

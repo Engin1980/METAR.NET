@@ -76,7 +76,7 @@ namespace ENG.WMOCodes.Types
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private List<RunwayVisibility> _Runways = new List<RunwayVisibility>();
     ///<summary>
-    /// Sets/gets runway designator.
+    /// Sets/gets runway designator. Cannot be null.
     ///</summary>
     public List<RunwayVisibility> Runways
     {
@@ -86,6 +86,8 @@ namespace ENG.WMOCodes.Types
       }
       set
       {
+        if (value == null)
+          throw new ArgumentNullException("Property Runways cannot be null. Use empty object/collection instead.");
         _Runways = value;
       }
     }

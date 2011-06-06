@@ -24,22 +24,20 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     protected override PhenomInfo _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      PhenomInfoWithNSW ret = null;
+      PhenomInfo ret = null;
 
       if (groups[0].Success)
       {
-          ret = new PhenomInfoWithNSW();
+        ret = new PhenomInfo();
 
-          string str = groups[1].Value;
-          Match m = Regex.Match(str, RegEx);
-          List<ePhenomCollection> colls = null;
+        string str = groups[1].Value;
+        Match m = Regex.Match(str, RegEx);
+        List<ePhenomCollection> colls = null;
 
-          colls = DecodePhenomSets(m);
+        colls = DecodePhenomSets(m);
 
-          ret.AddRange(colls);
+        ret.AddRange(colls);
       }
-      else
-        ret = null;
 
       return ret;
     }

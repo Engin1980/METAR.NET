@@ -34,15 +34,15 @@ namespace ENG.WMOCodes.Decoders
       try
       {
         new TafPrefixDecoder().Decode(ref pom);
-        ret.IsCorrected = new CORDecoder().Decode(ref pom);
-        ret.IsAmmended = new AMDDecoder().Decode(ref pom);
+        ret.IsCorrected = new CORDecoder() { Required = false }.Decode(ref pom);
+        ret.IsAmmended = new AMDDecoder() { Required = false }.Decode(ref pom);
         ret.ICAO = new ICAODecoder().Decode(ref pom);
         ret.DayTime = new DayHourMinuteDecoder().Decode(ref pom);
-        ret.IsMissing = new NILDecoder().Decode(ref pom);
+        ret.IsMissing = new NILDecoder() { Required = false }.Decode(ref pom);
         if (ret.IsMissing == false)
         {
           ret.Period = new DayHourDayHourDecoder().Decode(ref pom);
-          ret.IsCancelled = new CNLDecoder().Decode(ref pom);
+          ret.IsCancelled = new CNLDecoder() { Required = false }.Decode(ref pom);
           if (ret.IsCancelled == false)
           {
             ret.Wind = new WindDecoder() { Required=false }.Decode(ref pom);

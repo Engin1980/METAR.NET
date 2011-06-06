@@ -24,7 +24,10 @@ namespace ENG.WMOCodes.Decoders.Internal
         ret = DecodeTrend(m.Groups, ref source);
       }
       else
-        throw new DecodeException(Description, new ArgumentException("source"));
+        if (Required)
+          throw new DecodeException(Description, new ArgumentException("source"));
+        else
+          ret = null;
 
       return ret;
     }

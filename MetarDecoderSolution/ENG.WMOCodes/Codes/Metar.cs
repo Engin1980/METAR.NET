@@ -191,13 +191,15 @@ namespace ENG.WMOCodes.Codes
       }
       set
       {
+        if (value == null)
+          throw new ArgumentNullException("Property Phenomens cannot be null. Use empty object/collection instead.");
         _Phenomens = value;
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private CloudInfoWithNCD _Clouds = null;
     ///<summary>
-    /// Sets/gets Clouds value.
+    /// Sets/gets Clouds value. Cannot be null.
     ///</summary>
     public CloudInfoWithNCD Clouds
     {
@@ -207,6 +209,8 @@ namespace ENG.WMOCodes.Codes
       }
       set
       {
+        if (value == null)
+          throw new ArgumentNullException("Property Clouds cannot be null. Use empty object/collection instead.");
         _Clouds = value;
       }
     }
@@ -263,7 +267,7 @@ namespace ENG.WMOCodes.Codes
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private RePhenomInfo _RePhenomens = null;
     ///<summary>
-    /// Sets/gets RePhenoms value.
+    /// Sets/gets RePhenoms value. Cannot be null
     ///</summary>
     public RePhenomInfo RePhenomens
     {
@@ -273,13 +277,15 @@ namespace ENG.WMOCodes.Codes
       }
       set
       {
+        if (value == null)
+          throw new ArgumentNullException("Property RePhenomens cannot be null. Use empty object/collection instead.");
         _RePhenomens = value;
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private WindShearInfo _WindShears = null;
     ///<summary>
-    /// Sets/gets WindShears value, or null if not presented in metar.
+    /// Sets/gets WindShears value. Cannot be null.
     ///</summary>
     public WindShearInfo WindShears
     {
@@ -289,13 +295,15 @@ namespace ENG.WMOCodes.Codes
       }
       set
       {
+        if (value == null)
+          throw new ArgumentNullException("Property WindShears cannot be null. Use empty object/collection instead.");
         _WindShears = value;
       }
     }
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
     private RunwayConditionInfo _RunwayConditions = null;
     ///<summary>
-    /// Sets/gets RunwayConditions value, or null if not presented in metar.
+    /// Sets/gets RunwayConditions value. Cannot be null.
     ///</summary>
     public RunwayConditionInfo RunwayConditions
     {
@@ -305,6 +313,8 @@ namespace ENG.WMOCodes.Codes
       }
       set
       {
+        if (value == null)
+          throw new ArgumentNullException("Property Runways cannot be null. Use empty object/collection instead.");
         _RunwayConditions = value;
       }
     }

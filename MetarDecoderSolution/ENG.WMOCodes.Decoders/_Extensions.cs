@@ -40,9 +40,24 @@ namespace ENG.WMOCodes.Decoders
     /// <param name="target">The target.</param>
     public static void CopyPropertiesTo(this object source, object target)
     {
-      // tady je to v lojzovi. kopíruje to i parametry kolekcí, když se kopírují kolekce, což je průser
-      // a netuším co s tím
+      CopyPropertiesTo(source, target, new List<string>());
+    }
 
+    public static void CopyPropertiesTo(this object source, object target, params string [] excludes)
+    {
+      List<string> excludeLst = excludes.ToList();
+
+      CopyPropertiesTo(source, target, excludeLst);
+    }
+
+    /// <summary>
+    /// Copies the properties from one object to the other. Only intersection of the properties are copied, rest is ignored.
+    /// </summary>
+    /// <param name="source">The source.</param>
+    /// <param name="target">The target.</param>
+    /// <param name="excludeList">The list of properties which should be skipped and not copied..</param>
+    public static void CopyPropertiesTo(this object source, object target, List<string> excludeList)
+    {
       var ins = source.GetType().GetInterfaces();
       bool areLists = false;
       areLists = IsList(source) && IsList(target);
@@ -50,6 +65,7 @@ namespace ENG.WMOCodes.Decoders
       PropertyInfo[] sp = source.GetType().GetProperties();
       PropertyInfo[] tp = target.GetType().GetProperties();
       PropertyInfo[] shared = GetSharedProperties(sp, tp);
+      CutOutExcluded(ref shared, excludeList);
       object val;
 
       foreach (var fItem in shared)
@@ -74,6 +90,19 @@ namespace ENG.WMOCodes.Decoders
       {
         throw new Exception("Failed to copy items between ILists.", ex);
       } // catch (Exception ex)
+    }
+
+    private static void CutOutExcluded(ref PropertyInfo[] shared, List<string> excludeList)
+    {
+      List<PropertyInfo> ret = new List<PropertyInfo>();
+
+      foreach (var fItem in shared)
+      {
+        if (excludeList.Contains(fItem.Name) == false)
+          ret.Add(fItem);
+      } // foreach (var fItem in shared)
+
+      shared = ret.ToArray();
     }
 
     private static void CopyListItems(IList source, IList target)

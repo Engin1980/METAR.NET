@@ -40,6 +40,8 @@
       this.btnLongInfo = new System.Windows.Forms.Button();
       this.txtResult = new System.Windows.Forms.TextBox();
       this.btnTest = new System.Windows.Forms.Button();
+      this.txtTaf = new System.Windows.Forms.TextBox();
+      this.label2 = new System.Windows.Forms.Label();
       this.SuspendLayout();
       // 
       // label1
@@ -87,23 +89,26 @@
       this.label3.AutoSize = true;
       this.label3.Location = new System.Drawing.Point(14, 53);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(44, 15);
+      this.label3.Size = new System.Drawing.Size(51, 15);
       this.label3.TabIndex = 4;
-      this.label3.Text = "Metar:";
+      this.label3.Text = "METAR:";
       // 
       // txtMetar
       // 
-      this.txtMetar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                  | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtMetar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
       this.txtMetar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtMetar.Location = new System.Drawing.Point(76, 50);
       this.txtMetar.Name = "txtMetar";
       this.txtMetar.Size = new System.Drawing.Size(610, 21);
       this.txtMetar.TabIndex = 5;
+      this.txtMetar.Text = "METAR EETN 012150Z 26004G18KT 6000NE 0300S R04/0300V0500D R22/2000 +SNBR -RAHZ SC" +
+    "T002 OVC012 04/04 Q1013 WS ALL RWY R08/000095 R26/CLDR// TEMPO AT1300 2000 BR RM" +
+    "K OA2";
       // 
       // btnSanityCheck
       // 
-      this.btnSanityCheck.Location = new System.Drawing.Point(180, 97);
+      this.btnSanityCheck.Location = new System.Drawing.Point(180, 124);
       this.btnSanityCheck.Name = "btnSanityCheck";
       this.btnSanityCheck.Size = new System.Drawing.Size(131, 23);
       this.btnSanityCheck.TabIndex = 7;
@@ -113,7 +118,7 @@
       // 
       // btnEncDec
       // 
-      this.btnEncDec.Location = new System.Drawing.Point(317, 97);
+      this.btnEncDec.Location = new System.Drawing.Point(317, 124);
       this.btnEncDec.Name = "btnEncDec";
       this.btnEncDec.Size = new System.Drawing.Size(179, 23);
       this.btnEncDec.TabIndex = 8;
@@ -123,7 +128,7 @@
       // 
       // btnShortInfo
       // 
-      this.btnShortInfo.Location = new System.Drawing.Point(502, 97);
+      this.btnShortInfo.Location = new System.Drawing.Point(502, 124);
       this.btnShortInfo.Name = "btnShortInfo";
       this.btnShortInfo.Size = new System.Drawing.Size(157, 23);
       this.btnShortInfo.TabIndex = 10;
@@ -133,7 +138,7 @@
       // 
       // btnLongInfo
       // 
-      this.btnLongInfo.Location = new System.Drawing.Point(502, 77);
+      this.btnLongInfo.Location = new System.Drawing.Point(502, 104);
       this.btnLongInfo.Name = "btnLongInfo";
       this.btnLongInfo.Size = new System.Drawing.Size(157, 23);
       this.btnLongInfo.TabIndex = 9;
@@ -143,31 +148,53 @@
       // 
       // txtResult
       // 
-      this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                  | System.Windows.Forms.AnchorStyles.Left)
-                  | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtResult.Location = new System.Drawing.Point(17, 126);
+      this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtResult.Location = new System.Drawing.Point(17, 153);
       this.txtResult.Multiline = true;
       this.txtResult.Name = "txtResult";
       this.txtResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.txtResult.Size = new System.Drawing.Size(669, 326);
+      this.txtResult.Size = new System.Drawing.Size(669, 299);
       this.txtResult.TabIndex = 11;
       // 
       // btnTest
       // 
-      this.btnTest.Location = new System.Drawing.Point(17, 97);
+      this.btnTest.Location = new System.Drawing.Point(17, 124);
       this.btnTest.Name = "btnTest";
       this.btnTest.Size = new System.Drawing.Size(131, 23);
       this.btnTest.TabIndex = 6;
       this.btnTest.Text = "Test metar string";
       this.btnTest.UseVisualStyleBackColor = true;
+      this.btnTest.Visible = false;
       this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+      // 
+      // txtTaf
+      // 
+      this.txtTaf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtTaf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+      this.txtTaf.Location = new System.Drawing.Point(76, 77);
+      this.txtTaf.Name = "txtTaf";
+      this.txtTaf.Size = new System.Drawing.Size(610, 21);
+      this.txtTaf.TabIndex = 13;
+      // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Location = new System.Drawing.Point(14, 80);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(33, 15);
+      this.label2.TabIndex = 12;
+      this.label2.Text = "TAF:";
       // 
       // FrmTest
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(717, 464);
+      this.Controls.Add(this.txtTaf);
+      this.Controls.Add(this.label2);
       this.Controls.Add(this.btnTest);
       this.Controls.Add(this.txtResult);
       this.Controls.Add(this.btnLongInfo);
@@ -202,5 +229,7 @@
     private System.Windows.Forms.Button btnLongInfo;
     private System.Windows.Forms.TextBox txtResult;
     private System.Windows.Forms.Button btnTest;
+    private System.Windows.Forms.TextBox txtTaf;
+    private System.Windows.Forms.Label label2;
   }
 }

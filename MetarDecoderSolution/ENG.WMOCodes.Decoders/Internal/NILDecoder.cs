@@ -21,8 +21,7 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     protected override bool _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-      bool val = groups[1].Length > 0;
-      return val;
+      return true;
     }
   }
 }

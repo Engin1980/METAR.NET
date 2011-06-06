@@ -20,11 +20,18 @@ namespace ENG.WMOCodes.Decoders.Internal.Basic
         ret = _Decode(groups);
       else
         if (Required)
-          throw 
-            new DecodeException(Description, 
-              new ArgumentException ("Failed text is >" + source + "<."));
+          throw
+            new DecodeException(Description,
+              new ArgumentException("Failed text is >" + source + "<."));
         else
-          ret = default(T);
+        {
+          // pokud je T nejaky list, vracim jeho prazdnou kolekci, jinak vracim default (typicky null)
+          Type t = typeof(T);
+          if (t.GetInterface("System.Collections.IList", false) != null)
+            ret = Activator.CreateInstance<T>();
+          else
+            ret = default(T);
+        }
 
       return ret;
     }

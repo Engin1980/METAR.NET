@@ -20,10 +20,7 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     protected override bool _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-#warning TODO Nemelo by byt napsano nejak jinak, aby se to nemuselo kontrolovat?
-      
-      bool val = groups[1].Length > 0;
-      return val;
+      return true;
     }
   }
 }

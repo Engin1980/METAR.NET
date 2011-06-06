@@ -16,7 +16,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       WindVariable wv = new WindVariableDecoder() { Required = false }.Decode(ref source);
 
       WindWithVariability ret = new WindWithVariability();
-      w.CopyPropertiesTo(ret);
+      w.CopyPropertiesTo(ret, "IsVariable");
       ret.Variability = wv;
 
       return ret;

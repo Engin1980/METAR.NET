@@ -21,7 +21,6 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     protected override RunwayVisibility _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
-
       RunwayVisibility ret = new RunwayVisibility();
 
       ret.Runway = groups[3].Value;
@@ -41,12 +40,12 @@ namespace ENG.WMOCodes.Decoders.Internal
       {
         if (groups[9].Value == "FT")
         {
-          ret.IsInFeet = true;
+          ret.Unit = Common.eDistanceUnit.ft;
           ret.Tendency = null;
         }
         else
         {
-          ret.IsInFeet = false;
+          ret.Unit = Common.eDistanceUnit.m;
           ret.Tendency = (RunwayVisibility.eTendency)
             Enum.Parse(typeof(RunwayVisibility.eTendency), groups[9].Value, false);
         }

@@ -22,19 +22,27 @@ namespace Tutorial
       AddInfo("Starting sync download");
 
       string metar;
+      string taf;
 
       // this specifies the downloader - from where and how the metar will be downloaded.
-      ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever retriever = 
+      ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever mRetriever = 
         new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
+
+      ENG.WMOCodes.Downloaders.Retrievers.TAF.NoaaGovRetriever tRetriever =
+        new ENG.WMOCodes.Downloaders.Retrievers.TAF.NoaaGovRetriever();
 
       try
       {
         // synchronously download the metar, parameters are
         // 1) which airport; 2) from which source
         metar = ENG.WMOCodes.Downloaders.Downloader.Download(
-          txtIcao.Text.Trim(), retriever);
+          txtIcao.Text.Trim(), mRetriever);
+
+        taf = ENG.WMOCodes.Downloaders.Downloader.Download(
+          txtIcao.Text.Trim(), tRetriever);
 
         txtMetar.Text = metar;
+        txtTaf.Text = taf;
 
         AddInfo("... downloaded");
       }
@@ -155,44 +163,38 @@ namespace Tutorial
 
     private void btnLongInfo_Click(object sender, EventArgs e)
     {
-      MessageBox.Show("Not supported yet.");
-#warning TODO Dodelat
+      AddInfo("Performing long-info print...");
 
-      //AddInfo("Performing long-info print...");
+      ENG.WMOCodes.Codes.Metar mtr = GetMetar();
 
-      //ENG.Metar.Decoder.Metar mtr = GetMetar();
+      if (mtr == null) return;
 
-      //if (mtr == null) return;
+      ENG.WMOCodes.Formatters.InfoFormatter.MetarFormatter formatter =
+        new ENG.WMOCodes.Formatters.InfoFormatter.MetarFormatter();
 
-      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-      //  new ENG.Metar.Decoder.Formatters.CzechLongInfoFormatter();
+      string str = formatter.ToString(mtr);
 
-      //string str = mtr.ToInfo(ifo, true, true, true, true);
+      AddInfo(str);
 
-      //AddInfo(str);
-
-      //AddInfo("...done");
+      AddInfo("...done");
     }
 
     private void btnShortInfo_Click(object sender, EventArgs e)
     {
-      MessageBox.Show("Not supported yet.");
-#warning TODO Dodelat
+      AddInfo("Performing short-info print...");
 
-      //AddInfo("Performing short-info print...");
+      ENG.WMOCodes.Codes.Metar mtr = GetMetar();
 
-      //ENG.Metar.Decoder.Metar mtr = GetMetar();
+      if (mtr == null) return;
 
-      //if (mtr == null) return;
+      ENG.WMOCodes.Formatters.ShortInfoFormatter.MetarFormatter formatter = 
+        new ENG.WMOCodes.Formatters.ShortInfoFormatter.MetarFormatter();
 
-      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-      //  new ENG.Metar.Decoder.Formatters.ShortInfoFormatter();
+      string str = formatter.ToString(mtr);
 
-      //string str = mtr.ToInfo(ifo, true, true, true, true);
+      AddInfo(str);
 
-      //AddInfo(str);
-
-      //AddInfo("...done");
+      AddInfo("...done");
     }
   }
 }

@@ -133,19 +133,21 @@ namespace Tutorial
 
     private static void PrintShortInfo()
     {
-#warning TODO Dodelat
 
-      //string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
-      //ENG.WMOCodes.Codes.Metar metar =
-      //  ENG.Metar.Decoder.Metar.Create(sourceMetar);
+      string sourceMetar = "METAR LOWG 312320Z AUTO 00000KT 0200 R35/0650N R17/1200D BCFG 06/05 Q1010 RMK BASE S CLD004 N CLD007";
 
-      //ENG.Metar.Decoder.Formatters.InfoFormatter ifo =
-      //  new ENG.Metar.Decoder.Formatters.ShortInfoFormatter();
+      // decoding
+      ENG.WMOCodes.Decoders.MetarDecoder metarDecoder = new ENG.WMOCodes.Decoders.MetarDecoder();
+      ENG.WMOCodes.Codes.Metar metar = metarDecoder.Decode(sourceMetar);
 
-      //string str = metar.ToInfo(ifo, true, true, true, true);
+      // formatting to short info with US culture
+      ENG.WMOCodes.Formatters.ShortInfoFormatter.MetarFormatter metarFormatter =
+        new ENG.WMOCodes.Formatters.ShortInfoFormatter.MetarFormatter();
 
-      //Console.WriteLine(str);
-      //Console.ReadKey();
+      string str = metarFormatter.ToString(metar);
+
+      Console.WriteLine(str);
+      Console.ReadKey();
     }
 
     private static void PrintLongInfo()

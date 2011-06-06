@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ENG.WMOCodes.Formatters.ShortInfo.Properties {
+namespace ENG.WMOCodes.Formatters.ShortInfoFormatter.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ENG.WMOCodes.Formatters.ShortInfo.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ENG.WMOCodes.Formatters.ShortInfo.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ENG.WMOCodes.Formatters.ShortInfoFormatter.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

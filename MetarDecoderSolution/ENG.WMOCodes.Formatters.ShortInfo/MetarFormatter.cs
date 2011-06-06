@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ESystem.Extensions;
-using R = ENG.WMOCodes.Formatters.ShortInfo.Properties.Resources;
+using R = ENG.WMOCodes.Formatters.ShortInfoFormatter.Properties.Resources;
 using ENG.WMOCodes.Types;
 using System.Globalization;
 
-namespace ENG.WMOCodes.Formatters.ShortInfo
+namespace ENG.WMOCodes.Formatters.ShortInfoFormatter
 {
   /// <summary>
   /// Converts metar into short information string .
@@ -293,13 +293,10 @@ namespace ENG.WMOCodes.Formatters.ShortInfo
     {
       sb.Replace(".", ". ");
       sb.Replace(",", ", ");
-      sb.Replace(":", ": ");
     }
 
     private void RemoveSpaces(StringBuilder sb)
     {
-      DoReplace(sb, " :", ":");
-      DoReplace(sb, ": ", ":");
       DoReplace(sb, " .", ".");
       DoReplace(sb, ". ", ".");
       DoReplace(sb, " ,", ",");

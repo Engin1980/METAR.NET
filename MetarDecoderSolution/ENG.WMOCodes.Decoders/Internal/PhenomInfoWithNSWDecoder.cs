@@ -28,23 +28,23 @@ namespace ENG.WMOCodes.Decoders.Internal
 
       if (groups[0].Success)
       {
+        ret = new PhenomInfoWithNSW();
+
         if (groups[1].Success)
-          ret = new PhenomInfoWithNSW() { IsNSW = true };
+          ret.IsNSW = true;
         else
         {
           ret = new PhenomInfoWithNSW();
 
           string str = groups[2].Value;
           Match m = Regex.Match(str, RegEx);
-          List<ePhenomCollection> colls = null;            
+          List<ePhenomCollection> colls = null;
 
-            colls = DecodePhenomSets(m);
+          colls = DecodePhenomSets(m);
 
-            ret.AddRange(colls);
+          ret.AddRange(colls);
         }
       }
-      else
-        ret = null;
 
       return ret;
     }
