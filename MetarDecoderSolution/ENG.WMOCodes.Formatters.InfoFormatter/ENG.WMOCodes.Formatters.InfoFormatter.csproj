@@ -46,7 +46,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj">
       <Project>{C9817849-7A1D-411D-AF88-6663695191E3}</Project>
-      <Name>ENG_WMOCodes_Formatters</Name>
+      <Name>ENG.WMOCodes.Formatters</Name>
     </ProjectReference>
     <ProjectReference Include="..\ENG.WMOCodes\ENG.WMOCodes.csproj">
       <Project>{119FCACD-C111-495C-BCA9-FC332EE88D74}</Project>
