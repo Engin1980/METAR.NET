@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="IMetarFormatter.cs" />
     <Compile Include="ITafFormatter.cs" />
-    <Compile Include="MetarFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
