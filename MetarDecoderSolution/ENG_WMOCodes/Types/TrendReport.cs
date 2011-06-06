@@ -6,6 +6,10 @@ using ENG.WMOCodes.Types.Basic;
 
 namespace ENG.WMOCodes.Types
 {
+  /// <summary>
+  /// Represents trend report for metar/taf codes, containing only(!) wind, visibility, phenomens and clouds. 
+  /// This class is usually not used directly, but inherited and descendants are used.
+  /// </summary>
   public class TrendReport : ICodeItem
   {
     #region Properties

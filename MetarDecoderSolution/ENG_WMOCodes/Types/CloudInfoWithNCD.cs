@@ -27,17 +27,28 @@ namespace ENG.WMOCodes.Types
 
     #region Methods
 
+    /// <summary>
+    /// Sets all flags (VV, NSC, etc.) off.
+    /// </summary>
     protected override void SetAllFlagsOff()
     {
       _IsNCD = false;
       base.SetAllFlagsOff();
     }
+
+    /// <summary>
+    /// Sets the NCD (no clouds detected) flag.
+    /// </summary>
     public virtual void SetNCD()
     {
       SetAllFlagsOff();
       _IsNCD = true;
     }
 
+    /// <summary>
+    /// Returns item in code string.
+    /// </summary>
+    /// <returns></returns>
     public override string ToCode()
     {
       if (IsNCD)
@@ -46,6 +57,11 @@ namespace ENG.WMOCodes.Types
         return base.ToCode();
     }
 
+    /// <summary>
+    /// Proceed sanity check of inserted values.
+    /// </summary>
+    /// <param name="errors">Found errors.</param>
+    /// <param name="warnings">Found warnings.</param>
     public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       base.SanityCheck(ref errors, ref warnings);

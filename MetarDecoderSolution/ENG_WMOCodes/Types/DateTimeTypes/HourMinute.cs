@@ -6,6 +6,9 @@ using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types.DateTimeTypes
 {
+  /// <summary>
+  /// Represents date/time value defined by hour and minute.
+  /// </summary>
   public class HourMinute
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]

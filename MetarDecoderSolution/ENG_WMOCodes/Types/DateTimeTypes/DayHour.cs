@@ -6,6 +6,9 @@ using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types.DateTimeTypes
 {
+  /// <summary>
+  /// Represents day/time value defined by day-hour.
+  /// </summary>
   public class DayHour : DateTimeTypes.DateTimeType
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -43,18 +46,35 @@ namespace ENG.WMOCodes.Types.DateTimeTypes
       }
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="DayHour"/> class.
+    /// </summary>
+    /// <param name="day">The day.</param>
+    /// <param name="hour">The hour.</param>
     public DayHour(int day, int hour)
     {
       this.Day = day;
       this.Hour = hour;
     }
+    /// <summary>
+    /// Initializes a new instance of the <see cref="DayHour"/> class.
+    /// </summary>
     public DayHour() { }
 
+    /// <summary>
+    /// Returns item in code string.
+    /// </summary>
+    /// <returns></returns>
     public override string ToCode()
     {
       return Day.ToString("00") + Hour.ToString("00");
     }
 
+    /// <summary>
+    /// Proceed sanity check of inserted values.
+    /// </summary>
+    /// <param name="errors">Found errors.</param>
+    /// <param name="warnings">Found warnings.</param>
     public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       // nothing to do

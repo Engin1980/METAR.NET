@@ -8,13 +8,25 @@ using ENG.WMOCodes.Decoders.Internal;
 
 namespace ENG.WMOCodes.Decoders
 {
+  /// <summary>
+  /// Represents decoder for metar code.
+  /// </summary>
   public class MetarDecoder : PublicDecoder<Metar>
   {
+    /// <summary>
+    /// Gets the description.
+    /// </summary>
+    /// <value>The description.</value>
     public override string Description
     {
       get { return "Whole METAR"; }
     }
 
+    /// <summary>
+    /// The descendant's implementation of the decoding function.
+    /// </summary>
+    /// <param name="source">Source string to decode.</param>
+    /// <returns></returns>
     protected override Metar _Decode(string source)
     {
       Metar ret = new Metar();

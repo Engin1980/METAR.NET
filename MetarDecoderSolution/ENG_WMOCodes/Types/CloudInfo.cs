@@ -99,6 +99,9 @@ namespace ENG.WMOCodes.Types
       _VVDistance = distance;
     }
 
+    /// <summary>
+    /// Sets all flags (VV, NSC, etc.) off.
+    /// </summary>
     protected virtual void SetAllFlagsOff()
     {
       _IsSKC = false;

@@ -6,6 +6,9 @@ using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types
 {
+  /// <summary>
+  /// Represents recent phenom info. Derived from <see cref="PhenomInfo"/>.
+  /// </summary>
   public class RePhenomInfo : PhenomInfo
   {
     #region Inherited

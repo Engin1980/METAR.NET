@@ -8,13 +8,24 @@ using ENG.WMOCodes.Decoders.Internal;
 
 namespace ENG.WMOCodes.Decoders
 {
+  /// <summary>
+  /// Represents decoder for the TAF report.
+  /// </summary>
   public class TafDecoder : PublicDecoder<Taf>
   {
+    /// <summary>
+    /// Gets the description.
+    /// </summary>
+    /// <value>The description.</value>
     public override string Description
     {
       get { return "Whole TAF"; }
     }
 
+    /// <summary>
+    /// The descendant's implementation of the decoding function.
+    /// </summary>
+    /// <param name="source">Source string to decode.</param>
     protected override Taf _Decode(string source)
     {
       string pom = source;

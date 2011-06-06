@@ -6,6 +6,9 @@ using ENG.WMOCodes.Types.DateTimeTypes;
 
 namespace ENG.WMOCodes.Types
 {
+  /// <summary>
+  /// Represents interval for trend TAF report starting with prefix (e.g. FM011200 )
+  /// </summary>
   public class TafIntervalFM : TafInterval
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]

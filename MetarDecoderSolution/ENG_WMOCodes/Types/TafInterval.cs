@@ -6,6 +6,9 @@ using ENG.WMOCodes.Types.Basic;
 
 namespace ENG.WMOCodes.Types
 {
+  /// <summary>
+  /// Represents definition of trend TAF interval - that means from-to time when trend is active.
+  /// </summary>
   public abstract class TafInterval : ICodeItem
   {
     #region ICodeItem Members

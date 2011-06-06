@@ -228,6 +228,11 @@ namespace ENG.WMOCodes.Types
       }
     }
 
+
+    /// <summary>
+    /// Gets new instance of calm wind.
+    /// </summary>
+    /// <value>The calm.</value>
     public static Wind Calm
     {
       get

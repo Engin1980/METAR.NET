@@ -9,10 +9,20 @@ using System.Globalization;
 
 namespace ENG.WMOCodes.Formatters.ShortInfo
 {
+  /// <summary>
+  /// Converts metar into short information string .
+  /// </summary>
   public class MetarFormatter : ENG.WMOCodes.Formatters.IMetarFormatter
   {
     #region IMetarFormatter Members
 
+    /// <summary>
+    /// Returns a <see cref="System.String"/> that represents this instance.
+    /// </summary>
+    /// <param name="metar">The metar.</param>
+    /// <returns>
+    /// A <see cref="System.String"/> that represents this instance.
+    /// </returns>
     public string ToString(Codes.Metar metar)
     {
       StringBuilder ret = new StringBuilder();
@@ -52,6 +62,14 @@ namespace ENG.WMOCodes.Formatters.ShortInfo
       return ret.ToString();
     }
 
+    /// <summary>
+    /// Returns a <see cref="System.String"/> that represents this instance.
+    /// </summary>
+    /// <param name="metar">The metar.</param>
+    /// <param name="cultureInfo">The culture info.</param>
+    /// <returns>
+    /// A <see cref="System.String"/> that represents this instance.
+    /// </returns>
     public string ToString(Codes.Metar metar, CultureInfo cultureInfo)
     {
       var oldCulture = R.Culture;

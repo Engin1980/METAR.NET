@@ -8,6 +8,9 @@ using ENG.WMOCodes.Types;
 
 namespace ENG.WMOCodes.Codes
 {
+  /// <summary>
+  /// Represents TAF report representing the weather forecast.
+  /// </summary>
   public class Taf : TrendReport
   {
     #region Nested
@@ -228,14 +231,16 @@ namespace ENG.WMOCodes.Codes
 
     #endregion Properties
 
+    /// <summary>
+    /// Obsolete. Use decoders to decode TAF report from TAF code.
+    /// </summary>
+    /// <param name="taf"></param>
+    /// <returns></returns>
+    /// <exception cref="NotSupportedException">This method is obsolete and is not supported.</exception>
     [Obsolete("Not supported.")]
     public static Taf Create(string taf)
     {
       throw new NotSupportedException();
-
-      //Taf ret = new TafDecoder().Decode(taf);
-      //
-      //return ret;
     }
 
     private bool GetFlag(eTafFlag eTafType)
@@ -251,6 +256,10 @@ namespace ENG.WMOCodes.Codes
         _TafType = _TafType & ~eTafType;
     }
 
+    /// <summary>
+    /// Returns item in code string.
+    /// </summary>
+    /// <returns></returns>
     public override string ToCode()
     {
       StringBuilder ret = new StringBuilder();
@@ -279,6 +288,11 @@ namespace ENG.WMOCodes.Codes
       return ret.ToString();
     }
 
+    /// <summary>
+    /// Proceed sanity check of inserted values.
+    /// </summary>
+    /// <param name="errors">Found errors.</param>
+    /// <param name="warnings">Found warnings.</param>
     public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       base.SanityCheck(ref errors, ref warnings);

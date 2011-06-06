@@ -29,7 +29,7 @@ namespace ENG.WMOCodes.Downloaders.Retrievers.Metar
     /// </summary>
     /// <param name="sourceStream">Source stream, from which the metar will be obtained.</param>
     /// <returns>Metar string.</returns>
-    /// <exception cref="MetarDownloadException">Returns if anything fails. Inner exception should contain more accurate info.</exception>
+    /// <exception cref="DownloadException">Returns if anything fails. Inner exception should contain more accurate info.</exception>
     public string DecodeWMOCode(System.IO.Stream sourceStream)
     {
       System.IO.StreamReader rdr = new System.IO.StreamReader(sourceStream);

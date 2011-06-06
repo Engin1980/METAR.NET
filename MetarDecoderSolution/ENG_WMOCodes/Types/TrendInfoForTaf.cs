@@ -7,6 +7,10 @@ using ENG.WMOCodes.Types.DateTimeTypes;
 
 namespace ENG.WMOCodes.Types
 {
+
+  /// <summary>
+  /// Represents trend report contained in TAF report. <seealso cref="TrendReport"/>
+  /// </summary>
   public class TrendInfoForTaf : TrendReport
   {
     #region Properties
@@ -31,6 +35,10 @@ namespace ENG.WMOCodes.Types
 
     #endregion Properties
 
+      /// <summary>
+      /// Returns item in code string.
+      /// </summary>
+      /// <returns></returns>
     public override string ToCode()
     {
       StringBuilder ret = new StringBuilder();
@@ -41,6 +49,11 @@ namespace ENG.WMOCodes.Types
       return ret.ToString();
     }
 
+    /// <summary>
+    /// Proceed sanity check of inserted values.
+    /// </summary>
+    /// <param name="errors">Found errors.</param>
+    /// <param name="warnings">Found warnings.</param>
     public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       base.SanityCheck(ref errors, ref warnings);

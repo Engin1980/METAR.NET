@@ -6,6 +6,9 @@ using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types.DateTimeTypes
 {
+  /// <summary>
+  /// Represents date/time interval defined from day-hour to day-hour
+  /// </summary>
   public class DayHourDayHour :DateTimeTypes.DateTimeType
   {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]

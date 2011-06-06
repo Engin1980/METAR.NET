@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ENG.WMOCodes.Downloaders
 {
+  /// <summary>
+  /// Interface to represent retriever to download data from the source.
+  /// </summary>
   public interface IRetriever
   {
     /// <summary>
@@ -20,7 +23,7 @@ namespace ENG.WMOCodes.Downloaders
     /// </summary>
     /// <param name="sourceStream">Source stream, from which the metar will be obtained.</param>
     /// <returns>Code string.</returns>
-    /// <exception cref="MetarDownloadException">
+    /// <exception cref="DownloadException">
     /// Returns if anything fails. Inner exception should contain more accurate info.
     /// </exception>
     string DecodeWMOCode(System.IO.Stream sourceStream);

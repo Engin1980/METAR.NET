@@ -6,6 +6,9 @@ using ENG.WMOCodes.Types.Basic;
 
 namespace ENG.WMOCodes.Types
 {
+  /// <summary>
+  /// Represents standard wind (<see cref=" Wind"/>) extended with wind variability.
+  /// </summary>
   public class WindWithVariability : Wind
   {
     /// <summary>
@@ -26,7 +29,6 @@ namespace ENG.WMOCodes.Types
         _Variability = value;
       }
     }
-
 
     /// <summary>
     /// Returns true if wind is varying between two headings.. <see cref="Variability"/> <see cref="WindVariable"/>
@@ -79,6 +81,10 @@ namespace ENG.WMOCodes.Types
     //  return ret.ToString();
     //}
 
+    /// <summary>
+    /// Returns item in code string.
+    /// </summary>
+    /// <returns></returns>
     public override string ToCode()
     {
       StringBuilder ret = new StringBuilder(base.ToCode());
@@ -91,6 +97,11 @@ namespace ENG.WMOCodes.Types
       return ret.ToString();
     }
 
+    /// <summary>
+    /// Proceed sanity check of inserted values.
+    /// </summary>
+    /// <param name="errors">Found errors.</param>
+    /// <param name="warnings">Found warnings.</param>
     public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       base.SanityCheck(ref errors, ref warnings);

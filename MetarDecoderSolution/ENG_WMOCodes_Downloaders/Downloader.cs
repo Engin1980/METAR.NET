@@ -49,7 +49,7 @@ namespace ENG.WMOCodes.Downloaders
     /// <param name="icao">Icao code of airport/station.</param>
     /// <param name="retriever">Metar retrievere used to decode metar from source stream</param>
     /// <returns>Metar as string.</returns>
-    /// <exception cref="MetarDownloadException">
+    /// <exception cref="DownloadException">
     /// Raised when any error occurs.
     /// </exception>
     public static string Download(string icao, IRetriever retriever)
@@ -71,7 +71,7 @@ namespace ENG.WMOCodes.Downloaders
     /// </summary>
     /// <param name="ICAO">Icao code of airport/station.</param>
     /// <returns>Metar as string.</returns>
-    /// <exception cref="MetarDownloadException">
+    /// <exception cref="DownloadException">
     /// Raised when any error occurs.
     /// </exception>
     public string Download(string ICAO)
@@ -107,8 +107,8 @@ namespace ENG.WMOCodes.Downloaders
     /// </summary>
     /// <param name="icao">Icao code of airport/station.</param>
     /// <param name="retriever">Metar retrievere used to decode metar from source stream</param>
-    /// <param name="downloadMetarCompletedDelegate">Delegate function raised when download is completed or error occured.</param>
-    /// <exception cref="MetarDownloadException">
+    /// <param name="downloadCompletedDelegate">Delegate function raised when download is completed or error occured.</param>
+    /// <exception cref="DownloadException">
     /// Raised when any error occurs.
     /// </exception>
     public static void DownloadAsync(string icao, IRetriever retriever,
@@ -124,7 +124,7 @@ namespace ENG.WMOCodes.Downloaders
     /// </summary>
     /// <param name="icao">Icao code of airport/station.</param>
     /// <param name="downloadCompletedDelegate">Delegate function raised when download is completed or error occured.</param>
-    /// <exception cref="MetarDownloadException">
+    /// <exception cref="DownloadException">
     /// Raised when any error occurs.
     /// </exception>
     public void DownloadAsync(

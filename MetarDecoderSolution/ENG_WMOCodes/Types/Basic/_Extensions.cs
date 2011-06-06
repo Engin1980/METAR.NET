@@ -47,6 +47,11 @@ namespace ENG.WMOCodes.Types.Basic
       return ret;
     }
 
+    /// <summary>
+    /// Copies the properties from one object to the other. Only intersection of the properties are copied, rest is ignored.
+    /// </summary>
+    /// <param name="source">The source.</param>
+    /// <param name="target">The target.</param>
     public static void CopyPropertiesTo(this object source, object target)
     {      
       // tady je to v lojzovi. kopíruje to i parametry kolekcí, když se kopírují kolekce, což je průser
@@ -95,8 +100,6 @@ namespace ENG.WMOCodes.Types.Basic
 
     private static bool IsList(object target)
     {
-      bool ret = false;
-
       foreach (var fItem in target.GetType().GetInterfaces())
       {
         if (fItem.FullName.Contains("System.Collections.Generic.IList"))
