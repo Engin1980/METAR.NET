@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ENG.WMOCodes.Types.Basic;
+using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types
 {
@@ -94,7 +95,7 @@ namespace ENG.WMOCodes.Types
 
         foreach (var fItem in this)
         {
-          b.AppendSpaced(fItem.ToCode());
+          b.AppendPreSpaced(fItem.ToCode());
         } // foreach (var fItem in WindShears)
 
         if (b.Length > 0)

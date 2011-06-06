@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ENG.WMOCodes.Types.Basic;
+using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types
 {
@@ -85,17 +86,17 @@ namespace ENG.WMOCodes.Types
     {
       StringBuilder ret = new StringBuilder();
 
-      ret.AppendSpaced(this.Type.ToString());
+      ret.AppendPreSpaced(this.Type.ToString());
       this.Times.ForEach(
-        i => ret.AppendSpaced(i.ToCode()));
+        i => ret.AppendPreSpaced(i.ToCode()));
       if (Wind != null)
-        ret.AppendSpaced(Wind.ToCode());
+        ret.AppendPreSpaced(Wind.ToCode());
       if (Visibility != null)
-        ret.AppendSpaced(this.Visibility.ToCode());
+        ret.AppendPreSpaced(this.Visibility.ToCode());
       if (Phenomens != null)
-        ret.AppendSpaced(this.Phenomens.ToCode());
+        ret.AppendPreSpaced(this.Phenomens.ToCode());
       if (Clouds != null)
-        ret.AppendSpaced(this.Clouds.ToCode());
+        ret.AppendPreSpaced(this.Clouds.ToCode());
 
       return ret.ToString().TrimEnd();
     }

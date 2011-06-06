@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ENG.WMOCodes.Types.Basic;
+using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types
 {
@@ -24,7 +25,7 @@ namespace ENG.WMOCodes.Types
         StringBuilder ret = new StringBuilder();
 
         this.ForEach(
-          i => ret.AppendSpaced(i.ToCode()));
+          i => ret.AppendPreSpaced(i.ToCode()));
 
         return ret.ToString().TrimEnd();
     }

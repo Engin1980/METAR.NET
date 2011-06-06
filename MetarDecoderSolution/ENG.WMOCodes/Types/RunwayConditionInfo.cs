@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ENG.WMOCodes.Types.Basic;
+using ESystem.Extensions;
 
 namespace ENG.WMOCodes.Types
 {
@@ -48,7 +49,7 @@ namespace ENG.WMOCodes.Types
 
         foreach (var fItem in this)
         {
-          ret.AppendSpaced(fItem.ToCode());
+          ret.AppendPreSpaced(fItem.ToCode());
         } // foreach (var fItem in RunwayConditions)
 
         return ret.ToString().TrimEnd();

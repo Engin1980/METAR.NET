@@ -495,26 +495,26 @@ namespace ENG.WMOCodes.Codes
       //"RERA RESN WS RWY24C RWY04 R04C/012345 R22/////// " +
       //"TEMPO FM1010 TL2020 AT1330 VRB03G20KT 010V040 M1/8SM RA SNBR FEW040 OVC050TCU RMK HOTOVO");
 
-      ret.AppendSpaced(this.Type.ToString());
-      ret.AppendSpaced(this.ICAO);
-      ret.AppendSpaced(this.Date.ToCode() + "Z");
-      if (this.IsAUTO) ret.AppendSpaced("AUTO");
-      ret.AppendSpaced(this.Wind.ToCode());
-      ret.AppendSpaced(this.Visibility.ToCode());
+      ret.AppendPreSpaced(this.Type.ToString());
+      ret.AppendPreSpaced(this.ICAO);
+      ret.AppendPreSpaced(this.Date.ToCode() + "Z");
+      if (this.IsAUTO) ret.AppendPreSpaced("AUTO");
+      ret.AppendPreSpaced(this.Wind.ToCode());
+      ret.AppendPreSpaced(this.Visibility.ToCode());
       if (this.Phenomens != null)
-        ret.AppendSpaced(this.Phenomens.ToCode());
+        ret.AppendPreSpaced(this.Phenomens.ToCode());
       if (this.Clouds != null)
-        ret.AppendSpaced(this.Clouds.ToCode());
-      ret.AppendSpaced(IntToMetarString(this.Temperature) + "/" + IntToMetarString(this.DewPoint));
-      ret.AppendSpaced(this.Pressure.ToCode());
+        ret.AppendPreSpaced(this.Clouds.ToCode());
+      ret.AppendPreSpaced(IntToMetarString(this.Temperature) + "/" + IntToMetarString(this.DewPoint));
+      ret.AppendPreSpaced(this.Pressure.ToCode());
       if (this.RePhenomens != null)
-        ret.AppendSpaced(this.RePhenomens.ToCode());
+        ret.AppendPreSpaced(this.RePhenomens.ToCode());
       if (this.WindShears != null)
-        ret.AppendSpaced(this.WindShears.ToCode());
+        ret.AppendPreSpaced(this.WindShears.ToCode());
       if (this.RunwayConditions != null)
-        ret.AppendSpaced(this.RunwayConditions.ToCode());
+        ret.AppendPreSpaced(this.RunwayConditions.ToCode());
       if (this.Trend != null)
-        ret.AppendSpaced(this.Trend.ToCode());
+        ret.AppendPreSpaced(this.Trend.ToCode());
       if (!string.IsNullOrEmpty(this.Remark))
         ret.Append("RMK " + this.Remark);
 
