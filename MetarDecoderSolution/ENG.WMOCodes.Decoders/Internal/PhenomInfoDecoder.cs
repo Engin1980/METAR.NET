@@ -15,7 +15,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       get { return "Phenomens"; }
     }
 
-    private const string R_PHENOM_ITEM = @"(\-|\+| |VC|MI|BC|PR|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)";
+    private const string R_PHENOM_ITEM = @"(\-|\+| |VC|MI|BC|PR(?!OB)|DR|BL|SH|TS|FZ|DZ|RA|SN|SG|IC|PL|GR|GS|BR|FG|FU|VA|DU|SA|HZ|PO|SQ|FC|SS|DS)";
 
     public override string RegEx
     {

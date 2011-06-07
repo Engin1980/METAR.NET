@@ -5,11 +5,160 @@ using System.Text;
 using ESystem.Extensions;
 using R = ENG.WMOCodes.Formatters.InfoFormatter.Properties.Resources;
 using ENG.WMOCodes.Types;
+using ENG.WMOCodes.Codes;
 
 namespace ENG.WMOCodes.Formatters.InfoFormatter
 {
   class Formatter
   {
+    internal static string ToString(Codes.Taf taf)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.Append(R.TAF + R.Space);
+      ret.Append(R.For + R.Space);
+      ret.Append(taf.ICAO + R.Space);
+      ret.Append(R.IssuedAtDay + R.Space);
+      ret.Append(Get(taf.DayTime) + R.Dot);
+      if (taf.IsMissing)
+        ret.Append(R.Missing + R.Dot);
+      else
+      {
+        ret.Append(Get(taf.Period));
+
+        if (taf.IsCancelled)
+          ret.Append(R.Cancelled + R.Dot);
+        else
+        {
+          ret.Append(Get(taf as TrendReport));
+          //ret.Append(Get(taf.Wind) + R.Dot);
+          //ret.Append(Get(taf.Visibility) + R.Dot);
+          //ret.Append(Get(taf.Phenomens) + R.Dot);
+          //ret.Append(Get(taf.Clouds) + R.Dot);
+
+          ret.Append(GetTemperatures(taf) + R.Dot);
+
+          foreach (var fItem in taf.Trends)
+            ret.Append(Get(fItem) + R.Dot);
+        }
+      }
+
+      Reformat(ret);
+
+      return ret.ToString();
+    }
+
+    private static string Get (TrendInfoForTaf trendInfoForTaf)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.Append(Get(trendInfoForTaf.Interval) + R.Dot);
+
+      ret.Append(Get(trendInfoForTaf as TrendReport) + R.Dot);
+
+      return ret.ToString();
+    }
+
+    private static string Get(TafInterval tafInterval)
+    {
+      string ret;
+      if (tafInterval is TafIntervalFM)
+        ret = Get(tafInterval as TafIntervalFM);
+      else
+        ret = Get(tafInterval as TafIntervalNonFM);
+
+      return ret;
+    }
+
+    private static string Get(TafIntervalFM tafInterval)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.Append(R.NextWeatherIsExpected + R.Space + R.From + 
+        R.Space + Get(tafInterval.From) + R.Space + R.Dot);
+
+      return ret.ToString();
+    }
+
+    private static string Get(TafIntervalNonFM tafInterval)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.Append(R.NextWeatherIsExpected + R.Space);
+      switch (tafInterval.Type)
+      {
+        case TafIntervalNonFM.eType.BECMG:
+          break;
+        case TafIntervalNonFM.eType.INTER:
+          break;
+        case TafIntervalNonFM.eType.PROB30:
+          ret.Append (R.Prob30 + R.Space);
+          break;
+        case TafIntervalNonFM.eType.PROB40:
+          ret.Append (R.Prob40 + R.Space);
+          break;
+        case TafIntervalNonFM.eType.TEMPO:
+          ret.Append (R.TEMPO + R.Space);
+          break;
+        case TafIntervalNonFM.eType.TEMPO_PROB30:
+          ret.Append (R.TEMPO + R.Space + R.Prob30 + R.Space);
+          break;
+          case TafIntervalNonFM.eType.TEMPO_PROB40:
+          ret.Append (R.TEMPO + R.Space + R.Prob40 + R.Space);
+          break;
+        default:
+          break;
+      }
+      
+      ret.Append (Get(tafInterval.Interval) + R.Dot);
+
+      return ret.ToString();
+    }
+
+    #region Taf expected temperatures
+
+    private static string GetTemperatures(Taf taf)
+    {
+      StringBuilder sb = new StringBuilder();
+
+      if (taf.MaxTemperature != null)
+        sb.Append(Get(taf.MaxTemperature));
+      sb.Append(R.Space);
+      if (taf.MinTemperature != null)
+        sb.Append(Get(taf.MinTemperature));
+      sb.Append(R.Dot);
+
+      return sb.ToString();
+    }
+
+    private static string Get(TemperatureExtremeTN temperatureExtremeTN)
+    {
+      return R.Min + R.Space + R.Temperature + R.Colon + R.Space + temperatureExtremeTN.Temperature + R.Celsius +
+        R.Space + R.TemperatureAtTime + R.Space + Get(temperatureExtremeTN.Time);
+    }
+
+    private static string Get(TemperatureExtremeTX temperatureExtremeTX)
+    {
+      return R.Max + R.Space + R.Temperature + R.Colon + R.Space + temperatureExtremeTX.Temperature + R.Celsius +
+        R.Space + R.TemperatureAtTime + R.Space + Get(temperatureExtremeTX.Time);
+    }
+
+    private static string Get(Types.DateTimeTypes.DayHourDayHour dayHourDayHour)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      ret.Append(R.ValidFrom +
+        R.Space + Get(dayHourDayHour.From) + R.Space +  R.To + R.Space + Get(dayHourDayHour.To) + R.Dot);
+
+      return ret.ToString();
+    }
+
+    #endregion Taf expected temperatures
+
+    private static string Get(Types.DateTimeTypes.DayHour dayHour)
+    {
+      return R.Day + R.Space + dayHour.Day + R.Dot + R.Space + dayHour.Hour.ToString() + ":00" + R.Space;
+    }
 
     internal static StringBuilder ToString(Codes.Metar metar)
     {
@@ -42,8 +191,8 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       ret.Append(Get(metar.Clouds));
       ret.Append(R.Dot);
 
-      ret.Append(R.Temperature + R.Colon + R.Space + metar.Temperature.ToString() + R.Dot);
-      ret.Append(R.DewPoint + R.Colon + R.Space + metar.DewPoint.ToString() + R.Dot);
+      ret.Append(R.Temperature + R.Colon + R.Space + metar.Temperature.ToString() + R.Celsius + R.Dot);
+      ret.Append(R.DewPoint + R.Colon + R.Space + metar.DewPoint.ToString() + R.Celsius + R.Dot);
 
       ret.Append(Get(metar.Pressure));
       ret.Append(R.Dot);
@@ -54,11 +203,76 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       ret.Append(Get(metar.RunwayConditions));
       ret.Append(R.Dot);
 
-      /*
-      Weather trend temporally at 13:00Z : Visibility 2000 meters. Weather: mist. Sky clear. Remark: OA2.
-      */
+      if (metar.Trend != null)
+        ret.Append(Get(metar.Trend));
+      ret.Append(R.Dot);
+
+      if (metar.Remark != null)
+        ret.Append(GetRemark(metar.Remark));
+      ret.Append(R.Dot);
+
+      Reformat(ret);
 
       return ret;
+    }
+
+    private static string Get(TrendInfoForMetar trendInfoForMetar)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      if (trendInfoForMetar.Type == TrendInfoForMetar.eType.NOSIG)
+        ret.Append(R.NOSIG);
+      else
+      {
+        ret.Append(Get(trendInfoForMetar.Type) + R.Colon+ R.Space);
+
+        ret.Append(
+          Get(trendInfoForMetar as TrendReport));
+      }
+
+      return ret.ToString();
+    }
+
+    private static string Get(TrendReport trendReport)
+    {
+      StringBuilder ret = new StringBuilder();
+
+      if (trendReport.Wind != null)
+        ret.Append(Get(trendReport.Wind) + R.Dot);
+
+      if (trendReport.Visibility != null)
+        ret.Append(Get(trendReport.Visibility) + R.Dot);
+
+      ret.Append(Get(trendReport.Phenomens) + R.Dot);
+
+      ret.Append(Get(trendReport.Clouds) + R.Dot);
+
+      return ret.ToString();
+    }
+
+    private static string Get(Visibility visibility)
+    {
+          StringBuilder ret = new StringBuilder();
+
+          if (visibility.IsClear)
+            ret.Append(R.VisibilityClear);
+          else
+          {
+            ret.Append(R.Visibility + R.Space + Get(visibility.Distance.Value) + R.Space);
+          }
+
+        return ret.ToString();
+    }
+
+    private static string Get(TrendInfoForMetar.eType eType)
+    {
+      return
+        R.ResourceManager.GetString(eType.ToString(), R.Culture);
+    }
+
+    private static string GetRemark(string p)
+    {
+      return R.Remark + R.Colon + R.Space + p;
     }
 
     #region Runway condition
@@ -279,7 +493,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
 
       StringBuilder ret = new StringBuilder();
 
-      ret.Append(R.Phenomens);
+      ret.Append(R.Weather + R.Colon + R.Space);
 
       foreach (var fItem in phenomInfo)
         ret.Append(Get(fItem) + R.Semicolon + R.Space);
@@ -315,13 +529,10 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
     {
       StringBuilder ret = new StringBuilder();
 
-      if (visibilityForMetar.IsClear)
-        ret.Append ( R.VisibilityClear);
-      else
-      {
-        
-        ret.Append(R.Visibility + R.Space + Get(visibilityForMetar.Distance.Value) + R.Space);
+      ret.Append(Get(visibilityForMetar as Visibility));
 
+      if (visibilityForMetar.IsClear == false)
+      {
         if (visibilityForMetar.DirectionSpecification != null)
           ret.Append (R.VisibilityFrom + Get(visibilityForMetar.DirectionSpecification.Value) + R.Space);
 
@@ -360,8 +571,8 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       if (fItem.Tendency.HasValue && fItem.Tendency.Value != RunwayVisibility.eTendency.N)
         ret.Append(R.Space + R.ResourceManager.GetString("RunwayVisibilityTendency_" + fItem.Tendency.Value.ToString()));
 
-      if (fItem.VariableVisibility.HasValue)
-        ret.Append(R.RunwayVisibilityVaryingTo + R.Space + Get(fItem.VariableVisibility.Value));
+      if (fItem.VariableDistance.HasValue)
+        ret.Append(R.RunwayVisibilityVaryingTo + R.Space + Get(fItem.VariableDistance.Value));
 
       ret.Append(R.Dot);
 
@@ -388,8 +599,6 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
         ret.Append(racional.Value);
       else
         ret.Append(racional.Numerator + "/" + racional.Denominator);
-
-      return ret.ToString();
 
       return ret.ToString();
     }
@@ -476,6 +685,60 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
 
       return ret;
     }
+
+    #region Reformat
+
+    private static void Reformat (StringBuilder sb)
+    {
+
+      RemoveSpaces(sb);
+      AdjustCasing(sb);
+      AddSpaces(sb);
+
+    }
+
+    private static void AddSpaces(StringBuilder sb)
+    {
+      sb.Replace(".", ". ");
+      sb.Replace(",", ", ");
+    }
+
+    private static void AdjustCasing(StringBuilder sb)
+    {
+      for (int i = 0; i < sb.Length - 1; i++)
+      {
+        if (sb[i] == '.')
+          sb[i + 1] = char.ToUpper(sb[i + 1]);
+      }
+    }
+
+    private static void DoReplace(StringBuilder sb, string original, string replacing)
+    {
+      while (sb.ToString().Contains(original))
+        sb.Replace(original, replacing);
+    }
+
+    private static void RemoveSpaces(StringBuilder sb)
+    {
+      DoReplace(sb, ". ", ".");
+      DoReplace(sb, " .", ".");
+      DoReplace(sb, ", ", ",");
+      DoReplace(sb, " ,", ",");
+      DoReplace(sb, ",.", ".");
+      DoReplace(sb, ";.", ".");
+      DoReplace(sb, ",,", ",");      
+      DoReplace(sb, "..", ".");
+    }
+
+    static char[] pncs = new char[] { '.', ',', ':' };
+    private static bool IsPunctuation(char p)
+    {
+      if (pncs.Contains(p))
+        return true;
+      else
+        return false;
+    }
+    #endregion Reformat
 
 
   }

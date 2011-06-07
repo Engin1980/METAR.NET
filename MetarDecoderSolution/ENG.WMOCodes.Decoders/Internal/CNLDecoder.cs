@@ -16,7 +16,7 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     public override string RegEx
     {
-      get { return "(CNL)?"; }
+      get { return "^CNL"; }
     }
 
     protected override bool _Decode(System.Text.RegularExpressions.GroupCollection groups)

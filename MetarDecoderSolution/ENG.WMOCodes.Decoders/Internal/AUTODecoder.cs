@@ -15,7 +15,7 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     public override string RegEx
     {
-      get { return "(AUTO)?"; }
+      get { return "^AUTO"; }
     }
 
     protected override bool _Decode(System.Text.RegularExpressions.GroupCollection groups)

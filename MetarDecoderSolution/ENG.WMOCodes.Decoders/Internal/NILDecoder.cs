@@ -16,7 +16,7 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     public override string RegEx
     {
-      get { return "(NIL)?"; }
+      get { return "^NIL"; }
     }
 
     protected override bool _Decode(System.Text.RegularExpressions.GroupCollection groups)

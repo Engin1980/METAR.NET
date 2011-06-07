@@ -35,7 +35,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       get { return "Trend/Tempo/Becoming data"; }
     }
 
-    private const int NUMBER_OF_GROUPS = 7;
+    private const int NUMBER_OF_GROUPS = 8;
     private string regexPattern
     {
       get { return "(^TEMPO)|(^PROB30 TEMPO)|(^PROB40 TEMPO)|(^BECMG)|(^FM)|(^PROB40)|(^PROB30)"; }

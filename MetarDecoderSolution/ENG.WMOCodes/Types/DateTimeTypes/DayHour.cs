@@ -41,7 +41,7 @@ namespace ENG.WMOCodes.Types.DateTimeTypes
       }
       set
       {
-        if (value.IsBetween(0, 23) == false) throw new ArgumentException("Value have to be between 0-23.");
+        if (value.IsBetween(0, 24) == false) throw new ArgumentException("Value have to be between 0-24.");
         _Hour = value;
       }
     }

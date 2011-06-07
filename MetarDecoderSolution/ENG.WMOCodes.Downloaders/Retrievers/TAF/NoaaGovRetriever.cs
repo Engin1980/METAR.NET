@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ENG.WMOCodes.Downloaders.Retrievers.TAF
+namespace ENG.WMOCodes.Downloaders.Retrievers.Taf
 {
   /// <summary>
   /// Downloads taf data from weather.noaa.gov web site.

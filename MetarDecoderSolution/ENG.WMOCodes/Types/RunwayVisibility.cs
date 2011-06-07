@@ -110,21 +110,19 @@ namespace ENG.WMOCodes.Types
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private NonNegInt? _VariableVisibility;
+    private NonNegInt? _VariableDistance;
     ///<summary>
     /// Sets/gets VariableVisibility value. Null if visibility does not vary.
     ///</summary>
-    public NonNegInt? VariableVisibility
+    public NonNegInt? VariableDistance
     {
       get
       {
-#warning TODO Přejmenovat na VariableDistance nebo VaryingDistanceTo nebo tak něco, protože hlavní vlastnost je Distance
-        
-        return (_VariableVisibility);
+        return (_VariableDistance);
       }
       set
       {
-        _VariableVisibility = value;
+        _VariableDistance = value;
       }
     }
     /// <summary>
@@ -181,8 +179,8 @@ namespace ENG.WMOCodes.Types
       if (DeviceMeasurementRestriction != null)
         ret.Append(DeviceMeasurementRestriction.Value.ToString());
       ret.Append(Distance.ToString("0000"));
-      if (VariableVisibility.HasValue)
-        ret.Append("V" + VariableVisibility.Value.ToString("0000"));
+      if (VariableDistance.HasValue)
+        ret.Append("V" + VariableDistance.Value.ToString("0000"));
       if (Unit == Common.eDistanceUnit.ft)
         ret.Append("FT");
       else if (Tendency.HasValue)

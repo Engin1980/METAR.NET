@@ -28,8 +28,8 @@ namespace Tutorial
       ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever mRetriever = 
         new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
 
-      ENG.WMOCodes.Downloaders.Retrievers.TAF.NoaaGovRetriever tRetriever =
-        new ENG.WMOCodes.Downloaders.Retrievers.TAF.NoaaGovRetriever();
+      ENG.WMOCodes.Downloaders.Retrievers.Taf.NoaaGovRetriever tRetriever =
+        new ENG.WMOCodes.Downloaders.Retrievers.Taf.NoaaGovRetriever();
 
       try
       {
@@ -134,6 +134,24 @@ namespace Tutorial
       return ret;
     }
 
+    private ENG.WMOCodes.Codes.Taf GetTaf()
+    {
+      ENG.WMOCodes.Codes.Taf ret = null;
+      ENG.WMOCodes.Decoders.TafDecoder decoder = new ENG.WMOCodes.Decoders.TafDecoder();
+
+      try
+      {
+        ret =
+          decoder.Decode(txtTaf.Text);
+      }
+      catch (Exception ex)
+      {
+        AddInfo("Error - " + ex.GetMessages());
+      }
+
+      return ret;
+    }
+
     private void btnTest_Click(object sender, EventArgs e)
     {
       MessageBox.Show("Not supported yet.");
@@ -166,15 +184,30 @@ namespace Tutorial
       AddInfo("Performing long-info print...");
 
       ENG.WMOCodes.Codes.Metar mtr = GetMetar();
+      ENG.WMOCodes.Codes.Taf taf = GetTaf();
 
-      if (mtr == null) return;
+      if (mtr != null)
+      {
 
       ENG.WMOCodes.Formatters.InfoFormatter.MetarFormatter formatter =
         new ENG.WMOCodes.Formatters.InfoFormatter.MetarFormatter();
 
       string str = formatter.ToString(mtr);
 
+      AddInfo(" === METAR ===");
       AddInfo(str);
+      }
+
+      if (taf != null)
+      {
+      ENG.WMOCodes.Formatters.InfoFormatter.TafFormatter tafFormatter =
+        new ENG.WMOCodes.Formatters.InfoFormatter.TafFormatter();
+
+      string str = tafFormatter.ToString(taf);
+
+      AddInfo(" === TAF ===");
+      AddInfo(str);
+      }
 
       AddInfo("...done");
     }

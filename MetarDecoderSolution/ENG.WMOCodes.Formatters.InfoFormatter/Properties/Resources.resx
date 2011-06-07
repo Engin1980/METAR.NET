@@ -214,7 +214,7 @@
     <value>frozent ruts or ridges</value>
   </data>
   <data name="Ft" xml:space="preserve">
-    <value>feet</value>
+    <value>ft</value>
   </data>
   <data name="FU" xml:space="preserve">
     <value>smoke</value>
@@ -250,7 +250,7 @@
     <value>KPH</value>
   </data>
   <data name="KT" xml:space="preserve">
-    <value>KT(S)</value>
+    <value>kts</value>
   </data>
   <data name="LessThan10Percent" xml:space="preserve">
     <value>less than 10%</value>
@@ -309,7 +309,7 @@
   <data name="OVC" xml:space="preserve">
     <value>overcast</value>
   </data>
-  <data name="Phenomens" xml:space="preserve">
+  <data name="Weather" xml:space="preserve">
     <value>Weather</value>
   </data>
   <data name="PL" xml:space="preserve">
@@ -467,5 +467,53 @@
   </data>
   <data name="Zulu" xml:space="preserve">
     <value>Z</value>
+  </data>
+  <data name="BECMG" xml:space="preserve">
+    <value>Becoming weather</value>
+  </data>
+  <data name="Celsius" xml:space="preserve">
+    <value>°C</value>
+  </data>
+  <data name="NOSIG" xml:space="preserve">
+    <value>No significant change</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>remark</value>
+  </data>
+  <data name="TEMPO" xml:space="preserve">
+    <value>temporal</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Report is cancelled</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>maximum</value>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>minimum</value>
+  </data>
+  <data name="Missing" xml:space="preserve">
+    <value>Report is missing</value>
+  </data>
+  <data name="NextWeatherIsExpected" xml:space="preserve">
+    <value>following weather is expected</value>
+  </data>
+  <data name="Prob30" xml:space="preserve">
+    <value>with probability 30%</value>
+  </data>
+  <data name="Prob40" xml:space="preserve">
+    <value>with probability 40%</value>
+  </data>
+  <data name="TAF" xml:space="preserve">
+    <value>TAF</value>
+  </data>
+  <data name="TemperatureAtTime" xml:space="preserve">
+    <value>expected at </value>
+  </data>
+  <data name="ValidFrom" xml:space="preserve">
+    <value>valid from</value>
   </data>
 </root>

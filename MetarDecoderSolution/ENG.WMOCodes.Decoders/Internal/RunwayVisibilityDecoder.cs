@@ -34,7 +34,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       ret.Distance = groups[6].GetIntValue();
 
       if (groups[7].Success)
-        ret.VariableVisibility = groups[8].GetIntValue();
+        ret.VariableDistance = groups[8].GetIntValue();
 
       if (groups[9].Success)
       {

@@ -70,6 +70,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Becoming weather.
+        /// </summary>
+        internal static string BECMG {
+            get {
+                return ResourceManager.GetString("BECMG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to broken clouds.
         /// </summary>
         internal static string BKN {
@@ -160,11 +169,29 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Report is cancelled.
+        /// </summary>
+        internal static string Cancelled {
+            get {
+                return ResourceManager.GetString("Cancelled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cumulonimbus.
         /// </summary>
         internal static string CB {
             get {
                 return ResourceManager.GetString("CB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to °C.
+        /// </summary>
+        internal static string Celsius {
+            get {
+                return ResourceManager.GetString("Celsius", resourceCulture);
             }
         }
         
@@ -219,6 +246,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         internal static string CoveredBy {
             get {
                 return ResourceManager.GetString("CoveredBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to day.
+        /// </summary>
+        internal static string Day {
+            get {
+                return ResourceManager.GetString("Day", resourceCulture);
             }
         }
         
@@ -349,7 +385,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to feet.
+        ///   Looks up a localized string similar to ft.
         /// </summary>
         internal static string Ft {
             get {
@@ -457,7 +493,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to KT(S).
+        ///   Looks up a localized string similar to kts.
         /// </summary>
         internal static string KT {
             get {
@@ -511,6 +547,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to maximum.
+        /// </summary>
+        internal static string Max {
+            get {
+                return ResourceManager.GetString("Max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to METAR.
         /// </summary>
         internal static string METAR {
@@ -520,11 +565,29 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to minimum.
+        /// </summary>
+        internal static string Min {
+            get {
+                return ResourceManager.GetString("Min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MPH.
         /// </summary>
         internal static string MIPH {
             get {
                 return ResourceManager.GetString("MIPH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report is missing.
+        /// </summary>
+        internal static string Missing {
+            get {
+                return ResourceManager.GetString("Missing", resourceCulture);
             }
         }
         
@@ -583,11 +646,29 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to following weather is expected.
+        /// </summary>
+        internal static string NextWeatherIsExpected {
+            get {
+                return ResourceManager.GetString("NextWeatherIsExpected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to no clouds detected.
         /// </summary>
         internal static string NoCloudsDetected {
             get {
                 return ResourceManager.GetString("NoCloudsDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No significant change.
+        /// </summary>
+        internal static string NOSIG {
+            get {
+                return ResourceManager.GetString("NOSIG", resourceCulture);
             }
         }
         
@@ -637,15 +718,6 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weather.
-        /// </summary>
-        internal static string Phenomens {
-            get {
-                return ResourceManager.GetString("Phenomens", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ice pellets.
         /// </summary>
         internal static string PL {
@@ -682,11 +754,38 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to with probability 30%.
+        /// </summary>
+        internal static string Prob30 {
+            get {
+                return ResourceManager.GetString("Prob30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to with probability 40%.
+        /// </summary>
+        internal static string Prob40 {
+            get {
+                return ResourceManager.GetString("Prob40", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to rain.
         /// </summary>
         internal static string RA {
             get {
                 return ResourceManager.GetString("RA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to remark.
+        /// </summary>
+        internal static string Remark {
+            get {
+                return ResourceManager.GetString("Remark", resourceCulture);
             }
         }
         
@@ -898,6 +997,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TAF.
+        /// </summary>
+        internal static string TAF {
+            get {
+                return ResourceManager.GetString("TAF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to towering cumulus.
         /// </summary>
         internal static string TCU {
@@ -912,6 +1020,24 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         internal static string Temperature {
             get {
                 return ResourceManager.GetString("Temperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to expected at .
+        /// </summary>
+        internal static string TemperatureAtTime {
+            get {
+                return ResourceManager.GetString("TemperatureAtTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to temporal.
+        /// </summary>
+        internal static string TEMPO {
+            get {
+                return ResourceManager.GetString("TEMPO", resourceCulture);
             }
         }
         
@@ -948,6 +1074,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         internal static string VA {
             get {
                 return ResourceManager.GetString("VA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to valid from.
+        /// </summary>
+        internal static string ValidFrom {
+            get {
+                return ResourceManager.GetString("ValidFrom", resourceCulture);
             }
         }
         
@@ -1002,6 +1137,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         internal static string W {
             get {
                 return ResourceManager.GetString("W", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weather.
+        /// </summary>
+        internal static string Weather {
+            get {
+                return ResourceManager.GetString("Weather", resourceCulture);
             }
         }
         

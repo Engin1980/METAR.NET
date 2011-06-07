@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TafFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj">

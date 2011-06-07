@@ -36,7 +36,7 @@ namespace ENG.WMOCodes.Decoders
       ret.IsCorrected = new CORDecoder() { Required = false }.Decode(ref p);
       ret.ICAO = new ICAODecoder().Decode(ref p);
       ret.Date = new DayHourMinuteDecoder().Decode(ref p);
-      ret.IsMissing = new NILDecoder().Decode(ref p);
+      ret.IsMissing = new NILDecoder() { Required = false }.Decode(ref p);
       ret.IsAUTO = new AUTODecoder() { Required = false }.Decode(ref p);
       ret.Wind = new WindWithVariabilityDecoder().Decode(ref p);
       ret.Visibility = new VisibilityForMetarDecoder().Decode(ref p);
