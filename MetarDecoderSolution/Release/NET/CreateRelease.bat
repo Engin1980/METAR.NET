@@ -6,16 +6,16 @@ del *.pdb /q
 del *.xml /q
 del *.chm /q
 
-echo Inserting ESystem dependece
-copy ..\..\MetarDecoder\bin\Debug\ESystem.* .\
+echo Inserting -tutorial- project content
+copy "..\..\Tutorial\bin\Debug\*.*" .\
 
-echo Inserting Metar Decoder project
-copy ..\..\MetarDecoder\bin\Debug\ENG.* .\
-copy ..\..\MetarDecoder\Documentation\Help\MetarDecoder.chm .\
-
-echo Inserting Metar Downloader project
-copy ..\..\MetarDownloader\bin\Debug\ENG.* .\
-copy ..\..\MetarDownloader\Documentation\Help\MetarDownloader.chm .\
+echo Inserting documentation
+copy "..\..\ENG.WMOCodes.Documentation\Help\Documentation.chm .\
 
 echo Release created
 Pause
+
+rem PS C:\Documents and Settings\Marek Vajgl> copy -path "C:\Documents and Settings\
+rem Marek Vajgl\Dokumenty\Visual Studio 2010\Projects\MetarDecoderSolution\Tutorial"
+rem  -destination "C:\Documents and Settings\Marek Vajgl\Dokumenty\Visual Studio 201
+rem 0\Projects\MetarDecoderSolution\Release\NET" -recurse

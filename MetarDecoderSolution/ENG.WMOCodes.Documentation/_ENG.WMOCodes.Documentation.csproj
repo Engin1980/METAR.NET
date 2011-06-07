@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_ENG_WMOCodes_Documentation</RootNamespace>
-    <AssemblyName>_ENG_WMOCodes_Documentation</AssemblyName>
+    <AssemblyName>_ENG.WMOCodes.Documentation</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

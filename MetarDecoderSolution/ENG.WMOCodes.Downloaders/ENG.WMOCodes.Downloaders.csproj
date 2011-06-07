@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ENG.WMOCodes.Downloaders</RootNamespace>
-    <AssemblyName>ENG_WMOCodes_Downloaders</AssemblyName>
+    <AssemblyName>ENG.WMOCodes.Downloaders</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\ENG_WMOCodes_Downloaders.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\ENG.WMOCodes.Downloaders.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

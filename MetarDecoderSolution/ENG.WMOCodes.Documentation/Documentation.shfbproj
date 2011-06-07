@@ -21,17 +21,22 @@
     <SdkLinkTarget>Parent</SdkLinkTarget>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\ENG.WMOCodes\ENG.WMOCodes.csproj" />
-<DocumentationSource sourceFile="..\ENG.WMOCodes.Decoders\ENG.WMOCodes.Decoders.csproj" />
-<DocumentationSource sourceFile="..\ENG.WMOCodes.Downloaders\ENG.WMOCodes.Downloaders.csproj" />
-<DocumentationSource sourceFile="..\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj" />
-<DocumentationSource sourceFile="..\ENG.WMOCodes.Formatters.InfoFormatter\ENG.WMOCodes.Formatters.InfoFormatter.csproj" />
-<DocumentationSource sourceFile="..\ENG.WMOCodes.Formatters.ShortInfo\ENG.WMOCodes.Formatters.ShortInfo.csproj" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\ENG.WMOCodes.Decoders\ENG.WMOCodes.Decoders.csproj" />
+      <DocumentationSource sourceFile="..\ENG.WMOCodes.Downloaders\ENG.WMOCodes.Downloaders.csproj" />
+      <DocumentationSource sourceFile="..\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj" />
+      <DocumentationSource sourceFile="..\ENG.WMOCodes.Formatters.InfoFormatter\ENG.WMOCodes.Formatters.InfoFormatter.csproj" />
+      <DocumentationSource sourceFile="..\ENG.WMOCodes.Formatters.ShortInfo\ENG.WMOCodes.Formatters.ShortInfo.csproj" />
+    </DocumentationSources>
     <PresentationStyle>hana</PresentationStyle>
     <FeedbackEMailAddress>engin%40seznam.cz</FeedbackEMailAddress>
     <FrameworkVersion>3.5</FrameworkVersion>
     <HelpFileFormat>HtmlHelp1x</HelpFileFormat>
     <VisibleItems>Attributes, InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
     <CleanIntermediates>True</CleanIntermediates>
+    <ProjectSummary>METAR.NET project
+Project for decoding METAR/SPECI and TAF reports.
+Website: http://metar.codeplex.com</ProjectSummary>
+    <HelpTitle>METAR.NET project documentation</HelpTitle>
   </PropertyGroup>
   <!-- There are no properties for these two groups but they need to appear in
        order for Visual Studio to perform the build. -->

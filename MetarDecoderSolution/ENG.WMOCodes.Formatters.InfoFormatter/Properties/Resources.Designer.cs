@@ -961,6 +961,15 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SPECI.
+        /// </summary>
+        internal static string SPECI {
+            get {
+                return ResourceManager.GetString("SPECI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to squalls.
         /// </summary>
         internal static string SQ {

@@ -164,7 +164,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
     {
       StringBuilder ret = new StringBuilder();
 
-      ret.Append(R.METAR);
+      ret.Append(metar.Type == Metar.eType.METAR ? R.METAR : R.SPECI);
       ret.Append(R.Space);      
 
       ret.Append(R.For);

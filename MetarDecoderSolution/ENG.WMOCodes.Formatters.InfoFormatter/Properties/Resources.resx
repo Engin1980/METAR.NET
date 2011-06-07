@@ -516,4 +516,7 @@
   <data name="ValidFrom" xml:space="preserve">
     <value>valid from</value>
   </data>
+  <data name="SPECI" xml:space="preserve">
+    <value>SPECI</value>
+  </data>
 </root>
