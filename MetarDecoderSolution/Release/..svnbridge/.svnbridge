@@ -10,4 +10,12 @@
 *.xml
 METAR_NET.zip
 METAR_SVL.zip
+</Value></Property><Property><Name>svn:ignore</Name><Value>*.chm
+*.dll
+*.pdb
+*.rar
+*.xml
+*.zip
+METAR_NET.zip
+METAR_SVL.zip
 </Value></Property></Properties></ItemProperties>

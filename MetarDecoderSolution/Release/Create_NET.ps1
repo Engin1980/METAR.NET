@@ -29,6 +29,16 @@ function Copy-Tutorial {
   Copy-Item $source -Force -Recurse -Destination $target
   Get-ChildItem $target -Include ".svn" -Force -Recurse | Remove-Item -Force -Recurse
 }
+
+function Copy-Content_txt {
+  Write-Host    ... adding release text files
+  Copy-Item $solutionPath"Release\*.txt" $tempPath
+}
+
+function Copy-Documentation {
+  Write-Host    ... adding documentation
+  Copy-Item $solutionPath"ENG.WMOCodes.Documentation\Help\Documentation.chm" $tempPath 
+}
   
 
 function Process-Projects {
@@ -36,7 +46,12 @@ function Process-Projects {
   Copy-ESystem_Extensions $folder"ENG.WMOCodes\"$debugPath  
   Get-ChildItem $folder ENG* | ForEach-Object { Copy-Output $folder $_.Name }
   Copy-Tutorial $folder
+  Copy-Content_txt
+  Copy-Documentation
+  
 }
+
+############### end of functions
 
 Write-Host === Preparation ===
 if (Test-Path $tempPath -PathType container) {
@@ -56,10 +71,12 @@ Process-Projects $source
 
 Write-Host   ... packing
 sl $tempPath
-zip -9 -q -r METAR_NET.zip *
+$version = (Get-Item '.\ENG.WMOCodes.dll').VersionInfo.ProductVersion
+$zipFile = "METAR_NET_" + $version + ".zip"
+zip -9 -q -r $zipFile *
 
 Write-Host   ... copy result zip file
-$source = $tempPath + "METAR_NET.zip"
+$source = $tempPath + $zipFile
 $target = $solutionPath + $releasePath
 Copy-Item $source -Destination $target -Force
 
