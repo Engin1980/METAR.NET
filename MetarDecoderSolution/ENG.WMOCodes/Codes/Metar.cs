@@ -526,7 +526,7 @@ namespace ENG.WMOCodes.Codes
       if (this.Trend != null)
         ret.AppendPreSpaced(this.Trend.ToCode());
       if (!string.IsNullOrEmpty(this.Remark))
-        ret.Append("RMK " + this.Remark);
+        ret.AppendPreSpaced("RMK " + this.Remark);
 
       return ret.ToString().TrimEnd();
     }
