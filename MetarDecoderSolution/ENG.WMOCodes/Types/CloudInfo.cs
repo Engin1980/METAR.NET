@@ -15,7 +15,7 @@ namespace ENG.WMOCodes.Types
     #region Properties
 
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private bool _IsSKC = true;
+    private bool _IsSKC = false;
     ///<summary>
     /// Gets "is sky clear" value. That is SKC in metar.
     ///</summary>
@@ -122,7 +122,7 @@ namespace ENG.WMOCodes.Types
     /// <returns></returns>
     public virtual string ToCode()
     {
-      if (IsSKC)
+       if (IsSKC)
         return "SKC";
       else if (IsNSC)
         return "NSC";
