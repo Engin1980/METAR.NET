@@ -197,7 +197,7 @@ namespace ENG.WMOCodes.Types
       {
         if (IsDevicesMinimumValue)
           ret.Append("M");
-        ret.Append(Distance.Value.ToString(false) + "SM");
+        ret.Append(Distance.Value.ToString(Racional.eToStringFormats.UsePreceedingWhole) + "SM");
       }
 
       return ret.ToString();
