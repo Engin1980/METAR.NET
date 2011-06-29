@@ -394,6 +394,19 @@ namespace ENG.WMOCodes.Types.Basic
     }
 
     /// <summary>
+    /// Obsolete! Returns a <see cref="System.String"/> that represents this instance.
+    /// </summary>
+    /// <param name="p">if set to <c>true</c> [p].</param>
+    /// <returns>
+    /// A <see cref="System.String"/> that represents this instance.
+    /// </returns>
+    [Obsolete("Use other overloads instead of this one.")]
+    public override string ToString(bool p)
+    {
+      return ToString(eToStringFormats.ForceToUseFriction);
+    }
+
+    /// <summary>
     /// Operator plus
     /// </summary>
     /// <param name="a"></param>
