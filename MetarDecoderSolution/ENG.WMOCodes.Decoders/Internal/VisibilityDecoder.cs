@@ -20,7 +20,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       get
       {
         return
-          @"^((CAVOK)|(\d{4})|((M)?(\d+)(/(\d))?SM))";
+          @"^((CAVOK)|(\d{4})|(((M)?|(\d+) )(\d+)(/(\d\d?))?SM))";
       }
     }
 
@@ -38,9 +38,12 @@ namespace ENG.WMOCodes.Decoders.Internal
           ret.SetMeters(grp[3].GetIntValue());
         }
         else
-          ret.SetMiles(new Racional(
-            grp[6].GetIntValue(),
-            (grp[8].Success) ? grp[8].GetIntValue() : 1), grp[5].Success);
+          ret.SetMiles(
+            new Racional(
+              grp[7].Success ? grp[7].GetIntValue() : 0,
+              grp[8].GetIntValue(),
+              (grp[9].Success) ? grp[9].GetIntValue() : 1),
+            grp[6].Success);
       }
 
       return ret;

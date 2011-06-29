@@ -20,7 +20,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       get
       {
         return
-          @"^((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|((M)?(\d+)(/(\d))?SM))";
+          @"^((CAVOK)|(SKC)|((\d{4})(NE|SW|NW|SE|N|E|S|W)?( (\d{4})(N|NE|E|SE|S|SW|W|NW))?)|(((M)?|(\d+) )(\d+)(/(\d\d?))?SM))";
       }
     }
 
@@ -53,9 +53,18 @@ namespace ENG.WMOCodes.Decoders.Internal
         ret.SetMeters(distance, dir, otherDist, otherDir);
       }
       else
-        ret.SetMiles(new Racional(
-          groups[12].GetIntValue(),
-          (groups[14].Success) ? groups[14].GetIntValue() : 1), groups[11].Success);
+      {
+        Racional r = new Racional(
+          (groups[13].Success) ? groups[13].GetIntValue() : 0,
+          groups[14].GetIntValue(),
+          (groups[16].Success) ? groups[16].GetIntValue() : 1
+          );
+
+        bool isMinimal = groups[12].Success;
+
+        ret.SetMiles(r, isMinimal);
+      }
+      
 
       return ret;
     }
