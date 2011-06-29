@@ -401,7 +401,7 @@ namespace ENG.WMOCodes.Types.Basic
     /// A <see cref="System.String"/> that represents this instance.
     /// </returns>
     [Obsolete("Use other overloads instead of this one.")]
-    public override string ToString(bool p)
+    public string ToString(bool p)
     {
       return ToString(eToStringFormats.ForceToUseFriction);
     }
