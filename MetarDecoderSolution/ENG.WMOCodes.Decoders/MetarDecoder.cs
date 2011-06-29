@@ -42,7 +42,9 @@ namespace ENG.WMOCodes.Decoders
       ret.Visibility = new VisibilityForMetarDecoder().Decode(ref p);
       ret.Visibility.Runways =
         new RunwayVisibilityListDecoder().Decode(ref p);
-      ret.Phenomens =  new PhenomInfoDecoder() { Required = false }.Decode(ref p);
+      var phenomens = new PhenomInfoDecoder() { Required = false }.Decode(ref p);
+      if (phenomens == null) phenomens = new Types.PhenomInfo();
+      ret.Phenomens = phenomens;
       ret.Clouds = new CloudInfoWithNCDDecoder() { Required = false }.Decode(ref p);
       ret.Temperature = new TemperatureDecoder().Decode(ref p);
       ret.DewPoint = new DewPointDecoder().Decode(ref p);

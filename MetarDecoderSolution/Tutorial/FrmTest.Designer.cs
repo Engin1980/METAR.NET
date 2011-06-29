@@ -103,7 +103,7 @@
       this.txtMetar.Size = new System.Drawing.Size(610, 21);
       this.txtMetar.TabIndex = 5;
       this.txtMetar.Text = "METAR EETN 012150Z 26004G18KT 6000NE 0300S R04/0300V0500D R22/2000 +SNBR -RAHZ SC" +
-    "T002 OVC012 04/04 Q1013 WS ALL RWY R08/000095 R26/CLDR// TEMPO AT1300 2000 BR RM" +
+    "T002 OVC012 04/04 Q1013 WS ALL RWY R08/000095 R26/CLRD// TEMPO AT1300 2000 BR RM" +
     "K OA2";
       // 
       // btnSanityCheck
