@@ -11,6 +11,23 @@ namespace ENG.WMOCodes.Types.Basic
   public struct Racional : IComparable<Racional>
   {
     /// <summary>
+    /// Defines how the method ToString formats output.
+    /// </summary>
+    public enum eToStringFormats
+    {
+      /// <summary>
+      /// If defined, friction format will be used even if the value is integer, e.g. 3/1 will create output 3/1. If not used, 
+      /// output will be 3.
+      /// </summary>
+      ForceToUseFriction,
+      /// <summary>
+      /// If defined, preceeding whole integer part will be derived, e.g. 7/3 will create 2 1/3. If not used,
+      /// output will be 7/3.
+      /// </summary>
+      UsePreceedingWhole,
+    }
+
+    /// <summary>
     /// Represents numerator.
     /// </summary>
     public readonly int Numerator;
@@ -34,6 +51,18 @@ namespace ENG.WMOCodes.Types.Basic
       this.Numerator = numerator;
       this.Denominator = denominator;
     }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Racional"/> struct.
+    /// </summary>
+    /// <param name="wholePart">The whole part before the racional format.</param>
+    /// <param name="numerator">The numerator.</param>
+    /// <param name="denominator">The denominator.</param>
+    /// <remarks>
+    /// Whole part means the part before the racional format. E.g. in racional "3 4/5" is wholePart = 3,
+    /// numerator = 4 and denominator = 5. Internally is this value converted into 19/5.
+    /// </remarks>
+    public Racional(int wholePart, int numerator, int denominator) : this (numerator + wholePart*denominator, denominator){}
 
     /// <summary>
     /// Converts string to Racional number using / or : as delimiters between numerator and denominator.
@@ -324,16 +353,35 @@ namespace ENG.WMOCodes.Types.Basic
     /// <summary>
     /// Returns value of this instance; param decides if delimited as racional number (e.g. 3/1).
     /// </summary>
-    /// <param name="useFrictionWhenInteger">True when allways use /, false otherwise.</param>
+    /// <param name="flag"></param>
     /// <returns></returns>
-    public string ToString(bool useFrictionWhenInteger)
+    public string ToString(Racional.eToStringFormats flag)
     {
-      if (((Denominator == 1) || (Denominator == -1))
+      StringBuilder ret = new StringBuilder();
+      int n = this.Numerator;
+      int d = this.Denominator;
+
+      if ((flag & eToStringFormats.UsePreceedingWhole) > 0)
+      {
+        int w = 0;
+        if (n > d)
+        {
+          w = n / d;
+          n = n - w * d;
+        }
+
+        if (w > 0)
+          ret.Append(w.ToString() + " ");
+      }
+
+      if ((n % d == 0)
         &&
-        !useFrictionWhenInteger)
-        return Value.ToString();
+        (flag & eToStringFormats.ForceToUseFriction) == 0)
+        ret.Append(n / d);
       else
-        return Numerator.ToString() + "/" + Denominator.ToString();
+        ret.Append(n + "/" + d);
+
+      return ret.ToString();
     }
     /// <summary>
     /// Returns value of this instance, allways delimited as racional number (e.g. 3/1).
@@ -342,7 +390,7 @@ namespace ENG.WMOCodes.Types.Basic
     /// <filterpriority>2</filterpriority>
     public override string ToString()
     {
-      return ToString(true);
+      return ToString(eToStringFormats.UsePreceedingWhole);
     }
 
     /// <summary>
