@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ESystem.Extensions;
+//using ESystem.Extensions;
 using R = ENG.WMOCodes.Formatters.InfoFormatter.Properties.Resources;
 using ENG.WMOCodes.Types;
 using ENG.WMOCodes.Codes;
@@ -442,19 +442,21 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       StringBuilder ret = new StringBuilder();
 
       if (cloudInfo.IsNSC)
-        ret.Append(R.NoSignificantCloud);
+          ret.Append(R.NoSignificantCloud);
       else if (cloudInfo.IsSKC)
-        ret.Append(R.SkyClear);
+          ret.Append(R.SkyClear);
+      else if (cloudInfo.IsCLR)
+          ret.Append(R.SkyClear);
       else if (cloudInfo.IsVerticalVisibility)
       {
-        if (cloudInfo.VVDistance.HasValue)
-          ret.Append(R.VerticalVisibility + R.Space + cloudInfo.VVDistance.Value);
-        else
-          ret.Append(R.VerticalVisibility + R.Space + R.Unknown);
+          if (cloudInfo.VVDistance.HasValue)
+              ret.Append(R.VerticalVisibility + R.Space + cloudInfo.VVDistance.Value);
+          else
+              ret.Append(R.VerticalVisibility + R.Space + R.Unknown);
       }
       else
-        foreach (var fItem in cloudInfo)
-          ret.Append(Get(fItem) + R.Comma);
+          foreach (var fItem in cloudInfo)
+              ret.Append(Get(fItem) + R.Comma);
 
       ret.Append(R.Dot);
 
@@ -636,12 +638,18 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       }
     }
 
+    private static void AppendPreSpaced (StringBuilder sb, string data)
+    {
+      if (sb.Length > 0)
+        sb.Append(" ");
+      sb.Append(data);
+    }
     private static string Get(Wind w)
     {
       StringBuilder ret = new StringBuilder();
 
       if (w.IsCalm)
-        ret.AppendPreSpaced(R.WindCalm);
+        AppendPreSpaced(ret, R.WindCalm);
       else
       {
         ret.Append(R.Wind);
@@ -649,7 +657,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
         ret.Append(R.Space);
 
         if (w.IsVariable)
-          ret.AppendPreSpaced(R.WindVariable);
+          AppendPreSpaced(ret, R.WindVariable);
         else
           ret.Append(R.From + R.Space + w.Direction.Value.ToString("000"));
 

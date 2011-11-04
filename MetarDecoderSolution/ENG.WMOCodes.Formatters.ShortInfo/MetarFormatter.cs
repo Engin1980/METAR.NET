@@ -166,7 +166,7 @@ namespace ENG.WMOCodes.Formatters.ShortInfoFormatter
       string ret = null;
       Cloud.eType t;
 
-      if (cloudInfoWithNCD.IsNCD || cloudInfoWithNCD.IsNSC || cloudInfoWithNCD.IsSKC || cloudInfoWithNCD.Count == 0)
+      if (cloudInfoWithNCD.IsNCD || cloudInfoWithNCD.IsNSC || cloudInfoWithNCD.IsSKC || cloudInfoWithNCD.IsCLR || cloudInfoWithNCD.Count == 0)
         ret = R.NoClouds;
       else
       {

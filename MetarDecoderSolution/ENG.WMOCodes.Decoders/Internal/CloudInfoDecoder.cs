@@ -21,7 +21,7 @@ namespace ENG.WMOCodes.Decoders.Internal
       get
       {
         return
-          @"^((NSC)|(SKC)|VV((\d{3})|/{3})|" + R_CLOUD_ITEM + "+)";
+          @"^((NSC)|(SKC)|(CLR)|VV((\d{3})|/{3})|" + R_CLOUD_ITEM + "+)";
       }
     }
 
@@ -38,12 +38,14 @@ namespace ENG.WMOCodes.Decoders.Internal
         else if (groups[3].Success)
           ret.SetSKC();
         else if (groups[4].Success)
+            ret.SetCLR();
+        else if (groups[5].Success)
         {
-          if (groups[4].Value == "///")
+          if (groups[5].Value == "///")
             ret.SetVerticalVisibility(null);
           else
             ret.SetVerticalVisibility(
-              groups[4].GetIntValue());
+              groups[5].GetIntValue());
         }
         else
         {

@@ -65,8 +65,8 @@ namespace ENG.WMOCodes.Types
     public override void SanityCheck(ref List<string> errors, ref List<string> warnings)
     {
       base.SanityCheck(ref errors, ref warnings);
-      if (IsNCD && (IsSKC || IsNSC || IsVerticalVisibility || Count > 0))
-        errors.Add("Unable to have IsNCD flag on, when IsSKC, IsNSC, IsVerticalVisibility is true or count of clouds > 0.");
+      if (IsNCD && (IsSKC || IsNSC || IsCLR || IsVerticalVisibility || Count > 0))
+        errors.Add("Unable to have IsNCD flag on, when IsSKC, IsNSC, IsCLR, or IsVerticalVisibility is true or count of clouds > 0.");
     }
 
     #endregion Methods

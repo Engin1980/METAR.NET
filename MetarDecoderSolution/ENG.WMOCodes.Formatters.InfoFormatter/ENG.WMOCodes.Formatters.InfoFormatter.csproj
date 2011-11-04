@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESystem.Extensions, Version=3.5.1.27442, Culture=neutral, PublicKeyToken=d9c9e29feae6bf4b, processorArchitecture=MSIL">
-      <HintPath>..\..\ESystemSolution\ESystem.Extensions\bin\Debug\ESystem.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
