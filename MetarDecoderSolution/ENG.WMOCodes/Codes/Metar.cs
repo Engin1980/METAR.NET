@@ -589,7 +589,7 @@ namespace ENG.WMOCodes.Codes
     #region Private methods
     private static string IntToMetarString(int p)
     {
-      if (p < 0)
+      if (p <= 0)
         return "M" + (-p).ToString("00");
       else
         return p.ToString("00");
