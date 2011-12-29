@@ -44,7 +44,7 @@ namespace ENG.WMOCodes.Decoders.Internal
     {
       get
       {
-        return new eType[] { eType.None, eType.Tempo, eType.Tempo30, eType.Tempo40, eType.Becmg, eType.Fm, eType.Prob40, eType.Prob40 };
+        return new eType[] { eType.None, eType.Tempo, eType.Tempo30, eType.Tempo40, eType.Becmg, eType.Fm, eType.Prob30, eType.Prob40 };
       }
     }
 
