@@ -17,17 +17,22 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     public override string RegEx
     {
-      get { return @"^TN(\d{2})/(\d{2})(\d{2})Z"; }
+      get { return @"^TN(M)?(\d{2})/(\d{2})(\d{2})Z"; }
     }
 
     protected override TemperatureExtremeTN _Decode(System.Text.RegularExpressions.GroupCollection groups)
     {
       TemperatureExtremeTN ret = new TemperatureExtremeTN();
 
-      ret.Temperature = groups[1].GetIntValue();
+      bool negate = groups[1].Success;
+
+      ret.Temperature = groups[2].GetIntValue();
+      if (negate)
+        ret.Temperature = -ret.Temperature;
+
       ret.Time = new DayHour();
-      ret.Time.Day = groups[2].GetIntValue();
-      ret.Time.Hour = groups[3].GetIntValue();
+      ret.Time.Day = groups[3].GetIntValue();
+      ret.Time.Hour = groups[4].GetIntValue();
 
       return ret;
     }

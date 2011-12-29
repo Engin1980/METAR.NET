@@ -16,7 +16,17 @@ namespace ENG.WMOCodes.Types
     /// <returns></returns>
     public override string ToCode()
     {
-      return "TX" + this.Temperature.ToString("00") + "/" + this.Time.ToCode() + "Z";
+      StringBuilder ret = new StringBuilder();
+
+      ret.Append ("TX");
+      if (this.Temperature <= 0)
+        ret.Append("M");
+      ret.Append(Math.Abs(this.Temperature).ToString("00"));
+      ret.Append("/");
+      ret.Append(this.Time.ToCode());
+      ret.Append("Z");
+
+      return ret.ToString();
     }
 
     /// <summary>
