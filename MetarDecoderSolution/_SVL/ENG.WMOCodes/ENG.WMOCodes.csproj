@@ -46,8 +46,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESystem.Extensions.SVL">
-      <HintPath>..\..\..\ESystemSolution\ESystem.Extensions.SVL\Bin\Debug\ESystem.Extensions.SVL.dll</HintPath>
+    <Reference Include="ESystem">
+      <HintPath>..\..\..\ESystemSolution\SVL 3\ESystem\Bin\Debug\ESystem.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.Windows" />
