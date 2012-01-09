@@ -65,29 +65,45 @@ namespace Tutorial
 
     private void btnAsyncDown_Click(object sender, EventArgs e)
     {
-      AddInfo("Downloading metar - asynchro...");
+      AddInfo("Downloading metar/taf - asynchro...");
 
-      // this specifies the downloader - from where and how the metar will be downloaded.
+      // this specifies the downloaders - from where and how the metar/taf will be downloaded.
+      // starting with METAR first
       ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever retriever =
         new ENG.WMOCodes.Downloaders.Retrievers.Metar.NoaaGovRetriever();
-
+      
+      
       ENG.WMOCodes.Downloaders.Downloader.DownloadAsync(
           txtIcao.Text,
           retriever,
-          new ENG.WMOCodes.Downloaders.Downloader.DownloadCompletedDelegate(OnCompleted));
+          new ENG.WMOCodes.Downloaders.Downloader.DownloadCompletedDelegate(OnMetarCompleted));
 
-      AddInfo("... asynchro request send, waiting for result.");
+      // now get the TAF
+      ENG.WMOCodes.Downloaders.Retrievers.Taf.NoaaGovRetriever tRetriever =
+        new ENG.WMOCodes.Downloaders.Retrievers.Taf.NoaaGovRetriever();
+
+
+      ENG.WMOCodes.Downloaders.Downloader.DownloadAsync(
+          txtIcao.Text,
+          tRetriever,
+          new ENG.WMOCodes.Downloaders.Downloader.DownloadCompletedDelegate(OnTafCompleted));
+        
+        
+        AddInfo("... asynchro request send, waiting for result.");
+
+
+
     }
 
-    private void OnCompleted(ENG.WMOCodes.Downloaders.RetrieveResult result)
+    private void OnMetarCompleted(ENG.WMOCodes.Downloaders.RetrieveResult result)
     {
       if (this.InvokeRequired)
-        this.Invoke (new Action (() => {OnCompleted(result);}));
+        this.Invoke (new Action (() => {OnMetarCompleted(result);}));
       else
       {
         if (result.IsSuccessful)
         {
-          AddInfo("... asynchro result returned.");
+          AddInfo("... asynchro metar result returned.");
           txtMetar.Text = result.Result;
         }
         else
@@ -95,6 +111,24 @@ namespace Tutorial
           AddInfo("Asynchro download failed - " + result.Exception.GetMessages());
         }
       }
+    }
+
+    private void OnTafCompleted(ENG.WMOCodes.Downloaders.RetrieveResult result)
+    {
+        if (this.InvokeRequired)
+            this.Invoke(new Action(() => { OnTafCompleted(result); }));
+        else
+        {
+            if (result.IsSuccessful)
+            {
+                AddInfo("... asynchro taf result returned.");
+                txtTaf.Text = result.Result;
+            }
+            else
+            {
+                AddInfo("Asynchro download failed - " + result.Exception.GetMessages());
+            }
+        }
     }
 
     private void btnSanityCheck_Click(object sender, EventArgs e)
