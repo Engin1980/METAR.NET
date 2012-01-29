@@ -58,6 +58,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.CS-cz.resx" />
+	<EmbeddedResource Include="Properties\Resources.DE-de.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj">
