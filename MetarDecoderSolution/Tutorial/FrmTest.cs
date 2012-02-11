@@ -151,38 +151,47 @@ namespace Tutorial
 
     private ENG.WMOCodes.Codes.Metar GetMetar()
     {
-      ENG.WMOCodes.Codes.Metar ret = null;
-      ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();
+        if (txtMetar.Text == "")
+            return null;
+        else
+        {
+            ENG.WMOCodes.Codes.Metar ret = null;
+            ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();
 
-      try
-      {
-        ret = 
-          decoder.Decode (txtMetar.Text);
-      }
-      catch (Exception ex)
-      {
-        AddInfo("Error - " + ex.GetMessages());
-      }
-
-      return ret;
+            try
+            {
+                ret =
+                  decoder.Decode(txtMetar.Text);
+            }
+            catch (Exception ex)
+            {
+                AddInfo("Error - " + ex.GetMessages());
+            }
+            return ret;
+        }
     }
 
     private ENG.WMOCodes.Codes.Taf GetTaf()
     {
-      ENG.WMOCodes.Codes.Taf ret = null;
-      ENG.WMOCodes.Decoders.TafDecoder decoder = new ENG.WMOCodes.Decoders.TafDecoder();
+        if (txtTaf.Text == "")
+            return null;
+        else
+        {
+            ENG.WMOCodes.Codes.Taf ret = null;
+            ENG.WMOCodes.Decoders.TafDecoder decoder = new ENG.WMOCodes.Decoders.TafDecoder();
 
-      try
-      {
-        ret =
-          decoder.Decode(txtTaf.Text);
-      }
-      catch (Exception ex)
-      {
-        AddInfo("Error - " + ex.GetMessages());
-      }
+            try
+            {
+                ret =
+                  decoder.Decode(txtTaf.Text);
+            }
+            catch (Exception ex)
+            {
+                AddInfo("Error - " + ex.GetMessages());
+            }
 
-      return ret;
+            return ret;
+        }
     }
 
     private void btnTest_Click(object sender, EventArgs e)
