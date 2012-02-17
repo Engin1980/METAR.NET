@@ -120,6 +120,9 @@
   <data name="AllRunways" xml:space="preserve">
     <value>all runways</value>
   </data>
+  <data name="And" xml:space="preserve">
+    <value>and</value>
+  </data>
   <data name="BKN" xml:space="preserve">
     <value>broken clouds</value>
   </data>
@@ -170,6 +173,9 @@
   </data>
   <data name="CoveredBy" xml:space="preserve">
     <value>covered by</value>
+  </data>
+  <data name="Degree" xml:space="preserve">
+    <value>°</value>
   </data>
   <data name="DewPoint" xml:space="preserve">
     <value>dew point</value>
@@ -342,8 +348,8 @@
   <data name="RunwaysVisibilities" xml:space="preserve">
     <value>Runways' visibility</value>
   </data>
-  <data name="RunwayVisibilityVaryingTo" xml:space="preserve">
-    <value>varying to</value>
+  <data name="RunwayVisibilityVariableBetween" xml:space="preserve">
+    <value>variable between</value>
   </data>
   <data name="S" xml:space="preserve">
     <value>south</value>
@@ -427,7 +433,7 @@
     <value>sky clear.</value>
   </data>
   <data name="VisibilityFrom" xml:space="preserve">
-    <value>from</value>
+    <value>to</value>
   </data>
   <data name="W" xml:space="preserve">
     <value>west</value>
@@ -506,6 +512,15 @@
   </data>
   <data name="Prob40" xml:space="preserve">
     <value>with probability 40%</value>
+  </data>
+  <data name="RunwayVisibilityTendency_D" xml:space="preserve">
+    <value>decreasing</value>
+  </data>
+  <data name="RunwayVisibilityTendency_N" xml:space="preserve">
+    <value>no change</value>
+  </data>
+  <data name="RunwayVisibilityTendency_U" xml:space="preserve">
+    <value>upward</value>
   </data>
   <data name="TAF" xml:space="preserve">
     <value>TAF</value>

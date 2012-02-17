@@ -123,7 +123,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
 
       if (taf.MaxTemperature != null)
         sb.Append(Get(taf.MaxTemperature));
-      sb.Append(R.Space);
+      sb.Append(R.Space + R.Dot);
       if (taf.MinTemperature != null)
         sb.Append(Get(taf.MinTemperature));
       sb.Append(R.Dot);
@@ -310,7 +310,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       {
 
       if (fItem.Contamination.HasValue)
-        ret.Append(R.CoveredBy + Get(fItem.Contamination.Value) + R.Comma);
+        ret.Append(R.CoveredBy + R.Space + Get(fItem.Contamination.Value));
 
       if (fItem.Depth.HasValue)
         ret.Append(Get(fItem.Depth.Value) + R.Comma);
@@ -321,8 +321,6 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       if (fItem.Friction.HasValue)
         ret.Append(R.BrakingAction + R.Space + Get(fItem.Friction.Value));
       }
-
-      ret.Append(R.Dot);
 
       return ret.ToString();
     }
@@ -536,10 +534,10 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
       if (visibilityForMetar.IsClear == false)
       {
         if (visibilityForMetar.DirectionSpecification != null)
-          ret.Append (R.VisibilityFrom + Get(visibilityForMetar.DirectionSpecification.Value) + R.Space);
+          ret.Append (R.VisibilityFrom + R.Space + Get(visibilityForMetar.DirectionSpecification.Value) + R.Space);
 
         if (visibilityForMetar.OtherDistance.HasValue)
-          ret.Append(R.OpeningBracket + Get(visibilityForMetar.OtherDistance.Value) + R.ClosingBracket + R.Space);
+          ret.Append(R.OpeningBracket + Get(visibilityForMetar.OtherDistance.Value) + R.Space + R.VisibilityFrom + R.Space +  Get(visibilityForMetar.OtherDirectionSpecification.Value) +  R.ClosingBracket + R.Space);
 
         if (visibilityForMetar.Runways.Count > 0)
         {
@@ -558,27 +556,35 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
     {
       StringBuilder ret = new StringBuilder();
 
-      ret.Append(R.RunwaysVisibilities + R.Colon);
+      ret.Append(R.RunwaysVisibilities + R.Colon + R.Space);
       foreach (var fItem in list)
-        ret.Append(Get(fItem) + R.Semicolon);
+        ret.Append(Get(fItem) + R.Semicolon + R.Space);
+      
+      ret.Append(R.Dot);
 
       return ret.ToString();
     }
 
     private static string Get(RunwayVisibility fItem)
     {
-      StringBuilder ret = new StringBuilder (
-        R.Runway + R.Space + R.Colon + R.Space + fItem.Distance + Get(fItem.Distance));
-
-      if (fItem.Tendency.HasValue && fItem.Tendency.Value != RunwayVisibility.eTendency.N)
-        ret.Append(R.Space + R.ResourceManager.GetString("RunwayVisibilityTendency_" + fItem.Tendency.Value.ToString()));
+      StringBuilder ret = new StringBuilder (R.Runway + R.Space + fItem.Runway + R.Colon + R.Space);
 
       if (fItem.VariableDistance.HasValue)
-        ret.Append(R.RunwayVisibilityVaryingTo + R.Space + Get(fItem.VariableDistance.Value));
 
-      ret.Append(R.Dot);
+          ret.Append(R.RunwayVisibilityVariableBetween + R.Space + Get(fItem.Distance) + R.Space + R.And + R.Space +  Get(fItem.VariableDistance.Value));
+      else
+          ret.Append(Get(fItem.Distance));
+
+      if (fItem.Tendency.HasValue && fItem.Tendency.Value != RunwayVisibility.eTendency.N)
+          ret.Append(R.Space + Get(fItem.Tendency.Value));
 
       return ret.ToString();
+    }
+
+
+    private static string Get(RunwayVisibility.eTendency tendency)
+    {
+        return R.ResourceManager.GetString("RunwayVisibilityTendency_" + tendency.ToString());
     }
 
     private static object Get(Types.Basic.NonNegInt nonNegInt)
@@ -613,8 +619,8 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
     {
       string ret = Get(windWithVariability as Wind);
       if (windWithVariability.IsVarying)
-        ret += R.WindIsVaryingBetween + R.Space + windWithVariability.Variability.FromDirection.ToString("000") + R.Space +
-          R.To + R.Space + windWithVariability.Variability.ToDirection.ToString("000");
+        ret += R.WindIsVaryingBetween + R.Space + windWithVariability.Variability.FromDirection.ToString("000") + R.Degree + R.Space +
+          R.And + R.Space + windWithVariability.Variability.ToDirection.ToString("000") + R.Degree;
 
       ret += R.Dot;
 
@@ -659,7 +665,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
         if (w.IsVariable)
           AppendPreSpaced(ret, R.WindVariable);
         else
-          ret.Append(R.From + R.Space + w.Direction.Value.ToString("000"));
+          ret.Append(R.From + R.Space + w.Direction.Value.ToString("000") + R.Degree);
 
         ret.Append(R.Space);
 
@@ -672,7 +678,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
         ret.Append(Get(w.Unit));
 
         if (w.GustSpeed.HasValue)
-          ret.Append(R.WindGustingTo + R.Space + w.GustSpeed.Value.ToString() + ret.Append(Get(w.Unit)));
+            ret.Append(R.Space + R.WindGustingTo + R.Space + w.GustSpeed.Value.ToString() + Get(w.Unit));
 
         ret.Append(R.Space);
 
@@ -728,6 +734,7 @@ namespace ENG.WMOCodes.Formatters.InfoFormatter
 
     private static void RemoveSpaces(StringBuilder sb)
     {
+      DoReplace(sb, " ;", ";");
       DoReplace(sb, ". ", ".");
       DoReplace(sb, " .", ".");
       DoReplace(sb, ", ", ",");

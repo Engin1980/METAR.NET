@@ -120,6 +120,9 @@
   <data name="AllRunways" xml:space="preserve">
     <value>alle Pisten</value>
   </data>
+  <data name="And" xml:space="preserve">
+    <value>und</value>
+  </data>
   <data name="BKN" xml:space="preserve">
     <value>stark bewölkt in</value>
     <comment>5 bis 7 Achtel</comment>
@@ -171,6 +174,9 @@
   </data>
   <data name="CoveredBy" xml:space="preserve">
     <value>bedeckt mit </value>
+  </data>
+  <data name="Degree" xml:space="preserve">
+    <value>°</value>
   </data>
   <data name="DewPoint" xml:space="preserve">
     <value>Taupunkt</value>
@@ -346,8 +352,17 @@
   <data name="RunwaysVisibilities" xml:space="preserve">
     <value>Pistensichten</value>
   </data>
-  <data name="RunwayVisibilityVaryingTo" xml:space="preserve">
-    <value>variabel zu</value>
+  <data name="RunwayVisibilityVariableBetween" xml:space="preserve">
+    <value>variiert zwischen</value>
+  </data>
+  <data name="RunwayVisibilityTendency_D" xml:space="preserve">
+    <value>rückläufig</value>
+  </data>
+  <data name="RunwayVisibilityTendency_N" xml:space="preserve">
+    <value>gleichbleibend</value>
+  </data>
+  <data name="RunwayVisibilityTendency_U" xml:space="preserve">
+    <value>steigend</value>
   </data>
   <data name="S" xml:space="preserve">
     <value>Süden</value>
@@ -433,7 +448,7 @@
     <value>klarer Himmel</value>
   </data>
   <data name="VisibilityFrom" xml:space="preserve">
-    <value>von</value>
+    <value>Richtung</value>
   </data>
   <data name="W" xml:space="preserve">
     <value>Westen</value>
