@@ -32,9 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESystem.Extensions, Version=3.5.1.36316, Culture=neutral, PublicKeyToken=d9c9e29feae6bf4b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Privat\Projekte\METAR Parser\bin\Release NET 0.6.x\ESystem.Extensions.dll</HintPath>
+    <Reference Include="ESystem">
+      <HintPath>..\..\ESystemSolution\FW 3.5\ESystem\bin\Debug\ESystem.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
