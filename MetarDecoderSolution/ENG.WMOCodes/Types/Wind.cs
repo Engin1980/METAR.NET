@@ -65,7 +65,7 @@ namespace ENG.WMOCodes.Types
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private int? _Direction = 220;
+    private int? _Direction = 0;
     ///<summary>
     /// Sets/gets wind direction value.
     ///</summary>
@@ -111,7 +111,7 @@ namespace ENG.WMOCodes.Types
     /// <summary>
     /// </summary>
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-    private NonNegInt _Speed = 3;
+    private NonNegInt _Speed = 0;
     ///<summary>
     /// Sets/gets wind speed.
     ///</summary>
@@ -123,8 +123,8 @@ namespace ENG.WMOCodes.Types
       }
       set
       {
-        if (value > 100)
-          throw new Exception("Unable to capture greater speed than 100kts.");
+        if (value > 200)
+          throw new Exception("Unable to capture greater speed than 200kts.");
         _Speed = value;
       }
     }
@@ -151,8 +151,8 @@ namespace ENG.WMOCodes.Types
       }
       set
       {
-        if (value > 100)
-          throw new Exception("Unable to capture greater speed than 100kts.");
+        if (value > 200)
+          throw new Exception("Unable to capture greater speed than 200kts.");
         _GustSpeed = value;
       }
     }
