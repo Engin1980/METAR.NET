@@ -360,10 +360,10 @@ namespace ENG.WMOCodes.Types.Basic
       StringBuilder ret = new StringBuilder();
       int n = this.Numerator;
       int d = this.Denominator;
+      int w = 0;
 
       if ((flag & eToStringFormats.UsePreceedingWhole) > 0)
       {
-        int w = 0;
         if (n > d)
         {
           w = n / d;
@@ -371,8 +371,15 @@ namespace ENG.WMOCodes.Types.Basic
         }
 
         if (w > 0)
-          ret.Append(w.ToString() + " ");
+          ret.Append(w.ToString());
       }
+
+      // if rational part of number does make sense (that is, it is not O/1)
+      if (n != 0 || d != 1)
+      {
+        // if there is whole part, we must add space behind its print
+        if (w > 0)
+          ret.Append(" ");
 
       if ((n % d == 0)
         &&
@@ -380,6 +387,7 @@ namespace ENG.WMOCodes.Types.Basic
         ret.Append(n / d);
       else
         ret.Append(n + "/" + d);
+      }
 
       return ret.ToString();
     }
