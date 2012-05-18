@@ -92,6 +92,8 @@ namespace ENG.WMOCodes.Types
       protected set
       {
         _Distance = value;
+        if (value.HasValue)
+          IsClear = false;
       }
     }
 
@@ -99,6 +101,15 @@ namespace ENG.WMOCodes.Types
 
 
     #endregion Properties
+
+    #region .ctor
+
+    public Visibility()
+    {
+      this.SetClear(true);
+    }
+
+    #endregion .ctor
 
     #region Methods
     /// <summary>
