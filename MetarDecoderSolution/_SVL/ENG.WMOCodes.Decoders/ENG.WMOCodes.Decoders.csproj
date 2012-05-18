@@ -187,6 +187,9 @@
     <Compile Include="..\..\ENG.WMOCodes.Decoders\MetarDecoder.cs">
       <Link>MetarDecoder.cs</Link>
     </Compile>
+    <Compile Include="..\..\ENG.WMOCodes.Decoders\MetarDecoderWithAllOptional.cs">
+      <Link>MetarDecoderWithAllOptional.cs</Link>
+    </Compile>
     <Compile Include="..\..\ENG.WMOCodes.Decoders\TafDecoder.cs">
       <Link>TafDecoder.cs</Link>
     </Compile>

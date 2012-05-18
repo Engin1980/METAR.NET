@@ -12,12 +12,23 @@ namespace ENG.WMOCodes.Decoders.Internal
 
     protected override WindWithVariability _Decode(ref string source)
     {
-      Wind w = new WindDecoder().Decode(ref source);
+      Wind w = new WindDecoder() { Required = this.Required }.Decode(ref source);
       WindVariable wv = new WindVariableDecoder() { Required = false }.Decode(ref source);
 
-      WindWithVariability ret = new WindWithVariability();
-      w.CopyPropertiesTo(ret, "IsVariable");
-      ret.Variability = wv;
+      WindWithVariability ret;
+      if (w == null)
+      {
+        if (wv != null)
+          throw new Exception("No wind definition found, but wind variability definition found.  Possible invalid data?");
+        else
+          ret = null;
+      }
+      else
+      {
+        ret = new WindWithVariability();
+        w.CopyPropertiesTo(ret, "IsVariable");
+        ret.Variability = wv;
+      }
 
       return ret;
     }

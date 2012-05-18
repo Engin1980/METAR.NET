@@ -157,6 +157,8 @@ namespace Tutorial
         {
             ENG.WMOCodes.Codes.Metar ret = null;
             ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();
+            //ENG.WMOCodes.Decoders.MetarDecoderWithAllOptional decoder =
+            //  new ENG.WMOCodes.Decoders.MetarDecoderWithAllOptional();
 
             try
             {

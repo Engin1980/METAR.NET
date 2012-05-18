@@ -39,7 +39,7 @@ namespace Tutorial
       // into this object decode metar will be stored
       ENG.WMOCodes.Codes.Metar metarObject = null;
 
-      ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();
+      ENG.WMOCodes.Decoders.MetarDecoder decoder = new ENG.WMOCodes.Decoders.MetarDecoder();      
 
       try
       {
