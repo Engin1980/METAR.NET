@@ -4,4 +4,8 @@ Tester
 </Value></Property><Property><Name>svn:ignore</Name><Value>MetarDecoderSVL
 Tester
 TestResults
+</Value></Property><Property><Name>svn:ignore</Name><Value>MetarDecoderSVL
+Tester
+TestResults
+Other
 </Value></Property></Properties></ItemProperties>
