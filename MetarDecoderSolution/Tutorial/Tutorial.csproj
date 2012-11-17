@@ -69,29 +69,29 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ENG.WMOCodes.Decoders\ENG.WMOCodes.Decoders.csproj">
+    <ProjectReference Include="..\FW 3.5\ENG.WMOCodes.Decoders\ENG.WMOCodes.Decoders.csproj">
       <Project>{2CD3FB96-1955-4035-BC50-66800C84C3BE}</Project>
-      <Name>ENG.WMOCodes.Decoders %28FW3.5\ENG.WMOCodes.Decoders%29</Name>
+      <Name>ENG.WMOCodes.Decoders %28FW 3.5\ENG.WMOCodes.Decoders%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENG.WMOCodes.Downloaders\ENG.WMOCodes.Downloaders.csproj">
+    <ProjectReference Include="..\FW 3.5\ENG.WMOCodes.Downloaders\ENG.WMOCodes.Downloaders.csproj">
       <Project>{5D46B4C3-3CBD-4F70-B92B-710CA65CDB70}</Project>
-      <Name>ENG.WMOCodes.Downloaders %28FW3.5\ENG.WMOCodes.Downloaders%29</Name>
+      <Name>ENG.WMOCodes.Downloaders %28FW 3.5\ENG.WMOCodes.Downloaders%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENG.WMOCodes.Formatters.InfoFormatter\ENG.WMOCodes.Formatters.InfoFormatter.csproj">
+    <ProjectReference Include="..\FW 3.5\ENG.WMOCodes.Formatters.InfoFormatter\ENG.WMOCodes.Formatters.InfoFormatter.csproj">
       <Project>{1D53AA8D-0D19-4D76-81A2-61D1B86005EA}</Project>
       <Name>ENG.WMOCodes.Formatters.InfoFormatter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENG.WMOCodes.Formatters.ShortInfo\ENG.WMOCodes.Formatters.ShortInfo.csproj">
+    <ProjectReference Include="..\FW 3.5\ENG.WMOCodes.Formatters.ShortInfo\ENG.WMOCodes.Formatters.ShortInfo.csproj">
       <Project>{D8DAED18-C2B8-4991-A19B-E2EC5FDF7F14}</Project>
       <Name>ENG.WMOCodes.Formatters.ShortInfo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj">
+    <ProjectReference Include="..\FW 3.5\ENG.WMOCodes.Formatters\ENG.WMOCodes.Formatters.csproj">
       <Project>{C9817849-7A1D-411D-AF88-6663695191E3}</Project>
-      <Name>ENG.WMOCodes.Formatters %28FW3.5\ENG.WMOCodes.Formatters%29</Name>
+      <Name>ENG.WMOCodes.Formatters %28FW 3.5\ENG.WMOCodes.Formatters%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENG.WMOCodes\ENG.WMOCodes.csproj">
+    <ProjectReference Include="..\FW 3.5\ENG.WMOCodes\ENG.WMOCodes.csproj">
       <Project>{119FCACD-C111-495C-BCA9-FC332EE88D74}</Project>
-      <Name>ENG.WMOCodes %28FW3.5\ENG.WMOCodes%29</Name>
+      <Name>ENG.WMOCodes %28FW 3.5\ENG.WMOCodes%29</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
