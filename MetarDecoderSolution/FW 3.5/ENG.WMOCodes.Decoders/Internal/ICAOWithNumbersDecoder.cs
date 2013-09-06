@@ -7,7 +7,7 @@ using ENG.WMOCodes.Types;
 
 namespace ENG.WMOCodes.Decoders.Internal
 {
-  internal class ICAOWithNumbersDecoder : TypeDecoder<string>
+  class ICAOWithNumbersDecoder : TypeDecoder<string>
   {
     public override string Description
     {

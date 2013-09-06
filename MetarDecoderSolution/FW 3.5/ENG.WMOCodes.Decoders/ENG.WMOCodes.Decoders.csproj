@@ -55,6 +55,7 @@
     <Compile Include="Internal\DayHourMinuteDecoder.cs" />
     <Compile Include="Internal\DewPointDecoder.cs" />
     <Compile Include="Internal\ICAODecoder.cs" />
+    <Compile Include="Internal\ICAOWithNumbersDecoder.cs" />
     <Compile Include="Internal\MetarPrefixDecoder.cs" />
     <Compile Include="Internal\NILDecoder.cs" />
     <Compile Include="Internal\PhenomInfoDecoder.cs" />

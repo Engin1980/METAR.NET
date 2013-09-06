@@ -85,6 +85,9 @@
     <Compile Include="..\..\FW 3.5\ENG.WMOCodes.Decoders\Internal\ICAODecoder.cs">
       <Link>Internal\ICAODecoder.cs</Link>
     </Compile>
+    <Compile Include="..\..\FW 3.5\ENG.WMOCodes.Decoders\Internal\ICAOWithNumbersDecoder.cs">
+      <Link>Internal\ICAOWithNumbersDecoder.cs</Link>
+    </Compile>
     <Compile Include="..\..\FW 3.5\ENG.WMOCodes.Decoders\Internal\MetarPrefixDecoder.cs">
       <Link>Internal\MetarPrefixDecoder.cs</Link>
     </Compile>
