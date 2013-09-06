@@ -18,11 +18,19 @@ namespace ENG.WMOCodes.Decoders.Internal
       {
         ret.SetNCD();
         source = source.Substring(NCD.Length).TrimStart();
-    }
+      }
       else
       {
         CloudInfo ci = new CloudInfoDecoder() { Required = this.Required }.Decode(ref source);
         ci.CopyPropertiesTo(ret);
+        if (ci.IsCLR)
+          ret.SetCLR();
+        else if (ci.IsNSC)
+          ret.SetNCD();
+        else if (ci.IsSKC)
+          ret.SetSKC();
+        else if (ci.IsVerticalVisibility)
+          ret.SetVerticalVisibility(ci.VVDistance);
       }
 
       return ret;
