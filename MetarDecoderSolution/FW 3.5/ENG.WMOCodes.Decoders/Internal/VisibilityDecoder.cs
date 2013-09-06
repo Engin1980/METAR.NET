@@ -42,7 +42,7 @@ namespace ENG.WMOCodes.Decoders.Internal
             new Racional(
               grp[7].Success ? grp[7].GetIntValue() : 0,
               grp[8].GetIntValue(),
-              (grp[9].Success) ? grp[9].GetIntValue() : 1),
+              (grp[9].Success) ? grp[10].GetIntValue() : 1),
             grp[6].Success);
       }
 
