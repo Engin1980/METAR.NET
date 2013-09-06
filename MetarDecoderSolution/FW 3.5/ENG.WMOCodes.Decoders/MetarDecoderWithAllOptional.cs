@@ -38,7 +38,7 @@ namespace ENG.WMOCodes.Decoders
 
       ret.IsCorrected = new CORDecoder() { Required = false }.Decode(ref p);
 
-      ret.ICAO = new ICAODecoder().Decode(ref p);
+      ret.ICAO = new ICAOWithNumbersDecoder().Decode(ref p);
 
       ret.Date = new DayHourMinuteDecoder().Decode(ref p);
 
